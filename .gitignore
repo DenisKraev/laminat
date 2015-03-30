@@ -4,8 +4,8 @@
 # /upload/admin/config.php
 
 # System Cache Files
-/upload/system/cache/*
-!/upload/system/cache/index.html
+system/cache/*
+!system/cache/index.html
 
 # Image File
 # !/upload/image/no_image.jpg
