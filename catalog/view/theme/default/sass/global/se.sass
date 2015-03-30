@@ -1,0 +1,137 @@
+/* стандартные элементы
+
+/* Заголовки
+.title-style
+  margin: 0px
+  font-family: Calibri, sans-serif
+  font-weight: bold
+  font-size: 18px
+  line-height: 22px
+  text-transform: uppercase
+  margin-bottom: 35px
+  color: #000
+  &.center
+    text-align: center
+  &.in-box
+    padding: 25px
+    background: #fafafa
+a.title-style:hover
+  color: lighten(#000, 10%)
+
+/* Текст
+.text-style
+  font-family: Arial, sans-serif
+  font-size: 14px
+  line-height: 18px
+  color: #3f4245
+
+/* хлебные крошки
+.breadcrumbs
+  font-family: Arial, sans-serif
+  font-size: 12px
+  color: #845d45
+  +pie-clearfix
+  list-style: none
+  margin: 0px
+  padding: 0px
+  margin-bottom: 20px
+  li
+    float: left
+    margin-left: 15px
+    position: relative
+    &:first-child
+      margin-left: 0px
+      padding-left: 0px
+      &:before
+        display: none
+    &:before
+      position: absolute
+      top: 0px
+      left: -10px
+      height: 100%
+      content: '»'
+  a
+    color: #845d45
+    text-decoration: underline
+    &:hover
+      text-decoration: none
+
+/* Поля форм
+.form-row
+  margin-bottom: 15px
+
+.style-form-label
+  +font-family-2
+  color: #7f8c8c
+  font-size: 15px
+
+.style-form-text, .style-form-textarea
+  width: 100%
+  +font-family-2
+  color: #7f8c8c
+  font-size: 15px
+  background: #fafafa
+  border-radius: 3px
+  border: none
+  padding: 6px
+  +box-shadow(inset 2px 2px 2px 0px rgba(237,237,237,1))
+
+.style-form-textarea
+  resize: none
+
+/* Кнопки
+.btn-style
+  font-family: Calibri, sans-serif
+  color: #fff
+  font-size: 17px
+  font-weight: bold
+  text-transform: uppercase
+  background: #845d45
+  border-radius: 3px
+  border: none
+  cursor: pointer
+  +inline-block(top)
+  text-decoration: none
+  padding: 10px 40px
+  &:hover
+    text-decoration: none
+    background: lighten(#845d45, 10%)
+
+/* Пагинация
+.pagination
+  width: 100%
+  list-style: none
+  padding: 0px
+  margin: 0px
+  text-align: center
+  margin-bottom: 20px
+  > li
+    margin: 0px 3px
+    +inline-block(top)
+    &.selected a, &:hover a, &.active a, &.selected:hover a, &.active:hover a
+      background: #845d45
+      background-color: #845d45
+      color: #fff
+      text-decoration: none
+      border-color: transparent
+    &.hidden, &.disabled
+      display: none
+    > a, > span
+      display: block
+      +font-family-2(bold)
+      font-size: 12px
+      line-height: 12px
+      background: none
+      color: #845d45
+      padding: 8px 10px
+      border: none
+      border-radius: 3px
+      border: 1px solid #845d45
+      cursor: pointer
+      margin: 0px
+      font-weight: normal
+    &:hover span
+      background: none
+      border: 1px solid #845d45
+      color: #845d45
+      cursor: default

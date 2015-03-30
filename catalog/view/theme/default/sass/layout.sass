@@ -1,0 +1,70 @@
+*
+  +box-sizing(border-box)
+
+html
+  height: 100%
+
+body
+  height: 100%
+  +font-family-1
+  font-size: 14px
+
+@font-face
+  font-family: "OpenSans-regular-wf"
+  src: url("/fonts/opensans-regular.ttf")
+
+@font-face
+  font-family: "OpenSans-bold-wf"
+  src: url("/fonts/opensans-bold.ttf")
+
+@font-face
+  font-family: "MyriadPro-regular-wf"
+  src: url("/fonts/myriadpro-regular.eot")
+  src: url("/fonts/myriadpro-regular.eot?#iefix")format("embedded-opentype"), url("/fonts/myriadpro-regular.woff") format("woff"), url("/fonts/myriadpro-regular.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
+
+#wrapper
+  min-height: 100%
+  height: auto !important
+  height: 100%
+  margin: 0 auto -170px
+  width: 100%
+  background: #fff
+  //min-width: 940px;
+
+#footer
+  height: 170px
+
+#push
+  height: 190px
+
+.cf
+  +pie-clearfix
+
+.ib
+  +inline-block(top)
+
+img
+  vertical-align: top
+  border: none
+
+input, textarea, button, select, a
+  outline: none
+  &:focus
+    outline: none
+
+.inner-pages
+  padding-top: 30px
+
+/*Адаптивность на основе bootstrap
+@media (min-width: 1200px)
+  .container
+    width: 970px
+
+@media (min-width: 992px)
+  .container
+    width: 970px
+
+.slider-hidden
+  visibility: hidden

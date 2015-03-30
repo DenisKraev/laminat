@@ -1,12 +1,9 @@
 .idea/*
-
-# System Cache Files
+.sass-cache/*
 system/cache/*
 !system/cache/index.html
-
 vqmod/vqcache/*
-
-# image/cache/*
+image/cache/*
 
 # Config and Htaccess Files
 # /upload/.htaccess

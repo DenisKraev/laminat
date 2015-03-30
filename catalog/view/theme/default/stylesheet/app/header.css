@@ -1,0 +1,102 @@
+/*
+Error: Undefined mixin 'font-family-1'.
+        on line 12 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/header.sass, in `font-family-1'
+        from line 12 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/header.sass
+
+7:       max-width: 100%
+8:   .header-contact
+9:     float: right
+10:     padding: 13px 0px
+11:     .phone
+12:       +font-family-1
+13:       font-weight: bold
+14:       font-size: 19px
+15:       color: #845d45
+16:       line-height: 27px
+17:       padding-left: 30px
+
+Backtrace:
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/header.sass:12:in `font-family-1'
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/header.sass:12
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `with_mixin'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:20:in `render'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:268:in `render'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:293:in `watch'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:46:in `watch!'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/watch_project.rb:41:in `perform'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/bin/compass:44:in `call'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+C:/Ruby200-x64/bin/compass:23:in `load'
+C:/Ruby200-x64/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'font-family-1'.\A         on line 12 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/header.sass, in `font-family-1'\A         from line 12 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/header.sass\A \A 7:       max-width: 100%\A 8:   .header-contact\A 9:     float: right\A 10:     padding: 13px 0px\A 11:     .phone\A 12:       +font-family-1\A 13:       font-weight: bold\A 14:       font-size: 19px\A 15:       color: #845d45\A 16:       line-height: 27px\A 17:       padding-left: 30px"; }
