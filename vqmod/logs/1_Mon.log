@@ -28,3 +28,17 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->data['layouts'] 
 ----------------------------------------------------------------------
 
 
+---------- Date: 2015-03-30 14:10:42 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=common/home
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\laminat\vqmod/xml/coin-slider.xml
+   id        : Coin Slider Module - OpenCart 1.5.3 core file modifications
+   version   : 1.5.3
+   vqmver    : 2.2.2
+   author    : Aleksandr
+
+File Name    : system/library/image.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): if (isset($this->info['mime']) && $this->info['mime'] == 'image/png')
+----------------------------------------------------------------------
+
+

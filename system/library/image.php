@@ -3,7 +3,8 @@ class Image {
     private $file;
     private $image;
     private $info;
-		
+    private $type;
+
 	public function __construct($file) {
 		if (file_exists($file)) {
 			$this->file = $file;
@@ -16,16 +17,16 @@ class Image {
             	'bits'   => $info['bits'],
             	'mime'   => $info['mime']
         	);
-        	
+
         	$this->image = $this->create($file);
     	} else {
       		exit('Error: Could not load image ' . $file . '!');
     	}
 	}
-		
+
 	private function create($image) {
 		$mime = $this->info['mime'];
-		
+
 		if ($mime == 'image/gif') {
 			return imagecreatefromgif($image);
 		} elseif ($mime == 'image/png') {
@@ -33,13 +34,13 @@ class Image {
 		} elseif ($mime == 'image/jpeg') {
 			return imagecreatefromjpeg($image);
 		}
-    }	
-	
+    }
+
     public function save($file, $quality = 90) {
 		$info = pathinfo($file);
-       
+
 		$extension = strtolower($info['extension']);
-   		
+
 		if (is_resource($this->image)) {
 			if ($extension == 'jpeg' || $extension == 'jpg') {
 				imagejpeg($this->image, $file, $quality);
@@ -48,158 +49,200 @@ class Image {
 			} elseif($extension == 'gif') {
 				imagegif($this->image, $file);
 			}
-			   
+
 			imagedestroy($this->image);
 		}
     }
 
 	/**
-	*	
-	*	@param width 
+	*
+	*	@param width
 	*	@param height
 	*	@param default char [default, w, h]
-	*				   default = scale with white space, 
-	*				   w = fill according to width, 
+	*				   default = scale with white space,
+	*				   w = fill according to width,
 	*				   h = fill according to height
-	*	
+	*
 	*/
-    public function resize($width = 0, $height = 0, $default = '') {
-    	if (!$this->info['width'] || !$this->info['height']) {
-			return;
-		}
+  public function resize($width = 0, $height = 0, $default = '') {
+    $h = $height;
+    $w = $width;
 
-		$xpos = 0;
-		$ypos = 0;
-		$scale = 1;
+    if ($h == null) {
+      $k = $w / $this->info['width'];
+      $h = round($this->info['height'] * $k);
+      $this->trueResize($w, $h);
+      // 0-1
+    } else if ($w == null) {
+      $k = $h / $this->info['height'];
+      $w = round($this->info['width'] * $k);
+      $this->trueResize($w, $h);
+      // 1-1
+    } else {
 
-		$scale_w = $width / $this->info['width'];
-		$scale_h = $height / $this->info['height'];
+      $w2 = $w;
+      $h2 = intval(($w / $this->info['width']) * $this->info['height']);
 
-		if ($default == 'w') {
-			$scale = $scale_w;
-		} elseif ($default == 'h'){
-			$scale = $scale_h;
-		} else {
-			$scale = min($scale_w, $scale_h);
-		}
+      if ($h2 > $h) {
+        $h2 = $h;
+        $w2 = intval(($h / $this->info['height']) * $this->info['width']);
+      }
 
-		if ($scale == 1 && $scale_h == $scale_w && $this->info['mime'] != 'image/png') {
-			return;
-		}
+      $w = $w2;
+      $h = $h2;
+      $this->trueResize($w, $h);
+    }
 
-		$new_width = (int)($this->info['width'] * $scale);
-		$new_height = (int)($this->info['height'] * $scale);			
-    	$xpos = (int)(($width - $new_width) / 2);
-   		$ypos = (int)(($height - $new_height) / 2);
-        		        
-       	$image_old = $this->image;
-        $this->image = imagecreatetruecolor($width, $height);
-			
-		if (isset($this->info['mime']) && $this->info['mime'] == 'image/png') {		
-			imagealphablending($this->image, false);
-			imagesavealpha($this->image, true);
-			$background = imagecolorallocatealpha($this->image, 255, 255, 255, 127);
-			imagecolortransparent($this->image, $background);
-		} else {
-			$background = imagecolorallocate($this->image, 255, 255, 255);
-		}
-		
-		imagefilledrectangle($this->image, 0, 0, $width, $height, $background);
-	
-        imagecopyresampled($this->image, $image_old, $xpos, $ypos, 0, 0, $new_width, $new_height, $this->info['width'], $this->info['height']);
-        imagedestroy($image_old);
-           
-        $this->info['width']  = $width;
-        $this->info['height'] = $height;
-    }
-    
-    public function watermark($file, $position = 'bottomright') {
-        $watermark = $this->create($file);
-        
-        $watermark_width = imagesx($watermark);
-        $watermark_height = imagesy($watermark);
-        
-        switch($position) {
-            case 'topleft':
-                $watermark_pos_x = 0;
-                $watermark_pos_y = 0;
-                break;
-            case 'topright':
-                $watermark_pos_x = $this->info['width'] - $watermark_width;
-                $watermark_pos_y = 0;
-                break;
-            case 'bottomleft':
-                $watermark_pos_x = 0;
-                $watermark_pos_y = $this->info['height'] - $watermark_height;
-                break;
-            case 'bottomright':
-                $watermark_pos_x = $this->info['width'] - $watermark_width;
-                $watermark_pos_y = $this->info['height'] - $watermark_height;
-                break;
-        }
-        
-        imagecopy($this->image, $watermark, $watermark_pos_x, $watermark_pos_y, 0, 0, 120, 40);
-        
-        imagedestroy($watermark);
-    }
-    
-    public function crop($top_x, $top_y, $bottom_x, $bottom_y) {
-        $image_old = $this->image;
-        $this->image = imagecreatetruecolor($bottom_x - $top_x, $bottom_y - $top_y);
-        
-        imagecopy($this->image, $image_old, 0, 0, $top_x, $top_y, $this->info['width'], $this->info['height']);
-        imagedestroy($image_old);
-        
-        $this->info['width'] = $bottom_x - $top_x;
-        $this->info['height'] = $bottom_y - $top_y;
-    }
-    
-    public function rotate($degree, $color = 'FFFFFF') {
-		$rgb = $this->html2rgb($color);
-		
-        $this->image = imagerotate($this->image, $degree, imagecolorallocate($this->image, $rgb[0], $rgb[1], $rgb[2]));
-        
-		$this->info['width'] = imagesx($this->image);
-		$this->info['height'] = imagesy($this->image);
-    }
-	    
-    private function filter($filter) {
-        imagefilter($this->image, $filter);
-    }
-            
-    private function text($text, $x = 0, $y = 0, $size = 5, $color = '000000') {
-		$rgb = $this->html2rgb($color);
-        
-		imagestring($this->image, $size, $x, $y, $text, imagecolorallocate($this->image, $rgb[0], $rgb[1], $rgb[2]));
-    }
-    
-    private function merge($file, $x = 0, $y = 0, $opacity = 100) {
-        $merge = $this->create($file);
+  }
 
-        $merge_width = imagesx($image);
-        $merge_height = imagesy($image);
-		        
-        imagecopymerge($this->image, $merge, $x, $y, 0, 0, $merge_width, $merge_height, $opacity);
+  public function crop($w, $h, $cropType=null) {
+    $srcW = $this->info['width'];
+    $srcH = $this->info['height'];
+    $ks   = $srcW / $srcH; // растянутость по ширине
+    $kd   = $w / $h;
+    $ofX  = $ofXr  = 0;
+    $ofY  = $ofYr  = 0;
+    if ($kd > $ks) {
+      $a    = $srcW / $kd;
+      $ofY  = round(($srcH - $a) / 2);
+      $ofYr = round($srcH - $a);
+      $srcH = $a;
+      if ($cropType == 'top') {
+        $cropType = 'left';
+      }
+    } else {
+      $a    = $srcH * $kd;
+      $ofX  = round(($srcW - $a) / 2);
+      $ofXr = round($srcW - $a);
+      $srcW = $a;
     }
-			
+    if ($cropType == 'height') {
+      $k = $w / $this->info['width'];
+      $hd = round($this->info['height'] * $k);
+      if ($hd < $h) {
+        $this->trueResize($w, $hd);
+        return;
+      }
+      $cropType = 'left';
+    }
+    $imd = imagecreatetruecolor($w, $h);
+    $this->addAlphaChannel($w, $h, $imd);
+    if ($cropType == 'right') {
+      imagecopyresampled($imd, $this->image, 0, 0, $ofXr, $ofYr, $w, $h, $srcW, $srcH);
+    } else if ($cropType == 'left') {
+      imagecopyresampled($imd, $this->image, 0, 0, 0, 0, $w, $h, $srcW, $srcH);
+    } else {
+      imagecopyresampled($imd, $this->image, 0, 0, $ofX, $ofY, $w, $h, $srcW, $srcH);
+    }
+    $this->image = $imd;
+  }
+
+  function trueResize($width, $height){
+    $old = $this->image;
+    $this->image = imagecreatetruecolor ($width, $height);
+    $this->addAlphaChannel($width, $height);
+    imagecopyresampled ($this->image, $old, 0, 0, 0, 0, $width, $height, imagesx($old), imagesy($old));
+  }
+
+  // альфа каналы
+  function addAlphaChannel($width, $height, $im=null) {
+    if ($im == null) $im = $this->image;
+    if ($this->type == "gif" || $this->type == "png") {
+      imagealphablending($im, false);
+      imagesavealpha($im, true);
+      $transparent = imagecolorallocatealpha($im, 255, 255, 255, 127);
+      imagefilledrectangle($im, 0, 0, $width, $height, $transparent);
+    }
+  }
+
+  public function watermark($file, $position = 'bottomright') {
+      $watermark = $this->create($file);
+
+      $watermark_width = imagesx($watermark);
+      $watermark_height = imagesy($watermark);
+
+      switch($position) {
+          case 'topleft':
+              $watermark_pos_x = 0;
+              $watermark_pos_y = 0;
+              break;
+          case 'topright':
+              $watermark_pos_x = $this->info['width'] - $watermark_width;
+              $watermark_pos_y = 0;
+              break;
+          case 'bottomleft':
+              $watermark_pos_x = 0;
+              $watermark_pos_y = $this->info['height'] - $watermark_height;
+              break;
+          case 'bottomright':
+              $watermark_pos_x = $this->info['width'] - $watermark_width;
+              $watermark_pos_y = $this->info['height'] - $watermark_height;
+              break;
+      }
+
+      imagecopy($this->image, $watermark, $watermark_pos_x, $watermark_pos_y, 0, 0, 120, 40);
+
+      imagedestroy($watermark);
+  }
+
+//    public function crop($top_x, $top_y, $bottom_x, $bottom_y) {
+//        $image_old = $this->image;
+//        $this->image = imagecreatetruecolor($bottom_x - $top_x, $bottom_y - $top_y);
+//
+//        imagecopy($this->image, $image_old, 0, 0, $top_x, $top_y, $this->info['width'], $this->info['height']);
+//        imagedestroy($image_old);
+//
+//        $this->info['width'] = $bottom_x - $top_x;
+//        $this->info['height'] = $bottom_y - $top_y;
+//    }
+
+
+  public function rotate($degree, $color = 'FFFFFF') {
+  $rgb = $this->html2rgb($color);
+
+      $this->image = imagerotate($this->image, $degree, imagecolorallocate($this->image, $rgb[0], $rgb[1], $rgb[2]));
+
+  $this->info['width'] = imagesx($this->image);
+  $this->info['height'] = imagesy($this->image);
+  }
+
+  private function filter($filter) {
+      imagefilter($this->image, $filter);
+  }
+
+  private function text($text, $x = 0, $y = 0, $size = 5, $color = '000000') {
+  $rgb = $this->html2rgb($color);
+
+  imagestring($this->image, $size, $x, $y, $text, imagecolorallocate($this->image, $rgb[0], $rgb[1], $rgb[2]));
+  }
+
+  private function merge($file, $x = 0, $y = 0, $opacity = 100) {
+      $merge = $this->create($file);
+
+      $merge_width = imagesx($image);
+      $merge_height = imagesy($image);
+
+      imagecopymerge($this->image, $merge, $x, $y, 0, 0, $merge_width, $merge_height, $opacity);
+  }
+
 	private function html2rgb($color) {
 		if ($color[0] == '#') {
 			$color = substr($color, 1);
 		}
-		
+
 		if (strlen($color) == 6) {
-			list($r, $g, $b) = array($color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5]);   
+			list($r, $g, $b) = array($color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5]);
 		} elseif (strlen($color) == 3) {
-			list($r, $g, $b) = array($color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2]);    
+			list($r, $g, $b) = array($color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2]);
 		} else {
 			return false;
 		}
-		
-		$r = hexdec($r); 
-		$g = hexdec($g); 
-		$b = hexdec($b);    
-		
+
+		$r = hexdec($r);
+		$g = hexdec($g);
+		$b = hexdec($b);
+
 		return array($r, $g, $b);
-	}	
+	}
 }
 ?>

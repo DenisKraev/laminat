@@ -156,3 +156,5 @@ catalog\controller\module\coin_slider.php
 catalog\language\russian\module\coin_slider.php
 catalog\model\design\coin_slider.php
 catalog\view\theme\default\template\module\coin_slider.tpl
+system\library\image.php
+catalog\model\tool\image.php

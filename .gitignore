@@ -6,6 +6,8 @@ system/cache/*
 
 vqmod/vqcache/*
 
+# image/cache/*
+
 # Config and Htaccess Files
 # /upload/.htaccess
 # /upload/config.php
