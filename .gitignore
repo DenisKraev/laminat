@@ -1,11 +1,15 @@
-# Config and Htaccess Files
-# /upload/.htaccess
-# /upload/config.php
-# /upload/admin/config.php
+.idea/*
 
 # System Cache Files
 system/cache/*
 !system/cache/index.html
+
+vqmod/vqcache/*
+
+# Config and Htaccess Files
+# /upload/.htaccess
+# /upload/config.php
+# /upload/admin/config.php
 
 # Image File
 # !/upload/image/no_image.jpg
@@ -48,4 +52,3 @@ system/cache/*
 # /tests/phpunit/vendor/*
 # /tests/phpunit/composer.lock
 
-.idea/*
