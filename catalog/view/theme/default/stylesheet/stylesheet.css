@@ -64,12 +64,12 @@ label {
 	cursor: pointer;
 }
 /* layout */
-#container {
-	width: 980px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
-}
+/*#container {*/
+	/*width: 980px;*/
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
+	/*text-align: left;*/
+/*}*/
 #column-left {
 	float: left;
 	width: 180px;

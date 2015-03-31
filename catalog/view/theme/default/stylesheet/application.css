@@ -11,24 +11,12 @@ html {
 
 body {
   height: 100%;
-  font-family: Arial, sans-serif;
   font-size: 14px;
 }
 
 @font-face {
-  font-family: "OpenSans-regular-wf";
-  src: url("/fonts/opensans-regular.ttf");
-}
-@font-face {
-  font-family: "OpenSans-bold-wf";
-  src: url("/fonts/opensans-bold.ttf");
-}
-@font-face {
-  font-family: "MyriadPro-regular-wf";
-  src: url("/fonts/myriadpro-regular.eot");
-  src: url("/fonts/myriadpro-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/myriadpro-regular.woff") format("woff"), url("/fonts/myriadpro-regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
+  font-family: "OpenSans-ExtraBold-wf";
+  src: url("/fonts/opensans-extrabold.ttf");
 }
 #wrapper {
   min-height: 100%;
@@ -80,17 +68,17 @@ input:focus, textarea:focus, button:focus, select:focus, a:focus {
   padding-top: 30px;
 }
 
-/*Адаптивность на основе bootstrap */
-@media (min-width: 1200px) {
-  .container {
-    width: 970px;
-  }
+.site-content {
+  width: 980px;
+  margin: auto;
+  *zoom: 1;
 }
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
+.site-content:after {
+  content: "";
+  display: table;
+  clear: both;
 }
+
 .slider-hidden {
   visibility: hidden;
 }
@@ -273,55 +261,13 @@ a.title-style:hover {
 }
 
 /* шапка */
-.header .bottom {
-  padding: 20px 0px;
-}
-.header .bottom .logo {
+#header .logo {
   float: left;
 }
-.header .bottom .logo img {
-  max-width: 100%;
-}
-.header .bottom .header-contact {
-  float: right;
-  padding: 13px 0px;
-}
-.header .bottom .header-contact .phone {
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  font-size: 19px;
-  color: #845d45;
-  line-height: 27px;
-  padding-left: 30px;
-  background: url("/images/app/ico-phone-brown-27x27.png") 0px 50% no-repeat;
-}
 
-.header .bottom .soc-btns, #footer .soc-btns {
-  margin-left: 55px;
-}
-.header .bottom .soc-btns a, #footer .soc-btns a {
-  display: inline-block;
-  width: 27px;
-  height: 27px;
-  margin-left: 5px;
-}
-.header .bottom .soc-btns .fb-btn, #footer .soc-btns .fb-btn {
-  background: url("/images/app/ico-fb-brown-sprite-27x27.png") 0px 0px no-repeat;
-}
-.header .bottom .soc-btns .fb-btn:hover, #footer .soc-btns .fb-btn:hover {
-  background: url("/images/app/ico-fb-brown-sprite-27x27.png") -27px 0px no-repeat;
-}
-.header .bottom .soc-btns .skype-btn, #footer .soc-btns .skype-btn {
-  background: url("/images/app/ico-skype-brown-sprite-27x27.png") 0px 0px no-repeat;
-}
-.header .bottom .soc-btns .skype-btn:hover, #footer .soc-btns .skype-btn:hover {
-  background: url("/images/app/ico-skype-brown-sprite-27x27.png") -27px 0px no-repeat;
-}
-.header .bottom .soc-btns .gplus-btn, #footer .soc-btns .gplus-btn {
-  background: url("/images/app/ico-gplus-brown-sprite-27x27.png") 0px 0px no-repeat;
-}
-.header .bottom .soc-btns .gplus-btn:hover, #footer .soc-btns .gplus-btn:hover {
-  background: url("/images/app/ico-gplus-brown-sprite-27x27.png") -27px 0px no-repeat;
+/* слайдер */
+.box-slider .slide {
+  width: 100%;
 }
 
 /* подвал */

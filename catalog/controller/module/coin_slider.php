@@ -10,8 +10,9 @@ class ControllerModuleCoinSlider extends Controller
 		$this->load->model('design/coin_slider');
 		$this->load->model('tool/image');
 
-		$this->document->addScript('catalog/view/javascript/jquery/coin_slider/coin-slider.min.js');
-		$this->document->addStyle('catalog/view/javascript/jquery/coin_slider/coin-slider-styles.css');
+    $this->document->addScript('catalog/view/javascript/lib/jquery.cycle2.js');
+		//$this->document->addScript('catalog/view/javascript/jquery/coin_slider/coin-slider.min.js');
+		//$this->document->addStyle('catalog/view/javascript/jquery/coin_slider/coin-slider-styles.css');
 
 		if (empty($setting)) {
 			return;
