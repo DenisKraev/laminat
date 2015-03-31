@@ -6,7 +6,7 @@ require 'sass-globbing'
 http_path = "/"
 css_dir = "catalog/view/theme/default/stylesheet"
 sass_dir = "catalog/view/theme/default/sass"
-# images_dir = "images"
+images_dir = "catalog/view/theme/default/image"
 # javascripts_dir = "javascripts"
 
 # You can select your preferred output style here (can be overridden via the command line):

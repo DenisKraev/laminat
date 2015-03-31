@@ -27,15 +27,15 @@ $(document).ready(function() {
 	});
 	
 	/* Ajax Cart */
-	$('#cart > .heading a').live('click', function() {
-		$('#cart').addClass('active');
-		
-		$('#cart').load('index.php?route=module/cart #cart > *');
-		
-		$('#cart').live('mouseleave', function() {
-			$(this).removeClass('active');
-		});
-	});
+//	$('#cart > .heading a').live('click', function() {
+//		$('#cart').addClass('active');
+//
+//		$('#cart').load('index.php?route=module/cart #cart > *');
+//
+//		$('#cart').live('mouseleave', function() {
+//			$(this).removeClass('active');
+//		});
+//	});
 	
 	/* Mega Menu */
 	$('#menu ul > li > a + div').each(function(index, element) {
@@ -130,9 +130,9 @@ function addToCart(product_id, quantity) {
 				
 				$('.success').fadeIn('slow');
 				
-				$('#cart-total').html(json['total']);
+				$('#cart-total .count').html(json['count_cart']);
 				
-				$('html, body').animate({ scrollTop: 0 }, 'slow'); 
+				//$('html, body').animate({ scrollTop: 0 }, 'slow');
 			}	
 		}
 	});

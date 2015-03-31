@@ -1,4 +1,68 @@
 /* шапка
 #header
-  .logo
+  padding-top: 10px
+  .logo, .header-contacts, .cart-flash
     float: left
+  #search
+    float: right
+  .logo
+    text-decoration: none
+    &:hover
+      opacity: 0.9
+    img
+      margin-bottom: 5px
+    span
+      display: block
+      color: #060606
+      font-family: Verdana, sans-serif
+      font-style: italic
+      font-size: 12px
+      text-decoration: none
+      text-transform: lowercase
+.header-contacts
+  font-family: Arial
+  margin-top: 5px
+  margin-left: 70px
+  .phone
+    font-size: 22px
+    font-weight: bold
+    color: #444444
+  .wrap-callback
+    font-size: 12px
+    line-height: 25px
+    padding-right: 25px
+    background: image-url('app/ico-phone-orange-21x21.png') 100% 50% no-repeat
+    span
+      margin-right: 5px
+.cart-flash
+  padding-left: 32px
+  line-height: 25px
+  margin-top: 18px
+  margin-left: 60px
+  background: image-url('app/ico-cart-orange-23x23.png') 0px 50% no-repeat
+#search
+  margin-top: 11px
+  .form-search-style
+    font-family: Arial,sans-serif
+    font-size: 13px
+    color: #444444
+    width: 150px
+    padding: 12px
+    padding-right: 35px
+    border-radius: 20px
+    border: 1px solid #e8e8e8
+    +box-shadow(inset 1px 1px 2px 0px #e8e8e8)
+    +placeholder
+      font-family: Arial,sans-serif
+      font-size: 13px
+      color: #444444
+  .button-search
+    width: 41px
+    height: 41px
+    display: inline-block
+    vertical-align: middle
+    margin-left: -47px
+    background: image-url('app/ico-loupe-gray-12x13.png') 50% 50% no-repeat
+    &:hover
+      cursor: pointer
+      opacity: 0.9

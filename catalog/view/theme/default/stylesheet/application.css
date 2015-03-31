@@ -84,6 +84,15 @@ input:focus, textarea:focus, button:focus, select:focus, a:focus {
 }
 
 /* стандартные элементы */
+/* Ссылки */
+.link-style {
+  color: #e77817;
+  text-decoration: underline;
+}
+.link-style:hover {
+  text-decoration: none;
+}
+
 /* Заголовки */
 .title-style {
   margin: 0px;
@@ -261,8 +270,109 @@ a.title-style:hover {
 }
 
 /* шапка */
-#header .logo {
+#header {
+  padding-top: 10px;
+}
+#header .logo, #header .header-contacts, #header .cart-flash {
   float: left;
+}
+#header #search {
+  float: right;
+}
+#header .logo {
+  text-decoration: none;
+}
+#header .logo:hover {
+  opacity: 0.9;
+}
+#header .logo img {
+  margin-bottom: 5px;
+}
+#header .logo span {
+  display: block;
+  color: #060606;
+  font-family: Verdana, sans-serif;
+  font-style: italic;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+.header-contacts {
+  font-family: Arial;
+  margin-top: 5px;
+  margin-left: 70px;
+}
+.header-contacts .phone {
+  font-size: 22px;
+  font-weight: bold;
+  color: #444444;
+}
+.header-contacts .wrap-callback {
+  font-size: 12px;
+  line-height: 25px;
+  padding-right: 25px;
+  background: url('/catalog/view/theme/default/image/app/ico-phone-orange-21x21.png?1427787060') 100% 50% no-repeat;
+}
+.header-contacts .wrap-callback span {
+  margin-right: 5px;
+}
+
+.cart-flash {
+  padding-left: 32px;
+  line-height: 25px;
+  margin-top: 18px;
+  margin-left: 60px;
+  background: url('/catalog/view/theme/default/image/app/ico-cart-orange-23x23.png?1427790207') 0px 50% no-repeat;
+}
+
+#search {
+  margin-top: 11px;
+}
+#search .form-search-style {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #444444;
+  width: 150px;
+  padding: 12px;
+  padding-right: 35px;
+  border-radius: 20px;
+  border: 1px solid #e8e8e8;
+  -moz-box-shadow: inset 1px 1px 2px 0px #e8e8e8;
+  -webkit-box-shadow: inset 1px 1px 2px 0px #e8e8e8;
+  box-shadow: inset 1px 1px 2px 0px #e8e8e8;
+}
+#search .form-search-style::-webkit-input-placeholder {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #444444;
+}
+#search .form-search-style:-moz-placeholder {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #444444;
+}
+#search .form-search-style:-ms-input-placeholder {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #444444;
+}
+#search .form-search-style.placeholder {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #444444;
+}
+#search .button-search {
+  width: 41px;
+  height: 41px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -47px;
+  background: url('/catalog/view/theme/default/image/app/ico-loupe-gray-12x13.png?1427790843') 50% 50% no-repeat;
+}
+#search .button-search:hover {
+  cursor: pointer;
+  opacity: 0.9;
 }
 
 /* слайдер */

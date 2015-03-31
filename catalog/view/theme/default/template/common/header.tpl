@@ -35,7 +35,6 @@
 
 <!--<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />-->
 
-
 <?php foreach ($styles as $style) { ?>
   <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
@@ -79,20 +78,27 @@
 
 </head>
 <body>
+<div id="notification"></div>
 <div id="container">
 <div id="header" class="site-content">
 
-  <a href="<?php echo $home; ?>" class="logo"><img src="/catalog/view/theme/default/image/app/logo.png" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a>
+  <a href="<?php echo $home; ?>" class="logo">
+      <img src="/catalog/view/theme/default/image/app/logo.png" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" />
+      <span>Интернет-магазин напольных покрытий</span>
+  </a>
 
   <div class="header-contacts">
-      <a href="#" id="callbackphone-link" rel="nofollow"><?php echo $this->config->get('callbackphone_link_title'); ?></a>
+    <div class="phone">8-922-925-5984</div>
+    <div class="wrap-callback">
+      <span>Заказать</span><a href="#" id="callbackphone-link" class="link-style"><?php echo $this->config->get('callbackphone_link_title'); ?></a>
+    </div>
   </div>
 
   <?php echo $cart; ?>
 
   <div id="search">
+    <input class="form-search-style" type="text" name="search" placeholder="<?php echo $text_search; ?>" value="<?php echo $search; ?>" />
     <div class="button-search"></div>
-    <input type="text" name="search" placeholder="<?php echo $text_search; ?>" value="<?php echo $search; ?>" />
   </div>
 
 </div>
@@ -127,4 +133,3 @@
 <!--  </div>-->
 <?php //} ?>
 
-<div id="notification"></div>
