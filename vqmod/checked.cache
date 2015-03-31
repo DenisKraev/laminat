@@ -191,3 +191,8 @@ admin\view\template\localisation\currency_list.tpl
 admin\view\template\localisation\currency_form.tpl
 catalog\controller\checkout\cart.php
 catalog\language\russian\checkout\cart.php
+admin\language\russian\module\callbackphone.php
+admin\view\template\module\callbackphone.tpl
+catalog\controller\module\callbackphone.php
+catalog\language\russian\module\callbackphone.php
+catalog\view\theme\default\template\module\callbackphone.tpl

@@ -34,17 +34,29 @@
 <?php } ?>
 
 <!--<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />-->
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/application.css" />
+
 
 <?php foreach ($styles as $style) { ?>
   <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
+
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/callbackphone/callbackphone.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/callbackphone/jquery-ui-timepicker-addon.css" />
+
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/application.css" />
 
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" />
 <script type="text/javascript" src="catalog/view/javascript/lib/jquery.placeholder.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/common.js"></script>
+
+
+<script type="text/javascript" src="catalog/view/javascript/callbackphone/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/callbackphone/jquery-ui-timepicker-ru.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/callbackphone/simplemodal.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/callbackphone/mask.js"></script>
+
 <script type="text/javascript" src="catalog/view/javascript/app.js"></script>
 
 <?php foreach ($scripts as $script) { ?>
@@ -72,7 +84,9 @@
 
   <a href="<?php echo $home; ?>" class="logo"><img src="/catalog/view/theme/default/image/app/logo.png" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a>
 
-  <div class="header-contacts"></div>
+  <div class="header-contacts">
+      <a href="#" id="callbackphone-link" rel="nofollow"><?php echo $this->config->get('callbackphone_link_title'); ?></a>
+  </div>
 
   <?php echo $cart; ?>
 
