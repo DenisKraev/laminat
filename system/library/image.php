@@ -126,7 +126,18 @@ class Image {
       $cropType = 'left';
     }
     $imd = imagecreatetruecolor($w, $h);
-    $this->addAlphaChannel($w, $h, $imd);
+
+    if (isset($this->info['mime']) && $this->info['mime'] == 'image/png') {
+      imagealphablending($imd, false);
+      imagesavealpha($imd, true);
+      $background = imagecolorallocatealpha($imd, 255, 255, 255, 127);
+      imagecolortransparent($imd, $background);
+    } else {
+      $background = imagecolorallocate($imd, 255, 255, 255);
+    }
+
+    imagefilledrectangle($imd, 0, 0, $w, $w, $background);
+
     if ($cropType == 'right') {
       imagecopyresampled($imd, $this->image, 0, 0, $ofXr, $ofYr, $w, $h, $srcW, $srcH);
     } else if ($cropType == 'left') {
@@ -140,19 +151,19 @@ class Image {
   function trueResize($width, $height){
     $old = $this->image;
     $this->image = imagecreatetruecolor ($width, $height);
-    $this->addAlphaChannel($width, $height);
-    imagecopyresampled ($this->image, $old, 0, 0, 0, 0, $width, $height, imagesx($old), imagesy($old));
-  }
 
-  // альфа каналы
-  function addAlphaChannel($width, $height, $im=null) {
-    if ($im == null) $im = $this->image;
-    if ($this->type == "gif" || $this->type == "png") {
-      imagealphablending($im, false);
-      imagesavealpha($im, true);
-      $transparent = imagecolorallocatealpha($im, 255, 255, 255, 127);
-      imagefilledrectangle($im, 0, 0, $width, $height, $transparent);
+    if (isset($this->info['mime']) && $this->info['mime'] == 'image/png') {
+      imagealphablending($this->image, false);
+      imagesavealpha($this->image, true);
+      $background = imagecolorallocatealpha($this->image, 255, 255, 255, 127);
+      imagecolortransparent($this->image, $background);
+    } else {
+      $background = imagecolorallocate($this->image, 255, 255, 255);
     }
+
+    imagefilledrectangle($this->image, 0, 0, $width, $height, $background);
+
+    imagecopyresampled ($this->image, $old, 0, 0, 0, 0, $width, $height, imagesx($old), imagesy($old));
   }
 
   public function watermark($file, $position = 'bottomright') {
@@ -185,16 +196,6 @@ class Image {
       imagedestroy($watermark);
   }
 
-//    public function crop($top_x, $top_y, $bottom_x, $bottom_y) {
-//        $image_old = $this->image;
-//        $this->image = imagecreatetruecolor($bottom_x - $top_x, $bottom_y - $top_y);
-//
-//        imagecopy($this->image, $image_old, 0, 0, $top_x, $top_y, $this->info['width'], $this->info['height']);
-//        imagedestroy($image_old);
-//
-//        $this->info['width'] = $bottom_x - $top_x;
-//        $this->info['height'] = $bottom_y - $top_y;
-//    }
 
 
   public function rotate($degree, $color = 'FFFFFF') {

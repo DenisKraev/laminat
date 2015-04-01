@@ -136,8 +136,8 @@ class ControllerCommonFileManager extends Controller {
 						'YB'
 					);
 		
-					while (($size / 1024) > 1) {
-						$size = $size / 1024;
+					while (($size / 1980) > 1) {
+						$size = $size / 1980;
 						$i++;
 					}
 						
@@ -438,7 +438,7 @@ class ControllerCommonFileManager extends Controller {
 					$json['error'] = $this->language->get('error_directory');
 				}
 				
-				if ($this->request->files['image']['size'] > 300000) {
+				if ($this->request->files['image']['size'] > 1024000) {
 					$json['error'] = $this->language->get('error_file_size');
 				}
 				

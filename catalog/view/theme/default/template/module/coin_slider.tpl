@@ -29,10 +29,7 @@
     <?php foreach ($sliders as $slider) { ?>
       <div class="slide">
         <div class="site-content">
-          <h2>Террасные покрытия</h2>
-          <p>Главной особенностью материала является технология производства. ДПК представляет собой смесь дерева и пластмассы, которая одновременно обладает качествами каждого из двух основных компонентов.</p>
-          <a class="link-cat" href="#">Каталог</a><br>
-          <a class="link-price" href="#">Узнать цены</a>
+          <img src="<?php echo $slider['image']; ?>" alt="<?php echo $slider['title']; ?>">
         </div>
       </div>
     <?php } ?>
