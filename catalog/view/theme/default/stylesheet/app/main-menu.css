@@ -1,39 +1,27 @@
 /*
 Error: Undefined mixin 'box-shadow'.
-        on line 55 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/header.sass, in `box-shadow'
-        from line 55 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/header.sass
+        on line 5 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/main-menu.sass, in `box-shadow'
+        from line 5 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/main-menu.sass
 
-50:     width: 150px
-51:     padding: 12px
-52:     padding-right: 35px
-53:     border-radius: 20px
-54:     border: 1px solid #e8e8e8
-55:     +box-shadow(inset 1px 1px 2px 0px #e8e8e8)
-56:     +placeholder
-57:       font-family: Arial,sans-serif
-58:       font-size: 13px
-59:       color: #444444
-60:   .button-search
+1: /* главное меню
+2: .main-menu
+3:   font-family: Calibri, sans-serif
+4:   border-top: 1px solid #e3e3e3
+5:   +box-shadow(0px 3px 3px rgba(15, 15, 15, 0.15))
+6:   ul
+7:     list-style: none
+8:     padding: 0px
+9:     display: table
+10:   li
 
 Backtrace:
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/header.sass:55:in `box-shadow'
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/header.sass:55
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/main-menu.sass:5:in `box-shadow'
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/main-menu.sass:5
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `with_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
@@ -84,4 +72,4 @@ C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/ada
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'box-shadow'.\A         on line 55 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/header.sass, in `box-shadow'\A         from line 55 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/header.sass\A \A 50:     width: 150px\A 51:     padding: 12px\A 52:     padding-right: 35px\A 53:     border-radius: 20px\A 54:     border: 1px solid #e8e8e8\A 55:     +box-shadow(inset 1px 1px 2px 0px #e8e8e8)\A 56:     +placeholder\A 57:       font-family: Arial,sans-serif\A 58:       font-size: 13px\A 59:       color: #444444\A 60:   .button-search"; }
+  content: "Error: Undefined mixin 'box-shadow'.\A         on line 5 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/main-menu.sass, in `box-shadow'\A         from line 5 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/main-menu.sass\A \A 1: /* главное меню\A 2: .main-menu\A 3:   font-family: Calibri, sans-serif\A 4:   border-top: 1px solid #e3e3e3\A 5:   +box-shadow(0px 3px 3px rgba(15, 15, 15, 0.15))\A 6:   ul\A 7:     list-style: none\A 8:     padding: 0px\A 9:     display: table\A 10:   li"; }

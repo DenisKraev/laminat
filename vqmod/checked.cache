@@ -220,3 +220,13 @@ admin\view\template\catalog\information_form.tpl
 catalog\controller\information\information.php
 catalog\language\russian\information\information.php
 catalog\view\theme\default\template\information\information.tpl
+admin\controller\module\deadcow_seo.php
+admin\model\module\deadcow_seo.php
+admin\view\template\module\deadcow_seo.tpl
+catalog\language\russian\product\category.php
+catalog\view\theme\default\template\product\category.tpl
+admin\controller\catalog\category.php
+admin\language\russian\catalog\category.php
+admin\view\template\catalog\category_list.tpl
+admin\model\catalog\filter.php
+admin\view\template\catalog\category_form.tpl

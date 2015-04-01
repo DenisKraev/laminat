@@ -271,7 +271,8 @@ a.title-style:hover {
 
 /* шапка */
 #header {
-  padding-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 #header .logo, #header .header-contacts, #header .cart-flash {
   float: left;
@@ -373,6 +374,40 @@ a.title-style:hover {
 #search .button-search:hover {
   cursor: pointer;
   opacity: 0.9;
+}
+
+/* главное меню */
+.main-menu {
+  font-family: Calibri, sans-serif;
+  border-top: 1px solid #e3e3e3;
+  -moz-box-shadow: 0px 3px 3px rgba(15, 15, 15, 0.15);
+  -webkit-box-shadow: 0px 3px 3px rgba(15, 15, 15, 0.15);
+  box-shadow: 0px 3px 3px rgba(15, 15, 15, 0.15);
+}
+.main-menu ul {
+  list-style: none;
+  padding: 0px;
+  display: table;
+}
+.main-menu li {
+  display: table-cell;
+  text-align: center;
+}
+.main-menu li:first-child a {
+  border-left: 1px solid #e3e3e3;
+}
+.main-menu a {
+  display: block;
+  font-weight: bold;
+  color: #817f7f;
+  font-size: 18px;
+  padding: 15px 17px;
+  text-decoration: none;
+  border-right: 1px solid #e3e3e3;
+}
+.main-menu a:hover, .main-menu a.active {
+  background-color: #fbfbfb;
+  color: #444444;
 }
 
 /* слайдер */

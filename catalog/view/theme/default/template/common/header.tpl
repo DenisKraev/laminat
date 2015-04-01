@@ -103,39 +103,13 @@
 
 </div>
 
-    <ul>
+<div class="main-menu">
+    <ul class="site-content">
+      <?php foreach ($categories as $category) { ?>
+        <li><a href="<?php echo $category['href']; ?>" class="<?php echo $category['active'] ? 'active' : ''; ?>"><?php echo $category['name']; ?></a></li>
+      <?php } ?>
       <?php foreach ($informations as $information) { ?>
-        <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
+        <li><a href="<?php echo $information['href']; ?>" class="<?php echo $information['active'] ? 'active' : ''; ?>"><?php echo $information['title']; ?></a></li>
       <?php } ?>
     </ul>
-
-<?php //if ($categories) { ?>
-<!--  <div id="menu">-->
-<!--    <ul>-->
-<!--      --><?php //foreach ($categories as $category) { ?>
-<!--      <li>--><?php //if ($category['active']) { ?>
-<!--        <a href="--><?php //echo $category['href']; ?><!--" class="active">--><?php //echo $category['name']; ?><!--</a>-->
-<!--        --><?php //} else { ?>
-<!--        <a href="--><?php //echo $category['href']; ?><!--">--><?php //echo $category['name']; ?><!--</a>-->
-<!--        --><?php //} ?>
-<!---->
-<!--        --><?php //if ($category['children']) { ?>
-<!--        <div>-->
-<!--          --><?php //for ($i = 0; $i < count($category['children']);) { ?>
-<!--          <ul>-->
-<!--            --><?php //$j = $i + ceil(count($category['children']) / $category['column']); ?>
-<!--            --><?php //for (; $i < $j; $i++) { ?>
-<!--            --><?php //if (isset($category['children'][$i])) { ?>
-<!--            <li><a href="--><?php //echo $category['children'][$i]['href']; ?><!--">--><?php //echo $category['children'][$i]['name']; ?><!--</a></li>-->
-<!--            --><?php //} ?>
-<!--            --><?php //} ?>
-<!--          </ul>-->
-<!--          --><?php //} ?>
-<!--        </div>-->
-<!--        --><?php //} ?>
-<!--      </li>-->
-<!--      --><?php //} ?>
-<!--    </ul>-->
-<!--  </div>-->
-<?php //} ?>
-
+</div>

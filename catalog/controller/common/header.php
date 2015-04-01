@@ -108,32 +108,8 @@ class ControllerCommonHeader extends Controller {
 		
 		foreach ($categories as $category) {
 			if ($category['top']) {
-				// Level 2
-				$children_data = array();
-				
-				$children = $this->model_catalog_category->getCategories($category['category_id']);
-				
-				foreach ($children as $child) {
-					//Будем вычислять кол-во товаров в категориях только если это кол-во надо показывать
-					if ($this->config->get('config_product_count')) {
-						$data = array(
-							'filter_category_id'  => $child['category_id'],
-							'filter_sub_category' => true
-						);
-						
-						$product_total = $this->model_catalog_product->getTotalProducts($data);
-					}
-									
-					$children_data[] = array(
-						'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $product_total . ')' : ''),
-						'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])	
-					);						
-				}
-				
-				// Level 1
 				$this->data['categories'][] = array(
 					'name'     => $category['name'],
-					'children' => $children_data,
 					'active'   => in_array($category['category_id'], $parts),
 					'column'   => $category['column'] ? $category['column'] : 1,
 					'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])
@@ -145,15 +121,20 @@ class ControllerCommonHeader extends Controller {
 
     $this->data['informations'] = array();
 
-    print_r($this->model_catalog_information->getInformations());
-    print_r($_GET);
-
     foreach ($this->model_catalog_information->getInformations() as $result) {
       if ($result['main_menu']) {
+        $active = null;
+        if(isset($this->request->get['information_id'])){
+          $parts2 = explode('_', (string)$this->request->get['information_id']);
+          $active = in_array($result['information_id'], $parts2);
+        }
+
         $this->data['informations'][] = array(
           'title' => $result['title'],
+          'active' => $active,
           'href'  => $this->url->link('information/information', 'information_id=' . $result['information_id'])
         );
+
       }
     }
 		
