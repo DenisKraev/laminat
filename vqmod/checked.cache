@@ -213,3 +213,10 @@ catalog\model\localisation\zone.php
 catalog\controller\product\search.php
 catalog\language\russian\product\search.php
 catalog\view\theme\default\template\product\search.tpl
+admin\controller\catalog\information.php
+admin\language\russian\catalog\information.php
+admin\view\template\catalog\information_list.tpl
+admin\view\template\catalog\information_form.tpl
+catalog\controller\information\information.php
+catalog\language\russian\information\information.php
+catalog\view\theme\default\template\information\information.tpl

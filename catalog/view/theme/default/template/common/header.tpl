@@ -103,6 +103,12 @@
 
 </div>
 
+    <ul>
+      <?php foreach ($informations as $information) { ?>
+        <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
+      <?php } ?>
+    </ul>
+
 <?php //if ($categories) { ?>
 <!--  <div id="menu">-->
 <!--    <ul>-->
