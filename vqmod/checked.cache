@@ -240,3 +240,7 @@ admin\view\template\catalog\product_form.tpl
 admin\language\russian\module\html_block.php
 admin\model\module\html_block.php
 admin\view\template\module\html_block.tpl
+catalog\controller\module\html_block.php
+catalog\language\russian\module\html_block.php
+catalog\view\theme\default\template\module\html_block_preview.tpl
+catalog\view\theme\default\template\module\html_block.tpl

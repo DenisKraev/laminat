@@ -1,0 +1,52 @@
+/* блок с предложениями менеджерами на главной
+.box-offer
+  float: left
+  width: 730px
+.box-manager
+  float: right
+  width: 235px
+.offer-list
+  list-style: none
+  margin: 0px
+  padding: 0px
+  .item
+    +font-family-2
+    color: #444444
+    font-size: 16px
+    line-height: 22px
+    padding: 23px 20px 23px 45px
+    border-bottom: 1px solid #e3e3e3
+    background: image-url('app/ico-check-orange-29x27.png') 0px 50% no-repeat
+    span
+      text-transform: uppercase
+      color: #eb8c2a
+.box-manager
+  .manager-1, .manager-2
+    position: relative
+  .manager-1 .info
+    background: #fcd634
+    color: #333333
+  .manager-2 .info
+    background: #eb8d2b
+    color: #fff
+  .info
+    position: absolute
+    bottom: 13px
+    right: 0px
+    width: 120px
+    height: 50px
+    padding-top: 5px
+    padding-left: 7px
+    background: #FFFFCB
+    &:before
+      position: absolute
+      content: ''
+      width: 100%
+      height: 8px
+      top: 100%
+      left: 0px
+      background: image-url('app/shadow-manager-info.png') no-repeat
+  .name
+    +font-family-2(bold)
+  .phone
+    +font-family-2

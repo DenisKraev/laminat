@@ -10,20 +10,18 @@
 /* Заголовки
 .title-style
   margin: 0px
-  font-family: Calibri, sans-serif
-  font-weight: bold
-  font-size: 18px
+  +font-family-2(bold)
+  font-size: 20px
   line-height: 22px
-  text-transform: uppercase
   margin-bottom: 35px
-  color: #000
+  color: #333333
   &.center
     text-align: center
-  &.in-box
-    padding: 25px
-    background: #fafafa
-a.title-style:hover
-  color: lighten(#000, 10%)
+a.title-style
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+    color: lighten(#000, 10%)
 
 /* Текст
 .text-style

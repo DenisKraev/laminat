@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'inline-block'.
-        on line 40 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/slider.sass, in `inline-block'
-        from line 40 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/slider.sass
+        on line 41 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/slider.sass, in `inline-block'
+        from line 41 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/slider.sass
 
-35:   .pager
-36:     position: relative
-37:     padding: 8px 0px
-38:     height: 36px
-39:     z-index: 3
-40:     +inline-block(top)
-41:     background: image-url('app/bg-slider-pager-center.png') 0px 0px repeat-x
-42:     span
-43:       overflow: hidden
-44:       text-indent: -9000px
-45:       width: 19px
+36:   .pager
+37:     position: relative
+38:     padding: 8px 0px
+39:     height: 36px
+40:     z-index: 3
+41:     +inline-block(top)
+42:     background: image-url('app/bg-slider-pager-center.png') 0px 0px repeat-x
+43:     span
+44:       overflow: hidden
+45:       text-indent: -9000px
+46:       width: 19px
 
 Backtrace:
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/slider.sass:40:in `inline-block'
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/slider.sass:40
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/slider.sass:41:in `inline-block'
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/slider.sass:41
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
@@ -84,4 +84,4 @@ C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/ada
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'inline-block'.\A         on line 40 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/slider.sass, in `inline-block'\A         from line 40 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/slider.sass\A \A 35:   .pager\A 36:     position: relative\A 37:     padding: 8px 0px\A 38:     height: 36px\A 39:     z-index: 3\A 40:     +inline-block(top)\A 41:     background: image-url('app/bg-slider-pager-center.png') 0px 0px repeat-x\A 42:     span\A 43:       overflow: hidden\A 44:       text-indent: -9000px\A 45:       width: 19px"; }
+  content: "Error: Undefined mixin 'inline-block'.\A         on line 41 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/slider.sass, in `inline-block'\A         from line 41 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/slider.sass\A \A 36:   .pager\A 37:     position: relative\A 38:     padding: 8px 0px\A 39:     height: 36px\A 40:     z-index: 3\A 41:     +inline-block(top)\A 42:     background: image-url('app/bg-slider-pager-center.png') 0px 0px repeat-x\A 43:     span\A 44:       overflow: hidden\A 45:       text-indent: -9000px\A 46:       width: 19px"; }

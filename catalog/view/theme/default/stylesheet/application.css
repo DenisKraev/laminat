@@ -22,6 +22,10 @@ body {
   font-family: "OpenSans-bold-wf";
   src: url("/fonts/opensans-bold.ttf");
 }
+@font-face {
+  font-family: "OpenSans-regular-wf";
+  src: url("/fonts/opensans-regular.ttf");
+}
 #wrapper {
   min-height: 100%;
   height: auto !important;
@@ -101,23 +105,21 @@ input:focus, textarea:focus, button:focus, select:focus, a:focus {
 /* Заголовки */
 .title-style {
   margin: 0px;
-  font-family: Calibri, sans-serif;
-  font-weight: bold;
-  font-size: 18px;
+  font-family: "OpenSans-bold-wf";
+  font-size: 20px;
   line-height: 22px;
-  text-transform: uppercase;
   margin-bottom: 35px;
-  color: #000;
+  color: #333333;
 }
 .title-style.center {
   text-align: center;
 }
-.title-style.in-box {
-  padding: 25px;
-  background: #fafafa;
-}
 
+a.title-style {
+  text-decoration: none;
+}
 a.title-style:hover {
+  text-decoration: underline;
   color: #1a1a1a;
 }
 
@@ -435,6 +437,7 @@ a.title-style:hover {
   position: relative;
   overflow: hidden;
   min-width: 980px;
+  margin-bottom: 30px;
 }
 .box-slider .slider {
   z-index: 1;
@@ -526,6 +529,73 @@ a.title-style:hover {
   left: 7px;
   text-transform: lowercase;
   padding: 10px 35px;
+}
+
+/* блок с предложениями менеджерами на главной */
+.box-offer {
+  float: left;
+  width: 730px;
+}
+
+.box-manager {
+  float: right;
+  width: 235px;
+}
+
+.offer-list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.offer-list .item {
+  font-family: "OpenSans-regular-wf";
+  color: #444444;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 23px 20px 23px 45px;
+  border-bottom: 1px solid #e3e3e3;
+  background: url('/catalog/view/theme/default/image/app/ico-check-orange-29x27.png?1427978257') 0px 50% no-repeat;
+}
+.offer-list .item span {
+  text-transform: uppercase;
+  color: #eb8c2a;
+}
+
+.box-manager .manager-1, .box-manager .manager-2 {
+  position: relative;
+}
+.box-manager .manager-1 .info {
+  background: #fcd634;
+  color: #333333;
+}
+.box-manager .manager-2 .info {
+  background: #eb8d2b;
+  color: #fff;
+}
+.box-manager .info {
+  position: absolute;
+  bottom: 13px;
+  right: 0px;
+  width: 120px;
+  height: 50px;
+  padding-top: 5px;
+  padding-left: 7px;
+  background: #FFFFCB;
+}
+.box-manager .info:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 8px;
+  top: 100%;
+  left: 0px;
+  background: url('/catalog/view/theme/default/image/app/shadow-manager-info.png?1427980005') no-repeat;
+}
+.box-manager .name {
+  font-family: "OpenSans-bold-wf";
+}
+.box-manager .phone {
+  font-family: "OpenSans-regular-wf";
 }
 
 /* подвал */
