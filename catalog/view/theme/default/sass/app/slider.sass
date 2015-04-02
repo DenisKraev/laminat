@@ -1,7 +1,72 @@
 /* слайдер
 .box-slider
+  position: relative
+  overflow: hidden
+  min-width: 980px
+  .slider
+    z-index: 1
   .slide
     width: 100%
     padding: 30px 0px
   .slider-content
     min-height: 373px
+    position: relative
+  .prev, .next
+    position: absolute
+    top: 50%
+    margin-top: -16px
+    width: 35px
+    height: 35px
+    z-index: 3
+    &:hover
+      opacity: 0.9
+      cursor: pointer
+  .prev
+    left: 50%
+    margin-left: -570px
+    background: image-url('app/arrow-white-sprite-35x35.png') 0px 0px no-repeat
+  .next
+    right: 50%
+    margin-right: -570px
+    background: image-url('app/arrow-white-sprite-35x35.png') -35px 0px no-repeat
+  .wrap-pager
+    text-align: center
+    margin-top: -16px
+  .pager
+    position: relative
+    padding: 8px 0px
+    height: 36px
+    z-index: 3
+    +inline-block(top)
+    background: image-url('app/bg-slider-pager-center.png') 0px 0px repeat-x
+    span
+      overflow: hidden
+      text-indent: -9000px
+      width: 19px
+      height: 19px
+      margin-left: 9px
+      +inline-block(top)
+      background: image-url('app/btn-slider-pager-sprite.png') 0px 0px no-repeat
+      &.cycle-pager-active, &:hover
+        cursor: pointer
+        background: image-url('app/btn-slider-pager-sprite.png') -19px 0px no-repeat
+      &:first-child
+        margin-left: 0px
+    &:before, &:after
+      position: absolute
+      content: ''
+      width: 18px
+      top: 0px
+      height: 100%
+    &:before
+      right: 100%
+      background: image-url('app/bg-slider-pager-left.png') 0px 50% no-repeat
+    &:after
+      left: 100%
+      background: image-url('app/bg-slider-pager-right.png') 100% 50% no-repeat
+  .more
+    position: absolute
+    bottom: 40px
+    left: 7px
+    text-transform: lowercase
+    padding: 10px 35px

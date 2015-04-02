@@ -89,20 +89,23 @@ a.title-style:hover
 /* Кнопки
 .btn-style
   font-family: Calibri, sans-serif
-  color: #fff
-  font-size: 17px
   font-weight: bold
-  text-transform: uppercase
-  background: #845d45
-  border-radius: 3px
-  border: none
+  color: #fff
+  font-size: 14px
+  background: #eb8817
+  border-radius: 1px
   cursor: pointer
   +inline-block(top)
+  padding: 5px 10px
   text-decoration: none
-  padding: 10px 40px
+  &.volume
+    +font-family-2('bold')
+    +box-shadow(inset 0px 1px 2px 0px rgba(255, 255, 255, 0.24))
+    +box-shadow(0px 2px 5px 0px rgba(0, 0, 0, 0.50))
+    +background-image(linear-gradient(top, #ed901d 0%, #e56f0d 100%))
   &:hover
-    text-decoration: none
-    background: lighten(#845d45, 10%)
+    opacity: 0.9
+
 
 /* Пагинация
 .pagination
