@@ -592,6 +592,7 @@ class ControllerDesignCoinSlider extends Controller {
 			$this->data['slider_images'][] = array(
 				'coin_slider_image_description' => $slider_image['coin_slider_image_description'],
 				'link'                     => $slider_image['link'],
+				'slide_background_color'                     => $slider_image['slide_background_color'],
 				'image'                    => $image,
 				'thumb'                    => $this->model_tool_image->resize($image, 100, 100),
 				'sort_order'			   => $slider_image['sort_order'],	

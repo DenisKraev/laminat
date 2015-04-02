@@ -160,6 +160,7 @@ span.cke_skin_kama {
               <td class="left"><?php echo $entry_title; ?></td>
               <td class="left"><?php echo $entry_subtitle; ?></td>
               <td class="left"><?php echo $entry_link; ?></td>
+              <td>Цвет фона слайда/td>
               <td class="left"><?php echo $entry_image; ?></td>
               <td class="left"><?php echo $entry_sort_order; ?></td>
               <td></td>
@@ -183,7 +184,10 @@ span.cke_skin_kama {
 				<?php } ?>
 			</td>
               <td class="left"><input type="text" name="coin_slider_image[<?php echo $image_row; ?>][link]" value="<?php echo $slider_image['link']; ?>" /></td>
-              <td class="left"><div class="image"><img src="<?php echo $slider_image['thumb']; ?>" alt="" id="thumb<?php echo $image_row; ?>" />
+
+                <td class="left">#<input type="text" name="coin_slider_image[<?php echo $image_row; ?>][slide_background_color]" value="<?php echo $slider_image['slide_background_color']; ?>" size="6" maxlength="6" /></td>
+
+                <td class="left"><div class="image"><img src="<?php echo $slider_image['thumb']; ?>" alt="" id="thumb<?php echo $image_row; ?>" />
                   <input type="hidden" name="coin_slider_image[<?php echo $image_row; ?>][image]" value="<?php echo $slider_image['image']; ?>" id="image<?php echo $image_row; ?>"  />
                   <br />
                   <a onclick="image_upload('image<?php echo $image_row; ?>', 'thumb<?php echo $image_row; ?>');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb<?php echo $image_row; ?>').attr('src', '<?php echo $no_image; ?>'); $('#image<?php echo $image_row; ?>').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
@@ -236,7 +240,10 @@ function addImage() {
 	html += '</td>';
 
 	html += '<td class="left"><input type="text" name="coin_slider_image[' + image_row + '][link]" value="" /></td>';	
-	html += '<td class="left"><div class="image"><img src="<?php echo $no_image; ?>" alt="" id="thumb' + image_row + '" /><input type="hidden" name="coin_slider_image[' + image_row + '][image]" value="" id="image' + image_row + '" /><br /><a onclick="image_upload(\'image' + image_row + '\', \'thumb' + image_row + '\');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$(\'#thumb' + image_row + '\').attr(\'src\', \'<?php echo $no_image; ?>\'); $(\'#image' + image_row + '\').attr(\'value\', \'\');"><?php echo $text_clear; ?></a></div></td>';
+
+  html += ' <td class="left">#<input type="text" name="coin_slider_image['+ image_row +'][slide_background_color]" value="" size="6" maxlength="6" /></td>';
+
+  html += '<td class="left"><div class="image"><img src="<?php echo $no_image; ?>" alt="" id="thumb' + image_row + '" /><input type="hidden" name="coin_slider_image[' + image_row + '][image]" value="" id="image' + image_row + '" /><br /><a onclick="image_upload(\'image' + image_row + '\', \'thumb' + image_row + '\');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$(\'#thumb' + image_row + '\').attr(\'src\', \'<?php echo $no_image; ?>\'); $(\'#image' + image_row + '\').attr(\'value\', \'\');"><?php echo $text_clear; ?></a></div></td>';
 
 	html += '<td><input type="text" name="coin_slider_image[' + image_row + '][sort_order]" value="" size="2" maxlength="2" /></td>';
 
@@ -248,7 +255,22 @@ function addImage() {
 
 	<?php foreach ($languages as $language) { ?>
 	CKEDITOR.replace('coin_slider_image[' + image_row + '][coin_slider_image_description][<?php echo $language['language_id']; ?>][subtitle]');
+
+
 	<?php } ?>
+
+    $('input[name="text_color"], input[name="coin_slider_image[' + image_row + '][slide_background_color]"]').ColorPicker({
+        onSubmit: function(hsb, hex, rgb, el) {
+            $(el).val(hex);
+            $(el).ColorPickerHide();
+        },
+        onBeforeShow: function () {
+            $(this).ColorPickerSetColor(this.value);
+        }
+    })
+            .bind('keyup', function(){
+                $(this).ColorPickerSetColor(this.value);
+            });
 
 	image_row++;
 }
@@ -318,18 +340,21 @@ $('input[name="opacity"]').keyup(function(){
 <script type="text/javascript" src="/admin/view/javascript/jquery/colorpicker/js/colorpicker.js"></script>
 <script type="text/javascript"><!--
 $(document).ready(function(){
-	$('input[name="text_color"], input[name="background_color"]').ColorPicker({
-		onSubmit: function(hsb, hex, rgb, el) {
-			$(el).val(hex);
-			$(el).ColorPickerHide();
-		},
-		onBeforeShow: function () {
-			$(this).ColorPickerSetColor(this.value);
-		}
-	})
-	.bind('keyup', function(){
-		$(this).ColorPickerSetColor(this.value);
-	});
+<?php for($i=0; $i<$image_row; $i++) { ?>
+    $('input[name="text_color"], input[name="coin_slider_image[<?php echo $i; ?>][slide_background_color]"]').ColorPicker({
+        onSubmit: function(hsb, hex, rgb, el) {
+            $(el).val(hex);
+            $(el).ColorPickerHide();
+        },
+        onBeforeShow: function () {
+            $(this).ColorPickerSetColor(this.value);
+        }
+    })
+            .bind('keyup', function(){
+                $(this).ColorPickerSetColor(this.value);
+            });
+  <?php } ?>
+
 });
 //--></script>
 <?php echo $footer; ?>

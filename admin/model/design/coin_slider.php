@@ -32,7 +32,7 @@ class ModelDesignCoinSlider extends Model {
 		if (isset($data['coin_slider_image'])) {
 			foreach ($data['coin_slider_image'] as $coin_slider_image) {
 				$this->db->query("
-					INSERT INTO " . DB_PREFIX . "coin_slider_image SET coin_slider_id = '" . (int)$coin_slider_id . "', link = '" .  $this->db->escape($coin_slider_image['link']) . "', image = '" .  $this->db->escape($coin_slider_image['image']) . "', sort_order = '" .  (int)$coin_slider_image['sort_order'] . "'");
+					INSERT INTO " . DB_PREFIX . "coin_slider_image SET coin_slider_id = '" . (int)$coin_slider_id . "', slide_background_color = '" .  $this->db->escape($coin_slider_image['slide_background_color']) . "', link = '" .  $this->db->escape($coin_slider_image['link']) . "', image = '" .  $this->db->escape($coin_slider_image['image']) . "', sort_order = '" .  (int)$coin_slider_image['sort_order'] . "'");
 				
 				$coin_slider_image_id = $this->db->getLastId();
 				
@@ -76,7 +76,7 @@ class ModelDesignCoinSlider extends Model {
 			
 		if (isset($data['coin_slider_image'])) {
 			foreach ($data['coin_slider_image'] as $coin_slider_image) {
-				$this->db->query("INSERT INTO " . DB_PREFIX . "coin_slider_image SET coin_slider_id = '" . (int)$coin_slider_id . "', link = '" .  $this->db->escape($coin_slider_image['link']) . "', image = '" .  $this->db->escape($coin_slider_image['image']) . "', sort_order = '" .  (int)$coin_slider_image['sort_order'] . "'");
+				$this->db->query("INSERT INTO " . DB_PREFIX . "coin_slider_image SET coin_slider_id = '" . (int)$coin_slider_id . "', slide_background_color = '" .  $this->db->escape($coin_slider_image['slide_background_color']) . "', link = '" .  $this->db->escape($coin_slider_image['link']) . "', image = '" .  $this->db->escape($coin_slider_image['image']) . "', sort_order = '" .  (int)$coin_slider_image['sort_order'] . "'");
 				
 				$coin_slider_image_id = $this->db->getLastId();
 				
@@ -153,6 +153,7 @@ class ModelDesignCoinSlider extends Model {
 			$coin_slider_image_data[] = array(
 				'coin_slider_image_description' => $coin_slider_image_description_data,
 				'link'                     => $coin_slider_image['link'],
+				'slide_background_color'   => $coin_slider_image['slide_background_color'],
 				'image'                    => $coin_slider_image['image'],
 				'sort_order'               => $coin_slider_image['sort_order'],	
 			);

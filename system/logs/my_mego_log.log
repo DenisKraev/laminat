@@ -83,3 +83,35 @@
 2015-04-02 9:18:32 - PHP Notice:  Undefined variable: image_row in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 12
 2015-04-02 9:18:55 - PHP Notice:  Undefined variable: image_row in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 12
 2015-04-02 9:18:56 - PHP Notice:  Undefined variable: image_row in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 12
+2015-04-02 9:38:06 - PHP Notice:  Undefined variable: slide_background_color in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 188
+2015-04-02 9:38:06 - PHP Notice:  Undefined variable: slide_background_color in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 188
+2015-04-02 9:38:40 - PHP Notice:  Undefined variable: slide_background_color in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 188
+2015-04-02 9:38:40 - PHP Notice:  Undefined variable: slide_background_color in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 188
+2015-04-02 9:42:15 - PHP Notice:  Undefined variable: slide_background_color in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 188
+2015-04-02 9:42:15 - PHP Notice:  Undefined variable: slide_background_color in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 188
+2015-04-02 9:43:19 - PHP Notice:  Undefined variable: slide_background_color in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 188
+2015-04-02 9:43:19 - PHP Notice:  Undefined variable: slide_background_color in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 188
+2015-04-02 9:43:44 - PHP Notice:  Undefined variable: slide_background_color in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 188
+2015-04-02 9:43:44 - PHP Notice:  Undefined variable: slide_background_color in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 188
+2015-04-02 9:56:26 - PHP Notice:  Undefined index: slide_background_color in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 188
+2015-04-02 9:56:26 - PHP Notice:  Undefined index: slide_background_color in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 188
+2015-04-02 9:56:36 - PHP Notice:  Undefined index: slide_background_color in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 79
+2015-04-02 9:56:36 - PHP Notice:  Undefined index: slide_background_color in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 79
+2015-04-02 9:56:36 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 28
+2015-04-02 9:56:36 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 29
+2015-04-02 9:57:54 - PHP Notice:  Undefined index: slide_background_color in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 79
+2015-04-02 9:57:54 - PHP Notice:  Undefined index: slide_background_color in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 79
+2015-04-02 9:57:54 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 28
+2015-04-02 9:57:54 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 29
+2015-04-02 9:58:26 - PHP Notice:  Undefined index: slide_background_color in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 79
+2015-04-02 9:58:26 - PHP Notice:  Undefined index: slide_background_color in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 79
+2015-04-02 9:58:26 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 28
+2015-04-02 9:58:26 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 29
+2015-04-02 9:58:59 - PHP Notice:  Undefined index: slide_background_color in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 79
+2015-04-02 9:58:59 - PHP Notice:  Undefined index: slide_background_color in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 79
+2015-04-02 9:58:59 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 28
+2015-04-02 9:58:59 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 29
+2015-04-02 10:02:17 - PHP Notice:  Undefined index: slide_background_color in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 79
+2015-04-02 10:02:17 - PHP Notice:  Undefined index: slide_background_color in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 79
+2015-04-02 10:02:17 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 28
+2015-04-02 10:02:17 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 29
