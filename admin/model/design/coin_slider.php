@@ -4,27 +4,7 @@ class ModelDesignCoinSlider extends Model {
 		$this->db->query("
 			INSERT INTO " . DB_PREFIX . "coin_slider 
 				SET name = '" . $this->db->escape($data['name']) . "', 
-					status = '" . (int)$data['status'] . "', 
-					spw = '" . (int)$data['spw'] . "', 
-					sph = '" . (int)$data['sph'] . "', 
-					delay = '" . (int)$data['delay'] . "', 
-					s_delay = '" . (int)$data['s_delay'] . "', 
-					opacity = '" . (float)$data['opacity'] . "', 
-					title_speed = '" . (int)$data['title_speed'] . "', 
-					effect = '" . (int)$data['effect'] . "', 
-					navigation = '" . (int)$data['navigation'] . "', 
-					links = '" . (int)$data['links'] . "', 
-					hover_pause = '" . (int)$data['hover_pause'] ."', 
-					link_new_tab = '" . (int)$data['link_new_tab'] ."', 
-					width_title = '" . (int)$data['width_title'] ."', 
-					width_subtitle = '" . (int)$data['width_subtitle'] ."', 
-					padding_top = '" . (int)$data['padding_top'] ."', 
-					padding_left = '" . (int)$data['padding_left'] ."', 
-					distance = '" . (int)$data['distance'] ."', 
-					text_color = '" . $this->db->escape($data['text_color']) ."', 
-					background_color = '" . $this->db->escape($data['background_color']) ."',
-					show_buttons_prev_next = '" . $this->db->escape($data['show_buttons_prev_next'])  . "',
-					show_buttons_bottom = '" . $this->db->escape($data['show_buttons_bottom']) ."'
+					status = '" . (int)$data['status'] . "'
 		");
 	
 		$coin_slider_id = $this->db->getLastId();
@@ -47,27 +27,7 @@ class ModelDesignCoinSlider extends Model {
 		$this->db->query("
 			UPDATE " . DB_PREFIX . "coin_slider 
 				SET name = '" . $this->db->escape($data['name']) . "', 
-				status = '" . (int)$data['status'] . "', 
-				spw = '" . (int)$data['spw'] . "', 
-				sph = '" . (int)$data['sph'] . "', 
-				delay = '" . (int)$data['delay'] . "', 
-				s_delay = '" . (int)$data['s_delay'] . "', 
-				opacity = '" . (float)$data['opacity'] . "', 
-				title_speed = '" . (int)$data['title_speed'] . "', 
-				effect = '" . (int)$data['effect'] . "', 
-				navigation = '" . (int)$data['navigation'] . "', 
-				links = '" . (int)$data['links'] . "', 
-				hover_pause = '" . (int)$data['hover_pause']  . "', 
-				link_new_tab = '" . (int)$data['link_new_tab']  . "', 
-				width_title = '" . (int)$data['width_title']  . "', 
-				width_subtitle = '" . (int)$data['width_subtitle']  . "', 
-				padding_top = '" . (int)$data['padding_top']  . "', 
-				padding_left = '" . (int)$data['padding_left']  . "', 
-				distance = '" . (int)$data['distance']  . "', 
-				text_color = '" . $this->db->escape($data['text_color'])  . "', 
-				background_color = '" . $this->db->escape($data['background_color'])  . "',
-				show_buttons_prev_next = '" . $this->db->escape($data['show_buttons_prev_next'])  . "',
-				show_buttons_bottom = '" . $this->db->escape($data['show_buttons_bottom'])  . "'  
+				status = '" . (int)$data['status'] . "'
 					WHERE coin_slider_id = '" . (int)$coin_slider_id . "'
 		");
 

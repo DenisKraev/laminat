@@ -43,116 +43,6 @@ span.cke_skin_kama {
                 <?php } ?>
               </select></td>
           </tr>
-		  	<tr>
-				<td><?php echo $entry_spw; ?></td>
-				<td><input type="text" name="spw" value="<?php echo $spw; ?>" size="4" maxlength="4" class="digits" /></td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_sph; ?></td>
-				<td><input type="text" name="sph" value="<?php echo $sph; ?>" size="4" maxlength="4" class="digits" /></td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_delay; ?></td>
-				<td><input type="text" name="delay" value="<?php echo $delay; ?>" size="10" maxlength="10" class="digits" /></td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_sdelay; ?></td>
-				<td><input type="text" name="s_delay" value="<?php echo $s_delay; ?>" size="10" maxlength="10" class="digits" /></td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_opacity; ?></td>
-				<td><input type="text" name="opacity" value="<?php echo $opacity; ?>" size="10" maxlength="10" /></td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_titleSpeed; ?></td>
-				<td><input type="text" name="title_speed" value="<?php echo $title_speed; ?>" size="10" maxlength="10" class="digits" /></td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_effect; ?></td>
-				<td>
-					<select name="effect">
-						<option value="0" <?php if ($effect == 0) echo 'selected'; ?> >random</option>
-						<option value="1" <?php if ($effect == 1) echo 'selected'; ?> >swirl</option>
-						<option value="2" <?php if ($effect == 2) echo 'selected'; ?> >rain</option>
-						<option value="3" <?php if ($effect == 3) echo 'selected'; ?> >straight</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_navigation; ?></td>
-				<td>
-					<select name="navigation">
-						<option value="0" <?php if ($navigation == 0) echo 'selected'; ?> ><?php echo $entry_true; ?></option>
-						<option value="1" <?php if ($navigation == 1) echo 'selected'; ?> ><?php echo $entry_false; ?></option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_links; ?></td>
-				<td>
-					<select name="links">
-						<option value="0" <?php if ($links == 0) echo 'selected'; ?> ><?php echo $entry_true; ?></option>
-						<option value="1" <?php if ($links == 1) echo 'selected'; ?> ><?php echo $entry_false; ?></option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_hoverPause; ?></td>
-				<td>
-					<select name="hover_pause">
-						<option value="0" <?php if ($hover_pause == 0) echo 'selected'; ?> ><?php echo $entry_true; ?></option>
-						<option value="1" <?php if ($hover_pause == 1) echo 'selected'; ?> ><?php echo $entry_false; ?></option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2" style="background-color: #EFEFEF; font-weight: bold;"><?php echo $entry_more_options; ?></td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_more_link; ?></td>
-				<td>
-					<select name="link_new_tab">
-						<option value="0" <?php if ($link_new_tab == 0) echo 'selected'; ?> ><?php echo $entry_true; ?></option>
-						<option value="1" <?php if ($link_new_tab == 1) echo 'selected'; ?> ><?php echo $entry_false; ?></option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_more_width_title; ?></td>
-				<td><input type="text" name="width_title" value="<?php echo $width_title; ?>" size="4" maxlength="4" class="digits" autocomplete="off" />px</td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_more_width_subtitle; ?></td>
-				<td><input type="text" name="width_subtitle" value="<?php echo $width_subtitle; ?>" size="4" maxlength="4" class="digits" autocomplete="off" />px</td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_more_padding_top; ?></td>
-				<td><input type="text" name="padding_top" value="<?php echo $padding_top; ?>" size="4" maxlength="4" class="digits" autocomplete="off" />px</td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_more_padding_left; ?></td>
-				<td><input type="text" name="padding_left" value="<?php echo $padding_left; ?>" size="4" maxlength="4" class="digits" autocomplete="off" />px</td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_more_distance; ?></td>
-				<td><input type="text" name="distance" value="<?php echo $distance; ?>" size="4" maxlength="4" class="digits" autocomplete="off" />px</td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_more_color; ?></td>
-				<td>#<input type="text" name="text_color" value="<?php echo $text_color; ?>" size="6" maxlength="6" /></td>
-			</tr>
-            <tr>
-				<td><?php echo $entry_more_background_color; ?></td>
-				<td>#<input type="text" name="background_color" value="<?php echo $background_color; ?>" size="6" maxlength="6" /></td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_show_buttons_prev_next; ?></td>
-				<td><input type="checkbox" name="show_buttons_prev_next" value="1" <?php if (!empty($show_buttons_prev_next)) { ?> checked <?php } ?>/></td>
-			</tr>
-			<tr>
-				<td><?php echo $entry_show_buttons_bottom; ?></td>
-				<td><input type="checkbox" name="show_buttons_bottom" value="1" <?php if (!empty($show_buttons_bottom)) { ?> checked <?php } ?>/></td>
-			</tr>
         </table>
         <table id="images" class="list">
           <thead>
@@ -160,7 +50,7 @@ span.cke_skin_kama {
               <td class="left"><?php echo $entry_title; ?></td>
               <td class="left"><?php echo $entry_subtitle; ?></td>
               <td class="left"><?php echo $entry_link; ?></td>
-              <td>Цвет фона слайда/td>
+              <td>Цвет фона слайда</td>
               <td class="left"><?php echo $entry_image; ?></td>
               <td class="left"><?php echo $entry_sort_order; ?></td>
               <td></td>

@@ -115,3 +115,85 @@
 2015-04-02 10:02:17 - PHP Notice:  Undefined index: slide_background_color in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 79
 2015-04-02 10:02:17 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 28
 2015-04-02 10:02:17 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 29
+2015-04-02 10:16:49 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\admin\controller\design\coin_slider.php on line 615
+2015-04-02 10:16:52 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\admin\controller\design\coin_slider.php on line 615
+2015-04-02 10:17:05 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\admin\controller\design\coin_slider.php on line 615
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: spw in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 51
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: sph in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 52
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: delay in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 53
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: s_delay in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 54
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: opacity in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 55
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: title_speed in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 56
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: effect in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 57
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: navigation in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 58
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: links in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 59
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: hover_pause in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 60
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: link_new_tab in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 61
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: width_title in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 62
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: width_subtitle in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 63
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: padding_top in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 64
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: padding_left in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 65
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: distance in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 66
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: text_color in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 67
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: background_color in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 68
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: show_buttons_prev_next in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 69
+2015-04-02 10:18:01 - PHP Notice:  Undefined index: show_buttons_bottom in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 70
+2015-04-02 10:18:01 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 28
+2015-04-02 10:18:01 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 29
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: spw in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 51
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: sph in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 52
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: delay in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 53
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: s_delay in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 54
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: opacity in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 55
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: title_speed in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 56
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: effect in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 57
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: navigation in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 58
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: links in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 59
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: hover_pause in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 60
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: link_new_tab in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 61
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: width_title in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 62
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: width_subtitle in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 63
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: padding_top in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 64
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: padding_left in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 65
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: distance in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 66
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: text_color in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 67
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: background_color in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 68
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: show_buttons_prev_next in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 69
+2015-04-02 10:19:52 - PHP Notice:  Undefined index: show_buttons_bottom in D:\OpenServer\domains\laminat\admin\model\design\coin_slider.php on line 70
+2015-04-02 10:19:52 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '//				spw = '0',
+//				sph = '0',
+//				delay = '0',
+//				s_delay = '0',
+//				' at line 4<br />Error No: 1064<br />
+			UPDATE coin_slider 
+				SET name = 'wefawefawe', 
+				status = '1', 
+//				spw = '0',
+//				sph = '0',
+//				delay = '0',
+//				s_delay = '0',
+//				opacity = '0',
+//				title_speed = '0',
+//				effect = '0',
+//				navigation = '0',
+//				links = '0',
+//				hover_pause = '0',
+//				link_new_tab = '0',
+//				width_title = '0',
+//				width_subtitle = '0',
+//				padding_top = '0',
+//				padding_left = '0',
+//				distance = '0',
+//				text_color = '',
+//				background_color = '',
+//				show_buttons_prev_next = '',
+//				show_buttons_bottom = ''
+					WHERE coin_slider_id = '1'
+		 in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-02 10:20:16 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE coin_slider_id = '1'' at line 5<br />Error No: 1064<br />
+			UPDATE coin_slider 
+				SET name = 'wefawefawe', 
+				status = '1', 
+
+					WHERE coin_slider_id = '1'
+		 in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
