@@ -237,3 +237,6 @@ admin\view\template\catalog\product_list.tpl
 admin\model\localisation\tax_class.php
 admin\model\catalog\download.php
 admin\view\template\catalog\product_form.tpl
+admin\language\russian\module\html_block.php
+admin\model\module\html_block.php
+admin\view\template\module\html_block.tpl
