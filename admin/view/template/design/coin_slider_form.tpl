@@ -178,7 +178,8 @@ span.cke_skin_kama {
                 <?php } ?></td>
 			  <td class="left">
 				<?php foreach ($languages as $language) { ?>
-<img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /><br /><textarea name="coin_slider_image[<?php echo $image_row; ?>][coin_slider_image_description][<?php echo $language['language_id']; ?>][subtitle]"><?php echo isset($slider_image['coin_slider_image_description'][$language['language_id']]) ? $slider_image['coin_slider_image_description'][$language['language_id']]['subtitle'] : ''; ?></textarea><br />
+<img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /><br />
+            <textarea id="coin_slider_image[<?php echo $image_row; ?>][coin_slider_image_description][<?php echo $language['language_id']; ?>][subtitle]" name="coin_slider_image[<?php echo $image_row; ?>][coin_slider_image_description][<?php echo $language['language_id']; ?>][subtitle]"><?php echo isset($slider_image['coin_slider_image_description'][$language['language_id']]) ? $slider_image['coin_slider_image_description'][$language['language_id']]['subtitle'] : ''; ?></textarea><br />
 				<?php } ?>
 			</td>
               <td class="left"><input type="text" name="coin_slider_image[<?php echo $image_row; ?>][link]" value="<?php echo $slider_image['link']; ?>" /></td>
@@ -206,11 +207,13 @@ span.cke_skin_kama {
     </div>
   </div>
 </div>
-<script type="text/javascript" src="view/javascript/ckeditor/ckeditor.js"></script> 
+<script type="text/javascript" src="view/javascript/ckeditor/ckeditor.js"></script>
 <script type="text/javascript"><!--
 <?php for($i=0; $i<$image_row; $i++) { ?>
 	<?php foreach ($languages as $language) { ?>
-		CKEDITOR.replace('coin_slider_image[<?php echo $i; ?>][coin_slider_image_description][<?php echo $language['language_id']; ?>][subtitle]', {toolbar: null, toolbarGroups: null, removeButtons: null});
+		CKEDITOR.replace(
+            'coin_slider_image[<?php echo $i; ?>][coin_slider_image_description][<?php echo $language['language_id']; ?>][subtitle]'
+    );
 	<?php } ?>
 <?php } ?>
 //--></script>

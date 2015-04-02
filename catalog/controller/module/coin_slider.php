@@ -33,10 +33,10 @@ class ControllerModuleCoinSlider extends Controller
 					'subtitle' 	=> html_entity_decode($result['subtitle'], ENT_QUOTES, 'UTF-8'),
 					'link'  	=> $result['link'],
 					//'image' 	=> $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height'], '', $slider_config[0]['background_color']),
-          //'image' => $this->model_tool_image->resize($result['image'], 980, 280, '_tyu'),
-          'image' => $this->model_tool_image->crop($result['image'], 980, 280, 'top', '_thumb'),
+          'image' => $this->model_tool_image->resize($result['image'], 980, 373, '_thumb'),
 					'width'		=> $setting['width'],
-					'height'	=> $setting['height']
+					'height'	=> $setting['height'],
+					'background_color'	=> $slider_config[0]['background_color']
 				);
 			}
 		}

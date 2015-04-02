@@ -2,4 +2,8 @@
 /* слайдер */
 .box-slider .slide {
   width: 100%;
+  padding: 30px 0px;
+}
+.box-slider .slider-content {
+  min-height: 373px;
 }

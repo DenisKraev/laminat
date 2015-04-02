@@ -60,3 +60,26 @@
 2015-04-01 10:52:51 - PHP Notice:  Undefined index: information_id in D:\OpenServer\domains\laminat\catalog\controller\common\header.php on line 152
 2015-04-01 10:52:51 - PHP Notice:  Undefined index: information_id in D:\OpenServer\domains\laminat\catalog\controller\common\header.php on line 151
 2015-04-01 10:52:51 - PHP Notice:  Undefined index: information_id in D:\OpenServer\domains\laminat\catalog\controller\common\header.php on line 152
+2015-04-01 16:34:36 - PHP Notice:  Undefined index: background_color in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\coin_slider.tpl on line 30
+2015-04-01 16:35:18 - PHP Notice:  Undefined index: background_color in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\coin_slider.tpl on line 31
+2015-04-01 16:35:20 - PHP Notice:  Undefined index: background_color in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\coin_slider.tpl on line 31
+2015-04-01 16:35:25 - PHP Notice:  Undefined index: background_color in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\coin_slider.tpl on line 31
+2015-04-01 16:35:26 - PHP Notice:  Undefined index: background_color in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\coin_slider.tpl on line 31
+2015-04-01 16:36:00 - PHP Notice:  Undefined index: background_color in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\coin_slider.tpl on line 30
+2015-04-01 16:36:00 - PHP Notice:  Undefined index: background_color in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\coin_slider.tpl on line 31
+2015-04-01 16:38:26 - PHP Warning:  rmdir(D:\OpenServer\domains\laminat/image/cache/data//slider) [<a href='function.rmdir'>function.rmdir</a>]: Permission denied in D:\OpenServer\domains\laminat\admin\controller\design\coin_slider.php on line 59
+2015-04-01 16:38:26 - PHP Warning:  rmdir(D:\OpenServer\domains\laminat/image/cache/data/) [<a href='function.rmdir'>function.rmdir</a>]: Directory not empty in D:\OpenServer\domains\laminat\admin\controller\design\coin_slider.php on line 59
+2015-04-01 16:38:26 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 28
+2015-04-01 16:38:26 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 29
+2015-04-01 16:38:34 - PHP Warning:  rmdir(D:\OpenServer\domains\laminat/image/cache/data//slider) [<a href='function.rmdir'>function.rmdir</a>]: Permission denied in D:\OpenServer\domains\laminat\admin\controller\design\coin_slider.php on line 59
+2015-04-01 16:38:34 - PHP Warning:  rmdir(D:\OpenServer\domains\laminat/image/cache/data/) [<a href='function.rmdir'>function.rmdir</a>]: Directory not empty in D:\OpenServer\domains\laminat\admin\controller\design\coin_slider.php on line 59
+2015-04-01 16:38:34 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 28
+2015-04-01 16:38:34 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 29
+2015-04-01 16:38:47 - PHP Warning:  rmdir(D:\OpenServer\domains\laminat/image/cache/data//slider) [<a href='function.rmdir'>function.rmdir</a>]: Permission denied in D:\OpenServer\domains\laminat\admin\controller\design\coin_slider.php on line 59
+2015-04-01 16:38:47 - PHP Warning:  rmdir(D:\OpenServer\domains\laminat/image/cache/data/) [<a href='function.rmdir'>function.rmdir</a>]: Directory not empty in D:\OpenServer\domains\laminat\admin\controller\design\coin_slider.php on line 59
+2015-04-01 16:38:47 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 28
+2015-04-01 16:38:47 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 29
+2015-04-02 9:18:30 - PHP Notice:  Undefined variable: image_row in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 12
+2015-04-02 9:18:32 - PHP Notice:  Undefined variable: image_row in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 12
+2015-04-02 9:18:55 - PHP Notice:  Undefined variable: image_row in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 12
+2015-04-02 9:18:56 - PHP Notice:  Undefined variable: image_row in D:\OpenServer\domains\laminat\admin\view\template\design\coin_slider_form.tpl on line 12

@@ -27,9 +27,8 @@
 <div class="box-slider">
   <div class="slider">
     <?php foreach ($sliders as $slider) { ?>
-      <div class="slide">
-        <div class="site-content">
-          <img src="<?php echo $slider['image']; ?>" alt="<?php echo $slider['title']; ?>">
+      <div class="slide" style="background-color: #<?php echo $slider['background_color']; ?>">
+        <div class="slider-content site-content" style="background: url(<?php echo $slider['image']; ?>) 50% 50% no-repeat">
         </div>
       </div>
     <?php } ?>
