@@ -244,3 +244,5 @@ catalog\controller\module\html_block.php
 catalog\language\russian\module\html_block.php
 catalog\view\theme\default\template\module\html_block_preview.tpl
 catalog\view\theme\default\template\module\html_block.tpl
+admin\language\russian\module\timer.php
+admin\view\template\module\timer.tpl
