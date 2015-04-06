@@ -72,6 +72,11 @@
                   <td><input name="timer_module[<?php echo $module_row; ?>][title]" value="<?php echo $module['title']; ?>" class="title">
                   </td>
               </tr>
+              <tr>
+                  <td>Размер шрифта для заголовка<span class="help">от 1 до 72</span></td>
+                  <td><input name="timer_module[<?php echo $module_row; ?>][title_font_size]" value="<?php echo $module['title_font_size']; ?>" class="title_font_size">
+                  </td>
+              </tr>
             <tr>
               <td><?php echo $entry_layout; ?></td>
               <td><select name="timer_module[<?php echo $module_row; ?>][layout_id]">
@@ -196,6 +201,11 @@ function addModule() {
     html += '    </td>';
     html += '    </tr>';
     html += '    <tr>';
+    html += '      <td>Размер шрифта для заголовка</td>';
+    html += '      <td><input name="timer_module[' + module_row + '][title_font_size]" value="34" class="title_font_size">';
+    html += '    </td>';
+    html += '    </tr>';
+    html += '    <tr>';
 	html += '      <td><?php echo $entry_layout; ?></td>';
 	html += '      <td><select name="timer_module[' + module_row + '][layout_id]">';
 	<?php foreach ($layouts as $layout) { ?>
@@ -236,7 +246,7 @@ function addModule() {
 		filebrowserUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 		filebrowserImageUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 		filebrowserFlashUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>'
-	});  
+	});
 	<?php } ?>
 	
 	$('#language-' + module_row + ' a').tabs();

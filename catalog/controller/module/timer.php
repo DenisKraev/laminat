@@ -18,6 +18,7 @@ class ControllerModuleTimer extends Controller {
 		$template = new Template();
 
     $template->data['title'] = $setting['title'];
+    $template->data['title_font_size'] = $setting['title_font_size'];
 
     $cur = getdate();
     $cur = $cur[0];
@@ -50,7 +51,12 @@ class ControllerModuleTimer extends Controller {
       $template->data['date_stop'] = $this->rdate("d M", $stop);
     }
 
-		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/timer_div.tpl')) {
+    //Images
+    $this->load->model('tool/image');
+    $template->data['image'] = $this->model_tool_image->resize($setting['image'], 100, 100);
+
+
+    if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/timer_div.tpl')) {
 			$timer_div = $template->fetch($this->config->get('config_template') . '/template/module/timer_div.tpl');
 		} else {
 			$timer_div = $template->fetch('default/template/module/timer_div.tpl');

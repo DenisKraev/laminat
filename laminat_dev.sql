@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 03 2015 г., 09:12
+-- Время создания: Апр 06 2015 г., 17:04
 -- Версия сервера: 5.5.41-log
 -- Версия PHP: 5.3.29
 
@@ -2916,7 +2916,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=888 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=957 ;
 
 --
 -- Дамп данных таблицы `setting`
@@ -3178,7 +3178,8 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (878, 0, 'config', 'config_sms_gate_username', '', 0),
 (879, 0, 'config', 'config_sms_gate_password', '', 0),
 (886, 0, 'html_block', 'html_block_module', 'a:1:{i:0;a:5:{s:13:"html_block_id";s:1:"1";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
-(887, 0, 'html_block', 'html_block_1', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:115:"&lt;?php include($_SERVER[''DOCUMENT_ROOT''].''/catalog/view/theme/default/template/partials/offer_static.tpl''); ?&gt;";}s:6:"editor";a:1:{i:1;s:1:"1";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1);
+(887, 0, 'html_block', 'html_block_1', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:115:"&lt;?php include($_SERVER[''DOCUMENT_ROOT''].''/catalog/view/theme/default/template/partials/offer_static.tpl''); ?&gt;";}s:6:"editor";a:1:{i:1;s:1:"1";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
+(956, 0, 'timer', 'timer_module', 'a:1:{i:1;a:11:{s:11:"description";a:1:{i:1;s:31:"&lt;p&gt;\r\n	[Timer]&lt;/p&gt;\r\n";}s:4:"date";s:10:"2015-04-06";s:4:"time";s:8:"23:59:59";s:8:"interval";s:2:"24";s:5:"image";s:19:"data/timer/img2.png";s:5:"title";s:32:"Плинтус в подарок";s:15:"title_font_size";s:2:"34";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1);
 
 -- --------------------------------------------------------
 

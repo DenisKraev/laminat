@@ -255,3 +255,4 @@ catalog\language\russian\error\not_found.php
 admin\controller\common\login.php
 admin\language\russian\common\login.php
 admin\view\template\common\login.tpl
+catalog\model\setting\setting.php
