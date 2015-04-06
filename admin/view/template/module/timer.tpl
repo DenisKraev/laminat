@@ -34,7 +34,7 @@
           <div id="tab-language-<?php echo $module_row; ?>-<?php echo $language['language_id']; ?>">
             <table class="form">
               <tr>
-                <td><?php echo $entry_description; ?><br/><span class="help"><?php echo $entry_description_comment; ?></span></td>
+                <td>Таймер</td>
                 <td><textarea name="timer_module[<?php echo $module_row; ?>][description][<?php echo $language['language_id']; ?>]" id="description-<?php echo $module_row; ?>-<?php echo $language['language_id']; ?>"><?php echo isset($module['description'][$language['language_id']]) ? $module['description'][$language['language_id']] : '[Timer]'; ?></textarea></td>
               </tr>
             </table>
@@ -42,30 +42,36 @@
           <?php } ?>
           <table class="form">
             <tr>
-              <td><?php echo $entry_date; ?></td>
+              <td>Дата начала</td>
               <td><input name="timer_module[<?php echo $module_row; ?>][date]" class="date" value="<?php echo $module['date']; ?>">
               </td>
             </tr>
             <tr>
-              <td><?php echo $entry_time; ?><br /><span class="help"><?php echo $entry_time_comment; ?></span></td>
+              <td>Время начала<br /><span class="help"><?php echo $entry_time_comment; ?></span></td>
               <td><input name="timer_module[<?php echo $module_row; ?>][time]" value="<?php echo $module['time']; ?>" class="time">
               </td>
             </tr>
             <tr>
-              <td><?php echo $entry_show_weeks; ?></td>
-              <td><?php if ($module['show_weeks']) { ?>
-                <input type="radio" name="timer_module[<?php echo $module_row; ?>][show_weeks]" value="1" checked="checked" />
-                <?php echo $text_yes; ?>
-                <input type="radio" name="timer_module[<?php echo $module_row; ?>][show_weeks]" value="0" />
-                <?php echo $text_no; ?>
-                <?php } else { ?>
-                <input type="radio" name="timer_module[<?php echo $module_row; ?>][show_weeks]" value="1" />
-                <?php echo $text_yes; ?>
-                <input type="radio" name="timer_module[<?php echo $module_row; ?>][show_weeks]" value="0" checked="checked" />
-                <?php echo $text_no; ?>
-                <?php } ?></td>
-              </td>
+                <td>Интервал продолжительности<span class="help">вводить в часах (240 часов = 10 дней)</span></td>
+                <td><input name="timer_module[<?php echo $module_row; ?>][interval]" value="<?php echo $module['interval']; ?>" class="interval">
+                </td>
             </tr>
+            <tr>
+                <td>Картинка в счетчик</td>
+                <td>
+                    <div class="image">
+                      <img src="<?php echo $image_timer[$module_row]['thumb']; ?>" alt="" id="thumb<?php echo $module_row; ?>" />
+                      <input type="hidden" name="timer_module[<?php echo $module_row; ?>][image]" value="<?php echo $module['image']; ?>" id="image<?php echo $module_row; ?>"  />
+                      <br />
+                      <a onclick="image_upload('image<?php echo $module_row; ?>', 'thumb<?php echo $module_row; ?>');">обзор</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb<?php echo $module_row; ?>').attr('src', '<?php echo $no_image; ?>'); $('#image<?php echo $module_row; ?>').attr('value', '');">очистить</a>
+                    </div>
+                </td>
+            </tr>
+              <tr>
+                  <td>Заголовок</td>
+                  <td><input name="timer_module[<?php echo $module_row; ?>][title]" value="<?php echo $module['title']; ?>" class="title">
+                  </td>
+              </tr>
             <tr>
               <td><?php echo $entry_layout; ?></td>
               <td><select name="timer_module[<?php echo $module_row; ?>][layout_id]">
@@ -160,7 +166,7 @@ function addModule() {
 	html += '    <div id="tab-language-'+ module_row + '-<?php echo $language['language_id']; ?>">';
 	html += '      <table class="form">';
 	html += '        <tr>';
-	html += '          <td><?php echo $entry_description; ?><br /><span class="help"><?php echo $entry_description_comment; ?></span></td>';
+	html += '          <td><?php echo $entry_description; ?><br /></td>';
 	html += '          <td><textarea name="timer_module[' + module_row + '][description][<?php echo $language['language_id']; ?>]" id="description-' + module_row + '-<?php echo $language['language_id']; ?>">[Timer]</textarea></td>';
 	html += '        </tr>';
 	html += '      </table>';
@@ -169,22 +175,25 @@ function addModule() {
 
 	html += '  <table class="form" id="timer_form-' + module_row + '">';
     html += '    <tr>';
-    html += '      <td><?php echo $entry_date; ?></td>';
+    html += '      <td>Дата начала</td>';
     html += '      <td><input name="timer_module[' + module_row + '][date]" value="<?php echo date('Y-m-d'); ?>" class="date size="12">';
     html += '      </td>';
     html += '    </tr>';
     html += '    <tr>';
-    html += '      <td><?php echo $entry_time; ?><br /><span class="help"><?php echo $entry_time_comment; ?></span></td>';
+    html += '      <td>Время начала<br /><span class="help"><?php echo $entry_time_comment; ?></span></td>';
     html += '      <td><input name="timer_module[' + module_row + '][time]" value="23:59:59" class="time">';
     html += '    </td>';
     html += '    </tr>';
     html += '    <tr>';
-    html += '      <td><?php echo $entry_show_weeks; ?></td>';
-    html += '      <td><input type="radio" name="timer_module[' + module_row + '][show_weeks]" value="1" checked="checked" />';
-    html += '      <?php echo $text_yes; ?>';
-    html += '      <input type="radio" name="timer_module[' + module_row + '][show_weeks]" value="0" />';
-    html += '      <?php echo $text_no; ?>';
-    html += '      </td>';
+    html += '      <td>Интервал продолжительности<span class="help">вводить в часах (240 часов = 10 дней)</span></td>';
+    html += '      <td><input name="timer_module[' + module_row + '][interval]" value="" class="interval">';
+    html += '    </td>';
+    html += '    </tr>';
+    html += '    <tr><td>Картинка в счетчик</td><td class="left"><div class="image"><img src="<?php echo $no_image; ?>" alt="" id="thumb' + module_row + '" /><input type="hidden" name="coin_slider_image[' + module_row + '][image]" value="" id="image' + module_row + '" /><br /><a onclick="image_upload(\'image' + module_row + '\', \'thumb' + module_row + '\');">обзор</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$(\'#thumb' + module_row + '\').attr(\'src\', \'<?php echo $no_image; ?>\'); $(\'#image' + module_row + '\').attr(\'value\', \'\');">очистить</a></div></td></tr>';
+    html += '    <tr>';
+    html += '      <td>Заголовок</td>';
+    html += '      <td><input name="timer_module[' + module_row + '][title]" value="" class="title">';
+    html += '    </td>';
     html += '    </tr>';
     html += '    <tr>';
 	html += '      <td><?php echo $entry_layout; ?></td>';
@@ -195,7 +204,7 @@ function addModule() {
 	html += '      </select></td>';
 	html += '    </tr>';
 	html += '    <tr>';
-	html += '      <td><?php echo $entry_position; ?><br/><span class="help"><?php echo $entry_description_comment; ?></span></td>';
+	html += '      <td><?php echo $entry_position; ?><br/></td>';
 	html += '      <td><select name="timer_module[' + module_row + '][position]">';
 	html += '        <option value="content_top"><?php echo $text_content_top; ?></option>';
 	html += '        <option value="content_bottom"><?php echo $text_content_bottom; ?></option>';
@@ -257,5 +266,32 @@ $('#language-<?php echo $module_row; ?> a').tabs();
 <script type="text/javascript"><!--
 $('.date').datepicker({dateFormat: 'yy-mm-dd'});
 $('.time').timepicker({timeFormat: 'h:m:s'});
-//--></script> 
+//--></script>
+<script type="text/javascript"><!--
+function image_upload(field, thumb) {
+    $('#dialog').remove();
+
+    $('#content').prepend('<div id="dialog" style="padding: 3px 0px 0px 0px;"><iframe src="index.php?route=common/filemanager&token=<?php echo $token; ?>&field=' + encodeURIComponent(field) + '" style="padding:0; margin: 0; display: block; width: 100%; height: 100%;" frameborder="no" scrolling="auto"></iframe></div>');
+
+    $('#dialog').dialog({
+        title: 'Менеджер файлов',
+        close: function (event, ui) {
+            if ($('#' + field).attr('value')) {
+                $.ajax({
+                    url: 'index.php?route=common/filemanager/image&token=<?php echo $token; ?>&image=' + encodeURIComponent($('#' + field).attr('value')),
+                    dataType: 'text',
+                    success: function(data) {
+                        $('#' + thumb).replaceWith('<img src="' + data + '" alt="" id="' + thumb + '" />');
+                    }
+                });
+            }
+        },
+        bgiframe: false,
+        width: 800,
+        height: 400,
+        resizable: false,
+        modal: false
+    });
+};
+//--></script>
 <?php echo $footer; ?>

@@ -94,6 +94,24 @@ class ControllerModuleTimer extends Controller {
 		
 		$this->data['languages'] = $this->model_localisation_language->getLanguages();
 
+    //Images
+    $this->load->model('tool/image');
+    $this->data['no_image'] = $this->model_tool_image->resize('no_image.jpg', 100, 100);
+
+    $images = $this->model_setting_setting->getSetting('timer');
+
+    $i = 1;
+    foreach ($images['timer_module'] as $item) {
+      if ($item['image'] && file_exists(DIR_IMAGE . $item['image'])) {
+        $image_timer = $item['image'];
+      } else {
+        $image_timer = 'no_image.jpg';
+      }
+
+      $this->data['image_timer'][$i] = array('thumb' => $this->model_tool_image->resize($image_timer, 100, 100));
+      $i++;
+    }
+
 		$this->template = 'module/timer.tpl';
 		$this->children = array(
 			'common/header',

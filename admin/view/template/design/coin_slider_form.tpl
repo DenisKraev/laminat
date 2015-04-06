@@ -77,11 +77,16 @@ span.cke_skin_kama {
 
                 <td class="left">#<input type="text" name="coin_slider_image[<?php echo $image_row; ?>][slide_background_color]" value="<?php echo $slider_image['slide_background_color']; ?>" size="6" maxlength="6" /></td>
 
-                <td class="left"><div class="image"><img src="<?php echo $slider_image['thumb']; ?>" alt="" id="thumb<?php echo $image_row; ?>" />
-                  <input type="hidden" name="coin_slider_image[<?php echo $image_row; ?>][image]" value="<?php echo $slider_image['image']; ?>" id="image<?php echo $image_row; ?>"  />
-                  <br />
-                  <a onclick="image_upload('image<?php echo $image_row; ?>', 'thumb<?php echo $image_row; ?>');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb<?php echo $image_row; ?>').attr('src', '<?php echo $no_image; ?>'); $('#image<?php echo $image_row; ?>').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
-			  <td><input type="text" name="coin_slider_image[<?php echo $image_row; ?>][sort_order]" value="<?php echo $slider_image['sort_order']; ?>" size="2" maxlength="2" /></td>
+                <td class="left">
+                    <div class="image">
+                        <img src="<?php echo $slider_image['thumb']; ?>" alt="" id="thumb<?php echo $image_row; ?>" />
+                        <input type="hidden" name="coin_slider_image[<?php echo $image_row; ?>][image]" value="<?php echo $slider_image['image']; ?>" id="image<?php echo $image_row; ?>"  />
+                        <br />
+                        <a onclick="image_upload('image<?php echo $image_row; ?>', 'thumb<?php echo $image_row; ?>');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb<?php echo $image_row; ?>').attr('src', '<?php echo $no_image; ?>'); $('#image<?php echo $image_row; ?>').attr('value', '');"><?php echo $text_clear; ?></a>
+                    </div>
+                </td>
+			      <td>
+            <input type="text" name="coin_slider_image[<?php echo $image_row; ?>][sort_order]" value="<?php echo $slider_image['sort_order']; ?>" size="2" maxlength="2" /></td>
               <td class="left"><a onclick="$('#image-row<?php echo $image_row; ?>').remove();" class="button"><?php echo $button_remove; ?></a></td>
             </tr>
           </tbody>
@@ -185,7 +190,7 @@ function image_upload(field, thumb) {
 			}
 		},	
 		bgiframe: false,
-		width: 700,
+		width: 800,
 		height: 400,
 		resizable: false,
 		modal: false

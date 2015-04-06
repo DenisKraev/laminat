@@ -597,8 +597,8 @@ class ControllerDesignCoinSlider extends Controller {
 				'thumb'                    => $this->model_tool_image->resize($image, 100, 100),
 				'sort_order'			   => $slider_image['sort_order'],	
 			);	
-		} 
-	
+		}
+
 		$this->data['no_image'] = $this->model_tool_image->resize('no_image.jpg', 100, 100);		
 
 		$this->template = 'design/coin_slider_form.tpl';

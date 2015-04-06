@@ -1,3 +1,3 @@
-<div class="timer box">
-  <?php echo $text; ?>
+<div class="box-timer site-content">
+  <?php print_r($text); ?>
 </div>

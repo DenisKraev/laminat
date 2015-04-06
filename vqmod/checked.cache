@@ -246,3 +246,12 @@ catalog\view\theme\default\template\module\html_block_preview.tpl
 catalog\view\theme\default\template\module\html_block.tpl
 admin\language\russian\module\timer.php
 admin\view\template\module\timer.tpl
+catalog\controller\module\timer.php
+catalog\language\russian\module\timer.php
+catalog\view\theme\default\template\module\timer_div.tpl
+catalog\view\theme\default\template\module\timer.tpl
+catalog\controller\error\not_found.php
+catalog\language\russian\error\not_found.php
+admin\controller\common\login.php
+admin\language\russian\common\login.php
+admin\view\template\common\login.tpl

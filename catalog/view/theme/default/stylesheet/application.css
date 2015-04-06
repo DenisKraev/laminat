@@ -531,6 +531,11 @@ a.title-style:hover {
   padding: 10px 35px;
 }
 
+/* слайдер */
+.box-timer .flip-clock-wrapper ul li a div div.inn {
+  font-size: 20px;
+}
+
 /* блок с предложениями менеджерами на главной */
 .box-offer {
   float: left;
