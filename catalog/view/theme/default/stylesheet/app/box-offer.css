@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'font-family-2'.
-        on line 13 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-offer.sass, in `font-family-2'
-        from line 13 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-offer.sass
+        on line 15 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-offer.sass, in `font-family-2'
+        from line 15 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-offer.sass
 
-8: .offer-list
-9:   list-style: none
-10:   margin: 0px
-11:   padding: 0px
-12:   .item
-13:     +font-family-2
-14:     color: #444444
-15:     font-size: 16px
-16:     line-height: 22px
-17:     padding: 23px 20px 23px 45px
-18:     border-bottom: 1px solid #e3e3e3
+10: .offer-list
+11:   list-style: none
+12:   margin: 0px
+13:   padding: 0px
+14:   .item
+15:     +font-family-2
+16:     color: #444444
+17:     font-size: 16px
+18:     line-height: 22px
+19:     padding: 23px 20px 23px 45px
+20:     border-bottom: 1px solid #e3e3e3
 
 Backtrace:
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-offer.sass:13:in `font-family-2'
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-offer.sass:13
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-offer.sass:15:in `font-family-2'
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-offer.sass:15
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
@@ -84,4 +84,4 @@ C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/ada
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'font-family-2'.\A         on line 13 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-offer.sass, in `font-family-2'\A         from line 13 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-offer.sass\A \A 8: .offer-list\A 9:   list-style: none\A 10:   margin: 0px\A 11:   padding: 0px\A 12:   .item\A 13:     +font-family-2\A 14:     color: #444444\A 15:     font-size: 16px\A 16:     line-height: 22px\A 17:     padding: 23px 20px 23px 45px\A 18:     border-bottom: 1px solid #e3e3e3"; }
+  content: "Error: Undefined mixin 'font-family-2'.\A         on line 15 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-offer.sass, in `font-family-2'\A         from line 15 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-offer.sass\A \A 10: .offer-list\A 11:   list-style: none\A 12:   margin: 0px\A 13:   padding: 0px\A 14:   .item\A 15:     +font-family-2\A 16:     color: #444444\A 17:     font-size: 16px\A 18:     line-height: 22px\A 19:     padding: 23px 20px 23px 45px\A 20:     border-bottom: 1px solid #e3e3e3"; }

@@ -15,7 +15,7 @@ body {
 }
 
 @font-face {
-  font-family: "OpenSans-ExtraBold-wf";
+  font-family: "OpenSans-extrabold-wf";
   src: url("/fonts/opensans-extrabold.ttf");
 }
 @font-face {
@@ -532,11 +532,96 @@ a.title-style:hover {
 }
 
 /* слайдер */
+.box-timer .flip-clock-wrapper {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  text-transform: capitalize;
+  width: auto;
+}
+.box-timer .flip-clock-wrapper ul {
+  padding: 0px;
+  width: 30px;
+  height: 45px;
+  line-height: 45px;
+  margin: 2px;
+}
 .box-timer .flip-clock-wrapper ul li a div div.inn {
+  font-size: 33px;
+}
+.box-timer .flip-clock-wrapper ul li {
+  line-height: 45px;
+}
+.box-timer .flip-clock-divider {
+  width: 12px;
+  height: 55px;
+}
+.box-timer .flip-clock-divider .flip-clock-label {
+  right: -49px;
+}
+.box-timer .flip-clock-divider.minutes .flip-clock-label {
+  right: -52px;
+}
+.box-timer .flip-clock-divider.seconds .flip-clock-label {
+  right: -50px;
+}
+.box-timer .flip-clock-dot {
+  width: 7px;
+  height: 7px;
+  left: 2px;
+}
+.box-timer .flip-clock-dot.top {
+  top: 14px;
+}
+.box-timer .flip-clock-dot.bottom {
+  bottom: 15px;
+}
+
+.box-timer-bg {
+  height: 81px;
+  background: url('/catalog/view/theme/default/image/app/bg-timer.jpg?1428389545') 50% 0px no-repeat;
+}
+
+.box-timer .title {
+  width: 470px;
+  height: 81px;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 5px;
+  text-align: center;
+}
+.box-timer .title span {
+  font-family: "OpenSans-extrabold-wf";
+  color: #333333;
+  text-transform: uppercase;
+  line-height: 34px;
+}
+.box-timer .box-img-stop-date {
+  width: 160px;
+  text-align: center;
+}
+.box-timer .box-img-stop-date img {
+  margin-top: -10px;
+}
+.box-timer .box-img-stop-date .stop-date {
+  font-family: "OpenSans-regular-wf";
+  margin-top: -64px;
   font-size: 20px;
+  text-transform: lowercase;
+}
+.box-timer .box-img-stop-date .stop-date:hover {
+  opacity: 1;
+  cursor: auto;
+}
+.box-timer .clock {
+  margin: 0px;
+  margin-top: 20px;
 }
 
 /* блок с предложениями менеджерами на главной */
+.box-offer-manager {
+  margin-bottom: 50px;
+}
+
 .box-offer {
   float: left;
   width: 730px;

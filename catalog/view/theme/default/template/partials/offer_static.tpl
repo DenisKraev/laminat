@@ -1,4 +1,4 @@
-<div class="site-content">
+<div class="site-content box-offer-manager">
     <div class="box-offer">
         <h3 class="title-style">Мы предлагаем</h3>
         <ul class="offer-list">

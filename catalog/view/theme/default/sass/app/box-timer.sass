@@ -1,4 +1,67 @@
 /* слайдер
 .box-timer
+  .flip-clock-wrapper
+    font-family: Arial, sans-serif
+    font-size: 10px
+    text-transform: capitalize
+    width: auto
+  .flip-clock-wrapper ul
+    padding: 0px
+    width: 30px
+    height: 45px
+    line-height: 45px
+    margin: 2px
   .flip-clock-wrapper ul li a div div.inn
-    font-size: 20px
+    font-size: 33px
+  .flip-clock-wrapper ul li
+    line-height: 45px
+  .flip-clock-divider
+    width: 12px
+    height: 55px
+  .flip-clock-divider .flip-clock-label
+    right: -49px
+  .flip-clock-divider.minutes .flip-clock-label
+    right: -52px
+  .flip-clock-divider.seconds .flip-clock-label
+    right: -50px
+  .flip-clock-dot
+    width: 7px
+    height: 7px
+    left: 2px
+  .flip-clock-dot.top
+    top: 14px
+  .flip-clock-dot.bottom
+    bottom: 15px
+.box-timer-bg
+  height: 81px
+  background: image-url('app/bg-timer.jpg') 50% 0px no-repeat
+.box-timer
+  .title
+    width: 470px
+    height: 81px
+    display: table-cell
+    vertical-align: middle
+    padding-left: 5px
+    text-align: center
+    span
+      +font-family-2(extrabold)
+      color: #333333
+      text-transform: uppercase
+      line-height: 34px
+  .box-img-stop-date
+    width: 160px
+    text-align: center
+    img
+      margin-top: -10px
+    .stop-date
+      +font-family-2(regular)
+      margin-top: -64px
+      font-size: 20px
+      text-transform: lowercase
+      &:hover
+        opacity: 1
+        cursor: auto
+  .clock
+    margin: 0px
+    margin-top: 20px
+
