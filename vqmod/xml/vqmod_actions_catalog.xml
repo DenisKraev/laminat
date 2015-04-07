@@ -1,0 +1,197 @@
+<modification>
+        <id>Support catalog</id>
+        <version>1.5.1.3</version>
+        <vqmver>2.1.6</vqmver>
+        <author>Konstantin V. Sapronov aka costas</author>
+        <file name="catalog/controller/product/special.php">
+                <operation error="skip">
+                        <search position="replace"><![CDATA['href'      => $this->url->link('product/special', $url),]]></search>
+                        <add><![CDATA['href'      => $this->url->link('information/actions', $url),]]></add>
+                </operation>
+        </file>
+        <file name="catalog/controller/module/information.php">
+                <operation error="skip">
+                        <search position="after"><![CDATA[
+                        $this->data['informations'] = array();
+                        ]]></search>
+                        <add><![CDATA[
+			$this->data['informations'][] = array(
+				'title' => $this->language->get('actions'),
+				'href'  => $this->url->link('information/actions')
+			);
+                        ]]></add>
+                </operation>
+        </file>
+        <file name="catalog/controller/information/sitemap.php">
+                <operation error="skip">
+                        <search position="before"><![CDATA[$this->data['contact'] = $this->url->link('information/contact');]]></search>
+                        <add><![CDATA[
+			$this->data['text_actions'] = $this->language->get('actions');
+			$this->data['actions'] = $this->url->link('information/actions');
+                        ]]></add>
+                </operation>
+        </file>
+        <file name="catalog/view/theme/default/template/information/sitemap.tpl">
+                <operation error="skip">
+                        <search position="replace"><![CDATA[<li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>]]></search>
+                        <add><![CDATA[
+			<li><a href="<?php echo $actions; ?>"><?php echo $text_actions; ?></a></li>
+			            ]]></add>
+                </operation>
+        </file>
+        <file name="catalog/language/english/information/sitemap.php">
+                <operation error="skip">
+                        <search position="before"><![CDATA[
+                        ?>
+                        ]]></search>
+                        <add><![CDATA[$_['actions'] = 'Actions';]]></add>
+                </operation>
+        </file>
+        <file name="catalog/language/russian/information/sitemap.php">
+                <operation error="skip">
+                        <search position="before"><![CDATA[
+                        ?>
+                        ]]></search>
+                        <add><![CDATA[$_['actions'] = 'Акции';]]></add>
+                </operation>
+        </file>
+        
+        <file name="catalog/controller/common/footer.php">
+                <operation error="skip">
+                        <search position="before"><![CDATA[$this->data['contact'] = $this->url->link('information/contact');]]></search>
+                        <add><![CDATA[
+			$this->data['text_actions'] = $this->language->get('actions');
+			$this->data['actions'] = $this->url->link('information/actions');
+                        ]]></add>
+                </operation>
+        </file>
+        <file name="catalog/view/theme/default/template/common/footer.tpl">
+                <operation error="skip">
+                        <search position="replace"><![CDATA[<li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>]]></search>
+                        <add><![CDATA[
+			<li><a href="<?php echo $actions; ?>"><?php echo $text_actions; ?></a></li>
+			            ]]></add>
+                </operation>
+        </file>
+        
+        <file name="catalog/language/english/common/footer.php">
+                <operation error="skip">
+                        <search position="before"><![CDATA[
+                        ?>
+                        ]]></search>
+                        <add><![CDATA[$_['actions'] = 'Actions';]]></add>
+                </operation>
+        </file>
+        <file name="catalog/language/english/module/information.php">
+                <operation error="skip">
+                        <search position="before"><![CDATA[
+                        ?>
+                        ]]></search>
+                        <add><![CDATA[$_['actions'] = 'Actions';]]></add>
+                </operation>
+        </file>
+        <file name="catalog/language/russian/common/footer.php">
+                <operation error="skip">
+                        <search position="before"><![CDATA[
+                        ?>
+                        ]]></search>
+                        <add><![CDATA[$_['actions'] = 'Акции';]]></add>
+                </operation>
+        </file>
+        <file name="catalog/language/russian/module/information.php">
+                <operation error="skip">
+                        <search position="before"><![CDATA[
+                        ?>
+                        ]]></search>
+                        <add><![CDATA[$_['actions'] = 'Акции';]]></add>
+                </operation>
+        </file>
+	<file name="catalog/controller/common/column_left.php">
+                <operation error="skip">
+                        <search position="before"><![CDATA[if ($route == 'information/information' && isset($this->request->get['information_id'])) {]]></search>
+                        <add><![CDATA[
+$this->load->model('catalog/actions');
+if ($route == 'information/actions' && isset($this->request->get['actions_id'])) {
+        $layout_id = $this->model_catalog_actions->getActionsLayoutId($this->request->get['actions_id']);
+}
+                        ]]></add>
+                </operation>
+        </file>
+        <file name="catalog/controller/common/column_right.php">
+                <operation error="skip">
+                        <search position="before"><![CDATA[if ($route == 'information/information' && isset($this->request->get['information_id'])) {]]></search>
+                        <add><![CDATA[
+$this->load->model('catalog/actions');
+if ($route == 'information/actions' && isset($this->request->get['actions_id'])) {
+        $layout_id = $this->model_catalog_actions->getActionsLayoutId($this->request->get['actions_id']);
+}
+                        ]]></add>
+                </operation>
+        </file>
+        <file name="catalog/controller/common/content_bottom.php">
+                <operation error="skip">
+                        <search position="before"><![CDATA[if ($route == 'information/information' && isset($this->request->get['information_id'])) {]]></search>
+                        <add><![CDATA[
+$this->load->model('catalog/actions');
+if ($route == 'information/actions' && isset($this->request->get['actions_id'])) {
+        $layout_id = $this->model_catalog_actions->getActionsLayoutId($this->request->get['actions_id']);
+}
+                        ]]></add>
+                </operation>
+        </file>
+        <file name="catalog/controller/common/content_top.php">
+                <operation error="skip">
+                        <search position="before"><![CDATA[if ($route == 'information/information' && isset($this->request->get['information_id'])) {]]></search>
+                        <add><![CDATA[
+$this->load->model('catalog/actions');
+if ($route == 'information/actions' && isset($this->request->get['actions_id'])) {
+        $layout_id = $this->model_catalog_actions->getActionsLayoutId($this->request->get['actions_id']);
+}
+                        ]]></add>
+                </operation>
+        </file>
+        <file name="catalog/controller/common/column_left.php">
+                <operation error="skip">
+                        <search position="before"><![CDATA[if (substr($route, 0, 23) == 'information/information' && isset($this->request->get['information_id'])) {]]></search>
+                        <add><![CDATA[
+                $this->load->model('catalog/actions');
+                if (substr($route, 0, 19) == 'information/actions' && isset($this->request->get['actions_id'])) {
+                        $layout_id = $this->model_catalog_actions->getActionsLayoutId($this->request->get['actions_id']);
+                }
+                        ]]></add>
+                </operation>
+        </file>
+        <file name="catalog/controller/common/column_right.php">
+                <operation error="skip">
+                        <search position="before"><![CDATA[if (substr($route, 0, 23) == 'information/information' && isset($this->request->get['information_id'])) {]]></search>
+                        <add><![CDATA[
+                $this->load->model('catalog/actions');
+                if (substr($route, 0, 19) == 'information/actions' && isset($this->request->get['actions_id'])) {
+                        $layout_id = $this->model_catalog_actions->getActionsLayoutId($this->request->get['actions_id']);
+                }
+                        ]]></add>
+                </operation>
+        </file>
+        <file name="catalog/controller/common/content_bottom.php">
+                <operation error="skip">
+                        <search position="before"><![CDATA[if (substr($route, 0, 23) == 'information/information' && isset($this->request->get['information_id'])) {]]></search>
+                        <add><![CDATA[
+                $this->load->model('catalog/actions');
+                if (substr($route, 0, 19) == 'information/actions' && isset($this->request->get['actions_id'])) {
+                        $layout_id = $this->model_catalog_actions->getActionsLayoutId($this->request->get['actions_id']);
+                }
+                        ]]></add>
+                </operation>
+        </file>
+        <file name="catalog/controller/common/content_top.php">
+                <operation error="skip">
+                        <search position="before"><![CDATA[if (substr($route, 0, 23) == 'information/information' && isset($this->request->get['information_id'])) {]]></search>
+                        <add><![CDATA[
+                $this->load->model('catalog/actions');
+                if (substr($route, 0, 19) == 'information/actions' && isset($this->request->get['actions_id'])) {
+                        $layout_id = $this->model_catalog_actions->getActionsLayoutId($this->request->get['actions_id']);
+                }
+                        ]]></add>
+                </operation>
+        </file>
+</modification>
