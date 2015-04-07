@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 07 2015 г., 11:37
+-- Время создания: Апр 07 2015 г., 14:52
 -- Версия сервера: 5.5.41-log
 -- Версия PHP: 5.3.29
 
@@ -36,7 +36,14 @@ CREATE TABLE IF NOT EXISTS `actions` (
   `fancybox` int(1) NOT NULL DEFAULT '0',
   `product_related` text COLLATE utf8_bin,
   PRIMARY KEY (`actions_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
+
+--
+-- Дамп данных таблицы `actions`
+--
+
+INSERT INTO `actions` (`actions_id`, `image`, `image_size`, `date_start`, `date_end`, `status`, `fancybox`, `product_related`) VALUES
+(1, 'data/actions/img3.jpg', 0, 1428406080, 1429788480, 1, 0, '30,42');
 
 -- --------------------------------------------------------
 
@@ -58,6 +65,13 @@ CREATE TABLE IF NOT EXISTS `actions_description` (
   PRIMARY KEY (`actions_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- Дамп данных таблицы `actions_description`
+--
+
+INSERT INTO `actions_description` (`actions_id`, `language_id`, `title`, `meta_keywords`, `meta_description`, `h1`, `caption`, `anonnce`, `description`, `content`) VALUES
+(1, 1, '', '', '', '', 'Плинтус в подарок', '', '&lt;div&gt;\r\n	Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n&lt;div&gt;\r\n	в бесплатную укладку не входит.&lt;/div&gt;\r\n', '&lt;div&gt;\r\n	Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n&lt;div&gt;\r\n	в бесплатную укладку не входит.&lt;/div&gt;\r\n');
+
 -- --------------------------------------------------------
 
 --
@@ -71,6 +85,13 @@ CREATE TABLE IF NOT EXISTS `actions_to_layout` (
   PRIMARY KEY (`actions_id`,`store_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- Дамп данных таблицы `actions_to_layout`
+--
+
+INSERT INTO `actions_to_layout` (`actions_id`, `store_id`, `layout_id`) VALUES
+(1, 0, 11);
+
 -- --------------------------------------------------------
 
 --
@@ -82,6 +103,13 @@ CREATE TABLE IF NOT EXISTS `actions_to_store` (
   `store_id` int(11) NOT NULL,
   PRIMARY KEY (`actions_id`,`store_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Дамп данных таблицы `actions_to_store`
+--
+
+INSERT INTO `actions_to_store` (`actions_id`, `store_id`) VALUES
+(1, 0);
 
 -- --------------------------------------------------------
 
@@ -2979,7 +3007,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=960 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=983 ;
 
 --
 -- Дамп данных таблицы `setting`
@@ -3018,8 +3046,8 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (35, 0, 'flat', 'flat_status', '1', 0),
 (36, 0, 'flat', 'flat_geo_zone_id', '0', 0),
 (37, 0, 'flat', 'flat_tax_class_id', '9', 0),
-(39, 0, 'featured', 'featured_product', '43,40,42,49,46,47,28', 0),
-(40, 0, 'featured', 'featured_module', 'a:1:{i:0;a:7:{s:5:"limit";s:1:"5";s:11:"image_width";s:3:"160";s:12:"image_height";s:3:"160";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"2";}}', 1),
+(962, 0, 'featured', 'product', '', 0),
+(963, 0, 'featured', 'featured_product', '43,40,42,49,46,47,28', 0),
 (41, 0, 'flat', 'flat_cost', '5.00', 0),
 (42, 0, 'credit', 'credit_sort_order', '7', 0),
 (43, 0, 'credit', 'credit_status', '1', 0),
@@ -3171,7 +3199,7 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (230, 0, 'filterpro', 'option', 'a:4:{i:1;a:2:{s:7:"tooltip";s:0:"";s:9:"option_id";s:1:"2";}i:2;a:2:{s:7:"tooltip";s:0:"";s:9:"option_id";s:1:"1";}i:3;a:2:{s:7:"tooltip";s:0:"";s:9:"option_id";s:1:"5";}i:4;a:2:{s:7:"tooltip";s:0:"";s:9:"option_id";s:2:"11";}}', 1),
 (231, 0, 'filterpro', 'attribute_group', 'a:2:{i:1;a:2:{s:23:"attribute_group_tooltip";s:0:"";s:18:"attribute_group_id";s:1:"3";}i:2;a:2:{s:23:"attribute_group_tooltip";s:0:"";s:18:"attribute_group_id";s:1:"6";}}', 1),
 (232, 0, 'filterpro', 'attribute', 'a:11:{i:1;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:1:"4";}i:2;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:1:"5";}i:3;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:1:"6";}i:4;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:1:"7";}i:5;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:1:"8";}i:6;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:1:"9";}i:7;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:2:"10";}i:8;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:2:"11";}i:9;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:1:"3";}i:10;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:1:"1";}i:11;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:1:"2";}}', 1),
-(233, 0, 'coin_slider', 'coin_slider_module', 'a:1:{i:0;a:7:{s:14:"coin_slider_id";s:1:"1";s:5:"width";s:3:"980";s:6:"height";s:3:"280";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
+(973, 0, 'coin_slider', 'coin_slider_module', 'a:1:{i:0;a:7:{s:14:"coin_slider_id";s:1:"1";s:5:"width";s:3:"980";s:6:"height";s:3:"280";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
 (786, 0, 'config', 'config_review_status', '1', 0),
 (787, 0, 'config', 'config_download', '1', 0),
 (788, 0, 'config', 'config_voucher_min', '1', 0),
@@ -3239,10 +3267,11 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (877, 0, 'config', 'config_sms_message', '', 0),
 (878, 0, 'config', 'config_sms_gate_username', '', 0),
 (879, 0, 'config', 'config_sms_gate_password', '', 0),
-(886, 0, 'html_block', 'html_block_module', 'a:1:{i:0;a:5:{s:13:"html_block_id";s:1:"1";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
-(887, 0, 'html_block', 'html_block_1', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:115:"&lt;?php include($_SERVER[''DOCUMENT_ROOT''].''/catalog/view/theme/default/template/partials/offer_static.tpl''); ?&gt;";}s:6:"editor";a:1:{i:1;s:1:"1";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
-(957, 0, 'timer', 'timer_module', 'a:1:{i:1;a:11:{s:11:"description";a:1:{i:1;s:9:"[Timer]\r\n";}s:4:"date";s:10:"2015-04-06";s:4:"time";s:8:"23:59:59";s:8:"interval";s:2:"24";s:5:"image";s:19:"data/timer/img2.png";s:5:"title";s:32:"Плинтус в подарок";s:15:"title_font_size";s:2:"34";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
-(959, 0, 'actions_setting', 'actions_setting', 'a:13:{s:13:"actions_limit";i:5;s:11:"image_width";i:120;s:12:"image_height";i:120;s:18:"image_module_width";i:80;s:19:"image_module_height";i:80;s:13:"module_maxlen";i:400;s:17:"show_module_image";i:1;s:16:"show_module_date";i:1;s:10:"show_image";i:1;s:9:"show_date";i:1;s:23:"image_relproduct_height";i:80;s:22:"image_relproduct_width";i:80;s:17:"show_actions_date";i:1;}', 1);
+(976, 0, 'html_block', 'html_block_module', 'a:1:{i:0;a:5:{s:13:"html_block_id";s:1:"1";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
+(977, 0, 'html_block', 'html_block_1', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:115:"&lt;?php include($_SERVER[''DOCUMENT_ROOT''].''/catalog/view/theme/default/template/partials/offer_static.tpl''); ?&gt;";}s:6:"editor";a:1:{i:1;s:1:"1";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
+(975, 0, 'timer', 'timer_module', 'a:1:{i:1;a:11:{s:11:"description";a:1:{i:1;s:9:"[Timer]\r\n";}s:4:"date";s:10:"2015-04-06";s:4:"time";s:8:"23:59:59";s:8:"interval";s:2:"24";s:5:"image";s:19:"data/timer/img2.png";s:5:"title";s:32:"Плинтус в подарок";s:15:"title_font_size";s:2:"34";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
+(959, 0, 'actions_setting', 'actions_setting', 'a:13:{s:13:"actions_limit";i:5;s:11:"image_width";i:120;s:12:"image_height";i:120;s:18:"image_module_width";i:80;s:19:"image_module_height";i:80;s:13:"module_maxlen";i:400;s:17:"show_module_image";i:1;s:16:"show_module_date";i:1;s:10:"show_image";i:1;s:9:"show_date";i:1;s:23:"image_relproduct_height";i:80;s:22:"image_relproduct_width";i:80;s:17:"show_actions_date";i:1;}', 1),
+(982, 0, 'actions', 'actions_module', 'a:1:{i:0;a:5:{s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:5:"limit";s:1:"4";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1);
 
 -- --------------------------------------------------------
 

@@ -40,7 +40,7 @@
                 <?php } ?>
               </select></td>
             <td class="left"><select name="actions_module[<?php echo $module_row; ?>][position]">
-                <!-- <?php if ($module['position'] == 'content_top') { ?>
+                <?php if ($module['position'] == 'content_top') { ?>
                 <option value="content_top" selected="selected"><?php echo $text_content_top; ?></option>
                 <?php } else { ?>
                 <option value="content_top"><?php echo $text_content_top; ?></option>
@@ -49,7 +49,7 @@
                 <option value="content_bottom" selected="selected"><?php echo $text_content_bottom; ?></option>
                 <?php } else { ?>
                 <option value="content_bottom"><?php echo $text_content_bottom; ?></option>
-                <?php } ?>--> 
+                <?php } ?>
                 <?php if ($module['position'] == 'column_left') { ?>
                 <option value="column_left" selected="selected"><?php echo $text_column_left; ?></option>
                 <?php } else { ?>

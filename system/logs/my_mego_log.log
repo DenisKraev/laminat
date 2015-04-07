@@ -337,3 +337,4 @@
 2015-04-06 15:34:40 - PHP Notice:  Undefined variable: image in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\timer_div.tpl on line 4
 2015-04-06 15:34:40 - PHP Notice:  Undefined variable: image in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\timer_div.tpl on line 4
 2015-04-06 17:01:52 - PHP Notice:  Undefined index: title_font_size in D:\OpenServer\domains\laminat\admin\view\template\module\timer.tpl on line 77
+2015-04-07 14:42:13 - PHP Notice:  Undefined variable: text_actions_setting in D:\OpenServer\domains\laminat\admin\view\template\catalog\actions_form_setting.tpl on line 33
