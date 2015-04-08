@@ -13,7 +13,7 @@ Error: Undefined mixin 'font-family-2'.
 15:   line-height: 22px
 16:   margin-bottom: 35px
 17:   color: #333333
-18:   &.center
+18:   a
 
 Backtrace:
 D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/global/se.sass:13:in `font-family-2'
@@ -73,4 +73,4 @@ C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/ada
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'font-family-2'.\A         on line 13 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/global/se.sass, in `font-family-2'\A         from line 13 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/global/se.sass\A \A 8:     text-decoration: none\A 9: \A 10: /* Заголовки\A 11: .title-style\A 12:   margin: 0px\A 13:   +font-family-2(bold)\A 14:   font-size: 20px\A 15:   line-height: 22px\A 16:   margin-bottom: 35px\A 17:   color: #333333\A 18:   &.center"; }
+  content: "Error: Undefined mixin 'font-family-2'.\A         on line 13 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/global/se.sass, in `font-family-2'\A         from line 13 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/global/se.sass\A \A 8:     text-decoration: none\A 9: \A 10: /* Заголовки\A 11: .title-style\A 12:   margin: 0px\A 13:   +font-family-2(bold)\A 14:   font-size: 20px\A 15:   line-height: 22px\A 16:   margin-bottom: 35px\A 17:   color: #333333\A 18:   a"; }

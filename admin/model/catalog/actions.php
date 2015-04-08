@@ -16,8 +16,8 @@ class ModelCatalogActions extends Model {
 			`image` = '" . (string)$data['image'] . "', 
 			`status` = '" . (int)$data['status'] . "',
 			`fancybox` = '".(int)$data['fancybox']."',
-			`date_start` = '".(int)$data['date_start']."',
-			`date_end` = '".(int)$data['date_end']."',
+			`date_start` = '".$data['date_start']."',
+			`date_end` = '".$data['date_end']."',
 			`product_related` = '" . $product_related . "'
 			");
 
@@ -83,8 +83,8 @@ class ModelCatalogActions extends Model {
 		
 		$this->db->query("UPDATE `" . DB_PREFIX . "actions` SET
 			`image` = '" . (string)$data['image'] . "',
-			`date_start` = '" . (int)$data['date_start'] . "',
-			`date_end` = '" . (int)$data['date_end'] . "',
+			`date_start` = '" . $data['date_start'] . "',
+			`date_end` = '" . $data['date_end'] . "',
 			`status` = '" . (int)$data['status'] . "',
 			`fancybox` = '" . (int)$data['fancybox'] . "',
 			`product_related` = '" . $product_related . "'

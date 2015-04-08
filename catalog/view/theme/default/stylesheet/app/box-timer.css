@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'font-family-2'.
-        on line 47 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-timer.sass, in `font-family-2'
-        from line 47 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-timer.sass
+        on line 48 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-timer.sass, in `font-family-2'
+        from line 48 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-timer.sass
 
-42:     display: table-cell
-43:     vertical-align: middle
-44:     padding-left: 5px
-45:     text-align: center
-46:     span
-47:       +font-family-2(extrabold)
-48:       color: #333333
-49:       text-transform: uppercase
-50:       line-height: 34px
-51:   .box-img-stop-date
-52:     width: 160px
+43:     display: table-cell
+44:     vertical-align: middle
+45:     padding-left: 5px
+46:     text-align: center
+47:     span
+48:       +font-family-2(extrabold)
+49:       color: #333333
+50:       text-transform: uppercase
+51:       line-height: 34px
+52:   .box-img-stop-date
+53:     width: 160px
 
 Backtrace:
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-timer.sass:47:in `font-family-2'
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-timer.sass:47
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-timer.sass:48:in `font-family-2'
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-timer.sass:48
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
@@ -95,4 +95,4 @@ C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/ada
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'font-family-2'.\A         on line 47 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-timer.sass, in `font-family-2'\A         from line 47 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-timer.sass\A \A 42:     display: table-cell\A 43:     vertical-align: middle\A 44:     padding-left: 5px\A 45:     text-align: center\A 46:     span\A 47:       +font-family-2(extrabold)\A 48:       color: #333333\A 49:       text-transform: uppercase\A 50:       line-height: 34px\A 51:   .box-img-stop-date\A 52:     width: 160px"; }
+  content: "Error: Undefined mixin 'font-family-2'.\A         on line 48 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-timer.sass, in `font-family-2'\A         from line 48 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-timer.sass\A \A 43:     display: table-cell\A 44:     vertical-align: middle\A 45:     padding-left: 5px\A 46:     text-align: center\A 47:     span\A 48:       +font-family-2(extrabold)\A 49:       color: #333333\A 50:       text-transform: uppercase\A 51:       line-height: 34px\A 52:   .box-img-stop-date\A 53:     width: 160px"; }

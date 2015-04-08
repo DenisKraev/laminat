@@ -6,10 +6,21 @@ $(document).ready(function(){
         paused: true,
         speed: 600,
         manualSpeed: 500,
-        prev: '.prev',
-        next: '.next',
+        prev: '.box-slider .prev',
+        next: '.box-slider .next',
         slides: '.slide',
-        pager: '.pager'
+        pager: '.box-slider .pager'
+    });
+
+    $('.actions-list').cycle({
+        paused: true,
+        fx: 'carousel',
+        visible: 2,
+        speed: 600,
+        manualSpeed: 500,
+        prev: '.box-actions .prev',
+        next: '.box-actions .next',
+        slides: '.actions-item'
     });
 
 //    $('.prod-slider').lightSlider({

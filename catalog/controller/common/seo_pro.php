@@ -1,50 +1,33 @@
 <?php
 class ControllerCommonSeoPro extends Controller {
-	private $cache_data = null;
-
-	public function __construct($registry) {
-		parent::__construct($registry);
-		$this->cache_data = $this->cache->get('seo_pro');
-		if (!$this->cache_data) {
-			$query = $this->db->query("SELECT LOWER(`keyword`) as 'keyword', `query` FROM " . DB_PREFIX . "url_alias");
-			$this->cache_data = array();
-			foreach ($query->rows as $row) {
-				$this->cache_data['keywords'][$row['keyword']] = $row['query'];
-				$this->cache_data['queries'][$row['query']] = $row['keyword'];
-			}
-			$this->cache->set('seo_pro', $this->cache_data);
-		}
-	}
-
 	public function index() {
-
 		// Add rewrite to url class
 		if ($this->config->get('config_seo_url')) {
 			$this->url->addRewrite($this);
-		} else {
-			return;
 		}
 
 		// Decode URL
-		if (!isset($this->request->get['_route_'])) {
-			$this->validate();
-		} else {
-			$route_ = $route = $this->request->get['_route_'];
+		if (isset($this->request->get['_route_'])) {
+			$route = $this->request->get['_route_'];
 			unset($this->request->get['_route_']);
 			$parts = explode('/', trim(utf8_strtolower($route), '/'));
+
+			if (preg_match('#^(actions/)(.*)#', $route, $matches)) {
+				$parts = explode('/', trim(utf8_strtolower($matches[2]), '/'));
+				if($parts[0] == '' AND count($parts) == 1) {
+					$parts = explode('/', trim(utf8_strtolower($route), '/'));
+				}
+			}
+                        
 			list($last_part) = explode('.', array_pop($parts));
 			array_push($parts, $last_part);
 
-			$rows = array();
-			foreach ($parts as $keyword) {
-				if (isset($this->cache_data['keywords'][$keyword])) {
-					$rows[] = array('keyword' => $keyword, 'query' => $this->cache_data['keywords'][$keyword]);
-				}
-			}
+			$keyword_in = array_map(array($this->db, 'escape'), $parts);
+			$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "url_alias WHERE keyword IN ('" . implode("', '", $keyword_in) . "')");
 
-			if (count($rows) == sizeof($parts)) {
+			if ($query->num_rows == sizeof($parts)) {
 				$queries = array();
-				foreach ($rows as $row) {
+				foreach ($query->rows as $row) {
 					$queries[utf8_strtolower($row['keyword'])] = $row['query'];
 				}
 
@@ -58,12 +41,17 @@ class ControllerCommonSeoPro extends Controller {
 						} else {
 							$this->request->get['path'] .= '_' . $url[1];
 						}
-					} elseif (count($url) > 1) {
+					} else {
 						$this->request->get[$url[0]] = $url[1];
 					}
 				}
 			} else {
 				$this->request->get['route'] = 'error/not_found';
+
+                        }
+                        if (isset($keyword_in[0]) AND $keyword_in[0] == 'actions') {
+                    		$this->request->get['route'] = 'information/actions';
+                        
 			}
 
 			if (isset($this->request->get['product_id'])) {
@@ -75,20 +63,18 @@ class ControllerCommonSeoPro extends Controller {
 			} elseif (isset($this->request->get['path'])) {
 				$this->request->get['route'] = 'product/category';
 			} elseif (isset($this->request->get['manufacturer_id'])) {
-				$this->request->get['route'] = 'product/manufacturer/info';
+				$this->request->get['route'] = 'product/manufacturer/product';
 			} elseif (isset($this->request->get['information_id'])) {
 				$this->request->get['route'] = 'information/information';
-			} elseif(isset($this->cache_data['queries'][$route_])) {
-					header($this->request->server['SERVER_PROTOCOL'] . ' 301 Moved Permanently');
-					$this->response->redirect($this->cache_data['queries'][$route_]);
-			} else {
-				if (isset($queries[$parts[0]])) {
-					$this->request->get['route'] = $queries[$parts[0]];
-				}
+
+			}elseif( isset($this->request->get['actions_id']) ) {
+				$this->request->get['route'] = 'information/actions';
+                        
 			}
 
-
-			$this->validate();
+			if (isset($this->request->get['route']) && $this->request->get['route'] != 'error/not_found') {
+				$this->validate($route);
+			}
 
 			if (isset($this->request->get['route'])) {
 				return $this->forward($this->request->get['route']);
@@ -110,6 +96,13 @@ class ControllerCommonSeoPro extends Controller {
 		unset($data['route']);
 
 		switch ($route) {
+
+                        case 'information/actions':
+				if (!isset($data['actions_id'])) {
+					$seo_url .= '/actions';
+				}
+				break;
+                        
 			case 'product/product':
 				if (isset($data['product_id'])) {
 					$tmp = $data;
@@ -134,11 +127,6 @@ class ControllerCommonSeoPro extends Controller {
 				}
 				break;
 
-			case 'product/product/review':
-			case 'information/information/info':
-				return $link;
-				break;
-
 			default:
 				break;
 		}
@@ -152,12 +140,22 @@ class ControllerCommonSeoPro extends Controller {
 		$link .= 'index.php?route=' . $route;
 
 		if (count($data)) {
-			$link .= '&amp;' . urldecode(http_build_query($data, '', '&amp;'));
+			$link .= '&' . urldecode(http_build_query($data));
 		}
 
 		$queries = array();
 		foreach ($data as $key => $value) {
 			switch ($key) {
+
+                        case 'actions_id':
+				$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "url_alias WHERE `query` = '" . $this->db->escape($key . '=' . (int)$value) . "'");
+				if ($query->num_rows) {
+					$seo_url .= '/actions/' . rawurlencode($query->row['keyword']);
+					unset($data[$key]);
+					$postfix = 1;
+				}
+				break;
+                        
 				case 'product_id':
 				case 'manufacturer_id':
 				case 'category_id':
@@ -180,24 +178,18 @@ class ControllerCommonSeoPro extends Controller {
 			}
 		}
 
-		if(empty($queries)) {
-			$queries[] = $route;
-		}
+		if (!empty($queries)) {
+			$query_in = array_map(array($this->db, 'escape'), $queries);
+			$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "url_alias WHERE `query` IN ('" . implode("', '", $query_in) . "')");
 
-		$rows = array();
-		foreach($queries as $query) {
-			if(isset($this->cache_data['queries'][$query])) {
-				$rows[] = array('query' => $query, 'keyword' => $this->cache_data['queries'][$query]);
-			}
-		}
-
-		if(count($rows) == count($queries)) {
-			$aliases = array();
-			foreach($rows as $row) {
-				$aliases[$row['query']] = $row['keyword'];
-			}
-			foreach($queries as $query) {
-				$seo_url .= '/' . rawurlencode($aliases[$query]);
+			if ($query->num_rows == count($queries)) {
+				$aliases = array();
+				foreach ($query->rows as $row) {
+					$aliases[$row['query']] = $row['keyword'];
+				}
+				foreach ($queries as $query) {
+					$seo_url .= '/' . rawurlencode($aliases[$query]);
+				}
 			}
 		}
 
@@ -217,12 +209,8 @@ class ControllerCommonSeoPro extends Controller {
 			$seo_url .= '/';
 		}
 
-		if(substr($seo_url, -2) == '//') {
-			$seo_url = substr($seo_url, 0, -1);
-		}
-
 		if (count($data)) {
-			$seo_url .= '?' . urldecode(http_build_query($data, '', '&amp;'));
+			$seo_url .= '?' . urldecode(http_build_query($data));
 		}
 
 		return $seo_url;
@@ -282,55 +270,48 @@ class ControllerCommonSeoPro extends Controller {
 		return $path[$category_id];
 	}
 
-	private function validate() {
-		if (isset($this->request->get['route']) && $this->request->get['route'] == 'error/not_found') {
-			return;
-		}
-		if(empty($this->request->get['route'])) {
-			$this->request->get['route'] = 'common/home';
+	private function validate($link) {
+		$get = array('path', 'actions_id', 'product_id', 'manufacturer_id', 'category_id', 'information_id');
+
+		$data = array_intersect_key($this->request->get, array_flip($get));
+
+		$args = '';
+
+		if (isset($data['path'])) {
+			$args .= 'path=' . $data['path'];
+			unset($data['path']);
 		}
 
-		if (isset($this->request->server['HTTP_X_REQUESTED_WITH']) && strtolower($this->request->server['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-			return;
+		if (count($data)) {
+			$args .= '&' . urldecode(http_build_query($data));
 		}
 
 		if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
-			$config_ssl = substr($this->config->get('config_ssl'), 0, $this->strpos_offset('/', $this->config->get('config_ssl'), 3) + 1);
-			$url = str_replace('&amp;', '&', $config_ssl . ltrim($this->request->server['REQUEST_URI'], '/'));
-			$seo = str_replace('&amp;', '&', $this->url->link($this->request->get['route'], $this->getQueryString(array('route')), 'SSL'));
+			$scheme = 'SSL';
 		} else {
-			$config_url = substr($this->config->get('config_url'), 0, $this->strpos_offset('/', $this->config->get('config_url'), 3) + 1);
-			$url = str_replace('&amp;', '&', $config_url . ltrim($this->request->server['REQUEST_URI'], '/'));
-			$seo = str_replace('&amp;', '&', $this->url->link($this->request->get['route'], $this->getQueryString(array('route')), 'NONSSL'));
+			$scheme = 'NONSSL';
 		}
 
-		if (rawurldecode($url) != rawurldecode($seo)) {
-			header($this->request->server['SERVER_PROTOCOL'] . ' 301 Moved Permanently');
+		$seo_url = $this->url->link($this->request->get['route'], $args, $scheme);
 
-			$this->response->redirect($seo);
-		}
-	}
+		$seo_url = str_replace('&amp;', '&', $seo_url);
 
-	private function strpos_offset($needle, $haystack, $occurrence) {
-		// explode the haystack
-		$arr = explode($needle, $haystack);
-		// check the needle is not out of bounds
-		switch($occurrence) {
-			case $occurrence == 0:
-				return false;
-			case $occurrence > max(array_keys($arr)):
-				return false;
-			default:
-				return strlen(implode($needle, array_slice($arr, 0, $occurrence)));
-		}
-	}
+		$link = parse_url($this->config->get('config_url'), PHP_URL_PATH) . $link;
 
-	private function getQueryString($exclude = array()) {
-		if (!is_array($exclude)) {
-			$exclude = array();
+		if ($link != rawurldecode(parse_url($seo_url, PHP_URL_PATH))) {
+			$get[] = 'route';
+
+			$data = array_diff_key($this->request->get, array_flip($get));
+
+			if (count($data)) {
+				$seo_url .= (strpos($seo_url, '?') === false) ? '?' : '&';
+				$seo_url .= urldecode(http_build_query($data));
 			}
 
-		return urldecode(http_build_query(array_diff_key($this->request->get, array_flip($exclude))));
+			header($this->request->server['SERVER_PROTOCOL'] . ' 301 Moved Permanently');
+
+			$this->response->redirect($seo_url);
 		}
 	}
+}
 ?>

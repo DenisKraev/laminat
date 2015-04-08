@@ -15,10 +15,18 @@
   line-height: 22px
   margin-bottom: 35px
   color: #333333
+  a
+    text-decoration: none
+    &:hover
+      text-decoration: underline
   &.center
     text-align: center
+  &.white, &.white a
+    color: #fff
 a.title-style
   text-decoration: none
+  &.white
+    color: #fff
   &:hover
     text-decoration: underline
     color: lighten(#000, 10%)

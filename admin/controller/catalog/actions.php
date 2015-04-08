@@ -609,13 +609,13 @@ class ControllerCatalogActions extends Controller {
 		}
 
 		/* BEGIN Check Date & Time */
-		if (!preg_match('/\d{2}-\d{2}-\d{4} \d{1,2}:\d{1,2}/', $this->request->post['date_start'])) {
-			$this->error['warning'] = $this->language->get('error_date_start');
-		}
-
-		if (!preg_match('/\d{2}-\d{2}-\d{4} \d{1,2}:\d{1,2}/', $this->request->post['date_end'])) {
-			$this->error['warning'] = $this->language->get('error_date_end');
-		}
+//		if (!preg_match('/\d{2}-\d{2}-\d{4} \d{1,2}:\d{1,2}/', $this->request->post['date_start'])) {
+//			$this->error['warning'] = $this->language->get('error_date_start');
+//		}
+//
+//		if (!preg_match('/\d{2}-\d{2}-\d{4} \d{1,2}:\d{1,2}/', $this->request->post['date_end'])) {
+//			$this->error['warning'] = $this->language->get('error_date_end');
+//		}
 
 		foreach ($this->request->post['actions_description'] as $language_id => $value) {
 			if ((strlen(utf8_decode($value['caption'])) < 3) || (strlen(utf8_decode($value['caption'])) > 254)) {
