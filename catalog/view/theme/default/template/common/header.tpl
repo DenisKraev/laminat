@@ -54,7 +54,7 @@
 <script type="text/javascript" src="catalog/view/javascript/callbackphone/jquery-ui-timepicker-addon.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/callbackphone/jquery-ui-timepicker-ru.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/callbackphone/simplemodal.js"></script>
-<script type="text/javascript" src="catalog/view/javascript/callbackphone/mask.js"></script>
+<!--<script type="text/javascript" src="catalog/view/javascript/callbackphone/mask.js"></script>-->
 
 <script type="text/javascript" src="catalog/view/javascript/app.js"></script>
 

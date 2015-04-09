@@ -2,26 +2,31 @@ $(document).ready(function(){
 
     $('input, textarea').placeholder();
 
-    $('.slider').cycle({
-        paused: true,
-        speed: 600,
-        manualSpeed: 500,
-        prev: '.box-slider .prev',
-        next: '.box-slider .next',
-        slides: '.slide',
-        pager: '.box-slider .pager'
-    });
+    if($('.slider').size() > 0){
+        $('.slider').cycle({
+            paused: true,
+            speed: 600,
+            manualSpeed: 500,
+            prev: '.box-slider .prev',
+            next: '.box-slider .next',
+            slides: '.slide',
+            pager: '.box-slider .pager'
+        });
+    }
 
-    $('.actions-list').cycle({
-        paused: true,
-        fx: 'carousel',
-        visible: 2,
-        speed: 600,
-        manualSpeed: 500,
-        prev: '.box-actions .prev',
-        next: '.box-actions .next',
-        slides: '.actions-item'
-    });
+    if($('.actions-list').size() > 0){
+        $('.actions-list').cycle({
+            paused: true,
+            fx: 'carousel',
+            visible: 2,
+            speed: 600,
+            manualSpeed: 500,
+            prev: '.box-actions .prev',
+            next: '.box-actions .next',
+            slides: '.actions-item'
+        });
+    }
+
 
 //    $('.prod-slider').lightSlider({
 //        gallery: true,

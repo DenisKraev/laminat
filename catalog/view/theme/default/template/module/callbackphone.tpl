@@ -96,7 +96,7 @@ var callbackphonecomment = $('#callbackphonecomment').val();
       jQuery(document).ready(function() { 
         callbackphone('#callup').datetimepicker();
         callbackphone('#callto').datetimepicker();
-        callbackphone('#callbackphonetel').mask('<?php echo $callbackphone_mask; ?>');
+        //callbackphone('#callbackphonetel').mask('<?php echo $callbackphone_mask; ?>');
       });
   $=jQuery.noConflict();
 </script>

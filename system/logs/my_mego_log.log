@@ -679,3 +679,5 @@
 				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
 				WHERE pd.language_id = '1'
 				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-09 10:07:21 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-09 10:07:21 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
