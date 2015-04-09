@@ -681,3 +681,5 @@
 				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
 2015-04-09 10:07:21 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
 2015-04-09 10:07:21 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-09 14:24:19 - PHP Notice:  Undefined index: 1 in D:\OpenServer\domains\laminat\admin\view\template\module\product_status_form.tpl on line 30
+2015-04-09 14:27:33 - PHP Notice:  Undefined variable: product in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\product.tpl on line 9

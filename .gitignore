@@ -1,9 +1,12 @@
 .idea/*
 .sass-cache/*
 system/cache/*
+system/logs/my_mego_log.log
 !system/cache/index.html
 vqmod/vqcache/*
+vqmod/checked.cache
 image/cache/*
+
 
 # Config and Htaccess Files
 # /upload/.htaccess

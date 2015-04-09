@@ -45,6 +45,7 @@ function display(view) {
 			
 			if (image != null) { 
 				html += '<div class="image">' + image + '</div>';
+        html += '  <div class="statuses">' + $(element).find('.statuses').html() + '</div>';
 			}
 			
 			var price = $(element).find('.price').html();
@@ -55,6 +56,7 @@ function display(view) {
 					
 			html += '  <div class="name">' + $(element).find('.name').html() + '</div>';
 			html += '  <div class="description">' + $(element).find('.description').html() + '</div>';
+
 			
 			var rating = $(element).find('.rating').html();
 			
@@ -80,11 +82,12 @@ function display(view) {
 			
 			if (image != null) {
 				html += '<div class="image">' + image + '</div>';
+        html += '  <div class="statuses">' + $(element).find('.statuses').html() + '</div>';
 			}
 			
 			html += '<div class="name">' + $(element).find('.name').html() + '</div>';
 			html += '<div class="description">' + $(element).find('.description').html() + '</div>';
-			
+
 			var price = $(element).find('.price').html();
 			
 			if (price != null) {

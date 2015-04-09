@@ -6,6 +6,7 @@
     <?php } ?>
   </div>
   <div class="product-info">
+    <div class="statuses"><?php echo $statuses; ?></div>
     <?php if ($thumb || $images) { ?>
     <div class="left">
       <?php if ($thumb) { ?>

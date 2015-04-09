@@ -1,4 +1,4 @@
-of<?php
+<?php
 
 // Heading
 $_['heading_title'] = 'Статусы Товаров';

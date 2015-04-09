@@ -586,6 +586,8 @@ class ControllerModuleFilterPro extends Controller {
 
 		$this->data += $this->language->load('product/category');
 
+    $this->load->model('catalog/product_status');
+
 		$this->data['use_lazyload'] = isset($filterpro_setting['use_lazyload']) ? 1 : 0;
 
 		$this->data['products'] = array();
@@ -626,7 +628,8 @@ class ControllerModuleFilterPro extends Controller {
 				'thumb'       => $image,
 				'name'        => $result['name'],
 				'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, 100) . '..',
-				'price'       => $price,
+        'statuses'    => $this->model_catalog_product_status->getHTMLProductStatuses($result['product_id']),
+        'price'       => $price,
 				'special'     => $special,
 				'tax'         => $tax,
 				'rating'      => $result['rating'],
