@@ -23,32 +23,43 @@ class ControllerModuleTimer extends Controller {
     $cur = getdate();
     $cur = $cur[0];
 
-    $interval =  $setting['interval'] * 60 * 60; // интервал часы в секунды
-    $template->data['interval'] = $interval;
+    $interval =  $setting['interval'] * 60 * 60;
 
     $str = $setting['date'].' '.$setting['time'];
     $start = strtotime($str);
 
     $past_interval =  $cur - $start;
-    $stop = $start + ($interval - $past_interval);
+    // 3600 корректировка на час (пока не выяснил почему так работает)
+    $stop = ($start + ($interval - $past_interval)) - 3600;
+    $stop_text = ($start + $interval) - 3600;
 
     $count = floor($past_interval/$interval);
 
     if($count >= 1){
       $start = $start + ($interval * $count);
       $past_interval =  abs($cur - $start);
-      $stop = $start + ($interval - $past_interval);
+
+      $cur_t = new DateTime(date('Y-m-d'));
+      $start_t = new DateTime($setting['date']);
+      $start_t = new DateTime($start_t->format('Y-m-d'));
+      if($cur_t > $start_t) {
+        $stop = ($start + ($interval - $past_interval)) - 3600;
+      } else {
+        $stop = ($start + ($interval - $past_interval));
+      }
+
+      $stop_text = $stop;
     }
 
     $template->data['start'] = $start;
     $template->data['stop'] = $stop;
 
-    $search = mb_substr($this->rdate("d M", $stop), 0, 1, 'utf-8');
+    $search = mb_substr($this->rdate("d M", $stop_text), 0, 1, 'utf-8');
     if($search == 0){
       $replace = '';
-      $template->data['date_stop'] = str_replace($search, $replace, $this->rdate("d M", $stop));
+      $template->data['date_stop'] = str_replace($search, $replace, $this->rdate("d M", $stop_text));
     } else {
-      $template->data['date_stop'] = $this->rdate("d M", $stop);
+      $template->data['date_stop'] = $this->rdate("d M", $stop_text);
     }
 
     //Images

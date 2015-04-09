@@ -11,6 +11,7 @@ class ModelCatalogActions extends Model {
 				n.image,
 				n.date_start,
 				n.date_end,
+				n.interval,
 				nd.caption,
 				nd.description,
 				nd.anonnce

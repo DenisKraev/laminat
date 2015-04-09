@@ -16,11 +16,13 @@
                 </a>
               <?php } ?>
               <div class="info">
+                <div class="mark">Акция</div>
                 <div class="title"><a href="<?php echo $action['href']; ?>"><?php echo $action['caption']; ?></a></div>
                 <?php if ($action['date']) { ?>
                   <div class="date"><?php echo $action['date']; ?></div>
                 <?php } ?>
                 <div class="description"><?php echo $action['anonnce']; ?></div>
+                <a class="more" href="<?php echo $action['href']; ?>">Подробнее</a>
               </div>
             </div>
           </div>

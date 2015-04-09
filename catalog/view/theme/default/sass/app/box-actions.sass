@@ -44,7 +44,42 @@
     height: 45px
     background: image-url('app/shadow-action-item.png') 50% 0px no-repeat
   .box-img
-    float: left
+    display: table-cell
   .info
+    font-family: Calibri, sans-serif
     width: 220px
-    float: left
+    height: 218px
+    display: table-cell
+    vertical-align: middle
+    padding-left: 12px
+  .mark
+    font-weight: bold
+    font-size: 18px
+    color: #fff
+    text-transform: uppercase
+    background: #eb8c2a
+    padding: 5px 8px
+    margin-bottom: 8px
+    +inline-block(top)
+  .title, .date
+    font-weight: bold
+    font-size: 21px
+    color: #010101
+    a
+      color: #010101
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+  .date
+    margin-bottom: 8px
+  .description
+    font-family: Arial, sans-serif
+    font-size: 12px
+    line-height: 16px
+    color: #444444
+    margin-bottom: 5px
+  .more
+    color: #444444
+    font-size: 14px
+    &:hover
+      text-decoration: none

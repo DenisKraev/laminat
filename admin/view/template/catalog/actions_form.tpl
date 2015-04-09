@@ -115,13 +115,17 @@
               <td><input type="text" name="keyword" value="<?php echo $keyword; ?>" /></td>
             </tr>
             <tr>
-            	<td><?php echo $entry_date_start; ?></td>
-                <td><input class="date_start" type="text" name="date_start" value="<?php echo $date_start; ?>"></input></td>
+            	  <td><?php echo $entry_date_start; ?></td>
+                <td><input class="date_start" type="text" name="date_start" value="<?php echo $date_start; ?>"></td>
             </tr>
             <tr>
-        	<td><?php echo $entry_date_end; ?></td>
-        	<td><input class="date_end" type="text" name="date_end" value="<?php echo $date_end; ?>"></input></td>
+              <td><?php echo $entry_date_end; ?></td>
+              <td><input class="date_end" type="text" name="date_end" value="<?php echo $date_end; ?>"></td>
             </tr>
+              <tr>
+                <td>Интервал<span class="help">Если интрвал заполнен, то дата окаончания остается пустой</span></td>
+                <td><input class="interval" type="text" name="interval" value="<?php echo $interval; ?>"></td>
+              </tr>
           </table>
         </div>
         <div id="tab-seo">
@@ -302,9 +306,9 @@ timeFormat: 'h:m'
 });
 
 <?php
-if ($date_end == 0){
-	echo "$('.date_end').datepicker('disable');";
-}
+//if ($date_end == 0){
+//	echo "$('.date_end').datepicker('disable');";
+//}
 ?>
 
 

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 07 2015 г., 14:52
+-- Время создания: Апр 09 2015 г., 10:02
 -- Версия сервера: 5.5.41-log
 -- Версия PHP: 5.3.29
 
@@ -30,20 +30,24 @@ CREATE TABLE IF NOT EXISTS `actions` (
   `actions_id` int(11) NOT NULL AUTO_INCREMENT,
   `image` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `image_size` int(1) NOT NULL DEFAULT '0',
-  `date_start` int(11) NOT NULL DEFAULT '0',
-  `date_end` int(11) NOT NULL DEFAULT '0',
+  `date_start` text COLLATE utf8_bin,
+  `date_end` text COLLATE utf8_bin,
+  `interval` int(11) DEFAULT NULL,
   `status` int(1) NOT NULL DEFAULT '0',
   `fancybox` int(1) NOT NULL DEFAULT '0',
   `product_related` text COLLATE utf8_bin,
   PRIMARY KEY (`actions_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=5 ;
 
 --
 -- Дамп данных таблицы `actions`
 --
 
-INSERT INTO `actions` (`actions_id`, `image`, `image_size`, `date_start`, `date_end`, `status`, `fancybox`, `product_related`) VALUES
-(1, 'data/actions/img3.jpg', 0, 1428406080, 1429788480, 1, 0, '30,42');
+INSERT INTO `actions` (`actions_id`, `image`, `image_size`, `date_start`, `date_end`, `interval`, `status`, `fancybox`, `product_related`) VALUES
+(1, 'data/actions/img3.jpg', 0, '1428406080', '1429788480', NULL, 1, 0, '30,42'),
+(2, 'data/actions/img3.jpg', 0, '1428408180', '1428408180', NULL, 1, 0, ''),
+(3, 'data/actions/img3.jpg', 0, '1428440400', '', 24, 1, 0, ''),
+(4, '', 0, '1428526800', '', 240, 1, 0, '');
 
 -- --------------------------------------------------------
 
@@ -70,7 +74,10 @@ CREATE TABLE IF NOT EXISTS `actions_description` (
 --
 
 INSERT INTO `actions_description` (`actions_id`, `language_id`, `title`, `meta_keywords`, `meta_description`, `h1`, `caption`, `anonnce`, `description`, `content`) VALUES
-(1, 1, '', '', '', '', 'Плинтус в подарок', '', '&lt;div&gt;\r\n	Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n&lt;div&gt;\r\n	в бесплатную укладку не входит.&lt;/div&gt;\r\n', '&lt;div&gt;\r\n	Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n&lt;div&gt;\r\n	в бесплатную укладку не входит.&lt;/div&gt;\r\n');
+(1, 1, '', '', '', '', 'Плинтус в подарок', '', '&lt;div&gt;\r\n	Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n&lt;div&gt;\r\n	в бесплатную укладку не входит.Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n&lt;div&gt;\r\n	в бесплатную укладку не входит.Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n&lt;div&gt;\r\n	в бесплатную укладку не входит.&lt;/div&gt;\r\n', '&lt;div&gt;\r\n	Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n&lt;div&gt;\r\n	в бесплатную укладку не входит.&lt;/div&gt;\r\n'),
+(2, 1, '', '', '', '', 'Еще акция', '', '&lt;p&gt;\r\n	фкпыфукп фкпыукп&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	укпыукп ыукпыур&lt;/p&gt;\r\n'),
+(3, 1, '', '', '', '', 'Акция', '', '&lt;p&gt;\r\n	фыпфкуп&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	фукпыукп&lt;/p&gt;\r\n'),
+(4, 1, '', '', '', '', 'ewgaweg', '', '&lt;p&gt;\r\n	wegaw&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	waegaweg&lt;/p&gt;\r\n');
 
 -- --------------------------------------------------------
 
@@ -90,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `actions_to_layout` (
 --
 
 INSERT INTO `actions_to_layout` (`actions_id`, `store_id`, `layout_id`) VALUES
-(1, 0, 11);
+(2, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -109,7 +116,10 @@ CREATE TABLE IF NOT EXISTS `actions_to_store` (
 --
 
 INSERT INTO `actions_to_store` (`actions_id`, `store_id`) VALUES
-(1, 0);
+(1, 0),
+(2, 0),
+(3, 0),
+(4, 0);
 
 -- --------------------------------------------------------
 
@@ -2377,7 +2387,7 @@ INSERT INTO `product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`
 (36, 'Товар 9', '', '', '', '', '', '', '', 994, 6, 'data/demo/ipod_nano_1.jpg', 8, 0, '100.0000', 100, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 18:09:19', '2011-09-30 01:07:12', 0),
 (40, 'Товар 11', '', '', '', '', '', '', '', 970, 5, 'data/demo/iphone_1.jpg', 8, 1, '101.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:12', '2011-09-30 01:06:53', 0),
 (41, 'Товар 14', '', '', '', '', '', '', '', 977, 5, 'data/demo/imac_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:26', '2011-09-30 01:06:44', 0),
-(42, 'Товар 15', '', '', '', '', '', '', '', 990, 5, 'data/demo/apple_cinema_30.jpg', 8, 1, '100.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, '2009-02-03 21:07:37', '2011-09-30 00:46:19', 1),
+(42, 'Товар 15', '', '', '', '', '', '', '', 990, 5, 'data/demo/apple_cinema_30.jpg', 8, 1, '100.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, '2009-02-03 21:07:37', '2011-09-30 00:46:19', 2),
 (43, 'Товар 16', '', '', '', '', '', '', '', 929, 5, 'data/demo/macbook_1.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:07:49', '2011-09-30 01:05:46', 2),
 (44, 'Товар 17', '', '', '', '', '', '', '', 1000, 5, 'data/demo/macbook_air_1.jpg', 8, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:00', '2011-09-30 01:05:53', 0),
 (45, 'Товар 18', '', '', '', '', '', '', '', 998, 5, 'data/demo/macbook_pro_1.jpg', 8, 1, '2000.0000', 0, 100, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:17', '2011-09-15 22:22:01', 0),
@@ -3007,7 +3017,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=983 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1120 ;
 
 --
 -- Дамп данных таблицы `setting`
@@ -3269,9 +3279,9 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (879, 0, 'config', 'config_sms_gate_password', '', 0),
 (976, 0, 'html_block', 'html_block_module', 'a:1:{i:0;a:5:{s:13:"html_block_id";s:1:"1";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
 (977, 0, 'html_block', 'html_block_1', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:115:"&lt;?php include($_SERVER[''DOCUMENT_ROOT''].''/catalog/view/theme/default/template/partials/offer_static.tpl''); ?&gt;";}s:6:"editor";a:1:{i:1;s:1:"1";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
-(975, 0, 'timer', 'timer_module', 'a:1:{i:1;a:11:{s:11:"description";a:1:{i:1;s:9:"[Timer]\r\n";}s:4:"date";s:10:"2015-04-06";s:4:"time";s:8:"23:59:59";s:8:"interval";s:2:"24";s:5:"image";s:19:"data/timer/img2.png";s:5:"title";s:32:"Плинтус в подарок";s:15:"title_font_size";s:2:"34";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
-(959, 0, 'actions_setting', 'actions_setting', 'a:13:{s:13:"actions_limit";i:5;s:11:"image_width";i:120;s:12:"image_height";i:120;s:18:"image_module_width";i:80;s:19:"image_module_height";i:80;s:13:"module_maxlen";i:400;s:17:"show_module_image";i:1;s:16:"show_module_date";i:1;s:10:"show_image";i:1;s:9:"show_date";i:1;s:23:"image_relproduct_height";i:80;s:22:"image_relproduct_width";i:80;s:17:"show_actions_date";i:1;}', 1),
-(982, 0, 'actions', 'actions_module', 'a:1:{i:0;a:5:{s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:5:"limit";s:1:"4";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1);
+(1119, 0, 'timer', 'timer_module', 'a:1:{i:1;a:11:{s:11:"description";a:1:{i:1;s:31:"&lt;p&gt;\r\n	[Timer]&lt;/p&gt;\r\n";}s:4:"date";s:10:"2015-04-09";s:4:"time";s:5:"0:0:0";s:8:"interval";s:2:"24";s:5:"image";s:19:"data/timer/img2.png";s:5:"title";s:32:"Плинтус в подарок";s:15:"title_font_size";s:2:"34";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
+(982, 0, 'actions', 'actions_module', 'a:1:{i:0;a:5:{s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:5:"limit";s:1:"4";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
+(984, 0, 'actions_setting', 'actions_setting', 'a:14:{s:13:"actions_limit";s:1:"5";s:11:"image_width";s:3:"120";s:12:"image_height";s:3:"120";s:10:"show_image";s:1:"1";s:9:"show_date";s:1:"1";s:22:"image_relproduct_width";s:2:"80";s:23:"image_relproduct_height";s:2:"80";s:17:"show_actions_date";s:1:"1";s:18:"image_module_width";s:3:"212";s:19:"image_module_height";s:3:"218";s:13:"module_maxlen";s:2:"80";s:17:"show_module_image";s:1:"1";s:16:"show_module_date";s:1:"1";s:3:"seo";a:1:{i:1;a:4:{s:2:"h1";s:0:"";s:5:"title";s:0:"";s:8:"keywords";s:0:"";s:11:"description";s:0:"";}}}', 1);
 
 -- --------------------------------------------------------
 

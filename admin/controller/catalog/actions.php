@@ -338,10 +338,18 @@ class ControllerCatalogActions extends Controller {
 			$actions_info = $this->model_catalog_actions->getActions($this->request->get['actions_id']);
 
 			/* Format DateTime */
-			if (isset($actions_info['date_start'])) {
+			if ($actions_info['date_start'] != '') {
 				$actions_info['date_start'] = date("d-m-Y H:i", $actions_info['date_start']);
-				$actions_info['date_end'] = date("d-m-Y H:i", $actions_info['date_end']);
-			}
+			} else {
+        $actions_info['date_start'] = '';
+      }
+
+      if ($actions_info['date_end'] != '') {
+        $actions_info['date_end'] = date("d-m-Y H:i", $actions_info['date_end']);
+      } else {
+        $actions_info['date_end'] = '';
+      }
+
 		}
 
 		$this->load->model('localisation/language');
@@ -404,6 +412,8 @@ class ControllerCatalogActions extends Controller {
 		} else {
 			$this->data['date_end'] = date('d-m-Y H:i', time());
 		}
+
+    $this->data['interval'] = $actions_info['interval'];
 		
 		// Product Related 
 		//------------------------------------------------------------------

@@ -458,3 +458,224 @@
 				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
 2015-04-08 10:53:08 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\model\catalog\actions.php:78) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 28
 2015-04-08 10:53:08 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\model\catalog\actions.php:78) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 29
+2015-04-08 11:28:59 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 11:29:04 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 155
+2015-04-08 11:29:06 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 11:29:06 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 11:29:06 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 64
+2015-04-08 11:30:57 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 11:30:57 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 11:30:57 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 64
+2015-04-08 11:34:59 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 11:34:59 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 11:34:59 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 64
+2015-04-08 11:41:09 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 11:41:09 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 11:41:09 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 64
+2015-04-08 11:43:31 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 11:43:31 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 11:43:31 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 64
+2015-04-08 11:43:58 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 11:43:58 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 11:43:58 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 64
+2015-04-08 11:44:37 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 11:44:37 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 11:44:37 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 64
+2015-04-08 13:33:21 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 13:33:22 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 155
+2015-04-08 13:33:23 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 342
+2015-04-08 13:33:24 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 13:33:53 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 299
+2015-04-08 13:33:53 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 299
+2015-04-08 13:33:53 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 64
+2015-04-08 13:33:53 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 63
+2015-04-08 13:34:06 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 186
+2015-04-08 13:34:06 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 186
+2015-04-08 13:34:06 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 64
+2015-04-08 13:34:11 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 299
+2015-04-08 13:34:11 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 299
+2015-04-08 13:34:11 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 64
+2015-04-08 13:34:11 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 63
+2015-04-08 13:45:41 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 342
+2015-04-08 13:45:42 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 13:45:44 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 342
+2015-04-08 13:45:44 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 13:46:36 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 342
+2015-04-08 13:46:36 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 13:46:39 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 342
+2015-04-08 13:46:39 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 13:47:19 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 342
+2015-04-08 13:47:19 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 13:47:42 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 13:50:33 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 13:53:23 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 13:53:28 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 155
+2015-04-08 13:53:32 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 14:10:04 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 155
+2015-04-08 14:10:04 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-08 14:10:10 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 14:10:24 - PHP Notice:  Undefined index: date_end in D:\OpenServer\domains\laminat\admin\model\catalog\actions.php on line 77
+2015-04-08 14:10:24 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 28
+2015-04-08 14:10:24 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 29
+2015-04-08 14:13:10 - PHP Notice:  Undefined index: date_end in D:\OpenServer\domains\laminat\admin\model\catalog\actions.php on line 82
+2015-04-08 14:13:10 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 28
+2015-04-08 14:13:10 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 29
+2015-04-08 14:13:59 - PHP Notice:  Undefined index: interval in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 14:13:59 - PHP Notice:  Undefined index: interval in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 14:13:59 - PHP Notice:  Undefined index: interval in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 43
+2015-04-08 14:16:09 - PHP Notice:  Undefined variable: date_start in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 103
+2015-04-08 14:18:02 - PHP Notice:  Undefined index: date_end in D:\OpenServer\domains\laminat\admin\model\catalog\actions.php on line 82
+2015-04-08 14:18:02 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 28
+2015-04-08 14:18:02 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 29
+2015-04-08 14:18:55 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 14:19:13 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-08 14:19:19 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 14:19:25 - PHP Notice:  Undefined index: date_end in D:\OpenServer\domains\laminat\admin\model\catalog\actions.php on line 82
+2015-04-08 14:19:25 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 28
+2015-04-08 14:19:25 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 29
+2015-04-08 14:19:40 - PHP Notice:  Undefined index: date_end in D:\OpenServer\domains\laminat\admin\model\catalog\actions.php on line 82
+2015-04-08 14:19:40 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 28
+2015-04-08 14:19:40 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\laminat\admin\index.php:86) in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 29
+2015-04-08 14:23:55 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 14:23:58 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-08 14:23:59 - PHP Notice:  Undefined variable: actions_info in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 416
+2015-04-08 14:24:16 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-08 14:24:16 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 155
+2015-04-08 14:24:16 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-08 14:24:19 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 14:26:50 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 14:27:00 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-08 14:27:00 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 155
+2015-04-08 14:27:00 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-08 14:27:32 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 14:29:02 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-08 14:29:02 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-08 14:29:30 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 14:30:11 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-08 14:30:11 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-08 14:30:25 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 14:30:36 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-08 14:30:36 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-08 14:30:55 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 14:30:59 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-08 14:30:59 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-08 14:31:01 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-08 14:51:40 - PHP Notice:  Undefined variable: start in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\timer_div.tpl on line 15
+2015-04-08 14:51:40 - PHP Notice:  Undefined variable: stop in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\timer_div.tpl on line 16
+2015-04-08 14:51:42 - PHP Notice:  Undefined variable: start in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\timer_div.tpl on line 15
+2015-04-08 14:51:42 - PHP Notice:  Undefined variable: stop in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\timer_div.tpl on line 16
+2015-04-08 17:34:16 - PHP Notice:  Undefined variable: stop_text in D:\OpenServer\domains\laminat\catalog\controller\module\timer.php on line 69
+2015-04-08 17:34:16 - PHP Notice:  Undefined variable: stop_text in D:\OpenServer\domains\laminat\catalog\controller\module\timer.php on line 72
+2015-04-09 8:50:00 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-09 9:05:59 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-09 9:05:59 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-09 9:06:32 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-09 9:06:40 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-09 9:06:40 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-09 9:06:52 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-09 9:07:09 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-09 9:07:09 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-09 9:07:53 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-09 9:30:02 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-09 9:30:02 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-09 9:30:04 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-09 9:30:14 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-09 9:30:14 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-09 9:34:52 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-09 9:35:00 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-09 9:35:00 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-09 9:41:03 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-09 9:46:22 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50

@@ -707,7 +707,7 @@ a.title-style:hover {
 .box-actions {
   min-width: 980px;
   padding: 21px 0px;
-  background: url('/catalog/view/theme/default/image/app/bg-box-actions.jpg?1428412475') 50% 0px repeat-x;
+  background: url('/catalog/view/theme/default/image/app/bg-box-actions.jpg?1428476247') 50% 0px repeat-x;
 }
 .box-actions .title-style {
   margin-bottom: 20px;
@@ -764,11 +764,58 @@ a.title-style:hover {
   background: url('/catalog/view/theme/default/image/app/shadow-action-item.png?1428414146') 50% 0px no-repeat;
 }
 .actions-item .box-img {
-  float: left;
+  display: table-cell;
 }
 .actions-item .info {
+  font-family: Calibri, sans-serif;
   width: 220px;
-  float: left;
+  height: 218px;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 12px;
+}
+.actions-item .mark {
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  background: #eb8c2a;
+  padding: 5px 8px;
+  margin-bottom: 8px;
+  display: inline-block;
+  vertical-align: top;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+.actions-item .title, .actions-item .date {
+  font-weight: bold;
+  font-size: 21px;
+  color: #010101;
+}
+.actions-item .title a, .actions-item .date a {
+  color: #010101;
+  text-decoration: none;
+}
+.actions-item .title a:hover, .actions-item .date a:hover {
+  text-decoration: underline;
+}
+.actions-item .date {
+  margin-bottom: 8px;
+}
+.actions-item .description {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+  margin-bottom: 5px;
+}
+.actions-item .more {
+  color: #444444;
+  font-size: 14px;
+}
+.actions-item .more:hover {
+  text-decoration: none;
 }
 
 /* подвал */

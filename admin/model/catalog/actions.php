@@ -3,8 +3,17 @@ class ModelCatalogActions extends Model {
 	
 	public function addActions($data) {
 		/* Format date & time */
-		$data['date_start'] = strtotime( preg_replace('|^([0-9]{2})-([0-9]{2})-([0-9]{4})|', "\\3-\\2-\\1", $data['date_start']) . ':00' );
-		$data['date_end'] = strtotime( preg_replace('|^([0-9]{2})-([0-9]{2})-([0-9]{4})|', "\\3-\\2-\\1", $data['date_end']). ':00' );
+    if($data['date_start'] != ''){
+      $data['date_start'] = strtotime( preg_replace('|^([0-9]{2})-([0-9]{2})-([0-9]{4})|', "\\3-\\2-\\1", $data['date_start']) . ':00' );
+    } else {
+      $data['date_start'] = '';
+    }
+
+    if($data['date_end'] != ''){
+      $data['date_end'] = strtotime( preg_replace('|^([0-9]{2})-([0-9]{2})-([0-9]{4})|', "\\3-\\2-\\1", $data['date_end']) . ':00' );
+    } else {
+      $data['date_end'] = '';
+    }
 		
 		if( isset($data['product_related']) && $data['product_related'] != '' ) {
 			$product_related = implode(',', $data['product_related']);
@@ -18,6 +27,7 @@ class ModelCatalogActions extends Model {
 			`fancybox` = '".(int)$data['fancybox']."',
 			`date_start` = '".$data['date_start']."',
 			`date_end` = '".$data['date_end']."',
+			`interval` = '".$data['interval']."',
 			`product_related` = '" . $product_related . "'
 			");
 
@@ -72,9 +82,18 @@ class ModelCatalogActions extends Model {
 	}
 	public function editActions($actions_id, $data) {
 		/* Format date & time */
-		$data['date_start'] = strtotime( preg_replace('|^([0-9]{2})-([0-9]{2})-([0-9]{4})|', "\\3-\\2-\\1", $data['date_start']) . ':00' );
-		$data['date_end'] = strtotime( preg_replace('|^([0-9]{2})-([0-9]{2})-([0-9]{4})|', "\\3-\\2-\\1", $data['date_end']) . ':00' );
-		
+    if($data['date_start'] != ''){
+      $data['date_start'] = strtotime( preg_replace('|^([0-9]{2})-([0-9]{2})-([0-9]{4})|', "\\3-\\2-\\1", $data['date_start']) . ':00' );
+    } else {
+      $data['date_start'] = '';
+    }
+
+    if($data['date_end'] != ''){
+      $data['date_end'] = strtotime( preg_replace('|^([0-9]{2})-([0-9]{2})-([0-9]{4})|', "\\3-\\2-\\1", $data['date_end']) . ':00' );
+    } else {
+      $data['date_end'] = '';
+    }
+
 		if( isset($data['product_related']) && $data['product_related'] != '' ) {
 			$product_related = implode(',', $data['product_related']);
 		} else {
@@ -85,6 +104,7 @@ class ModelCatalogActions extends Model {
 			`image` = '" . (string)$data['image'] . "',
 			`date_start` = '" . $data['date_start'] . "',
 			`date_end` = '" . $data['date_end'] . "',
+			`interval` = '" . $data['interval'] . "',
 			`status` = '" . (int)$data['status'] . "',
 			`fancybox` = '" . (int)$data['fancybox'] . "',
 			`product_related` = '" . $product_related . "'
