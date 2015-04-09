@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 09 2015 г., 14:40
+-- Время создания: Апр 09 2015 г., 16:54
 -- Версия сервера: 5.5.41-log
 -- Версия PHP: 5.3.29
 
@@ -2380,7 +2380,7 @@ CREATE TABLE IF NOT EXISTS `product` (
 INSERT INTO `product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `date_added`, `date_modified`, `viewed`) VALUES
 (28, 'Товар 1', '', '', '', '', '', '', '', 939, 7, 'data/demo/htc_touch_hd_1.jpg', 5, 1, '100.0000', 200, 9, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:06:50', '2011-09-30 01:05:39', 0),
 (29, 'Товар 2', '', '', '', '', '', '', '', 999, 6, 'data/demo/palm_treo_pro_1.jpg', 6, 1, '279.9900', 0, 9, '2009-02-03', '133.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 3, 1, 1, 0, 1, '2009-02-03 16:42:17', '2011-09-30 01:06:08', 0),
-(30, 'Товар 3', '', '', '', '', '', '', '', 7, 6, 'data/demo/canon_eos_5d_1.jpg', 9, 1, '100.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:59:00', '2011-09-30 01:05:23', 0),
+(30, 'Товар 3', '', '', '', '', '', '', '', 7, 6, 'data/demo/canon_eos_5d_1.jpg', 9, 1, '100.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:59:00', '2015-04-09 17:52:53', 0),
 (31, 'Товар 4', '', '', '', '', '', '', '', 1000, 6, 'data/demo/nikon_d300_1.jpg', 0, 1, '80.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 3, 1, 1, 0, 1, '2009-02-03 17:00:10', '2011-09-30 01:06:00', 0),
 (32, 'Товар 5', '', '', '', '', '', '', '', 999, 6, 'data/demo/ipod_touch_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 17:07:26', '2011-09-30 01:07:22', 0),
 (33, 'Товар 6', '', '', '', '', '', '', '', 1000, 6, 'data/demo/samsung_syncmaster_941bw.jpg', 0, 1, '200.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 17:08:31', '2011-09-30 01:06:29', 0),
@@ -2522,14 +2522,14 @@ CREATE TABLE IF NOT EXISTS `product_image` (
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_image_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2357 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2359 ;
 
 --
 -- Дамп данных таблицы `product_image`
 --
 
 INSERT INTO `product_image` (`product_image_id`, `product_id`, `image`, `sort_order`) VALUES
-(2345, 30, 'data/demo/canon_eos_5d_2.jpg', 0),
+(2358, 30, 'data/demo/canon_eos_5d_3.jpg', 0),
 (2321, 47, 'data/demo/hp_3.jpg', 0),
 (2035, 28, 'data/demo/htc_touch_hd_2.jpg', 0),
 (2351, 41, 'data/demo/imac_3.jpg', 0),
@@ -2556,7 +2556,7 @@ INSERT INTO `product_image` (`product_image_id`, `product_id`, `image`, `sort_or
 (1990, 48, 'data/demo/ipod_classic_3.jpg', 0),
 (1981, 40, 'data/demo/iphone_2.jpg', 0),
 (1980, 40, 'data/demo/iphone_5.jpg', 0),
-(2344, 30, 'data/demo/canon_eos_5d_3.jpg', 0),
+(2357, 30, 'data/demo/canon_eos_5d_2.jpg', 0),
 (2320, 47, 'data/demo/hp_2.jpg', 0),
 (2034, 28, 'data/demo/htc_touch_hd_3.jpg', 0),
 (2350, 41, 'data/demo/imac_2.jpg', 0),
@@ -2668,8 +2668,8 @@ INSERT INTO `product_option_value` (`product_option_value_id`, `product_option_i
 (12, 224, 35, 11, 46, 0, 1, '5.0000', '+', 0, '+', '0.00000000', '+'),
 (13, 224, 35, 11, 47, 10, 1, '10.0000', '+', 0, '+', '0.00000000', '+'),
 (14, 224, 35, 11, 48, 15, 1, '15.0000', '+', 0, '+', '0.00000000', '+'),
-(16, 226, 30, 5, 40, 5, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(15, 226, 30, 5, 39, 2, 1, '0.0000', '+', 0, '+', '0.00000000', '+');
+(15, 226, 30, 5, 39, 2, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(16, 226, 30, 5, 40, 5, 1, '0.0000', '+', 0, '+', '0.00000000', '+');
 
 -- --------------------------------------------------------
 
@@ -2705,7 +2705,7 @@ CREATE TABLE IF NOT EXISTS `product_reward` (
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_reward_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=547 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=548 ;
 
 --
 -- Дамп данных таблицы `product_reward`
@@ -2719,7 +2719,7 @@ INSERT INTO `product_reward` (`product_reward_id`, `product_id`, `customer_group
 (339, 29, 1, 0),
 (343, 48, 1, 0),
 (335, 40, 1, 0),
-(539, 30, 1, 200),
+(547, 30, 1, 200),
 (331, 44, 1, 700),
 (333, 45, 1, 800),
 (337, 31, 1, 0),
@@ -2748,7 +2748,7 @@ CREATE TABLE IF NOT EXISTS `product_special` (
   `date_end` date NOT NULL DEFAULT '0000-00-00',
   PRIMARY KEY (`product_special_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=441 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=443 ;
 
 --
 -- Дамп данных таблицы `product_special`
@@ -2756,8 +2756,8 @@ CREATE TABLE IF NOT EXISTS `product_special` (
 
 INSERT INTO `product_special` (`product_special_id`, `product_id`, `customer_group_id`, `priority`, `price`, `date_start`, `date_end`) VALUES
 (440, 42, 1, 1, '90.0000', '0000-00-00', '0000-00-00'),
-(439, 30, 1, 2, '90.0000', '0000-00-00', '0000-00-00'),
-(438, 30, 1, 1, '80.0000', '0000-00-00', '0000-00-00');
+(442, 30, 1, 2, '90.0000', '0000-00-00', '0000-00-00'),
+(441, 30, 1, 1, '80.0000', '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -2780,7 +2780,8 @@ CREATE TABLE IF NOT EXISTS `product_status` (
 --
 
 INSERT INTO `product_status` (`product_id`, `status_id`, `product_show`, `category_show`, `sort_order`) VALUES
-(42, 1, 1, 1, 0);
+(42, 1, 1, 1, 0),
+(30, 1, 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -2804,8 +2805,8 @@ INSERT INTO `product_to_category` (`product_id`, `category_id`, `main_category`)
 (28, 24, 0),
 (29, 20, 0),
 (29, 24, 0),
-(30, 20, 0),
 (30, 33, 0),
+(30, 20, 1),
 (31, 33, 0),
 (32, 34, 0),
 (33, 20, 0),
@@ -3488,7 +3489,7 @@ CREATE TABLE IF NOT EXISTS `url_alias` (
   `keyword` varchar(255) NOT NULL,
   PRIMARY KEY (`url_alias_id`),
   KEY `query` (`query`(64))
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=911 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=912 ;
 
 --
 -- Дамп данных таблицы `url_alias`
@@ -3540,7 +3541,7 @@ INSERT INTO `url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (910, 'product_id=42', 'apple-cinema-30'),
 (906, 'category_id=34', 'mp3-pleery'),
 (842, 'category_id=36', 'test-2'),
-(872, 'product_id=30', 'canon-eos-5d'),
+(911, 'product_id=30', 'canon-eos-5d'),
 (873, 'product_id=47', 'hp-lp3065'),
 (874, 'product_id=28', 'htc-touch-hd'),
 (875, 'product_id=64', 'htc-touch-hd-1'),

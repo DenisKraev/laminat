@@ -14,6 +14,8 @@ class ControllerModuleLatest extends Controller {
 		$this->data['products'] = array();
 		
 		$data = array(
+      'latest_mark' => 'Новинка',
+      'latest_mark_row' => 'name',
 			'sort'  => 'p.date_added',
 			'order' => 'DESC',
 			'start' => 0,
@@ -21,6 +23,7 @@ class ControllerModuleLatest extends Controller {
 		);
 
 		$results = $this->model_catalog_product->getProducts($data);
+
 
 		foreach ($results as $result) {
 			if ($result['image']) {
