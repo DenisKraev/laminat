@@ -56,11 +56,11 @@
 <script type="text/javascript" src="catalog/view/javascript/callbackphone/simplemodal.js"></script>
 <!--<script type="text/javascript" src="catalog/view/javascript/callbackphone/mask.js"></script>-->
 
-<script type="text/javascript" src="catalog/view/javascript/app.js"></script>
-
 <?php foreach ($scripts as $script) { ?>
   <script type="text/javascript" src="<?php echo $script; ?>"></script>
 <?php } ?>
+
+<script type="text/javascript" src="catalog/view/javascript/app.js"></script>
 
 <?php if ($stores) { ?>
   <script type="text/javascript">

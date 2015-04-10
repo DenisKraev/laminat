@@ -26,8 +26,6 @@ class ControllerModuleLatest extends Controller {
 
 		$results = $this->model_catalog_product->getProducts($data);
 
-    //print_r($results);
-
 		foreach ($results as $result) {
 			if ($result['image']) {
 				$image = $this->model_tool_image->crop($result['image'], $setting['image_width'], $setting['image_height'], 'center',  '_latest');

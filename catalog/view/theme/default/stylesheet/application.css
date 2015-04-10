@@ -402,6 +402,7 @@ a.title-style:hover {
 .box-actions {
   min-width: 980px;
   padding: 21px 0px;
+  margin-bottom: 45px;
   background: url('/catalog/view/theme/default/image/app/bg-box-actions.jpg?1428476247') 50% 0px repeat-x;
 }
 .box-actions .title-style {
@@ -629,6 +630,53 @@ a.title-style:hover {
 }
 .box-manager .phone {
   font-family: "OpenSans-regular-wf";
+}
+
+/* главное меню */
+.box-sale {
+  margin-bottom: 45px;
+}
+.box-sale .product-list {
+  margin: 0px -8px;
+}
+.box-sale .product-item {
+  margin: 0px 11px;
+}
+.box-sale .product-item * {
+  white-space: normal;
+}
+.box-sale .top {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e3e3e3;
+}
+.box-sale .title-style {
+  float: left;
+  margin-bottom: 0px;
+}
+.box-sale .nav-slider {
+  float: right;
+}
+.box-sale .nav-slider .prev, .box-sale .nav-slider .next {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+.box-sale .nav-slider .prev {
+  background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') 0px 0px no-repeat;
+}
+.box-sale .nav-slider .prev:hover {
+  background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') -60px 0px no-repeat;
+}
+.box-sale .nav-slider .next {
+  background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') -30px 0px no-repeat;
+}
+.box-sale .nav-slider .next:hover {
+  background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') -90px 0px no-repeat;
 }
 
 /* слайдер */

@@ -40,6 +40,19 @@ $(document).ready(function(){
         });
     }
 
+    if($('.box-sale .product-list').size() > 0){
+        $('.box-sale .product-list').cycle({
+            paused: true,
+            fx: 'carousel',
+            visible: 4,
+            speed: 600,
+            manualSpeed: 500,
+            prev: '.box-sale .prev',
+            next: '.box-sale .next',
+            slides: '.product-item'
+        });
+    }
+
 
 //    $('.prod-slider').lightSlider({
 //        gallery: true,
