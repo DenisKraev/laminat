@@ -34,8 +34,9 @@
             <thead>
               <tr>
                 <td width="1" style="text-align: center;"><input type="checkbox" onclick="$('input[name*=\'selected\']').attr('checked', this.checked);" /></td>
-                <td class="left"><?php echo $status_image; ?></td>                            
-                <td class="left"><?php echo $status_name; ?></td>              
+                <td class="left">ID</td>
+                <td class="left"><?php echo $status_image; ?></td>
+                <td class="left"><?php echo $status_name; ?></td>
                 <td class="left"><?php echo $status_url; ?></td>
                 <td class="left"><?php echo $status_action; ?></td>  
               </tr>
@@ -48,6 +49,7 @@
               <td style="text-align: center;">
                 <input type="checkbox" name="selected[]" value="<?php echo $status['status_id']; ?>" />
               </td>
+              <td class="left"><?php echo $status['status_id']; ?></td>
               <td class="left"><img src="<?php echo $status['thumb']; ?>" /></td>
               <td class="left"><?php echo $status['name']; ?></td>
               <td class="left"><a href="<?php echo $status['url']; ?>"><?php echo $status['url']; ?></a></td>

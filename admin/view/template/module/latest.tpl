@@ -18,6 +18,7 @@
         <table id="module" class="list">
           <thead>
             <tr>
+              <td class="left">ID Статуса</td>
               <td class="left"><?php echo $entry_limit; ?></td>
               <td class="left"><?php echo $entry_image; ?></td>
               <td class="left"><?php echo $entry_layout; ?></td>
@@ -31,6 +32,7 @@
           <?php foreach ($modules as $module) { ?>
           <tbody id="module-row<?php echo $module_row; ?>">
             <tr>
+              <td class="left"><input type="text" name="latest_module[<?php echo $module_row; ?>][id_status]" value="<?php echo $module['id_status']; ?>"" size="1" /></td>
               <td class="left"><input type="text" name="latest_module[<?php echo $module_row; ?>][limit]" value="<?php echo $module['limit']; ?>" size="1" /></td>
               <td class="left"><input type="text" name="latest_module[<?php echo $module_row; ?>][image_width]" value="<?php echo $module['image_width']; ?>" size="3" />
                 <input type="text" name="latest_module[<?php echo $module_row; ?>][image_height]" value="<?php echo $module['image_height']; ?>" size="3" />
@@ -85,7 +87,7 @@
           <?php } ?>
           <tfoot>
             <tr>
-              <td colspan="6"></td>
+              <td colspan="7"></td>
               <td class="left"><a onclick="addModule();" class="button"><?php echo $button_add_module; ?></a></td>
             </tr>
           </tfoot>
@@ -100,6 +102,7 @@ var module_row = <?php echo $module_row; ?>;
 function addModule() {	
 	html  = '<tbody id="module-row' + module_row + '">';
 	html += '  <tr>';
+	html += '    <td class="left"><input type="text" name="latest_module[' + module_row + '][id_status]" value="" size="1" /></td>';
 	html += '    <td class="left"><input type="text" name="latest_module[' + module_row + '][limit]" value="5" size="1" /></td>';
 	html += '    <td class="left"><input type="text" name="latest_module[' + module_row + '][image_width]" value="80" size="3" /> <input type="text" name="latest_module[' + module_row + '][image_height]" value="80" size="3" /></td>';
 	html += '    <td class="left"><select name="latest_module[' + module_row + '][layout_id]">';

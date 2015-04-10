@@ -14,8 +14,8 @@ class ControllerModuleLatest extends Controller {
 		$this->data['products'] = array();
 		
 		$data = array(
-      'latest_mark' => 'Новинка',
-      'latest_mark_row' => 'name',
+      'latest_mark' => $setting['id_status'],
+      'latest_mark_row' => 'status_id',
 			'sort'  => 'p.date_added',
 			'order' => 'DESC',
 			'start' => 0,

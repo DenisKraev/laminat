@@ -1,11 +1,11 @@
 .idea/*
 .sass-cache/*
 system/cache/*
-!system/logs/my_mego_log.log
-!system/cache/index.html
+system/logs/*
+!/system/cache/index.html
 vqmod/vqcache/*
-!vqmod/checked.cache
-!vqmod/mods.cache
+!/vqmod/checked.cache
+!/vqmod/mods.cache
 vqmod/logs/*
 image/cache/*
 
