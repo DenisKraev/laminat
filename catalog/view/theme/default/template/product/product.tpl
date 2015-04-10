@@ -351,7 +351,7 @@ $('#button-cart').bind('click', function() {
 		data: $('.product-info input[type=\'text\'], .product-info input[type=\'hidden\'], .product-info input[type=\'radio\']:checked, .product-info input[type=\'checkbox\']:checked, .product-info select, .product-info textarea'),
 		dataType: 'json',
 		success: function(json) {
-			$('.success, .warning, .attention, information, .error').remove();
+			$('.success, .warning, .attention, .information, .error').remove();
 			
 			if (json['error']) {
 				if (json['error']['option']) {
@@ -366,9 +366,11 @@ $('#button-cart').bind('click', function() {
 					
 				$('.success').fadeIn('slow');
 					
-				$('#cart-total').html(json['total']);
+				//$('#cart-total').html(json['total']);
+
+        $('#cart-total .count').html(json['count_cart']);
 				
-				$('html, body').animate({ scrollTop: 0 }, 'slow'); 
+				//$('html, body').animate({ scrollTop: 0 }, 'slow');
 			}	
 		}
 	});

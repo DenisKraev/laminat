@@ -170,3 +170,10 @@ catalog\language\russian\product\special.php
 catalog\view\theme\default\template\product\special.tpl
 catalog\controller\account\wishlist.php
 catalog\language\russian\account\wishlist.php
+catalog\language\russian\product\category.php
+catalog\controller\module\filterpro.php
+catalog\language\russian\module\filterpro.php
+catalog\model\module\filterpro.php
+catalog\view\theme\default\template\module\filterpro.tpl
+catalog\view\theme\default\template\product\category.tpl
+catalog\view\theme\default\template\module\filterpro_products.tpl
