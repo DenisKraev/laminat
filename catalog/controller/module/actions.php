@@ -102,7 +102,7 @@ class ControllerModuleActions extends Controller {
       }
 
 			if ($result['image'] AND $actions_setting['show_module_image'] ) {
-				$image = $this->model_tool_image->resize($result['image'], $actions_setting['image_module_width'], $actions_setting['image_module_height']);
+				$image = $this->model_tool_image->crop($result['image'], $actions_setting['image_module_width'], $actions_setting['image_module_height'], 'center', '_actions');
 			} else {
 				$image = FALSE;
 			}

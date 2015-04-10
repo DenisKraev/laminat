@@ -27,6 +27,19 @@ $(document).ready(function(){
         });
     }
 
+    if($('.box-latest .product-list').size() > 0){
+        $('.box-latest .product-list').cycle({
+            paused: true,
+            fx: 'carousel',
+            visible: 4,
+            speed: 600,
+            manualSpeed: 500,
+            prev: '.box-latest .prev',
+            next: '.box-latest .next',
+            slides: '.product-item'
+        });
+    }
+
 
 //    $('.prod-slider').lightSlider({
 //        gallery: true,

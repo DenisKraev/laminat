@@ -3,13 +3,15 @@ class ControllerModuleLatest extends Controller {
 	protected function index($setting) {
 		$this->language->load('module/latest');
 		
-      	$this->data['heading_title'] = $this->language->get('heading_title');
+    $this->data['heading_title'] = $this->language->get('heading_title');
 		
 		$this->data['button_cart'] = $this->language->get('button_cart');
 				
 		$this->load->model('catalog/product');
 		
 		$this->load->model('tool/image');
+
+    $this->load->helper('truncate');
 		
 		$this->data['products'] = array();
 		
@@ -24,10 +26,11 @@ class ControllerModuleLatest extends Controller {
 
 		$results = $this->model_catalog_product->getProducts($data);
 
+    //print_r($results);
 
 		foreach ($results as $result) {
 			if ($result['image']) {
-				$image = $this->model_tool_image->resize($result['image'], $setting['image_width'], $setting['image_height']);
+				$image = $this->model_tool_image->crop($result['image'], $setting['image_width'], $setting['image_height'], 'center',  '_latest');
 			} else {
 				$image = false;
 			}
@@ -49,15 +52,31 @@ class ControllerModuleLatest extends Controller {
 			} else {
 				$rating = false;
 			}
-			
+
+      $attribute_groups = $this->model_catalog_product->getProductAttributes($result['product_id']);
+
+      $attribute_data = array();
+      $attribute_data['name'] = null;
+      $attribute_data['text'] = null;
+      if(!empty($attribute_groups)) {
+        foreach($attribute_groups[0]['attribute'] as $item) {
+          if($item['name'] == 'Класс') {
+            $attribute_data['name'] = $item['name'];
+            $attribute_data['text'] = $item['text'];
+          }
+        }
+      }
+
 			$this->data['products'][] = array(
 				'product_id' => $result['product_id'],
 				'thumb'   	 => $image,
-				'name'    	 => $result['name'],
+				'name'    	 => truncate($result['name'], 40),
 				'price'   	 => $price,
 				'special' 	 => $special,
 				'rating'     => $rating,
-				'reviews'    => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
+				'attribute_data'     => $attribute_data,
+				'art'        => $result['sku'],
+        'reviews'    => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
 				'href'    	 => $this->url->link('product/product', 'product_id=' . $result['product_id']),
 			);
 		}

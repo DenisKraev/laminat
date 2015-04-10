@@ -72,7 +72,8 @@ class ModelCatalogProduct extends Model {
 				'status'           => $query->row['status'],
 				'date_added'       => $query->row['date_added'],
 				'date_modified'    => $query->row['date_modified'],
-				'viewed'           => $query->row['viewed']
+        //'attribute_groups' => $this->model_catalog_product->getProductAttributes($query->row['product_id']),
+        'viewed'           => $query->row['viewed']
 			);
 		} else {
 			return false;
