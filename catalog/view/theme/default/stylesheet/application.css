@@ -420,19 +420,30 @@ a.title-style:hover {
   z-index: 101;
   cursor: pointer;
 }
+.wrap-actions .prev:hover, .wrap-actions .next:hover {
+  opacity: 0.9;
+}
 .wrap-actions .prev {
   left: -55px;
   background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') 0px 0px no-repeat;
 }
-.wrap-actions .prev:hover {
+.wrap-actions .prev.disabled {
   background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') -60px 0px no-repeat;
+}
+.wrap-actions .prev.disabled:hover {
+  cursor: auto;
+  opacity: 1;
 }
 .wrap-actions .next {
   right: -55px;
   background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') -30px 0px no-repeat;
 }
-.wrap-actions .next:hover {
+.wrap-actions .next.disabled {
   background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') -90px 0px no-repeat;
+}
+.wrap-actions .next.disabled:hover {
+  cursor: auto;
+  opacity: 1;
 }
 
 .actions-list {
@@ -548,17 +559,28 @@ a.title-style:hover {
   *zoom: 1;
   *display: inline;
 }
+.box-latest .nav-slider .prev:hover, .box-latest .nav-slider .next:hover {
+  opacity: 0.9;
+}
 .box-latest .nav-slider .prev {
   background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') 0px 0px no-repeat;
 }
-.box-latest .nav-slider .prev:hover {
+.box-latest .nav-slider .prev.disabled {
   background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') -60px 0px no-repeat;
+}
+.box-latest .nav-slider .prev.disabled:hover {
+  cursor: auto;
+  opacity: 1;
 }
 .box-latest .nav-slider .next {
   background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') -30px 0px no-repeat;
 }
-.box-latest .nav-slider .next:hover {
+.box-latest .nav-slider .next.disabled {
   background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') -90px 0px no-repeat;
+}
+.box-latest .nav-slider .next.disabled:hover {
+  cursor: auto;
+  opacity: 1;
 }
 
 /* блок с предложениями менеджерами на главной */
@@ -666,17 +688,28 @@ a.title-style:hover {
   *zoom: 1;
   *display: inline;
 }
+.box-sale .nav-slider .prev:hover, .box-sale .nav-slider .next:hover {
+  opacity: 0.9;
+}
 .box-sale .nav-slider .prev {
   background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') 0px 0px no-repeat;
 }
-.box-sale .nav-slider .prev:hover {
+.box-sale .nav-slider .prev.disabled {
   background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') -60px 0px no-repeat;
+}
+.box-sale .nav-slider .prev.disabled:hover {
+  cursor: auto;
+  opacity: 1;
 }
 .box-sale .nav-slider .next {
   background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') -30px 0px no-repeat;
 }
-.box-sale .nav-slider .next:hover {
+.box-sale .nav-slider .next.disabled {
   background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') -90px 0px no-repeat;
+}
+.box-sale .nav-slider .next.disabled:hover {
+  cursor: auto;
+  opacity: 1;
 }
 
 /* слайдер */

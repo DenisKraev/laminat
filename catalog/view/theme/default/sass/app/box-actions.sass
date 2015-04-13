@@ -15,16 +15,24 @@
     top: 105px
     z-index: 101
     cursor: pointer
+    &:hover
+      opacity: 0.9
   .prev
     left: -55px
     background: image-url('app/arrow-white-grey-sprite-30x30.png') 0px 0px no-repeat
-    &:hover
+    &.disabled
       background: image-url('app/arrow-white-grey-sprite-30x30.png') -60px 0px no-repeat
+      &:hover
+        cursor: auto
+        opacity: 1
   .next
     right: -55px
     background: image-url('app/arrow-white-grey-sprite-30x30.png') -30px 0px no-repeat
-    &:hover
+    &.disabled
       background: image-url('app/arrow-white-grey-sprite-30x30.png') -90px 0px no-repeat
+      &:hover
+        cursor: auto
+        opacity: 1
 .actions-list
   margin: 0px -12px
   height: 290px

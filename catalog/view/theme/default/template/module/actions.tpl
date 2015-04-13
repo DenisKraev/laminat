@@ -5,7 +5,7 @@
     <h3 class="title-style white"><a href="<?php echo $continue; ?>"><?php echo $heading_title; ?></a></h3>
 
     <div class="wrap-actions">
-      <div class="actions-list">
+      <div class="actions-list" data-cycle-carousel-visible=<?php echo (count($actions) <= 2) ? count($actions): 2; ?>>
 
         <?php foreach($actions as $action) { ?>
           <div class="actions-item">

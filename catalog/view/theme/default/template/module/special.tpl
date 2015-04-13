@@ -5,7 +5,7 @@
       <div class="nav-slider"><div class="prev"></div><div class="next"></div></div>
   </div>
 
-  <div class="product-list">
+  <div class="product-list" data-cycle-carousel-visible=<?php echo (count($products) <= 4) ? count($products): 4; ?>>
 
     <?php foreach ($products as $product) { ?>
       <div class="product-item">

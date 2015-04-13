@@ -18,7 +18,7 @@ $(document).ready(function(){
         $('.actions-list').cycle({
             paused: true,
             fx: 'carousel',
-            visible: 2,
+            allowWrap: false,
             speed: 600,
             manualSpeed: 500,
             prev: '.box-actions .prev',
@@ -31,7 +31,7 @@ $(document).ready(function(){
         $('.box-latest .product-list').cycle({
             paused: true,
             fx: 'carousel',
-            visible: 4,
+            allowWrap: false,
             speed: 600,
             manualSpeed: 500,
             prev: '.box-latest .prev',
@@ -44,7 +44,7 @@ $(document).ready(function(){
         $('.box-sale .product-list').cycle({
             paused: true,
             fx: 'carousel',
-            visible: 4,
+            allowWrap: false,
             speed: 600,
             manualSpeed: 500,
             prev: '.box-sale .prev',

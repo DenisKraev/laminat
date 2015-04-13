@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'inline-block'.
-        on line 64 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass, in `inline-block'
-        from line 64 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass
+        on line 72 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass, in `inline-block'
+        from line 72 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass
 
-59:     color: #fff
-60:     text-transform: uppercase
-61:     background: #eb8c2a
-62:     padding: 5px 8px
-63:     margin-bottom: 8px
-64:     +inline-block(top)
-65:   .title, .date
-66:     font-weight: bold
-67:     font-size: 21px
-68:     color: #010101
-69:     a
+67:     color: #fff
+68:     text-transform: uppercase
+69:     background: #eb8c2a
+70:     padding: 5px 8px
+71:     margin-bottom: 8px
+72:     +inline-block(top)
+73:   .title, .date
+74:     font-weight: bold
+75:     font-size: 21px
+76:     color: #010101
+77:     a
 
 Backtrace:
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass:64:in `inline-block'
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass:64
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass:72:in `inline-block'
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass:72
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
@@ -84,4 +84,4 @@ C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/ada
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'inline-block'.\A         on line 64 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass, in `inline-block'\A         from line 64 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass\A \A 59:     color: #fff\A 60:     text-transform: uppercase\A 61:     background: #eb8c2a\A 62:     padding: 5px 8px\A 63:     margin-bottom: 8px\A 64:     +inline-block(top)\A 65:   .title, .date\A 66:     font-weight: bold\A 67:     font-size: 21px\A 68:     color: #010101\A 69:     a"; }
+  content: "Error: Undefined mixin 'inline-block'.\A         on line 72 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass, in `inline-block'\A         from line 72 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass\A \A 67:     color: #fff\A 68:     text-transform: uppercase\A 69:     background: #eb8c2a\A 70:     padding: 5px 8px\A 71:     margin-bottom: 8px\A 72:     +inline-block(top)\A 73:   .title, .date\A 74:     font-weight: bold\A 75:     font-size: 21px\A 76:     color: #010101\A 77:     a"; }

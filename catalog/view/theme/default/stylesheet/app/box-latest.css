@@ -9,11 +9,11 @@ Error: Undefined mixin 'inline-block'.
 20:       height: 30px
 21:       cursor: pointer
 22:       +inline-block(top)
-23:     .prev
-24:       background: image-url('app/arrow-white-grey-sprite-30x30.png') 0px 0px no-repeat
-25:       &:hover
-26:         background: image-url('app/arrow-white-grey-sprite-30x30.png') -60px 0px no-repeat
-27:     .next
+23:       &:hover
+24:         opacity: 0.9
+25:     .prev
+26:       background: image-url('app/arrow-white-grey-sprite-30x30.png') 0px 0px no-repeat
+27:       &.disabled
 
 Backtrace:
 D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-latest.sass:22:in `inline-block'
@@ -95,4 +95,4 @@ C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/ada
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'inline-block'.\A         on line 22 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-latest.sass, in `inline-block'\A         from line 22 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-latest.sass\A \A 17:     float: right\A 18:     .prev, .next\A 19:       width: 30px\A 20:       height: 30px\A 21:       cursor: pointer\A 22:       +inline-block(top)\A 23:     .prev\A 24:       background: image-url('app/arrow-white-grey-sprite-30x30.png') 0px 0px no-repeat\A 25:       &:hover\A 26:         background: image-url('app/arrow-white-grey-sprite-30x30.png') -60px 0px no-repeat\A 27:     .next"; }
+  content: "Error: Undefined mixin 'inline-block'.\A         on line 22 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-latest.sass, in `inline-block'\A         from line 22 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-latest.sass\A \A 17:     float: right\A 18:     .prev, .next\A 19:       width: 30px\A 20:       height: 30px\A 21:       cursor: pointer\A 22:       +inline-block(top)\A 23:       &:hover\A 24:         opacity: 0.9\A 25:     .prev\A 26:       background: image-url('app/arrow-white-grey-sprite-30x30.png') 0px 0px no-repeat\A 27:       &.disabled"; }

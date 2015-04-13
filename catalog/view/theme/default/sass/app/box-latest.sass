@@ -20,11 +20,19 @@
       height: 30px
       cursor: pointer
       +inline-block(top)
+      &:hover
+        opacity: 0.9
     .prev
       background: image-url('app/arrow-white-grey-sprite-30x30.png') 0px 0px no-repeat
-      &:hover
+      &.disabled
         background: image-url('app/arrow-white-grey-sprite-30x30.png') -60px 0px no-repeat
+        &:hover
+          cursor: auto
+          opacity: 1
     .next
       background: image-url('app/arrow-white-grey-sprite-30x30.png') -30px 0px no-repeat
-      &:hover
+      &.disabled
         background: image-url('app/arrow-white-grey-sprite-30x30.png') -90px 0px no-repeat
+        &:hover
+          cursor: auto
+          opacity: 1
