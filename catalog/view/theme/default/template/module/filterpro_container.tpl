@@ -32,7 +32,7 @@ function display(view) {
 	if (view == 'list') {
 		$('.product-grid').attr('class', 'product-list');
 		
-		$('.product-list > div').each(function(index, element) {
+		$('.product-list > div.product-item').each(function(index, element) {
 			html  = '<div class="right">';
 			html += '  <div class="cart">' + $(element).find('.cart').html() + '</div>';
 			html += '  <div class="wishlist">' + $(element).find('.wishlist').html() + '</div>';
@@ -75,7 +75,7 @@ function display(view) {
 	} else {
 		$('.product-list').attr('class', 'product-grid');
 		
-		$('.product-grid > div').each(function(index, element) {
+		$('.product-grid > div.product-item').each(function(index, element) {
 			html = '';
 			
 			var image = $(element).find('.image').html();

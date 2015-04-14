@@ -1,44 +1,49 @@
-<?php echo $header; ?><?php echo $column_left; ?><?php echo $column_right; ?>
-<div id="content"><?php echo $content_top; ?>
+<?php echo $header; ?>
+<div class="site-content">
+<?php echo $column_left; ?>
+<?php echo $column_right; ?>
+<div id="content">
+
   <div class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
     <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
     <?php } ?>
   </div>
+  <?php echo $content_top; ?>
   <h1><?php echo $heading_title; ?></h1>
-  <?php if ($thumb || $description) { ?>
-  <div class="category-info">
-    <?php if ($thumb) { ?>
-    <div class="image"><img src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>" /></div>
-    <?php } ?>
-    <?php if ($description) { ?>
-    <?php echo $description; ?>
-    <?php } ?>
-  </div>
-  <?php } ?>
-  <?php if ($categories) { ?>
-  <h2><?php echo $text_refine; ?></h2>
-  <div class="category-list">
-    <?php if (count($categories) <= 5) { ?>
-    <ul>
-      <?php foreach ($categories as $category) { ?>
-      <li><a href="<?php echo $category['href']; ?>"><img src="<?php echo $category['thumb']; ?>"><span><?php echo $category['name']; ?></a></span></li>
-      <?php } ?>
-    </ul>
-    <?php } else { ?>
-    <?php for ($i = 0; $i < count($categories);) { ?>
-    <ul>
-      <?php $j = $i + ceil(count($categories) / 4); ?>
-      <?php for (; $i < $j; $i++) { ?>
-      <?php if (isset($categories[$i])) { ?>
-      <li><a href="<?php echo $categories[$i]['href']; ?>"><img src="<?php echo $categories[$i]['thumb']; ?>"><span><?php echo $categories[$i]['name']; ?></span></a></li>
-      <?php } ?>
-      <?php } ?>
-    </ul>
-    <?php } ?>
-    <?php } ?>
-  </div>
-  <?php } ?>
+<!--  --><?php //if ($thumb || $description) { ?>
+<!--  <div class="category-info">-->
+<!--    --><?php //if ($thumb) { ?>
+<!--    <div class="image"><img src="--><?php //echo $thumb; ?><!--" alt="--><?php //echo $heading_title; ?><!--" /></div>-->
+<!--    --><?php //} ?>
+<!--    --><?php //if ($description) { ?>
+<!--    --><?php //echo $description; ?>
+<!--    --><?php //} ?>
+<!--  </div>-->
+<!--  --><?php //} ?>
+<!--  --><?php //if ($categories) { ?>
+<!--  <h2>--><?php //echo $text_refine; ?><!--</h2>-->
+<!--  <div class="category-list">-->
+<!--    --><?php //if (count($categories) <= 5) { ?>
+<!--    <ul>-->
+<!--      --><?php //foreach ($categories as $category) { ?>
+<!--      <li><a href="--><?php //echo $category['href']; ?><!--"><img src="--><?php //echo $category['thumb']; ?><!--"><span>--><?php //echo $category['name']; ?><!--</a></span></li>-->
+<!--      --><?php //} ?>
+<!--    </ul>-->
+<!--    --><?php //} else { ?>
+<!--    --><?php //for ($i = 0; $i < count($categories);) { ?>
+<!--    <ul>-->
+<!--      --><?php //$j = $i + ceil(count($categories) / 4); ?>
+<!--      --><?php //for (; $i < $j; $i++) { ?>
+<!--      --><?php //if (isset($categories[$i])) { ?>
+<!--      <li><a href="--><?php //echo $categories[$i]['href']; ?><!--"><img src="--><?php //echo $categories[$i]['thumb']; ?><!--"><span>--><?php //echo $categories[$i]['name']; ?><!--</span></a></li>-->
+<!--      --><?php //} ?>
+<!--      --><?php //} ?>
+<!--    </ul>-->
+<!--    --><?php //} ?>
+<!--    --><?php //} ?>
+<!--  </div>-->
+<!--  --><?php //} ?>
   <?php if ($products) { ?>
   <div class="product-filter">
     <div class="display"><b><?php echo $text_display; ?></b> <?php echo $text_list; ?> <b>/</b> <a onclick="display('grid');"><?php echo $text_grid; ?></a></div>
@@ -68,7 +73,7 @@
   </div>
   <div class="product-list">
     <?php foreach ($products as $product) { ?>
-    <div>
+    <div class="product-item">
       <?php if ($product['thumb']) { ?>
       <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
       <?php } ?>
@@ -113,7 +118,7 @@ function display(view) {
 	if (view == 'list') {
 		$('.product-grid').attr('class', 'product-list');
 		
-		$('.product-list > div').each(function(index, element) {
+		$('.product-list > div.product-item').each(function(index, element) {
 			html  = '<div class="right">';
 			html += '  <div class="cart">' + $(element).find('.cart').html() + '</div>';
 			html += '  <div class="wishlist">' + $(element).find('.wishlist').html() + '</div>';
@@ -156,7 +161,7 @@ function display(view) {
 	} else {
 		$('.product-list').attr('class', 'product-grid');
 		
-		$('.product-grid > div').each(function(index, element) {
+		$('.product-grid > div.product-item').each(function(index, element) {
 			html = '';
 			
 			var image = $(element).find('.image').html();
@@ -201,5 +206,6 @@ if (view) {
 } else {
 	display('list');
 }
-//--></script> 
+//--></script>
+</div>
 <?php echo $footer; ?>

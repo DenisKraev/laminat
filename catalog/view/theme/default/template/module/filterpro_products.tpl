@@ -1,5 +1,5 @@
 <?php foreach ($products as $product) { ?>
-<div>
+<div class="product-item">
   <?php if ($product['thumb']) { ?>
   <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
   <?php } ?>

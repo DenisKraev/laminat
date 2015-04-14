@@ -69,3 +69,21 @@ input, textarea, button, select, a
 
 .slider-hidden
   visibility: hidden
+
+#column-left
+  float: left
+  width: 180px
+
+#column-right
+  float: right
+  width: 180px
+
+#content
+  min-height: 400px
+
+#column-left +
+  #column-right + #content, #content
+    margin-left: 195px
+
+#column-right + #content
+  margin-right: 195px

@@ -92,6 +92,28 @@ input:focus, textarea:focus, button:focus, select:focus, a:focus {
   visibility: hidden;
 }
 
+#column-left {
+  float: left;
+  width: 180px;
+}
+
+#column-right {
+  float: right;
+  width: 180px;
+}
+
+#content {
+  min-height: 400px;
+}
+
+#column-left + #column-right + #content, #column-left + #content {
+  margin-left: 195px;
+}
+
+#column-right + #content {
+  margin-right: 195px;
+}
+
 /* стандартные элементы */
 /* Ссылки */
 .link-style {
