@@ -68,7 +68,62 @@ class ControllerCommonFooter extends Controller {
 			}
 						
 			$this->model_tool_online->whosonline($ip, $this->customer->getId(), $url, $referer);
-		}		
+		}
+
+    // Menu
+    if (isset($this->request->get['path'])) {
+      $parts = explode('_', (string)$this->request->get['path']);
+    } else {
+      $parts = array();
+    }
+
+    $this->load->model('catalog/category');
+
+    $this->load->model('catalog/product');
+
+    $this->data['categories'] = array();
+
+    $categories = $this->model_catalog_category->getCategories(0);
+
+    foreach ($categories as $category) {
+      if ($category['top']) {
+        $this->data['categories'][] = array(
+          'name'     => $category['name'],
+          'active'   => in_array($category['category_id'], $parts),
+          'column'   => $category['column'] ? $category['column'] : 1,
+          'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])
+        );
+      }
+    }
+
+    $dateStart = '2015';
+    if($dateStart == date('Y')) {
+      $copyDate = $dateStart;
+    } else {
+      $copyDate = $dateStart.' — '. date('Y');
+    }
+     $this->data['copy'] = $copyDate;
+
+    $this->load->model('catalog/information');
+
+    $this->data['informations'] = array();
+
+    foreach ($this->model_catalog_information->getInformations() as $result) {
+      if ($result['main_menu']) {
+        $active = null;
+        if(isset($this->request->get['information_id'])){
+          $parts2 = explode('_', (string)$this->request->get['information_id']);
+          $active = in_array($result['information_id'], $parts2);
+        }
+
+        $this->data['informations'][] = array(
+          'title' => $result['title'],
+          'active' => $active,
+          'href'  => $this->url->link('information/information', 'information_id=' . $result['information_id'])
+        );
+
+      }
+    }
 		
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/footer.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/common/footer.tpl';

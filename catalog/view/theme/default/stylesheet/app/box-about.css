@@ -1,0 +1,6 @@
+@charset "UTF-8";
+/* о компании на главной */
+.box-about {
+  padding: 40px 0px;
+  background: url('/catalog/view/theme/default/image/app/shadow-line.png?1428997256') 50% 0px no-repeat;
+}

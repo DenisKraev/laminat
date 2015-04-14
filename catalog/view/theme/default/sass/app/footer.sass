@@ -1,11 +1,22 @@
 /* подвал
 #footer
-  font-family: Verdana, sans-serif
-  border-top: 1px solid #d4d4d4
-  padding-top: 25px
+  background: #f2f3f5
+  color: #444444
+  font-size: 12px
+  padding: 30px
+  padding-bottom: 0px
+  .left
+    float: left
+    width: 355px
+  .right
+    position: relative
+    float: right
+    width: 570px
+    padding-bottom: 15px
   .copy
-    color: #845d45
-    font-size: 13px
+    margin-bottom: 30px
+  .footer-contacts
+    line-height: 20px
   .footer-menu
     margin-bottom: 20px
     ul
@@ -18,14 +29,21 @@
     li
       +inline-block(top)
     a
-      color: #845d45
+      color: #444444
       font-size: 13px
-      text-decoration: underline
+      text-decoration: none
       &.active, &:hover
-        text-decoration: none
-  .soc-btns
-    margin-left: 0px !important
+        color: #eb8c2a
+        text-decoration: underline
+  .pay
+    line-height: 20px
+    p
+      margin: 0px
+      margin-bottom: 10px
   .dev
+    position: absolute
+    bottom: 0px
+    right: 0px
     line-height: 15px
     span
       text-transform: lowercase

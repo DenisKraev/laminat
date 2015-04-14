@@ -40,7 +40,7 @@ body {
 }
 
 #push {
-  height: 190px;
+  height: 170px;
 }
 
 .cf {
@@ -137,10 +137,10 @@ a.title-style:hover {
 
 /* Текст */
 .text-style {
-  font-family: Arial, sans-serif;
+  font-family: Verdana, sans-serif;
   font-size: 14px;
   line-height: 18px;
-  color: #3f4245;
+  color: #444444;
 }
 
 /* хлебные крошки */
@@ -398,6 +398,12 @@ a.title-style:hover {
   bottom: 15px;
 }
 
+/* о компании на главной */
+.box-about {
+  padding: 40px 0px;
+  background: url('/catalog/view/theme/default/image/app/shadow-line.png?1428997256') 50% 0px no-repeat;
+}
+
 /* главное меню */
 .box-actions {
   min-width: 980px;
@@ -581,6 +587,74 @@ a.title-style:hover {
 .box-latest .nav-slider .next.disabled:hover {
   cursor: auto;
   opacity: 1;
+}
+
+/* памятка на главной */
+.box-memo {
+  position: relative;
+  padding: 90px 0px;
+  background: #d7d7d7;
+}
+.box-memo:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 10px;
+  top: 0px;
+  left: 0px;
+  background: url('/catalog/view/theme/default/image/app/shadow-line.png?1428997256') 50% 0px no-repeat;
+}
+.box-memo .memo-list {
+  -moz-box-shadow: 0px 0px 27px 0px rgba(51, 51, 51, 0.52);
+  -webkit-box-shadow: 0px 0px 27px 0px rgba(51, 51, 51, 0.52);
+  box-shadow: 0px 0px 27px 0px rgba(51, 51, 51, 0.52);
+  background: url('/catalog/view/theme/default/image/app/bg-memo.jpg?1428998565') 50% 0px repeat-y;
+}
+.box-memo .left {
+  padding: 30px;
+  float: left;
+  width: 50%;
+}
+.box-memo .right {
+  padding: 30px;
+  padding-top: 100px;
+  float: right;
+  width: 50%;
+}
+.box-memo .title {
+  font-family: "OpenSans-bold-wf";
+  font-size: 18px;
+  color: #333333;
+  line-height: 22px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  margin: 30px 0px 50px 40px;
+  border-bottom: 10px solid #eb8c2a;
+}
+.box-memo .memo-item {
+  font-family: Verdana, sans-serif;
+  color: #444444;
+  font-size: 13px;
+  line-height: 16px;
+  padding-left: 60px;
+  margin-top: 40px;
+}
+.box-memo .memo-item:first-child {
+  margin-top: 0px;
+}
+.box-memo .numb {
+  font-family: "OpenSans-regular-wf";
+  padding: 15px 8px;
+  font-size: 31px;
+  background: #eb8c2a;
+  color: #fff;
+  float: left;
+  margin-left: -60px;
+  display: inline-block;
+  vertical-align: top;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
 }
 
 /* блок с предложениями менеджерами на главной */
@@ -803,13 +877,27 @@ a.title-style:hover {
 
 /* подвал */
 #footer {
-  font-family: Verdana, sans-serif;
-  border-top: 1px solid #d4d4d4;
-  padding-top: 25px;
+  background: #f2f3f5;
+  color: #444444;
+  font-size: 12px;
+  padding: 30px;
+  padding-bottom: 0px;
+}
+#footer .left {
+  float: left;
+  width: 355px;
+}
+#footer .right {
+  position: relative;
+  float: right;
+  width: 570px;
+  padding-bottom: 15px;
 }
 #footer .copy {
-  color: #845d45;
-  font-size: 13px;
+  margin-bottom: 30px;
+}
+#footer .footer-contacts {
+  line-height: 20px;
 }
 #footer .footer-menu {
   margin-bottom: 20px;
@@ -831,17 +919,25 @@ a.title-style:hover {
   *display: inline;
 }
 #footer .footer-menu a {
-  color: #845d45;
+  color: #444444;
   font-size: 13px;
-  text-decoration: underline;
-}
-#footer .footer-menu a.active, #footer .footer-menu a:hover {
   text-decoration: none;
 }
-#footer .soc-btns {
-  margin-left: 0px !important;
+#footer .footer-menu a.active, #footer .footer-menu a:hover {
+  color: #eb8c2a;
+  text-decoration: underline;
+}
+#footer .pay {
+  line-height: 20px;
+}
+#footer .pay p {
+  margin: 0px;
+  margin-bottom: 10px;
 }
 #footer .dev {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
   line-height: 15px;
 }
 #footer .dev span {

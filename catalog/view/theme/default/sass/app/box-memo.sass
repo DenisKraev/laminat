@@ -1,0 +1,52 @@
+/* памятка на главной
+.box-memo
+  position: relative
+  padding: 90px 0px
+  background: #d7d7d7
+  &:before
+    position: absolute
+    content: ''
+    width: 100%
+    height: 10px
+    top: 0px
+    left: 0px
+    background: image-url("app/shadow-line.png") 50% 0px no-repeat
+  .memo-list
+    +box-shadow(0px 0px 27px 0px rgba(51, 51, 51, 0.52))
+    background: image-url("app/bg-memo.jpg") 50% 0px repeat-y
+  .left
+    padding: 30px
+    float: left
+    width: 50%
+  .right
+    padding: 30px
+    padding-top: 100px
+    float: right
+    width: 50%
+  .title
+    +font-family-2(bold)
+    font-size: 18px
+    color: #333333
+    line-height: 22px
+    text-transform: uppercase
+    padding-bottom: 20px
+    margin: 30px 0px 50px 40px
+    border-bottom: 10px solid #eb8c2a
+  .memo-item
+    font-family: Verdana, sans-serif
+    color: #444444
+    font-size: 13px
+    line-height: 16px
+    padding-left: 60px
+    margin-top: 40px
+    &:first-child
+      margin-top: 0px
+  .numb
+    +font-family-2
+    padding: 15px 8px
+    font-size: 31px
+    background: #eb8c2a
+    color: #fff
+    float: left
+    margin-left: -60px
+    +inline-block(top)
