@@ -1,0 +1,61 @@
+/* меню категорий в каталоге
+.box-category-menu
+  border: 1px solid #e3e3e3
+  .title
+    +font-family-2(bold)
+    color: #333333
+    font-size: 20px
+    background: #f2f2f2
+    padding: 10px
+    border-bottom: 1px solid #e3e3e3
+.category-menu
+  padding: 15px
+  ul
+    margin: 0px
+    padding: 0px
+    list-style: none
+  li
+    margin-top: 7px
+    > ul
+      display: none
+  a
+    +font-family-2()
+    font-size: 16px
+    line-height: 18px
+  li.active > ul
+    display: block
+  > ul
+    > li
+      margin-top: 10px
+      padding-top: 10px
+      border-top: 1px solid #e3e3e3
+      &:first-child
+        margin-top: 0px
+        padding-top: 0px
+        border-top: none
+      > a
+        text-transform: uppercase
+        color: #000
+        text-decoration: none
+      > ul
+        padding-left: 10px
+        > li
+          > a
+            color: #444444
+            &:hover, &.active
+              color: #eb8c2a
+              text-decoration: none
+          > ul
+            > li
+              > a
+                color: #817f7f
+                background: image-url('app/dot-grey-7x7.png') 0px 50% no-repeat
+                padding-left: 14px
+                &:hover
+                  text-decoration: none
+            ul
+              padding-left: 14px
+            a
+              color: #817f7f
+              &:hover
+                text-decoration: none

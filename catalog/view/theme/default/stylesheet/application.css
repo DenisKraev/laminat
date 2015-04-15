@@ -897,6 +897,84 @@ a.title-style:hover {
   margin-top: 20px;
 }
 
+/* меню категорий в каталоге */
+.box-category-menu {
+  border: 1px solid #e3e3e3;
+}
+.box-category-menu .title {
+  font-family: "OpenSans-bold-wf";
+  color: #333333;
+  font-size: 20px;
+  background: #f2f2f2;
+  padding: 10px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.category-menu {
+  padding: 15px;
+}
+.category-menu ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.category-menu li {
+  margin-top: 7px;
+}
+.category-menu li > ul {
+  display: none;
+}
+.category-menu a {
+  font-family: "OpenSans-regular-wf";
+  font-size: 16px;
+  line-height: 18px;
+}
+.category-menu li.active > ul {
+  display: block;
+}
+.category-menu > ul > li {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e3e3e3;
+}
+.category-menu > ul > li:first-child {
+  margin-top: 0px;
+  padding-top: 0px;
+  border-top: none;
+}
+.category-menu > ul > li > a {
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+}
+.category-menu > ul > li > ul {
+  padding-left: 10px;
+}
+.category-menu > ul > li > ul > li > a {
+  color: #444444;
+}
+.category-menu > ul > li > ul > li > a:hover, .category-menu > ul > li > ul > li > a.active {
+  color: #eb8c2a;
+  text-decoration: none;
+}
+.category-menu > ul > li > ul > li > ul > li > a {
+  color: #817f7f;
+  background: url('/catalog/view/theme/default/image/app/dot-grey-7x7.png?1429095096') 0px 50% no-repeat;
+  padding-left: 14px;
+}
+.category-menu > ul > li > ul > li > ul > li > a:hover {
+  text-decoration: none;
+}
+.category-menu > ul > li > ul > li > ul ul {
+  padding-left: 14px;
+}
+.category-menu > ul > li > ul > li > ul a {
+  color: #817f7f;
+}
+.category-menu > ul > li > ul > li > ul a:hover {
+  text-decoration: none;
+}
+
 /* подвал */
 #footer {
   background: #f2f3f5;

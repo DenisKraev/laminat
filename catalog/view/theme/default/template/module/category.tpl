@@ -7,12 +7,12 @@ function renderCategoriesTree($tree) {
 
   foreach ($tree['items'] as $item) {
 
-    echo "<li>";
+    echo "<li class='".$item['active']."'>";
     echo "<a href='".$item['href']."' class='".$item['active']."'>".$item['name']."</a>";
 
     echo "<ul>";
     foreach ($item['items'] as $data) {
-      echo "<li>";
+      echo "<li class='".$data['active']."'>";
       echo "<a href='".$data['href']."' class='".$data['active']."'>". $data['name']."</a>";
       renderCategoriesTree($data);
       echo "</li>";
@@ -24,15 +24,12 @@ function renderCategoriesTree($tree) {
 
   echo "</ul>";
 }
-
 ?>
 
 
-<div class="box">
-  <div class="box-heading"><?php echo $heading_title; ?></div>
-  <div class="box-content">
-    <div class="box-category">
-      <?php renderCategoriesTree($categories); ?>
-    </div>
+<div class="box-category-menu">
+  <div class="title"><?php echo $heading_title; ?></div>
+  <div class="category-menu">
+    <?php renderCategoriesTree($categories); ?>
   </div>
 </div>
