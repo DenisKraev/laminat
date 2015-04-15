@@ -7807,3 +7807,5 @@
 2015-04-15 14:39:44 - PHP Notice:  Undefined variable: categories in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 82
 2015-04-15 14:39:45 - PHP Notice:  Undefined variable: categories in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 82
 2015-04-15 14:39:47 - PHP Notice:  Undefined variable: categories in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 82
+2015-04-15 16:23:39 - PHP Notice:  Undefined variable: display_categories in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\filterpro.tpl on line 77
+2015-04-15 16:23:39 - PHP Notice:  Undefined variable: display_categories in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\filterpro.tpl on line 87

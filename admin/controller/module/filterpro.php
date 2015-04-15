@@ -230,8 +230,10 @@ class ControllerModuleFilterPro extends Controller {
 			$this->data['setting']['filterpro_afterload'] = "";
 		}
 
-		$this->data['display_categories'][] = array('value' => 'checkbox', 'name' => $this->language->get('text_display_checkbox'));
-		$this->data['display_categories'][] = array('value' => 'none', 'name' => $this->language->get('text_display_none'));
+    $this->data['display_categories'][] = array('value' => 'checkbox', 'name' => $this->language->get('text_display_checkbox'));
+    $this->data['display_categories'][] = array('value' => 'none', 'name' => $this->language->get('text_display_none'));
+    $this->data['display_categories'][] = array('value' => 'select', 'name' => $this->language->get('text_display_select'));
+    //$this->data['display_categories'][] = array('value' => 'radio', 'name' => $this->language->get('text_display_radio'));
 
 		$this->data['display_options'][] = array('value' => 'checkbox', 'name' => $this->language->get('text_display_checkbox'));
 		$this->data['display_options'][] = array('value' => 'none', 'name' => $this->language->get('text_display_none'));

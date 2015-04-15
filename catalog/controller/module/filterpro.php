@@ -278,6 +278,7 @@ class ControllerModuleFilterPro extends Controller {
 			$this->data['categories'] = false;
 			if($filterpro_setting['display_categories'] != 'none') {
 				$this->data['categories'] = $this->model_module_filterpro->getSubCategories($data);
+        $this->data['display_categories'] = $filterpro_setting['display_categories'];
 				$this->data['expanded_categories'] = isset($filterpro_setting['expanded_categories']) ? 1 : 0;
 			}
 

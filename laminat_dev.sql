@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 15 2015 г., 11:55
+-- Время создания: Апр 15 2015 г., 16:30
 -- Версия сервера: 5.5.41-log
 -- Версия PHP: 5.3.29
 
@@ -441,7 +441,7 @@ CREATE TABLE IF NOT EXISTS `category` (
 
 INSERT INTO `category` (`category_id`, `image`, `menu_image`, `parent_id`, `top`, `column`, `sort_order`, `status`, `date_added`, `date_modified`) VALUES
 (27, '', 1, 20, 0, 0, 2, 1, '2009-01-31 01:55:34', '2015-04-14 15:35:09'),
-(20, 'data/demo/compaq_presario.jpg', 1, 0, 1, 1, 1, 1, '2009-01-05 21:49:43', '2015-04-14 15:34:29'),
+(20, '', 1, 0, 1, 1, 0, 1, '2009-01-05 21:49:43', '2015-04-15 14:38:21'),
 (73, '', 1, 64, 0, 1, 0, 1, '2015-04-14 18:08:11', '2015-04-15 11:03:33'),
 (67, '', 1, 61, 0, 1, 0, 1, '2015-04-14 15:49:12', '2015-04-14 15:49:12'),
 (68, '', 1, 61, 0, 1, 0, 1, '2015-04-14 15:49:26', '2015-04-14 15:49:26'),
@@ -450,7 +450,7 @@ INSERT INTO `category` (`category_id`, `image`, `menu_image`, `parent_id`, `top`
 (65, '', 1, 60, 0, 1, 0, 1, '2015-04-14 15:46:36', '2015-04-14 15:46:36'),
 (64, '', 1, 60, 0, 1, 0, 1, '2015-04-14 15:46:25', '2015-04-14 15:46:25'),
 (72, '', 1, 71, 0, 1, 0, 1, '2015-04-14 17:24:55', '2015-04-14 17:24:55'),
-(71, '', 1, 0, 0, 1, 0, 1, '2015-04-14 17:23:55', '2015-04-14 17:23:55'),
+(71, '', 1, 0, 0, 1, 1, 1, '2015-04-14 17:23:55', '2015-04-15 14:38:47'),
 (63, '', 1, 60, 0, 1, 0, 1, '2015-04-14 15:46:14', '2015-04-14 15:46:14'),
 (61, '', 1, 20, 0, 1, 0, 1, '2015-04-14 15:44:49', '2015-04-14 15:44:49'),
 (62, '', 1, 20, 0, 1, 0, 1, '2015-04-14 15:44:57', '2015-04-14 15:44:57'),
@@ -1790,23 +1790,6 @@ CREATE TABLE IF NOT EXISTS `option` (
   PRIMARY KEY (`option_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
---
--- Дамп данных таблицы `option`
---
-
-INSERT INTO `option` (`option_id`, `type`, `sort_order`) VALUES
-(1, 'radio', 2),
-(2, 'checkbox', 3),
-(4, 'text', 4),
-(5, 'select', 1),
-(6, 'textarea', 5),
-(7, 'file', 6),
-(8, 'date', 7),
-(9, 'time', 8),
-(10, 'datetime', 9),
-(11, 'select', 1),
-(12, 'date', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -1819,23 +1802,6 @@ CREATE TABLE IF NOT EXISTS `option_description` (
   `name` varchar(128) NOT NULL,
   PRIMARY KEY (`option_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `option_description`
---
-
-INSERT INTO `option_description` (`option_id`, `language_id`, `name`) VALUES
-(1, 1, 'Radio'),
-(2, 1, 'Checkbox'),
-(4, 1, 'Text'),
-(6, 1, 'Textarea'),
-(8, 1, 'Date'),
-(7, 1, 'File'),
-(5, 1, 'Select'),
-(9, 1, 'Time'),
-(10, 1, 'Date &amp; Time'),
-(12, 1, 'Delivery Date'),
-(11, 1, 'Size');
 
 -- --------------------------------------------------------
 
@@ -1874,26 +1840,6 @@ CREATE TABLE IF NOT EXISTS `option_value` (
   PRIMARY KEY (`option_value_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49 ;
 
---
--- Дамп данных таблицы `option_value`
---
-
-INSERT INTO `option_value` (`option_value_id`, `option_id`, `image`, `sort_order`) VALUES
-(43, 1, '', 3),
-(32, 1, '', 1),
-(45, 2, '', 4),
-(44, 2, '', 3),
-(42, 5, '', 4),
-(41, 5, '', 3),
-(39, 5, '', 1),
-(40, 5, '', 2),
-(31, 1, '', 2),
-(23, 2, '', 1),
-(24, 2, '', 2),
-(46, 11, '', 1),
-(47, 11, '', 2),
-(48, 11, '', 3);
-
 -- --------------------------------------------------------
 
 --
@@ -1907,26 +1853,6 @@ CREATE TABLE IF NOT EXISTS `option_value_description` (
   `name` varchar(128) NOT NULL,
   PRIMARY KEY (`option_value_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `option_value_description`
---
-
-INSERT INTO `option_value_description` (`option_value_id`, `language_id`, `option_id`, `name`) VALUES
-(43, 1, 1, 'Large'),
-(32, 1, 1, 'Small'),
-(45, 1, 2, 'Checkbox 4'),
-(44, 1, 2, 'Checkbox 3'),
-(31, 1, 1, 'Medium'),
-(42, 1, 5, 'Yellow'),
-(41, 1, 5, 'Green'),
-(39, 1, 5, 'Red'),
-(40, 1, 5, 'Blue'),
-(23, 1, 2, 'Checkbox 1'),
-(24, 1, 2, 'Checkbox 2'),
-(48, 1, 11, 'Large'),
-(47, 1, 11, 'Medium'),
-(46, 1, 11, 'Small');
 
 -- --------------------------------------------------------
 
@@ -2264,7 +2190,7 @@ CREATE TABLE IF NOT EXISTS `product` (
 INSERT INTO `product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `date_added`, `date_modified`, `viewed`) VALUES
 (28, 'Товар 1', '', '', '', '', '', '', '', 939, 7, 'data/demo/htc_touch_hd_1.jpg', 5, 1, '100.0000', 200, 0, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:06:50', '2015-04-14 17:15:32', 0),
 (29, 'Товар 2', '', '', '', '', '', '', '', 999, 6, 'data/demo/palm_treo_pro_1.jpg', 6, 1, '279.9900', 0, 0, '2009-02-03', '133.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:42:17', '2015-04-14 17:21:04', 0),
-(30, 'Товар 3', '0907', '', '', '', '', '', '', 7, 6, 'data/demo/canon_eos_5d_1.jpg', 9, 1, '100.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:59:00', '2015-04-14 17:14:42', 1),
+(30, 'Товар 3', '0907', '', '', '', '', '', '', 7, 6, 'data/demo/canon_eos_5d_1.jpg', 9, 1, '100.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:59:00', '2015-04-15 17:01:08', 1),
 (31, 'Товар 4', '', '', '', '', '', '', '', 1000, 6, 'data/demo/nikon_d300_1.jpg', 0, 1, '80.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 17:00:10', '2015-04-14 17:19:41', 0),
 (32, 'Товар 5', '', '', '', '', '', '', '', 999, 6, 'data/demo/ipod_touch_1.jpg', 8, 1, '100.0000', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 17:07:26', '2015-04-14 17:19:05', 0),
 (33, 'Товар 6', '', '', '', '', '', '', '', 1000, 6, 'data/demo/samsung_syncmaster_941bw.jpg', 0, 1, '200.0000', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 17:08:31', '2015-04-14 17:21:59', 0),
@@ -2277,7 +2203,7 @@ INSERT INTO `product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`
 (44, 'Товар 17', '', '', '', '', '', '', '', 1000, 5, 'data/demo/macbook_air_1.jpg', 8, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:00', '2011-09-30 01:05:53', 0),
 (45, 'Товар 18', '', '', '', '', '', '', '', 998, 5, 'data/demo/macbook_pro_1.jpg', 8, 1, '2000.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:17', '2015-04-14 17:19:24', 0),
 (46, 'Товар 19', '', '', '', '', '', '', '', 1000, 5, 'data/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:29', '2015-04-14 17:22:14', 1),
-(47, 'Товар 21', '', '', '', '', '', '', '', 1000, 5, 'data/demo/hp_1.jpg', 7, 1, '100.0000', 400, 0, '2009-02-03', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, '2009-02-03 21:08:40', '2015-04-14 17:30:21', 2),
+(47, 'Товар 21', '', '', '', '', '', '', '', 1000, 5, 'data/demo/hp_1.jpg', 7, 1, '100.0000', 400, 0, '2009-02-03', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, '2009-02-03 21:08:40', '2015-04-15 17:02:20', 2),
 (48, 'Товар 20', 'test 1', '', '', '', '', '', 'test 2', 995, 5, 'data/demo/ipod_classic_1.jpg', 8, 1, '100.0000', 0, 0, '2009-02-08', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-08 17:21:51', '2015-04-14 17:18:36', 0),
 (49, 'SAM1', '', '', '', '', '', '', '', 0, 8, 'data/demo/samsung_tab_1.jpg', 0, 1, '199.9900', 0, 0, '2011-04-25', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2011-04-26 08:57:34', '2015-04-14 17:21:26', 0),
 (64, 'Товар 01', '', '', '', '', '', '', '', 946, 7, 'data/demo/htc_touch_hd_1.jpg', 5, 1, '500.0000', 200, 0, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 0, '2011-05-24 23:48:34', '2015-04-14 17:15:52', 0);
@@ -2392,15 +2318,15 @@ CREATE TABLE IF NOT EXISTS `product_image` (
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_image_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2639 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2643 ;
 
 --
 -- Дамп данных таблицы `product_image`
 --
 
 INSERT INTO `product_image` (`product_image_id`, `product_id`, `image`, `sort_order`) VALUES
-(2580, 30, 'data/demo/canon_eos_5d_3.jpg', 0),
-(2638, 47, 'data/demo/hp_2.jpg', 0),
+(2640, 30, 'data/demo/canon_eos_5d_2.jpg', 0),
+(2642, 47, 'data/demo/hp_3.jpg', 0),
 (2584, 28, 'data/demo/htc_touch_hd_3.jpg', 0),
 (2588, 41, 'data/demo/imac_3.jpg', 0),
 (2593, 40, 'data/demo/iphone_4.jpg', 0),
@@ -2426,8 +2352,8 @@ INSERT INTO `product_image` (`product_image_id`, `product_id`, `image`, `sort_or
 (2602, 48, 'data/demo/ipod_classic_3.jpg', 0),
 (2592, 40, 'data/demo/iphone_3.jpg', 0),
 (2591, 40, 'data/demo/iphone_5.jpg', 0),
-(2579, 30, 'data/demo/canon_eos_5d_2.jpg', 0),
-(2637, 47, 'data/demo/hp_3.jpg', 0),
+(2639, 30, 'data/demo/canon_eos_5d_3.jpg', 0),
+(2641, 47, 'data/demo/hp_2.jpg', 0),
 (2583, 28, 'data/demo/htc_touch_hd_2.jpg', 0),
 (2587, 41, 'data/demo/imac_2.jpg', 0),
 (2590, 40, 'data/demo/iphone_2.jpg', 0),
@@ -2478,14 +2404,6 @@ CREATE TABLE IF NOT EXISTS `product_option` (
   PRIMARY KEY (`product_option_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=227 ;
 
---
--- Дамп данных таблицы `product_option`
---
-
-INSERT INTO `product_option` (`product_option_id`, `product_id`, `option_id`, `option_value`, `required`) VALUES
-(225, 47, 12, '2011-04-22', 1),
-(226, 30, 5, '', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -2508,14 +2426,6 @@ CREATE TABLE IF NOT EXISTS `product_option_value` (
   `weight_prefix` varchar(1) NOT NULL,
   PRIMARY KEY (`product_option_value_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
-
---
--- Дамп данных таблицы `product_option_value`
---
-
-INSERT INTO `product_option_value` (`product_option_value_id`, `product_option_id`, `product_id`, `option_id`, `option_value_id`, `quantity`, `subtract`, `price`, `price_prefix`, `points`, `points_prefix`, `weight`, `weight_prefix`) VALUES
-(15, 226, 30, 5, 39, 2, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(16, 226, 30, 5, 40, 5, 1, '0.0000', '+', 0, '+', '0.00000000', '+');
 
 -- --------------------------------------------------------
 
@@ -2551,7 +2461,7 @@ CREATE TABLE IF NOT EXISTS `product_reward` (
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_reward_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=625 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=627 ;
 
 --
 -- Дамп данных таблицы `product_reward`
@@ -2559,13 +2469,13 @@ CREATE TABLE IF NOT EXISTS `product_reward` (
 
 INSERT INTO `product_reward` (`product_reward_id`, `product_id`, `customer_group_id`, `points`) VALUES
 (604, 42, 1, 100),
-(624, 47, 1, 300),
+(626, 47, 1, 300),
 (607, 28, 1, 400),
 (618, 43, 1, 600),
 (619, 29, 1, 0),
 (613, 48, 1, 0),
 (610, 40, 1, 0),
-(605, 30, 1, 200),
+(625, 30, 1, 200),
 (331, 44, 1, 700),
 (616, 45, 1, 800),
 (617, 31, 1, 0),
@@ -2652,7 +2562,7 @@ CREATE TABLE IF NOT EXISTS `product_to_category` (
 INSERT INTO `product_to_category` (`product_id`, `category_id`, `main_category`) VALUES
 (40, 65, 1),
 (64, 60, 0),
-(30, 20, 0),
+(30, 62, 1),
 (48, 20, 0),
 (44, 64, 0),
 (31, 62, 1),
@@ -2669,15 +2579,15 @@ INSERT INTO `product_to_category` (`product_id`, `category_id`, `main_category`)
 (49, 67, 1),
 (33, 20, 0),
 (44, 59, 1),
-(30, 62, 1),
+(30, 20, 0),
 (45, 59, 1),
-(47, 20, 1),
+(47, 71, 0),
 (46, 20, 0),
 (29, 20, 0),
 (31, 20, 0),
 (43, 20, 0),
 (33, 65, 1),
-(47, 72, 0),
+(47, 20, 1),
 (36, 20, 0),
 (28, 60, 0),
 (46, 59, 1),
@@ -2695,7 +2605,7 @@ INSERT INTO `product_to_category` (`product_id`, `category_id`, `main_category`)
 (42, 20, 0),
 (42, 63, 1),
 (33, 60, 0),
-(47, 71, 0);
+(47, 72, 0);
 
 -- --------------------------------------------------------
 
@@ -2905,7 +2815,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1305 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1340 ;
 
 --
 -- Дамп данных таблицы `setting`
@@ -3093,10 +3003,9 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (1292, 0, 'deadcow_seo', 'deadcow_seo_products_template', '[product_name]', 0),
 (1290, 0, 'deadcow_seo', 'deadcow_seo_categories_template', '[category_name]', 0),
 (1291, 0, 'deadcow_seo', 'deadcow_seo_categories_suffix', '', 0),
-(1274, 0, 'filterpro', 'attribute_group', 'a:1:{i:1;a:2:{s:23:"attribute_group_tooltip";s:0:"";s:18:"attribute_group_id";s:1:"7";}}', 1),
-(1275, 0, 'filterpro', 'attribute', 'a:2:{i:1;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:2:"13";}i:2;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:2:"12";}}', 1),
-(1276, 0, 'filterpro', 'filterpro_module', 'a:1:{i:0;a:5:{s:4:"type";s:1:"0";s:9:"layout_id";s:1:"3";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
-(1272, 0, 'filterpro', 'filterpro_setting', 'a:25:{s:12:"price_slider";s:1:"1";s:7:"filters";s:1:"0";s:20:"display_manufacturer";s:8:"checkbox";s:18:"display_categories";s:8:"checkbox";s:12:"display_tags";s:8:"checkbox";s:16:"display_option_2";s:8:"checkbox";s:16:"display_option_1";s:8:"checkbox";s:16:"display_option_5";s:8:"checkbox";s:17:"display_option_11";s:8:"checkbox";s:20:"display_attribute_13";s:8:"checkbox";s:20:"display_attribute_12";s:8:"checkbox";s:11:"option_mode";s:2:"or";s:14:"attribute_mode";s:2:"or";s:14:"attr_delimeter";s:1:":";s:3:"tax";s:1:"0";s:20:"attribute_value_mode";s:2:"or";s:10:"attr_group";s:1:"0";s:13:"subcategories";s:2:"on";s:20:"option_main_checkbox";s:2:"on";s:15:"option_images_w";s:2:"20";s:15:"option_images_h";s:2:"20";s:19:"filterpro_container";s:15:".product-{view}";s:14:"filterpro_name";s:9:"FilterPro";s:19:"filterpro_afterload";s:0:"";s:9:"news_days";s:1:"0";}', 1),
+(1339, 0, 'filterpro', 'filterpro_module', 'a:1:{i:0;a:5:{s:4:"type";s:1:"0";s:9:"layout_id";s:1:"3";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
+(1337, 0, 'filterpro', 'attribute_group', 'a:1:{i:1;a:2:{s:23:"attribute_group_tooltip";s:0:"";s:18:"attribute_group_id";s:1:"7";}}', 1),
+(1338, 0, 'filterpro', 'attribute', 'a:2:{i:1;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:2:"13";}i:2;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:2:"12";}}', 1),
 (1302, 0, 'category', 'category_module', 'a:1:{i:0;a:4:{s:9:"layout_id";s:1:"3";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
 (973, 0, 'coin_slider', 'coin_slider_module', 'a:1:{i:0;a:7:{s:14:"coin_slider_id";s:1:"1";s:5:"width";s:3:"980";s:6:"height";s:3:"280";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
 (786, 0, 'config', 'config_review_status', '1', 0),
@@ -3170,7 +3079,7 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (1150, 0, 'special', 'special_module', 'a:1:{i:0;a:7:{s:5:"limit";s:3:"100";s:11:"image_width";s:3:"195";s:12:"image_height";s:3:"195";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
 (982, 0, 'actions', 'actions_module', 'a:1:{i:0;a:5:{s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:5:"limit";s:1:"4";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
 (984, 0, 'actions_setting', 'actions_setting', 'a:14:{s:13:"actions_limit";s:1:"5";s:11:"image_width";s:3:"120";s:12:"image_height";s:3:"120";s:10:"show_image";s:1:"1";s:9:"show_date";s:1:"1";s:22:"image_relproduct_width";s:2:"80";s:23:"image_relproduct_height";s:2:"80";s:17:"show_actions_date";s:1:"1";s:18:"image_module_width";s:3:"212";s:19:"image_module_height";s:3:"218";s:13:"module_maxlen";s:2:"80";s:17:"show_module_image";s:1:"1";s:16:"show_module_date";s:1:"1";s:3:"seo";a:1:{i:1;a:4:{s:2:"h1";s:0:"";s:5:"title";s:0:"";s:8:"keywords";s:0:"";s:11:"description";s:0:"";}}}', 1),
-(1273, 0, 'filterpro', 'option', 'a:4:{i:1;a:2:{s:7:"tooltip";s:0:"";s:9:"option_id";s:1:"2";}i:2;a:2:{s:7:"tooltip";s:0:"";s:9:"option_id";s:1:"1";}i:3;a:2:{s:7:"tooltip";s:0:"";s:9:"option_id";s:1:"5";}i:4;a:2:{s:7:"tooltip";s:0:"";s:9:"option_id";s:2:"11";}}', 1),
+(1336, 0, 'filterpro', 'filterpro_setting', 'a:28:{s:12:"price_slider";s:1:"1";s:7:"filters";s:1:"0";s:16:"expanded_filters";s:2:"on";s:20:"display_manufacturer";s:6:"select";s:21:"expanded_manufacturer";s:2:"on";s:18:"display_categories";s:6:"select";s:19:"expanded_categories";s:2:"on";s:12:"display_tags";s:8:"checkbox";s:13:"expanded_tags";s:2:"on";s:20:"display_attribute_13";s:6:"select";s:21:"expanded_attribute_13";s:2:"on";s:20:"display_attribute_12";s:6:"select";s:21:"expanded_attribute_12";s:2:"on";s:11:"option_mode";s:2:"or";s:14:"attribute_mode";s:2:"or";s:14:"attr_delimeter";s:1:":";s:3:"tax";s:1:"0";s:20:"attribute_value_mode";s:2:"or";s:10:"attr_group";s:1:"0";s:13:"subcategories";s:2:"on";s:20:"option_main_checkbox";s:2:"on";s:12:"disable_mask";s:2:"on";s:15:"option_images_w";s:2:"20";s:15:"option_images_h";s:2:"20";s:19:"filterpro_container";s:15:".product-{view}";s:14:"filterpro_name";s:9:"FilterPro";s:19:"filterpro_afterload";s:0:"";s:9:"news_days";s:1:"0";}', 1),
 (1143, 0, 'latest', 'latest_module', 'a:1:{i:0;a:8:{s:9:"id_status";s:1:"1";s:5:"limit";s:3:"100";s:11:"image_width";s:3:"195";s:12:"image_height";s:3:"195";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"2";}}', 1),
 (1210, 0, 'html_block', 'html_block_module', 'a:3:{i:0;a:5:{s:13:"html_block_id";s:1:"1";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}i:1;a:5:{s:13:"html_block_id";s:1:"2";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"4";}i:2;a:5:{s:13:"html_block_id";s:1:"3";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"5";}}', 1),
 (1211, 0, 'html_block', 'html_block_1', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:2099:"&lt;div class=&quot;site-content box-offer-manager&quot;&gt;\r\n&lt;div class=&quot;box-offer&quot;&gt;\r\n&lt;h3 class=&quot;title-style&quot;&gt;Мы предлагаем&lt;/h3&gt;\r\n\r\n&lt;ul class=&quot;offer-list&quot;&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – выезд инженера-консультанта на дом, для оценки технического состояния пола, замера, расчет количества необходимого материала.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – доставка образцов на дом. Вы можете подобрать напольное покрытие в соответствии обстановки, цветовой гаммы вашего помещения.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – при покупке у нас ламината, укладка бесплатно.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – при покупке у нас ламината, подложка бесплатно.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;box-manager&quot;&gt;\r\n&lt;h3 class=&quot;title-style&quot;&gt;Менеджеры&lt;/h3&gt;\r\n\r\n&lt;div class=&quot;manager-1&quot;&gt;&lt;img alt=&quot;Менеджер&quot; src=&quot;/catalog/view/theme/default/image/manager-1.png&quot; /&gt;\r\n&lt;div class=&quot;info&quot;&gt;\r\n&lt;div class=&quot;name&quot;&gt;Наталья&lt;/div&gt;\r\n\r\n&lt;div class=&quot;phone&quot;&gt;тел. 44-74-55&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;manager-2&quot;&gt;&lt;img alt=&quot;Менеджер&quot; src=&quot;/catalog/view/theme/default/image/manager-2.png&quot; /&gt;\r\n&lt;div class=&quot;info&quot;&gt;\r\n&lt;div class=&quot;name&quot;&gt;Николай&lt;/div&gt;\r\n\r\n&lt;div class=&quot;phone&quot;&gt;тел. 44-74-55&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}s:6:"editor";a:1:{i:1;s:1:"1";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
@@ -3354,7 +3263,7 @@ CREATE TABLE IF NOT EXISTS `url_alias` (
   `keyword` varchar(255) NOT NULL,
   PRIMARY KEY (`url_alias_id`),
   KEY `query` (`query`(64))
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1019 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1022 ;
 
 --
 -- Дамп данных таблицы `url_alias`
@@ -3399,15 +3308,15 @@ INSERT INTO `url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (775, 'affiliate/login', 'affiliate-login'),
 (774, 'common/home', ''),
 (1005, 'product_id=48', 'ipod-classic'),
-(987, 'category_id=20', 'laminat'),
+(1019, 'category_id=20', 'laminat'),
 (986, 'category_id=26', 'alloc-1'),
 (988, 'category_id=27', 'aller'),
 (991, 'manufacturer_id=8', 'alloc-2'),
 (897, 'information_id=4', 'about_us'),
 (996, 'product_id=42', 'apple-cinema-30'),
 (976, 'category_id=59', 'alloc'),
-(997, 'product_id=30', 'canon-eos-5d'),
-(1016, 'product_id=47', 'hp-lp3065'),
+(1020, 'product_id=30', 'canon-eos-5d'),
+(1021, 'product_id=47', 'hp-lp3065'),
 (999, 'product_id=28', 'htc-touch-hd'),
 (1000, 'product_id=64', 'htc-touch-hd-1'),
 (1001, 'product_id=41', 'imac'),

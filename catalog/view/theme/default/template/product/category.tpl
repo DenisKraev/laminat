@@ -83,7 +83,7 @@
   <?php if (!$categories && !$products) { ?>
   <div class="content"><?php echo $text_empty; ?></div>
   <?php } ?>
-  
+
   <?php echo $content_bottom; ?></div>
 <script type="text/javascript"><!--
 function display(view) {

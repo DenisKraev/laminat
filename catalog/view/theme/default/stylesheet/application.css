@@ -973,6 +973,25 @@ a.title-style:hover {
   text-decoration: none;
 }
 
+/* фильтр */
+#filterpro {
+  background: url('/catalog/view/theme/default/image/app/bg-grid.png?1429100775') 0px 0px repeat, #f2f2f2;
+  border: 1px solid #e3e3e3;
+  padding: 10px;
+  -moz-box-shadow: 3px 3px 3px #ededed;
+  -webkit-box-shadow: 3px 3px 3px #ededed;
+  box-shadow: 3px 3px 3px #ededed;
+}
+#filterpro .option_box {
+  position: relative;
+  padding: 0px;
+  display: inline-block;
+  vertical-align: top;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
 /* подвал */
 #footer {
   background: #f2f3f5;
