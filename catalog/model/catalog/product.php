@@ -92,7 +92,7 @@ class ModelCatalogProduct extends Model {
 
     if (!empty($data['filter_category_id'])) {
 			if (!empty($data['filter_sub_category'])) {
-				$sql .= " FROM " . DB_PREFIX . "category_path cp LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (cp.category_id = p2c.category_id)";			
+				$sql .= " FROM " . DB_PREFIX . "category_path cp LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (cp.category_id = p2c.category_id)";
 			} else {
 				$sql .= " FROM " . DB_PREFIX . "product_to_category p2c";
 			}
@@ -121,7 +121,7 @@ class ModelCatalogProduct extends Model {
 
     if (!empty($data['filter_category_id'])) {
 			if (!empty($data['filter_sub_category'])) {
-				$sql .= " AND cp.path_id = '" . (int)$data['filter_category_id'] . "'";	
+				$sql .= " AND cp.path_id = '" . (int)$data['filter_category_id'] . "'";
 			} else {
 				$sql .= " AND p2c.category_id = '" . (int)$data['filter_category_id'] . "'";			
 			}	

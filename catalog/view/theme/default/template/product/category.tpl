@@ -1,5 +1,5 @@
 <?php echo $header; ?>
-<div class="site-content">
+<div class="site-content inner-pages">
 <?php echo $column_left; ?>
 <?php echo $column_right; ?>
 <div id="content">

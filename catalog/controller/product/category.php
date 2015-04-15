@@ -213,7 +213,7 @@ class ControllerProductCategory extends Controller {
 			$data = array(
 				'filter_category_id' => $category_id,
         'filter_sub_category' => true,
-				'filter_filter'      => $filter, 
+				'filter_filter'      => $filter,
 				'sort'               => $sort,
 				'order'              => $order,
 				'start'              => ($page - 1) * $limit,
@@ -221,9 +221,10 @@ class ControllerProductCategory extends Controller {
 			);
 					
 			$results = $this->model_catalog_product->getProducts($data);
+
 			//Вызов метода getFoundProducts должен проводится сразу же после getProducts
 			//только тогда он выдает правильное значения количества товаров
-			$product_total = $this->model_catalog_product->getFoundProducts(); 
+			$product_total = $this->model_catalog_product->getFoundProducts();
 			
 			foreach ($results as $result) {
 				if ($result['image']) {

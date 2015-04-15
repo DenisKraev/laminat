@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 14 2015 г., 14:23
+-- Время создания: Апр 15 2015 г., 11:55
 -- Версия сервера: 5.5.41-log
 -- Версия PHP: 5.3.29
 
@@ -433,51 +433,30 @@ CREATE TABLE IF NOT EXISTS `category` (
   `date_added` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `date_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`category_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=59 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=75 ;
 
 --
 -- Дамп данных таблицы `category`
 --
 
 INSERT INTO `category` (`category_id`, `image`, `menu_image`, `parent_id`, `top`, `column`, `sort_order`, `status`, `date_added`, `date_modified`) VALUES
-(25, '', 1, 0, 0, 1, 3, 1, '2009-01-31 01:04:25', '2015-04-01 12:11:24'),
-(27, '', 1, 20, 0, 0, 2, 1, '2009-01-31 01:55:34', '2010-08-22 06:32:15'),
-(20, 'data/demo/compaq_presario.jpg', 1, 0, 1, 1, 1, 1, '2009-01-05 21:49:43', '2015-04-01 15:29:19'),
-(24, '', 1, 0, 0, 1, 5, 1, '2009-01-20 02:36:26', '2015-04-01 12:12:08'),
-(18, 'data/demo/hp_2.jpg', 1, 0, 0, 0, 2, 1, '2009-01-05 21:49:15', '2015-04-01 12:11:17'),
-(17, '', 1, 0, 0, 1, 4, 1, '2009-01-03 21:08:57', '2015-04-01 12:11:40'),
-(28, '', 1, 25, 0, 0, 1, 1, '2009-02-02 13:11:12', '2010-08-22 06:32:46'),
-(26, '', 1, 20, 0, 0, 1, 1, '2009-01-31 01:55:14', '2010-08-22 06:31:45'),
-(29, '', 1, 25, 0, 0, 1, 1, '2009-02-02 13:11:37', '2010-08-22 06:32:39'),
-(30, '', 1, 25, 0, 0, 1, 1, '2009-02-02 13:11:59', '2010-08-22 06:33:00'),
-(31, '', 1, 25, 0, 0, 1, 1, '2009-02-03 14:17:24', '2010-08-22 06:33:06'),
-(32, '', 1, 25, 0, 0, 1, 1, '2009-02-03 14:17:34', '2010-08-22 06:33:12'),
-(33, '', 1, 0, 0, 1, 6, 1, '2009-02-03 14:17:55', '2015-04-01 12:11:47'),
-(34, 'data/demo/ipod_touch_4.jpg', 1, 0, 0, 4, 7, 1, '2009-02-03 14:18:11', '2015-04-01 12:11:54'),
-(35, '', 1, 28, 0, 0, 0, 1, '2010-09-17 10:06:48', '2010-09-18 14:02:42'),
-(36, '', 1, 28, 0, 0, 0, 1, '2010-09-17 10:07:13', '2010-09-18 14:02:55'),
-(37, '', 1, 34, 0, 0, 0, 1, '2010-09-18 14:03:39', '2011-04-22 01:55:08'),
-(38, '', 1, 34, 0, 0, 0, 1, '2010-09-18 14:03:51', '2010-09-18 14:03:51'),
-(39, '', 1, 34, 0, 0, 0, 1, '2010-09-18 14:04:17', '2011-04-22 01:55:20'),
-(40, '', 1, 34, 0, 0, 0, 1, '2010-09-18 14:05:36', '2010-09-18 14:05:36'),
-(41, '', 1, 34, 0, 0, 0, 1, '2010-09-18 14:05:49', '2011-04-22 01:55:30'),
-(42, '', 1, 34, 0, 0, 0, 1, '2010-09-18 14:06:34', '2010-11-07 20:31:04'),
-(43, '', 1, 34, 0, 0, 0, 1, '2010-09-18 14:06:49', '2011-04-22 01:55:40'),
-(44, '', 1, 34, 0, 0, 0, 1, '2010-09-21 15:39:21', '2010-11-07 20:30:55'),
-(45, '', 1, 18, 0, 0, 0, 1, '2010-09-24 18:29:16', '2011-04-26 08:52:11'),
-(46, '', 1, 18, 0, 0, 0, 1, '2010-09-24 18:29:31', '2011-04-26 08:52:23'),
-(47, '', 1, 34, 0, 0, 0, 1, '2010-11-07 11:13:16', '2010-11-07 11:13:16'),
-(48, '', 1, 34, 0, 0, 0, 1, '2010-11-07 11:13:33', '2010-11-07 11:13:33'),
-(49, '', 1, 34, 0, 0, 0, 1, '2010-11-07 11:14:04', '2010-11-07 11:14:04'),
-(50, '', 1, 34, 0, 0, 0, 1, '2010-11-07 11:14:23', '2011-04-22 01:16:01'),
-(51, '', 1, 34, 0, 0, 0, 1, '2010-11-07 11:14:38', '2011-04-22 01:16:13'),
-(52, '', 1, 34, 0, 0, 0, 1, '2010-11-07 11:16:09', '2011-04-22 01:54:57'),
-(53, '', 1, 34, 0, 0, 0, 1, '2010-11-07 11:28:53', '2011-04-22 01:14:36'),
-(54, '', 1, 34, 0, 0, 0, 1, '2010-11-07 11:29:16', '2011-04-22 01:16:50'),
-(55, '', 1, 34, 0, 0, 0, 1, '2010-11-08 10:31:32', '2010-11-08 10:31:32'),
-(56, '', 1, 34, 0, 0, 0, 1, '2010-11-08 10:31:50', '2011-04-22 01:16:37'),
-(57, '', 1, 0, 0, 1, 3, 1, '2011-04-26 08:53:16', '2015-04-01 12:11:31'),
-(58, '', 1, 52, 0, 0, 0, 1, '2011-05-08 13:44:16', '2011-05-08 13:44:16');
+(27, '', 1, 20, 0, 0, 2, 1, '2009-01-31 01:55:34', '2015-04-14 15:35:09'),
+(20, 'data/demo/compaq_presario.jpg', 1, 0, 1, 1, 1, 1, '2009-01-05 21:49:43', '2015-04-14 15:34:29'),
+(73, '', 1, 64, 0, 1, 0, 1, '2015-04-14 18:08:11', '2015-04-15 11:03:33'),
+(67, '', 1, 61, 0, 1, 0, 1, '2015-04-14 15:49:12', '2015-04-14 15:49:12'),
+(68, '', 1, 61, 0, 1, 0, 1, '2015-04-14 15:49:26', '2015-04-14 15:49:26'),
+(26, '', 1, 20, 0, 0, 1, 1, '2009-01-31 01:55:14', '2015-04-14 15:35:01'),
+(66, '', 1, 60, 0, 1, 0, 1, '2015-04-14 15:46:47', '2015-04-14 15:46:47'),
+(65, '', 1, 60, 0, 1, 0, 1, '2015-04-14 15:46:36', '2015-04-14 15:46:36'),
+(64, '', 1, 60, 0, 1, 0, 1, '2015-04-14 15:46:25', '2015-04-14 15:46:25'),
+(72, '', 1, 71, 0, 1, 0, 1, '2015-04-14 17:24:55', '2015-04-14 17:24:55'),
+(71, '', 1, 0, 0, 1, 0, 1, '2015-04-14 17:23:55', '2015-04-14 17:23:55'),
+(63, '', 1, 60, 0, 1, 0, 1, '2015-04-14 15:46:14', '2015-04-14 15:46:14'),
+(61, '', 1, 20, 0, 1, 0, 1, '2015-04-14 15:44:49', '2015-04-14 15:44:49'),
+(62, '', 1, 20, 0, 1, 0, 1, '2015-04-14 15:44:57', '2015-04-14 15:44:57'),
+(59, '', 1, 20, 0, 1, 0, 1, '2015-04-14 15:44:19', '2015-04-14 15:44:19'),
+(60, '', 1, 20, 0, 1, 0, 1, '2015-04-14 15:44:37', '2015-04-14 15:44:37'),
+(74, '', 1, 73, 0, 1, 0, 1, '2015-04-14 18:08:19', '2015-04-15 11:03:08');
 
 -- --------------------------------------------------------
 
@@ -503,44 +482,23 @@ CREATE TABLE IF NOT EXISTS `category_description` (
 --
 
 INSERT INTO `category_description` (`category_id`, `language_id`, `name`, `description`, `meta_description`, `meta_keyword`, `seo_title`, `seo_h1`) VALUES
-(28, 1, 'Мониторы', '', '', '', '', ''),
-(33, 1, 'Камеры', '', '', '', '', ''),
-(32, 1, 'Веб-камеры', '', '', '', '', ''),
-(31, 1, 'Сканеры', '', '', '', '', ''),
-(30, 1, 'Принтеры', '', '', '', '', ''),
-(29, 1, 'Мышки', '', '', '', '', ''),
-(27, 1, 'Mac', '', '', '', '', ''),
-(26, 1, 'PC', '', '', '', '', ''),
-(17, 1, 'Програмное обеспечение', '', '', '', '', ''),
-(25, 1, 'Компоненты', '', '', '', '', ''),
-(24, 1, 'Телефоны и PDA', '', '', '', '', ''),
-(20, 1, 'Компьютеры', '&lt;p&gt;\r\n	Пример текста в описания категории&lt;/p&gt;\r\n', 'Пример описания категории', '', '', ''),
-(35, 1, 'test 1', '', '', '', '', ''),
-(36, 1, 'test 2', '', '', '', '', ''),
-(37, 1, 'test 5', '', '', '', '', ''),
-(38, 1, 'test 4', '', '', '', '', ''),
-(39, 1, 'test 6', '', '', '', '', ''),
-(40, 1, 'test 7', '', '', '', '', ''),
-(41, 1, 'test 8', '', '', '', '', ''),
-(42, 1, 'test 9', '', '', '', '', ''),
-(43, 1, 'test 11', '', '', '', '', ''),
-(34, 1, 'MP3 Плееры', '&lt;p&gt;\r\n	Shop Laptop feature only the best laptop deals on the market. By comparing laptop deals from the likes of PC World, Comet, Dixons, The Link and Carphone Warehouse, Shop Laptop has the most comprehensive selection of laptops on the internet. At Shop Laptop, we pride ourselves on offering customers the very best laptop deals. From refurbished laptops to netbooks, Shop Laptop ensures that every laptop - in every colour, style, size and technical spec - is featured on the site at the lowest possible price.&lt;/p&gt;\r\n', '', '', '', ''),
-(18, 1, 'Ноутбуки', '&lt;p&gt;\r\n	Shop Laptop feature only the best laptop deals on the market. By comparing laptop deals from the likes of PC World, Comet, Dixons, The Link and Carphone Warehouse, Shop Laptop has the most comprehensive selection of laptops on the internet. At Shop Laptop, we pride ourselves on offering customers the very best laptop deals. From refurbished laptops to netbooks, Shop Laptop ensures that every laptop - in every colour, style, size and technical spec - is featured on the site at the lowest possible price.&lt;/p&gt;\r\n', '', '', '', ''),
-(44, 1, 'test 12', '', '', '', '', ''),
-(45, 1, 'Windows', '', '', '', '', ''),
-(46, 1, 'Macs', '', '', '', '', ''),
-(47, 1, 'test 15', '', '', '', '', ''),
-(48, 1, 'test 16', '', '', '', '', ''),
-(49, 1, 'test 17', '', '', '', '', ''),
-(50, 1, 'test 18', '', '', '', '', ''),
-(51, 1, 'test 19', '', '', '', '', ''),
-(52, 1, 'test 20', '', '', '', '', ''),
-(53, 1, 'test 21', '', '', '', '', ''),
-(54, 1, 'test 22', '', '', '', '', ''),
-(55, 1, 'test 23', '', '', '', '', ''),
-(56, 1, 'test 24', '', '', '', '', ''),
-(57, 1, 'Планшеты', '', '', '', '', ''),
-(58, 1, 'test 25', '', '', '', '', '');
+(66, 1, 'Victori', '', '', '', '', ''),
+(64, 1, 'Castello', '', '', '', '', ''),
+(65, 1, 'Quick Style', '', '', '', '', ''),
+(27, 1, 'Aller', '', '', '', '', ''),
+(26, 1, 'Alloc', '', '', '', '', ''),
+(20, 1, 'Ламинат', '&lt;p&gt;Пример текста в описания категории&lt;/p&gt;\r\n', 'Пример описания категории', '', '', ''),
+(63, 1, 'Komfort', '', '', '', '', ''),
+(61, 1, 'Aqua-Step', '', '', '', '', ''),
+(62, 1, 'Artholtz', '', '', '', '', ''),
+(71, 1, 'Паркет', '', '', '', '', ''),
+(72, 1, 'Alloc', '', '', '', '', ''),
+(73, 1, 'тест', '', '', '', '', ''),
+(74, 1, 'тест2', '', '', '', '', ''),
+(67, 1, 'Original', '', '', '', '', ''),
+(68, 1, 'Wood 4V', '', '', '', '', ''),
+(59, 1, 'Alloc', '', '', '', '', ''),
+(60, 1, 'Alstenn', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -572,77 +530,49 @@ CREATE TABLE IF NOT EXISTS `category_path` (
 --
 
 INSERT INTO `category_path` (`category_id`, `path_id`, `level`) VALUES
-(25, 25, 0),
-(28, 25, 0),
-(28, 28, 1),
-(35, 25, 0),
-(35, 28, 1),
-(35, 35, 2),
-(36, 25, 0),
-(36, 28, 1),
-(36, 36, 2),
-(29, 25, 0),
-(29, 29, 1),
-(30, 25, 0),
-(30, 30, 1),
-(31, 25, 0),
-(31, 31, 1),
-(32, 25, 0),
-(32, 32, 1),
+(72, 72, 1),
+(73, 64, 2),
+(73, 60, 1),
+(63, 60, 1),
+(63, 20, 0),
+(62, 62, 1),
+(62, 20, 0),
+(61, 61, 1),
+(61, 20, 0),
+(65, 60, 1),
+(65, 20, 0),
+(64, 64, 2),
+(64, 60, 1),
+(64, 20, 0),
+(63, 63, 2),
+(66, 20, 0),
+(65, 65, 2),
 (20, 20, 0),
 (27, 20, 0),
 (27, 27, 1),
 (26, 20, 0),
 (26, 26, 1),
-(24, 24, 0),
-(18, 18, 0),
-(45, 18, 0),
-(45, 45, 1),
-(46, 18, 0),
-(46, 46, 1),
-(17, 17, 0),
-(33, 33, 0),
-(34, 34, 0),
-(37, 34, 0),
-(37, 37, 1),
-(38, 34, 0),
-(38, 38, 1),
-(39, 34, 0),
-(39, 39, 1),
-(40, 34, 0),
-(40, 40, 1),
-(41, 34, 0),
-(41, 41, 1),
-(42, 34, 0),
-(42, 42, 1),
-(43, 34, 0),
-(43, 43, 1),
-(44, 34, 0),
-(44, 44, 1),
-(47, 34, 0),
-(47, 47, 1),
-(48, 34, 0),
-(48, 48, 1),
-(49, 34, 0),
-(49, 49, 1),
-(50, 34, 0),
-(50, 50, 1),
-(51, 34, 0),
-(51, 51, 1),
-(52, 34, 0),
-(52, 52, 1),
-(58, 34, 0),
-(58, 52, 1),
-(58, 58, 2),
-(53, 34, 0),
-(53, 53, 1),
-(54, 34, 0),
-(54, 54, 1),
-(55, 34, 0),
-(55, 55, 1),
-(56, 34, 0),
-(56, 56, 1),
-(57, 57, 0);
+(73, 73, 3),
+(67, 20, 0),
+(59, 59, 1),
+(59, 20, 0),
+(60, 60, 1),
+(60, 20, 0),
+(66, 60, 1),
+(74, 73, 3),
+(74, 20, 0),
+(74, 60, 1),
+(74, 64, 2),
+(74, 74, 4),
+(72, 71, 0),
+(71, 71, 0),
+(68, 61, 1),
+(68, 68, 2),
+(67, 67, 2),
+(68, 20, 0),
+(66, 66, 2),
+(67, 61, 1),
+(73, 20, 0);
 
 -- --------------------------------------------------------
 
@@ -674,44 +604,23 @@ CREATE TABLE IF NOT EXISTS `category_to_store` (
 --
 
 INSERT INTO `category_to_store` (`category_id`, `store_id`) VALUES
-(17, 0),
-(18, 0),
 (20, 0),
-(24, 0),
-(25, 0),
 (26, 0),
 (27, 0),
-(28, 0),
-(29, 0),
-(30, 0),
-(31, 0),
-(32, 0),
-(33, 0),
-(34, 0),
-(35, 0),
-(36, 0),
-(37, 0),
-(38, 0),
-(39, 0),
-(40, 0),
-(41, 0),
-(42, 0),
-(43, 0),
-(44, 0),
-(45, 0),
-(46, 0),
-(47, 0),
-(48, 0),
-(49, 0),
-(50, 0),
-(51, 0),
-(52, 0),
-(53, 0),
-(54, 0),
-(55, 0),
-(56, 0),
-(57, 0),
-(58, 0);
+(59, 0),
+(60, 0),
+(61, 0),
+(62, 0),
+(63, 0),
+(64, 0),
+(65, 0),
+(66, 0),
+(67, 0),
+(68, 0),
+(71, 0),
+(72, 0),
+(73, 0),
+(74, 0);
 
 -- --------------------------------------------------------
 
@@ -1451,7 +1360,7 @@ CREATE TABLE IF NOT EXISTS `extension` (
   `type` varchar(32) NOT NULL,
   `code` varchar(32) NOT NULL,
   PRIMARY KEY (`extension_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=443 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=444 ;
 
 --
 -- Дамп данных таблицы `extension`
@@ -1470,6 +1379,7 @@ INSERT INTO `extension` (`extension_id`, `type`, `code`) VALUES
 (349, 'total', 'handling'),
 (350, 'total', 'low_order_fee'),
 (389, 'total', 'coupon'),
+(443, 'module', 'category'),
 (393, 'total', 'reward'),
 (398, 'total', 'voucher'),
 (407, 'payment', 'free_checkout'),
@@ -1483,8 +1393,7 @@ INSERT INTO `extension` (`extension_id`, `type`, `code`) VALUES
 (436, 'module', 'timer'),
 (438, 'module', 'actions'),
 (440, 'module', 'product_status'),
-(441, 'module', 'special'),
-(442, 'module', 'category_menu');
+(441, 'module', 'special');
 
 -- --------------------------------------------------------
 
@@ -1808,12 +1717,12 @@ CREATE TABLE IF NOT EXISTS `manufacturer` (
 --
 
 INSERT INTO `manufacturer` (`manufacturer_id`, `name`, `image`, `sort_order`) VALUES
-(5, 'HTC', 'data/demo/htc_logo.jpg', 0),
-(6, 'Palm', 'data/demo/palm_logo.jpg', 0),
-(7, 'Hewlett-Packard', 'data/demo/hp_logo.jpg', 0),
-(8, 'Apple', 'data/demo/apple_logo.jpg', 0),
-(9, 'Canon', 'data/demo/canon_logo.jpg', 0),
-(10, 'Sony', 'data/demo/sony_logo.jpg', 0);
+(5, 'Aberhof', '', 0),
+(6, 'Alstenn', '', 0),
+(7, 'Aqua-Step', '', 0),
+(8, 'Alloc', 'data/demo/apple_logo.jpg', 0),
+(9, 'Aller', 'data/demo/canon_logo.jpg', 0),
+(10, 'Artholtz', '', 0);
 
 -- --------------------------------------------------------
 
@@ -1842,13 +1751,7 @@ INSERT INTO `manufacturer_description` (`manufacturer_id`, `language_id`, `descr
 (7, 1, '', '', '', '', ''),
 (8, 1, '', '', '', '', ''),
 (9, 1, '', '', '', '', ''),
-(10, 1, '', '', '', '', ''),
-(5, 2, '', '', '', '', ''),
-(6, 2, '', '', '', '', ''),
-(7, 2, '', '', '', '', ''),
-(8, 2, '', '', '', '', ''),
-(9, 2, '', '', '', '', ''),
-(10, 2, '', '', '', '', '');
+(10, 1, '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -2359,26 +2262,25 @@ CREATE TABLE IF NOT EXISTS `product` (
 --
 
 INSERT INTO `product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `date_added`, `date_modified`, `viewed`) VALUES
-(28, 'Товар 1', '', '', '', '', '', '', '', 939, 7, 'data/demo/htc_touch_hd_1.jpg', 5, 1, '100.0000', 200, 0, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:06:50', '2015-04-10 15:42:27', 0),
-(29, 'Товар 2', '', '', '', '', '', '', '', 999, 6, 'data/demo/palm_treo_pro_1.jpg', 6, 1, '279.9900', 0, 0, '2009-02-03', '133.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:42:17', '2015-04-10 15:43:22', 0),
-(30, 'Товар 3', '0907', '', '', '', '', '', '', 7, 6, 'data/demo/canon_eos_5d_1.jpg', 9, 1, '100.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:59:00', '2015-04-10 15:42:12', 1),
-(31, 'Товар 4', '', '', '', '', '', '', '', 1000, 6, 'data/demo/nikon_d300_1.jpg', 0, 1, '80.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 17:00:10', '2015-04-10 15:43:14', 0),
-(32, 'Товар 5', '', '', '', '', '', '', '', 999, 6, 'data/demo/ipod_touch_1.jpg', 8, 1, '100.0000', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 17:07:26', '2015-04-10 15:43:04', 0),
-(33, 'Товар 6', '', '', '', '', '', '', '', 1000, 6, 'data/demo/samsung_syncmaster_941bw.jpg', 0, 1, '200.0000', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 17:08:31', '2015-04-10 15:43:33', 0),
-(34, 'Товар 7', '', '', '', '', '', '', '', 1000, 6, 'data/demo/ipod_shuffle_1.jpg', 8, 1, '100.0000', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 18:07:54', '2015-04-10 15:42:59', 0),
-(35, 'Товар 8', '', '', '', '', '', '', '', 1000, 5, 'no_image.jpg', 0, 0, '100.0000', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 18:08:31', '2015-04-10 15:43:42', 0),
-(36, 'Товар 9', '', '', '', '', '', '', '', 994, 6, 'data/demo/ipod_nano_1.jpg', 8, 0, '100.0000', 100, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 18:09:19', '2015-04-10 15:42:53', 0),
-(40, 'Товар 11', '', '', '', '', '', '', '', 970, 5, 'data/demo/iphone_1.jpg', 8, 1, '101.0000', 0, 0, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:12', '2015-04-10 17:07:40', 0),
-(41, 'Товар 14', '', '', '', '', '', '', '', 977, 5, 'data/demo/imac_1.jpg', 8, 1, '100.0000', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:26', '2015-04-10 17:58:56', 0),
-(42, 'Товар 15', '0709', '', '', '', '', '', '', 990, 7, 'data/demo/apple_cinema_30.jpg', 8, 1, '100.0000', 400, 0, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:37', '2015-04-10 16:02:49', 14),
-(43, 'Товар 16', '', '', '', '', '', '', '', 929, 5, 'data/demo/macbook_1.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:07:49', '2015-04-10 10:52:57', 2),
+(28, 'Товар 1', '', '', '', '', '', '', '', 939, 7, 'data/demo/htc_touch_hd_1.jpg', 5, 1, '100.0000', 200, 0, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:06:50', '2015-04-14 17:15:32', 0),
+(29, 'Товар 2', '', '', '', '', '', '', '', 999, 6, 'data/demo/palm_treo_pro_1.jpg', 6, 1, '279.9900', 0, 0, '2009-02-03', '133.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:42:17', '2015-04-14 17:21:04', 0),
+(30, 'Товар 3', '0907', '', '', '', '', '', '', 7, 6, 'data/demo/canon_eos_5d_1.jpg', 9, 1, '100.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:59:00', '2015-04-14 17:14:42', 1),
+(31, 'Товар 4', '', '', '', '', '', '', '', 1000, 6, 'data/demo/nikon_d300_1.jpg', 0, 1, '80.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 17:00:10', '2015-04-14 17:19:41', 0),
+(32, 'Товар 5', '', '', '', '', '', '', '', 999, 6, 'data/demo/ipod_touch_1.jpg', 8, 1, '100.0000', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 17:07:26', '2015-04-14 17:19:05', 0),
+(33, 'Товар 6', '', '', '', '', '', '', '', 1000, 6, 'data/demo/samsung_syncmaster_941bw.jpg', 0, 1, '200.0000', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 17:08:31', '2015-04-14 17:21:59', 0),
+(34, 'Товар 7', '', '', '', '', '', '', '', 1000, 6, 'data/demo/ipod_shuffle_1.jpg', 8, 1, '100.0000', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 18:07:54', '2015-04-14 17:18:52', 0),
+(36, 'Товар 9', '', '', '', '', '', '', '', 994, 6, 'data/demo/ipod_nano_1.jpg', 8, 0, '100.0000', 100, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 18:09:19', '2015-04-14 17:18:12', 0),
+(40, 'Товар 11', '', '', '', '', '', '', '', 970, 5, 'data/demo/iphone_1.jpg', 8, 1, '101.0000', 0, 0, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:12', '2015-04-14 17:16:31', 0),
+(41, 'Товар 14', '', '', '', '', '', '', '', 977, 5, 'data/demo/imac_1.jpg', 8, 1, '100.0000', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:26', '2015-04-14 17:16:08', 0),
+(42, 'Товар 15', '0709', '', '', '', '', '', '', 990, 7, 'data/demo/apple_cinema_30.jpg', 8, 1, '100.0000', 400, 0, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:37', '2015-04-14 17:13:10', 14),
+(43, 'Товар 16', '', '', '', '', '', '', '', 929, 5, 'data/demo/macbook_1.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:07:49', '2015-04-14 17:20:31', 2),
 (44, 'Товар 17', '', '', '', '', '', '', '', 1000, 5, 'data/demo/macbook_air_1.jpg', 8, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:00', '2011-09-30 01:05:53', 0),
-(45, 'Товар 18', '', '', '', '', '', '', '', 998, 5, 'data/demo/macbook_pro_1.jpg', 8, 1, '2000.0000', 0, 100, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:17', '2011-09-15 22:22:01', 0),
-(46, 'Товар 19', '', '', '', '', '', '', '', 1000, 5, 'data/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:29', '2015-04-10 15:43:38', 1),
-(47, 'Товар 21', '', '', '', '', '', '', '', 1000, 5, 'data/demo/hp_1.jpg', 7, 1, '100.0000', 400, 0, '2009-02-03', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, '2009-02-03 21:08:40', '2015-04-10 15:42:19', 2),
-(48, 'Товар 20', 'test 1', '', '', '', '', '', 'test 2', 995, 5, 'data/demo/ipod_classic_1.jpg', 8, 1, '100.0000', 0, 0, '2009-02-08', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-08 17:21:51', '2015-04-10 17:07:46', 0),
-(49, 'SAM1', '', '', '', '', '', '', '', 0, 8, 'data/demo/samsung_tab_1.jpg', 0, 1, '199.9900', 0, 0, '2011-04-25', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2011-04-26 08:57:34', '2015-04-10 15:43:27', 0),
-(64, 'Товар 01', '', '', '', '', '', '', '', 946, 7, 'data/demo/htc_touch_hd_1.jpg', 5, 1, '500.0000', 200, 0, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 0, '2011-05-24 23:48:34', '2015-04-10 15:42:33', 0);
+(45, 'Товар 18', '', '', '', '', '', '', '', 998, 5, 'data/demo/macbook_pro_1.jpg', 8, 1, '2000.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:17', '2015-04-14 17:19:24', 0),
+(46, 'Товар 19', '', '', '', '', '', '', '', 1000, 5, 'data/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:29', '2015-04-14 17:22:14', 1),
+(47, 'Товар 21', '', '', '', '', '', '', '', 1000, 5, 'data/demo/hp_1.jpg', 7, 1, '100.0000', 400, 0, '2009-02-03', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, '2009-02-03 21:08:40', '2015-04-14 17:30:21', 2),
+(48, 'Товар 20', 'test 1', '', '', '', '', '', 'test 2', 995, 5, 'data/demo/ipod_classic_1.jpg', 8, 1, '100.0000', 0, 0, '2009-02-08', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-08 17:21:51', '2015-04-14 17:18:36', 0),
+(49, 'SAM1', '', '', '', '', '', '', '', 0, 8, 'data/demo/samsung_tab_1.jpg', 0, 1, '199.9900', 0, 0, '2011-04-25', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2011-04-26 08:57:34', '2015-04-14 17:21:26', 0),
+(64, 'Товар 01', '', '', '', '', '', '', '', 946, 7, 'data/demo/htc_touch_hd_1.jpg', 5, 1, '500.0000', 200, 0, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 0, '2011-05-24 23:48:34', '2015-04-14 17:15:52', 0);
 
 -- --------------------------------------------------------
 
@@ -2427,26 +2329,25 @@ CREATE TABLE IF NOT EXISTS `product_description` (
 --
 
 INSERT INTO `product_description` (`product_id`, `language_id`, `name`, `description`, `meta_description`, `meta_keyword`, `seo_title`, `seo_h1`, `tag`) VALUES
-(35, 1, 'Товар 8', '&lt;p&gt;\r\n	Товар 8&lt;/p&gt;\r\n', '', '', '', '', ''),
-(48, 1, 'iPod Classic', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', '', ''),
-(40, 1, 'iPhone', '&lt;p class=&quot;intro&quot;&gt;\r\n	iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a name or number in your address book, a favorites list, or a call log. It also automatically syncs all your contacts from a PC, Mac, or Internet service. And it lets you select and listen to voicemail messages in whatever order you want just like email.&lt;/p&gt;\r\n', '', '', '', '', ''),
-(28, 1, 'HTC Touch HD', '&lt;p&gt;\r\n	HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high definition clarity for a mobile experience you never thought possible. Seductively sleek, the HTC Touch HD provides the next generation of mobile functionality, all at a simple touch. Fully integrated with Windows Mobile Professional 6.1, ultrafast 3.5G, GPS, 5MP camera, plus lots more - all delivered on a breathtakingly crisp 3.8&quot; WVGA touchscreen - you can take control of your mobile world with the HTC Touch HD.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Processor Qualcomm® MSM 7201A™ 528 MHz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows Mobile® 6.1 Professional Operating System&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Memory: 512 MB ROM, 288 MB RAM&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Dimensions: 115 mm x 62.8 mm x 12 mm / 146.4 grams&lt;/li&gt;\r\n	&lt;li&gt;\r\n		3.8-inch TFT-LCD flat touch-sensitive screen with 480 x 800 WVGA resolution&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HSDPA/WCDMA: Europe/Asia: 900/2100 MHz; Up to 2 Mbps up-link and 7.2 Mbps down-link speeds&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Quad-band GSM/GPRS/EDGE: Europe/Asia: 850/900/1800/1900 MHz (Band frequency, HSUPA availability, and data speed are operator dependent.)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Device Control via HTC TouchFLO™ 3D &amp;amp; Touch-sensitive front panel buttons&lt;/li&gt;\r\n	&lt;li&gt;\r\n		GPS and A-GPS ready&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Bluetooth® 2.0 with Enhanced Data Rate and A2DP for wireless stereo headsets&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wi-Fi®: IEEE 802.11 b/g&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HTC ExtUSB™ (11-pin mini-USB 2.0)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		5 megapixel color camera with auto focus&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VGA CMOS color camera&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in 3.5 mm audio jack, microphone, speaker, and FM radio&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Ring tone formats: AAC, AAC+, eAAC+, AMR-NB, AMR-WB, QCP, MP3, WMA, WAV&lt;/li&gt;\r\n	&lt;li&gt;\r\n		40 polyphonic and standard MIDI format 0 and 1 (SMF)/SP MIDI&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Rechargeable Lithium-ion or Lithium-ion polymer 1350 mAh battery&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Expansion Slot: microSD™ memory card (SD 2.0 compatible)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AC Adapter Voltage range/frequency: 100 ~ 240V AC, 50/60 Hz DC output: 5V and 1A&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Special Features: FM Radio, G-Sensor&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '', '', '', ''),
+(48, 1, 'iPod Classic', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n&lt;div&gt;\r\n&lt;p&gt;&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', '', ''),
+(40, 1, 'iPhone', '&lt;p class=&quot;intro&quot;&gt;iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a name or number in your address book, a favorites list, or a call log. It also automatically syncs all your contacts from a PC, Mac, or Internet service. And it lets you select and listen to voicemail messages in whatever order you want just like email.&lt;/p&gt;\r\n', '', '', '', '', ''),
+(28, 1, 'HTC Touch HD', '&lt;p&gt;HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high definition clarity for a mobile experience you never thought possible. Seductively sleek, the HTC Touch HD provides the next generation of mobile functionality, all at a simple touch. Fully integrated with Windows Mobile Professional 6.1, ultrafast 3.5G, GPS, 5MP camera, plus lots more - all delivered on a breathtakingly crisp 3.8&quot; WVGA touchscreen - you can take control of your mobile world with the HTC Touch HD.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Processor Qualcomm® MSM 7201A™ 528 MHz&lt;/li&gt;\r\n	&lt;li&gt;Windows Mobile® 6.1 Professional Operating System&lt;/li&gt;\r\n	&lt;li&gt;Memory: 512 MB ROM, 288 MB RAM&lt;/li&gt;\r\n	&lt;li&gt;Dimensions: 115 mm x 62.8 mm x 12 mm / 146.4 grams&lt;/li&gt;\r\n	&lt;li&gt;3.8-inch TFT-LCD flat touch-sensitive screen with 480 x 800 WVGA resolution&lt;/li&gt;\r\n	&lt;li&gt;HSDPA/WCDMA: Europe/Asia: 900/2100 MHz; Up to 2 Mbps up-link and 7.2 Mbps down-link speeds&lt;/li&gt;\r\n	&lt;li&gt;Quad-band GSM/GPRS/EDGE: Europe/Asia: 850/900/1800/1900 MHz (Band frequency, HSUPA availability, and data speed are operator dependent.)&lt;/li&gt;\r\n	&lt;li&gt;Device Control via HTC TouchFLO™ 3D &amp;amp; Touch-sensitive front panel buttons&lt;/li&gt;\r\n	&lt;li&gt;GPS and A-GPS ready&lt;/li&gt;\r\n	&lt;li&gt;Bluetooth® 2.0 with Enhanced Data Rate and A2DP for wireless stereo headsets&lt;/li&gt;\r\n	&lt;li&gt;Wi-Fi®: IEEE 802.11 b/g&lt;/li&gt;\r\n	&lt;li&gt;HTC ExtUSB™ (11-pin mini-USB 2.0)&lt;/li&gt;\r\n	&lt;li&gt;5 megapixel color camera with auto focus&lt;/li&gt;\r\n	&lt;li&gt;VGA CMOS color camera&lt;/li&gt;\r\n	&lt;li&gt;Built-in 3.5 mm audio jack, microphone, speaker, and FM radio&lt;/li&gt;\r\n	&lt;li&gt;Ring tone formats: AAC, AAC+, eAAC+, AMR-NB, AMR-WB, QCP, MP3, WMA, WAV&lt;/li&gt;\r\n	&lt;li&gt;40 polyphonic and standard MIDI format 0 and 1 (SMF)/SP MIDI&lt;/li&gt;\r\n	&lt;li&gt;Rechargeable Lithium-ion or Lithium-ion polymer 1350 mAh battery&lt;/li&gt;\r\n	&lt;li&gt;Expansion Slot: microSD™ memory card (SD 2.0 compatible)&lt;/li&gt;\r\n	&lt;li&gt;AC Adapter Voltage range/frequency: 100 ~ 240V AC, 50/60 Hz DC output: 5V and 1A&lt;/li&gt;\r\n	&lt;li&gt;Special Features: FM Radio, G-Sensor&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '', '', '', ''),
 (44, 1, 'MacBook Air', '&lt;div&gt;\r\n	MacBook Air is ultrathin, ultraportable, and ultra unlike anything else. But you don&amp;rsquo;t lose inches and pounds overnight. It&amp;rsquo;s the result of rethinking conventions. Of multiple wireless innovations. And of breakthrough design. With MacBook Air, mobile computing suddenly has a new standard.&lt;/div&gt;\r\n', '', '', '', '', ''),
-(45, 1, 'MacBook Pro', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Latest Intel mobile architecture&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Powered by the most advanced mobile processors from Intel, the new Core 2 Duo MacBook Pro is over 50% faster than the original Core Duo MacBook Pro and now supports up to 4GB of RAM.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Leading-edge graphics&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			The NVIDIA GeForce 8600M GT delivers exceptional graphics processing power. For the ultimate creative canvas, you can even configure the 17-inch model with a 1920-by-1200 resolution display.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Designed for life on the road&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Innovations such as a magnetic power connection and an illuminated keyboard with ambient light sensor put the MacBook Pro in a class by itself.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Connect. Create. Communicate.&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Quickly set up a video conference with the built-in iSight camera. Control presentations and media from up to 30 feet away with the included Apple Remote. Connect to high-bandwidth peripherals with FireWire 800 and DVI.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Next-generation wireless&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Featuring 802.11n wireless technology, the MacBook Pro delivers up to five times the performance and up to twice the range of previous-generation technologies.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', '', ''),
-(29, 1, 'Palm Treo Pro', '&lt;p&gt;\r\n	Redefine your workday with the Palm Treo Pro smartphone. Perfectly balanced, you can respond to business and personal email, stay on top of appointments and contacts, and use Wi-Fi or GPS when you’re out and about. Then watch a video on YouTube, catch up with news and sports on the web, or listen to a few songs. Balance your work and play the way you like it, with the Palm Treo Pro.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Windows Mobile® 6.1 Professional Edition&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Qualcomm® MSM7201 400MHz Processor&lt;/li&gt;\r\n	&lt;li&gt;\r\n		320x320 transflective colour TFT touchscreen&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HSDPA/UMTS/EDGE/GPRS/GSM radio&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Tri-band UMTS — 850MHz, 1900MHz, 2100MHz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Quad-band GSM — 850/900/1800/1900&lt;/li&gt;\r\n	&lt;li&gt;\r\n		802.11b/g with WPA, WPA2, and 801.1x authentication&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in GPS&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Bluetooth Version: 2.0 + Enhanced Data Rate&lt;/li&gt;\r\n	&lt;li&gt;\r\n		256MB storage (100MB user available), 128MB RAM&lt;/li&gt;\r\n	&lt;li&gt;\r\n		2.0 megapixel camera, up to 8x digital zoom and video capture&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Removable, rechargeable 1500mAh lithium-ion battery&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Up to 5.0 hours talk time and up to 250 hours standby&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MicroSDHC card expansion (up to 32GB supported)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MicroUSB 2.0 for synchronization and charging&lt;/li&gt;\r\n	&lt;li&gt;\r\n		3.5mm stereo headset jack&lt;/li&gt;\r\n	&lt;li&gt;\r\n		60mm (W) x 114mm (L) x 13.5mm (D) / 133g&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '', '', '', ''),
-(36, 1, 'iPod Nano', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Video in your pocket.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Its the small iPod with one very big idea: video. The worlds most popular music player now lets you enjoy movies, TV shows, and more on a two-inch display thats 65% brighter than before.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Sleek and colorful.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		With an anodized aluminum and polished stainless steel enclosure and a choice of five colors, iPod nano is dressed to impress.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;iTunes.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Available as a free download, iTunes makes it easy to browse and buy millions of songs, movies, TV shows, audiobooks, and games and download free podcasts all at the iTunes Store. And you can import your own music, manage your whole media library, and sync your iPod or iPhone with ease.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', '', '', ''),
-(46, 1, 'Sony VAIO', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', '', '', '', ''),
-(47, 1, 'HP LP3065', '&lt;p&gt;\r\n	Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge wide-aspect screen while letting you work as comfortably as possible - you might even forget you''re at the office&lt;/p&gt;\r\n', '', '', '', '', ''),
-(32, 1, 'iPod Touch', '&lt;p&gt;\r\n	&lt;strong&gt;Revolutionary multi-touch interface.&lt;/strong&gt;&lt;br /&gt;\r\n	iPod touch features the same multi-touch screen technology as iPhone. Pinch to zoom in on a photo. Scroll through your songs and videos with a flick. Flip through your library by album artwork with Cover Flow.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Gorgeous 3.5-inch widescreen display.&lt;/strong&gt;&lt;br /&gt;\r\n	Watch your movies, TV shows, and photos come alive with bright, vivid color on the 320-by-480-pixel display.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Music downloads straight from iTunes.&lt;/strong&gt;&lt;br /&gt;\r\n	Shop the iTunes Wi-Fi Music Store from anywhere with Wi-Fi.1 Browse or search to find the music youre looking for, preview it, and buy it with just a tap.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Surf the web with Wi-Fi.&lt;/strong&gt;&lt;br /&gt;\r\n	Browse the web using Safari and watch YouTube videos on the first iPod with Wi-Fi built in&lt;br /&gt;\r\n	&amp;nbsp;&lt;/p&gt;\r\n', '', '', '', '', ''),
-(41, 1, 'iMac', '&lt;div&gt;\r\n	Just when you thought iMac had everything, now there’s even more. More powerful Intel Core 2 Duo processors. And more memory standard. Combine this with Mac OS X Leopard and iLife ’08, and it’s more all-in-one than ever. iMac packs amazing performance into a stunningly slim space.&lt;/div&gt;\r\n', '', '', '', '', ''),
-(33, 1, 'Samsung SyncMaster 941BW', '&lt;div&gt;\r\n	Imagine the advantages of going big without slowing down. The big 19&quot; 941BW monitor combines wide aspect ratio with fast pixel response time, for bigger images, more room to work and crisp motion. In addition, the exclusive MagicBright 2, MagicColor and MagicTune technologies help deliver the ideal image in every situation, while sleek, narrow bezels and adjustable stands deliver style just the way you want it. With the Samsung 941BW widescreen analog/digital LCD monitor, it''s not hard to imagine.&lt;/div&gt;\r\n', '', '', '', '', ''),
-(34, 1, 'iPod Shuffle', '&lt;div&gt;\r\n	&lt;strong&gt;Born to be worn.&lt;/strong&gt;\r\n	&lt;p&gt;\r\n		Clip on the worlds most wearable music player and take up to 240 songs with you anywhere. Choose from five colors including four new hues to make your musical fashion statement.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Random meets rhythm.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		With iTunes autofill, iPod shuffle can deliver a new musical experience every time you sync. For more randomness, you can shuffle songs during playback with the slide of a switch.&lt;/p&gt;\r\n	&lt;strong&gt;Everything is easy.&lt;/strong&gt;\r\n	&lt;p&gt;\r\n		Charge and sync with the included USB dock. Operate the iPod shuffle controls with one hand. Enjoy up to 12 hours straight of skip-free music playback.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', '', '', ''),
-(43, 1, 'MacBook', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', '', '', ''),
-(31, 1, 'Nikon D300', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		Engineered with pro-level features and performance, the 12.3-effective-megapixel D300 combines brand new technologies with advanced features inherited from Nikon''s newly announced D3 professional digital SLR camera to offer serious photographers remarkable performance combined with agility.&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		Similar to the D3, the D300 features Nikon''s exclusive EXPEED Image Processing System that is central to driving the speed and processing power needed for many of the camera''s new features. The D300 features a new 51-point autofocus system with Nikon''s 3D Focus Tracking feature and two new LiveView shooting modes that allow users to frame a photograph using the camera''s high-resolution LCD monitor. The D300 shares a similar Scene Recognition System as is found in the D3; it promises to greatly enhance the accuracy of autofocus, autoexposure, and auto white balance by recognizing the subject or scene being photographed and applying this information to the calculations for the three functions.&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		The D300 reacts with lightning speed, powering up in a mere 0.13 seconds and shooting with an imperceptible 45-millisecond shutter release lag time. The D300 is capable of shooting at a rapid six frames per second and can go as fast as eight frames per second when using the optional MB-D10 multi-power battery pack. In continuous bursts, the D300 can shoot up to 100 shots at full 12.3-megapixel resolution. (NORMAL-LARGE image setting, using a SanDisk Extreme IV 1GB CompactFlash card.)&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		The D300 incorporates a range of innovative technologies and features that will significantly improve the accuracy, control, and performance photographers can get from their equipment. Its new Scene Recognition System advances the use of Nikon''s acclaimed 1,005-segment sensor to recognize colors and light patterns that help the camera determine the subject and the type of scene being photographed before a picture is taken. This information is used to improve the accuracy of autofocus, autoexposure, and auto white balance functions in the D300. For example, the camera can track moving subjects better and by identifying them, it can also automatically select focus points faster and with greater accuracy. It can also analyze highlights and more accurately determine exposure, as well as infer light sources to deliver more accurate white balance detection.&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', '', ''),
-(49, 1, 'Samsung Galaxy Tab 10.1', '&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1, is the world’s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 – includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick – a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader’s Hub, Music Hub and Samsung Mini Apps Tray – which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.&amp;nbsp;äö&lt;/p&gt;\r\n', '', '', '', '', ''),
-(42, 1, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', '&lt;p&gt;\r\n	описание&lt;/p&gt;\r\n', '', '', '', '', ''),
-(30, 1, 'Canon EOS 5D', '&lt;p&gt;\r\n	Canon''s press material for the EOS 5D states that it ''defines (a) new D-SLR category'', while we''re not typically too concerned with marketing talk this particular statement is clearly pretty accurate. The EOS 5D is unlike any previous digital SLR in that it combines a full-frame (35 mm sized) high resolution sensor (12.8 megapixels) with a relatively compact body (slightly larger than the EOS 20D, although in your hand it feels noticeably ''chunkier''). The EOS 5D is aimed to slot in between the EOS 20D and the EOS-1D professional digital SLR''s, an important difference when compared to the latter is that the EOS 5D doesn''t have any environmental seals. While Canon don''t specifically refer to the EOS 5D as a ''professional'' digital SLR it will have obvious appeal to professionals who want a high quality digital SLR in a body lighter than the EOS-1D. It will also no doubt appeal to current EOS 20D owners (although lets hope they''ve not bought too many EF-S lenses...) ??&lt;/p&gt;\r\n', '', '', '', '', ''),
-(64, 1, 'HTC Touch HD', '&lt;p&gt;\r\n	HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high definition clarity for a mobile experience you never thought possible. Seductively sleek, the HTC Touch HD provides the next generation of mobile functionality, all at a simple touch. Fully integrated with Windows Mobile Professional 6.1, ultrafast 3.5G, GPS, 5MP camera, plus lots more - all delivered on a breathtakingly crisp 3.8&quot; WVGA touchscreen - you can take control of your mobile world with the HTC Touch HD.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Processor Qualcomm® MSM 7201A™ 528 MHz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows Mobile® 6.1 Professional Operating System&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Memory: 512 MB ROM, 288 MB RAM&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Dimensions: 115 mm x 62.8 mm x 12 mm / 146.4 grams&lt;/li&gt;\r\n	&lt;li&gt;\r\n		3.8-inch TFT-LCD flat touch-sensitive screen with 480 x 800 WVGA resolution&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HSDPA/WCDMA: Europe/Asia: 900/2100 MHz; Up to 2 Mbps up-link and 7.2 Mbps down-link speeds&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Quad-band GSM/GPRS/EDGE: Europe/Asia: 850/900/1800/1900 MHz (Band frequency, HSUPA availability, and data speed are operator dependent.)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Device Control via HTC TouchFLO™ 3D &amp;amp; Touch-sensitive front panel buttons&lt;/li&gt;\r\n	&lt;li&gt;\r\n		GPS and A-GPS ready&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Bluetooth® 2.0 with Enhanced Data Rate and A2DP for wireless stereo headsets&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wi-Fi®: IEEE 802.11 b/g&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HTC ExtUSB™ (11-pin mini-USB 2.0)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		5 megapixel color camera with auto focus&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VGA CMOS color camera&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in 3.5 mm audio jack, microphone, speaker, and FM radio&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Ring tone formats: AAC, AAC+, eAAC+, AMR-NB, AMR-WB, QCP, MP3, WMA, WAV&lt;/li&gt;\r\n	&lt;li&gt;\r\n		40 polyphonic and standard MIDI format 0 and 1 (SMF)/SP MIDI&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Rechargeable Lithium-ion or Lithium-ion polymer 1350 mAh battery&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Expansion Slot: microSD™ memory card (SD 2.0 compatible)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AC Adapter Voltage range/frequency: 100 ~ 240V AC, 50/60 Hz DC output: 5V and 1A&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Special Features: FM Radio, G-Sensor&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '', '', '', '');
+(45, 1, 'MacBook Pro', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n&lt;div&gt;\r\n&lt;p&gt;&lt;b&gt;Latest Intel mobile architecture&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Powered by the most advanced mobile processors from Intel, the new Core 2 Duo MacBook Pro is over 50% faster than the original Core Duo MacBook Pro and now supports up to 4GB of RAM.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Leading-edge graphics&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;The NVIDIA GeForce 8600M GT delivers exceptional graphics processing power. For the ultimate creative canvas, you can even configure the 17-inch model with a 1920-by-1200 resolution display.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Designed for life on the road&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Innovations such as a magnetic power connection and an illuminated keyboard with ambient light sensor put the MacBook Pro in a class by itself.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Connect. Create. Communicate.&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Quickly set up a video conference with the built-in iSight camera. Control presentations and media from up to 30 feet away with the included Apple Remote. Connect to high-bandwidth peripherals with FireWire 800 and DVI.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Next-generation wireless&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Featuring 802.11n wireless technology, the MacBook Pro delivers up to five times the performance and up to twice the range of previous-generation technologies.&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', '', ''),
+(29, 1, 'Palm Treo Pro', '&lt;p&gt;Redefine your workday with the Palm Treo Pro smartphone. Perfectly balanced, you can respond to business and personal email, stay on top of appointments and contacts, and use Wi-Fi or GPS when you’re out and about. Then watch a video on YouTube, catch up with news and sports on the web, or listen to a few songs. Balance your work and play the way you like it, with the Palm Treo Pro.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Windows Mobile® 6.1 Professional Edition&lt;/li&gt;\r\n	&lt;li&gt;Qualcomm® MSM7201 400MHz Processor&lt;/li&gt;\r\n	&lt;li&gt;320x320 transflective colour TFT touchscreen&lt;/li&gt;\r\n	&lt;li&gt;HSDPA/UMTS/EDGE/GPRS/GSM radio&lt;/li&gt;\r\n	&lt;li&gt;Tri-band UMTS — 850MHz, 1900MHz, 2100MHz&lt;/li&gt;\r\n	&lt;li&gt;Quad-band GSM — 850/900/1800/1900&lt;/li&gt;\r\n	&lt;li&gt;802.11b/g with WPA, WPA2, and 801.1x authentication&lt;/li&gt;\r\n	&lt;li&gt;Built-in GPS&lt;/li&gt;\r\n	&lt;li&gt;Bluetooth Version: 2.0 + Enhanced Data Rate&lt;/li&gt;\r\n	&lt;li&gt;256MB storage (100MB user available), 128MB RAM&lt;/li&gt;\r\n	&lt;li&gt;2.0 megapixel camera, up to 8x digital zoom and video capture&lt;/li&gt;\r\n	&lt;li&gt;Removable, rechargeable 1500mAh lithium-ion battery&lt;/li&gt;\r\n	&lt;li&gt;Up to 5.0 hours talk time and up to 250 hours standby&lt;/li&gt;\r\n	&lt;li&gt;MicroSDHC card expansion (up to 32GB supported)&lt;/li&gt;\r\n	&lt;li&gt;MicroUSB 2.0 for synchronization and charging&lt;/li&gt;\r\n	&lt;li&gt;3.5mm stereo headset jack&lt;/li&gt;\r\n	&lt;li&gt;60mm (W) x 114mm (L) x 13.5mm (D) / 133g&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '', '', '', ''),
+(36, 1, 'iPod Nano', '&lt;div&gt;\r\n&lt;p&gt;&lt;strong&gt;Video in your pocket.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Its the small iPod with one very big idea: video. The worlds most popular music player now lets you enjoy movies, TV shows, and more on a two-inch display thats 65% brighter than before.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Sleek and colorful.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;With an anodized aluminum and polished stainless steel enclosure and a choice of five colors, iPod nano is dressed to impress.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;iTunes.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Available as a free download, iTunes makes it easy to browse and buy millions of songs, movies, TV shows, audiobooks, and games and download free podcasts all at the iTunes Store. And you can import your own music, manage your whole media library, and sync your iPod or iPhone with ease.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', '', '', ''),
+(46, 1, 'Sony VAIO', '&lt;div&gt;Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', '', '', '', ''),
+(47, 1, 'HP LP3065', '&lt;p&gt;Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge wide-aspect screen while letting you work as comfortably as possible - you might even forget you''re at the office&lt;/p&gt;\r\n', '', '', '', '', ''),
+(32, 1, 'iPod Touch', '&lt;p&gt;&lt;strong&gt;Revolutionary multi-touch interface.&lt;/strong&gt;&lt;br /&gt;\r\niPod touch features the same multi-touch screen technology as iPhone. Pinch to zoom in on a photo. Scroll through your songs and videos with a flick. Flip through your library by album artwork with Cover Flow.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Gorgeous 3.5-inch widescreen display.&lt;/strong&gt;&lt;br /&gt;\r\nWatch your movies, TV shows, and photos come alive with bright, vivid color on the 320-by-480-pixel display.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Music downloads straight from iTunes.&lt;/strong&gt;&lt;br /&gt;\r\nShop the iTunes Wi-Fi Music Store from anywhere with Wi-Fi.1 Browse or search to find the music youre looking for, preview it, and buy it with just a tap.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Surf the web with Wi-Fi.&lt;/strong&gt;&lt;br /&gt;\r\nBrowse the web using Safari and watch YouTube videos on the first iPod with Wi-Fi built in&lt;br /&gt;\r\n&amp;nbsp;&lt;/p&gt;\r\n', '', '', '', '', ''),
+(41, 1, 'iMac', '&lt;div&gt;Just when you thought iMac had everything, now there’s even more. More powerful Intel Core 2 Duo processors. And more memory standard. Combine this with Mac OS X Leopard and iLife ’08, and it’s more all-in-one than ever. iMac packs amazing performance into a stunningly slim space.&lt;/div&gt;\r\n', '', '', '', '', ''),
+(33, 1, 'Samsung SyncMaster 941BW', '&lt;div&gt;Imagine the advantages of going big without slowing down. The big 19&quot; 941BW monitor combines wide aspect ratio with fast pixel response time, for bigger images, more room to work and crisp motion. In addition, the exclusive MagicBright 2, MagicColor and MagicTune technologies help deliver the ideal image in every situation, while sleek, narrow bezels and adjustable stands deliver style just the way you want it. With the Samsung 941BW widescreen analog/digital LCD monitor, it''s not hard to imagine.&lt;/div&gt;\r\n', '', '', '', '', ''),
+(34, 1, 'iPod Shuffle', '&lt;div&gt;&lt;strong&gt;Born to be worn.&lt;/strong&gt;\r\n&lt;p&gt;Clip on the worlds most wearable music player and take up to 240 songs with you anywhere. Choose from five colors including four new hues to make your musical fashion statement.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Random meets rhythm.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;With iTunes autofill, iPod shuffle can deliver a new musical experience every time you sync. For more randomness, you can shuffle songs during playback with the slide of a switch.&lt;/p&gt;\r\n&lt;strong&gt;Everything is easy.&lt;/strong&gt;\r\n\r\n&lt;p&gt;Charge and sync with the included USB dock. Operate the iPod shuffle controls with one hand. Enjoy up to 12 hours straight of skip-free music playback.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', '', '', ''),
+(43, 1, 'MacBook', '&lt;div&gt;\r\n&lt;p&gt;&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', '', '', ''),
+(31, 1, 'Nikon D300', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n&lt;div&gt;Engineered with pro-level features and performance, the 12.3-effective-megapixel D300 combines brand new technologies with advanced features inherited from Nikon''s newly announced D3 professional digital SLR camera to offer serious photographers remarkable performance combined with agility.&lt;br /&gt;\r\n&lt;br /&gt;\r\nSimilar to the D3, the D300 features Nikon''s exclusive EXPEED Image Processing System that is central to driving the speed and processing power needed for many of the camera''s new features. The D300 features a new 51-point autofocus system with Nikon''s 3D Focus Tracking feature and two new LiveView shooting modes that allow users to frame a photograph using the camera''s high-resolution LCD monitor. The D300 shares a similar Scene Recognition System as is found in the D3; it promises to greatly enhance the accuracy of autofocus, autoexposure, and auto white balance by recognizing the subject or scene being photographed and applying this information to the calculations for the three functions.&lt;br /&gt;\r\n&lt;br /&gt;\r\nThe D300 reacts with lightning speed, powering up in a mere 0.13 seconds and shooting with an imperceptible 45-millisecond shutter release lag time. The D300 is capable of shooting at a rapid six frames per second and can go as fast as eight frames per second when using the optional MB-D10 multi-power battery pack. In continuous bursts, the D300 can shoot up to 100 shots at full 12.3-megapixel resolution. (NORMAL-LARGE image setting, using a SanDisk Extreme IV 1GB CompactFlash card.)&lt;br /&gt;\r\n&lt;br /&gt;\r\nThe D300 incorporates a range of innovative technologies and features that will significantly improve the accuracy, control, and performance photographers can get from their equipment. Its new Scene Recognition System advances the use of Nikon''s acclaimed 1,005-segment sensor to recognize colors and light patterns that help the camera determine the subject and the type of scene being photographed before a picture is taken. This information is used to improve the accuracy of autofocus, autoexposure, and auto white balance functions in the D300. For example, the camera can track moving subjects better and by identifying them, it can also automatically select focus points faster and with greater accuracy. It can also analyze highlights and more accurately determine exposure, as well as infer light sources to deliver more accurate white balance detection.&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', '', ''),
+(49, 1, 'Samsung Galaxy Tab 10.1', '&lt;p&gt;Samsung Galaxy Tab 10.1, is the world’s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.&lt;/p&gt;\r\n\r\n&lt;p&gt;Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 – includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick – a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.&lt;/p&gt;\r\n\r\n&lt;p&gt;Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader’s Hub, Music Hub and Samsung Mini Apps Tray – which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.&amp;nbsp;äö&lt;/p&gt;\r\n', '', '', '', '', ''),
+(42, 1, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', '&lt;p&gt;описание&lt;/p&gt;\r\n', '', '', '', '', ''),
+(30, 1, 'Canon EOS 5D', '&lt;p&gt;Canon''s press material for the EOS 5D states that it ''defines (a) new D-SLR category'', while we''re not typically too concerned with marketing talk this particular statement is clearly pretty accurate. The EOS 5D is unlike any previous digital SLR in that it combines a full-frame (35 mm sized) high resolution sensor (12.8 megapixels) with a relatively compact body (slightly larger than the EOS 20D, although in your hand it feels noticeably ''chunkier''). The EOS 5D is aimed to slot in between the EOS 20D and the EOS-1D professional digital SLR''s, an important difference when compared to the latter is that the EOS 5D doesn''t have any environmental seals. While Canon don''t specifically refer to the EOS 5D as a ''professional'' digital SLR it will have obvious appeal to professionals who want a high quality digital SLR in a body lighter than the EOS-1D. It will also no doubt appeal to current EOS 20D owners (although lets hope they''ve not bought too many EF-S lenses...) ??&lt;/p&gt;\r\n', '', '', '', '', ''),
+(64, 1, 'HTC Touch HD', '&lt;p&gt;HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high definition clarity for a mobile experience you never thought possible. Seductively sleek, the HTC Touch HD provides the next generation of mobile functionality, all at a simple touch. Fully integrated with Windows Mobile Professional 6.1, ultrafast 3.5G, GPS, 5MP camera, plus lots more - all delivered on a breathtakingly crisp 3.8&quot; WVGA touchscreen - you can take control of your mobile world with the HTC Touch HD.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Processor Qualcomm® MSM 7201A™ 528 MHz&lt;/li&gt;\r\n	&lt;li&gt;Windows Mobile® 6.1 Professional Operating System&lt;/li&gt;\r\n	&lt;li&gt;Memory: 512 MB ROM, 288 MB RAM&lt;/li&gt;\r\n	&lt;li&gt;Dimensions: 115 mm x 62.8 mm x 12 mm / 146.4 grams&lt;/li&gt;\r\n	&lt;li&gt;3.8-inch TFT-LCD flat touch-sensitive screen with 480 x 800 WVGA resolution&lt;/li&gt;\r\n	&lt;li&gt;HSDPA/WCDMA: Europe/Asia: 900/2100 MHz; Up to 2 Mbps up-link and 7.2 Mbps down-link speeds&lt;/li&gt;\r\n	&lt;li&gt;Quad-band GSM/GPRS/EDGE: Europe/Asia: 850/900/1800/1900 MHz (Band frequency, HSUPA availability, and data speed are operator dependent.)&lt;/li&gt;\r\n	&lt;li&gt;Device Control via HTC TouchFLO™ 3D &amp;amp; Touch-sensitive front panel buttons&lt;/li&gt;\r\n	&lt;li&gt;GPS and A-GPS ready&lt;/li&gt;\r\n	&lt;li&gt;Bluetooth® 2.0 with Enhanced Data Rate and A2DP for wireless stereo headsets&lt;/li&gt;\r\n	&lt;li&gt;Wi-Fi®: IEEE 802.11 b/g&lt;/li&gt;\r\n	&lt;li&gt;HTC ExtUSB™ (11-pin mini-USB 2.0)&lt;/li&gt;\r\n	&lt;li&gt;5 megapixel color camera with auto focus&lt;/li&gt;\r\n	&lt;li&gt;VGA CMOS color camera&lt;/li&gt;\r\n	&lt;li&gt;Built-in 3.5 mm audio jack, microphone, speaker, and FM radio&lt;/li&gt;\r\n	&lt;li&gt;Ring tone formats: AAC, AAC+, eAAC+, AMR-NB, AMR-WB, QCP, MP3, WMA, WAV&lt;/li&gt;\r\n	&lt;li&gt;40 polyphonic and standard MIDI format 0 and 1 (SMF)/SP MIDI&lt;/li&gt;\r\n	&lt;li&gt;Rechargeable Lithium-ion or Lithium-ion polymer 1350 mAh battery&lt;/li&gt;\r\n	&lt;li&gt;Expansion Slot: microSD™ memory card (SD 2.0 compatible)&lt;/li&gt;\r\n	&lt;li&gt;AC Adapter Voltage range/frequency: 100 ~ 240V AC, 50/60 Hz DC output: 5V and 1A&lt;/li&gt;\r\n	&lt;li&gt;Special Features: FM Radio, G-Sensor&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -2491,76 +2392,76 @@ CREATE TABLE IF NOT EXISTS `product_image` (
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_image_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2569 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2639 ;
 
 --
 -- Дамп данных таблицы `product_image`
 --
 
 INSERT INTO `product_image` (`product_image_id`, `product_id`, `image`, `sort_order`) VALUES
-(2475, 30, 'data/demo/canon_eos_5d_2.jpg', 0),
-(2477, 47, 'data/demo/hp_2.jpg', 0),
-(2479, 28, 'data/demo/htc_touch_hd_2.jpg', 0),
-(2568, 41, 'data/demo/imac_2.jpg', 0),
-(2563, 40, 'data/demo/iphone_6.jpg', 0),
-(2495, 36, 'data/demo/ipod_nano_3.jpg', 0),
-(2494, 36, 'data/demo/ipod_nano_2.jpg', 0),
-(2499, 34, 'data/demo/ipod_shuffle_3.jpg', 0),
-(2498, 34, 'data/demo/ipod_shuffle_2.jpg', 0),
-(2505, 32, 'data/demo/ipod_touch_4.jpg', 0),
-(2504, 32, 'data/demo/ipod_touch_3.jpg', 0),
-(2503, 32, 'data/demo/ipod_touch_2.jpg', 0),
-(2381, 43, 'data/demo/macbook_3.jpg', 0),
-(2380, 43, 'data/demo/macbook_2.jpg', 0),
+(2580, 30, 'data/demo/canon_eos_5d_3.jpg', 0),
+(2638, 47, 'data/demo/hp_2.jpg', 0),
+(2584, 28, 'data/demo/htc_touch_hd_3.jpg', 0),
+(2588, 41, 'data/demo/imac_3.jpg', 0),
+(2593, 40, 'data/demo/iphone_4.jpg', 0),
+(2600, 36, 'data/demo/ipod_nano_5.jpg', 0),
+(2599, 36, 'data/demo/ipod_nano_4.jpg', 0),
+(2607, 34, 'data/demo/ipod_shuffle_5.jpg', 0),
+(2606, 34, 'data/demo/ipod_shuffle_4.jpg', 0),
+(2613, 32, 'data/demo/ipod_touch_7.jpg', 0),
+(2612, 32, 'data/demo/ipod_touch_6.jpg', 0),
+(2611, 32, 'data/demo/ipod_touch_5.jpg', 0),
+(2624, 43, 'data/demo/macbook_5.jpg', 0),
+(2623, 43, 'data/demo/macbook_4.jpg', 0),
 (1974, 44, 'data/demo/macbook_air_4.jpg', 0),
 (1973, 44, 'data/demo/macbook_air_2.jpg', 0),
-(1977, 45, 'data/demo/macbook_pro_2.jpg', 0),
-(1976, 45, 'data/demo/macbook_pro_3.jpg', 0),
-(2509, 31, 'data/demo/nikon_d300_5.jpg', 0),
-(2508, 31, 'data/demo/nikon_d300_4.jpg', 0),
-(2511, 29, 'data/demo/palm_treo_pro_2.jpg', 0),
-(2521, 46, 'data/demo/sony_vaio_3.jpg', 0),
-(2520, 46, 'data/demo/sony_vaio_2.jpg', 0),
-(2566, 48, 'data/demo/ipod_classic_4.jpg', 0),
-(2565, 48, 'data/demo/ipod_classic_3.jpg', 0),
-(2562, 40, 'data/demo/iphone_2.jpg', 0),
-(2561, 40, 'data/demo/iphone_5.jpg', 0),
-(2474, 30, 'data/demo/canon_eos_5d_3.jpg', 0),
-(2476, 47, 'data/demo/hp_3.jpg', 0),
-(2478, 28, 'data/demo/htc_touch_hd_3.jpg', 0),
-(2567, 41, 'data/demo/imac_3.jpg', 0),
-(2560, 40, 'data/demo/iphone_3.jpg', 0),
-(2559, 40, 'data/demo/iphone_4.jpg', 0),
-(2564, 48, 'data/demo/ipod_classic_2.jpg', 0),
-(2493, 36, 'data/demo/ipod_nano_4.jpg', 0),
-(2492, 36, 'data/demo/ipod_nano_5.jpg', 0),
-(2497, 34, 'data/demo/ipod_shuffle_4.jpg', 0),
-(2496, 34, 'data/demo/ipod_shuffle_5.jpg', 0),
-(2502, 32, 'data/demo/ipod_touch_5.jpg', 0),
-(2501, 32, 'data/demo/ipod_touch_6.jpg', 0),
-(2500, 32, 'data/demo/ipod_touch_7.jpg', 0),
-(2379, 43, 'data/demo/macbook_4.jpg', 0),
-(2378, 43, 'data/demo/macbook_5.jpg', 0),
+(2616, 45, 'data/demo/macbook_pro_4.jpg', 0),
+(2615, 45, 'data/demo/macbook_pro_3.jpg', 0),
+(2620, 31, 'data/demo/nikon_d300_3.jpg', 0),
+(2619, 31, 'data/demo/nikon_d300_2.jpg', 0),
+(2626, 29, 'data/demo/palm_treo_pro_3.jpg', 0),
+(2636, 46, 'data/demo/sony_vaio_5.jpg', 0),
+(2635, 46, 'data/demo/sony_vaio_4.jpg', 0),
+(2603, 48, 'data/demo/ipod_classic_4.jpg', 0),
+(2602, 48, 'data/demo/ipod_classic_3.jpg', 0),
+(2592, 40, 'data/demo/iphone_3.jpg', 0),
+(2591, 40, 'data/demo/iphone_5.jpg', 0),
+(2579, 30, 'data/demo/canon_eos_5d_2.jpg', 0),
+(2637, 47, 'data/demo/hp_3.jpg', 0),
+(2583, 28, 'data/demo/htc_touch_hd_2.jpg', 0),
+(2587, 41, 'data/demo/imac_2.jpg', 0),
+(2590, 40, 'data/demo/iphone_2.jpg', 0),
+(2589, 40, 'data/demo/iphone_6.jpg', 0),
+(2601, 48, 'data/demo/ipod_classic_2.jpg', 0),
+(2598, 36, 'data/demo/ipod_nano_2.jpg', 0),
+(2597, 36, 'data/demo/ipod_nano_3.jpg', 0),
+(2605, 34, 'data/demo/ipod_shuffle_2.jpg', 0),
+(2604, 34, 'data/demo/ipod_shuffle_3.jpg', 0),
+(2610, 32, 'data/demo/ipod_touch_2.jpg', 0),
+(2609, 32, 'data/demo/ipod_touch_3.jpg', 0),
+(2608, 32, 'data/demo/ipod_touch_4.jpg', 0),
+(2622, 43, 'data/demo/macbook_2.jpg', 0),
+(2621, 43, 'data/demo/macbook_3.jpg', 0),
 (1972, 44, 'data/demo/macbook_air_3.jpg', 0),
-(1975, 45, 'data/demo/macbook_pro_4.jpg', 0),
-(2507, 31, 'data/demo/nikon_d300_2.jpg', 0),
-(2506, 31, 'data/demo/nikon_d300_3.jpg', 0),
-(2510, 29, 'data/demo/palm_treo_pro_3.jpg', 0),
-(2519, 46, 'data/demo/sony_vaio_4.jpg', 0),
-(2518, 46, 'data/demo/sony_vaio_5.jpg', 0),
-(2517, 49, 'data/demo/samsung_tab_2.jpg', 0),
-(2516, 49, 'data/demo/samsung_tab_3.jpg', 0),
-(2515, 49, 'data/demo/samsung_tab_4.jpg', 0),
-(2514, 49, 'data/demo/samsung_tab_5.jpg', 0),
-(2513, 49, 'data/demo/samsung_tab_6.jpg', 0),
-(2512, 49, 'data/demo/samsung_tab_7.jpg', 0),
-(2556, 42, 'data/demo/canon_eos_5d_1.jpg', 0),
-(2555, 42, 'data/demo/compaq_presario.jpg', 0),
-(2554, 42, 'data/demo/hp_1.jpg', 0),
-(2553, 42, 'data/demo/canon_logo.jpg', 0),
-(2481, 64, 'data/demo/htc_touch_hd_2.jpg', 0),
-(2480, 64, 'data/demo/htc_touch_hd_3.jpg', 0),
-(2552, 42, 'data/demo/canon_eos_5d_2.jpg', 0);
+(2614, 45, 'data/demo/macbook_pro_2.jpg', 0),
+(2618, 31, 'data/demo/nikon_d300_4.jpg', 0),
+(2617, 31, 'data/demo/nikon_d300_5.jpg', 0),
+(2625, 29, 'data/demo/palm_treo_pro_2.jpg', 0),
+(2634, 46, 'data/demo/sony_vaio_2.jpg', 0),
+(2633, 46, 'data/demo/sony_vaio_3.jpg', 0),
+(2632, 49, 'data/demo/samsung_tab_7.jpg', 0),
+(2631, 49, 'data/demo/samsung_tab_6.jpg', 0),
+(2630, 49, 'data/demo/samsung_tab_5.jpg', 0),
+(2629, 49, 'data/demo/samsung_tab_4.jpg', 0),
+(2628, 49, 'data/demo/samsung_tab_3.jpg', 0),
+(2627, 49, 'data/demo/samsung_tab_2.jpg', 0),
+(2578, 42, 'data/demo/canon_eos_5d_1.jpg', 0),
+(2577, 42, 'data/demo/compaq_presario.jpg', 0),
+(2576, 42, 'data/demo/hp_1.jpg', 0),
+(2575, 42, 'data/demo/canon_logo.jpg', 0),
+(2586, 64, 'data/demo/htc_touch_hd_3.jpg', 0),
+(2585, 64, 'data/demo/htc_touch_hd_2.jpg', 0),
+(2574, 42, 'data/demo/canon_eos_5d_2.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -2582,7 +2483,6 @@ CREATE TABLE IF NOT EXISTS `product_option` (
 --
 
 INSERT INTO `product_option` (`product_option_id`, `product_id`, `option_id`, `option_value`, `required`) VALUES
-(224, 35, 11, '', 1),
 (225, 47, 12, '2011-04-22', 1),
 (226, 30, 5, '', 1);
 
@@ -2614,11 +2514,8 @@ CREATE TABLE IF NOT EXISTS `product_option_value` (
 --
 
 INSERT INTO `product_option_value` (`product_option_value_id`, `product_option_id`, `product_id`, `option_id`, `option_value_id`, `quantity`, `subtract`, `price`, `price_prefix`, `points`, `points_prefix`, `weight`, `weight_prefix`) VALUES
-(14, 224, 35, 11, 48, 15, 1, '15.0000', '+', 0, '+', '0.00000000', '+'),
-(13, 224, 35, 11, 47, 10, 1, '10.0000', '+', 0, '+', '0.00000000', '+'),
-(12, 224, 35, 11, 46, 0, 1, '5.0000', '+', 0, '+', '0.00000000', '+'),
-(16, 226, 30, 5, 40, 5, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(15, 226, 30, 5, 39, 2, 1, '0.0000', '+', 0, '+', '0.00000000', '+');
+(15, 226, 30, 5, 39, 2, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(16, 226, 30, 5, 40, 5, 1, '0.0000', '+', 0, '+', '0.00000000', '+');
 
 -- --------------------------------------------------------
 
@@ -2654,33 +2551,32 @@ CREATE TABLE IF NOT EXISTS `product_reward` (
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_reward_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=603 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=625 ;
 
 --
 -- Дамп данных таблицы `product_reward`
 --
 
 INSERT INTO `product_reward` (`product_reward_id`, `product_id`, `customer_group_id`, `points`) VALUES
-(598, 42, 1, 100),
-(577, 47, 1, 300),
-(578, 28, 1, 400),
-(553, 43, 1, 600),
-(587, 29, 1, 0),
-(601, 48, 1, 0),
-(600, 40, 1, 0),
-(576, 30, 1, 200),
+(604, 42, 1, 100),
+(624, 47, 1, 300),
+(607, 28, 1, 400),
+(618, 43, 1, 600),
+(619, 29, 1, 0),
+(613, 48, 1, 0),
+(610, 40, 1, 0),
+(605, 30, 1, 200),
 (331, 44, 1, 700),
-(333, 45, 1, 800),
-(586, 31, 1, 0),
-(591, 35, 1, 0),
-(589, 33, 1, 0),
-(590, 46, 1, 0),
-(602, 41, 1, 0),
-(583, 36, 1, 0),
-(584, 34, 1, 0),
-(585, 32, 1, 0),
-(588, 49, 1, 1000),
-(579, 64, 1, 0);
+(616, 45, 1, 800),
+(617, 31, 1, 0),
+(622, 33, 1, 0),
+(623, 46, 1, 0),
+(609, 41, 1, 0),
+(612, 36, 1, 0),
+(614, 34, 1, 0),
+(615, 32, 1, 0),
+(620, 49, 1, 1000),
+(608, 64, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -2698,16 +2594,16 @@ CREATE TABLE IF NOT EXISTS `product_special` (
   `date_end` date NOT NULL DEFAULT '0000-00-00',
   PRIMARY KEY (`product_special_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=452 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=457 ;
 
 --
 -- Дамп данных таблицы `product_special`
 --
 
 INSERT INTO `product_special` (`product_special_id`, `product_id`, `customer_group_id`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(450, 40, 1, 0, '345.0000', '0000-00-00', '0000-00-00'),
-(448, 42, 1, 0, '4.0000', '0000-00-00', '0000-00-00'),
-(451, 48, 1, 0, '345.0000', '0000-00-00', '0000-00-00');
+(454, 40, 1, 0, '345.0000', '0000-00-00', '0000-00-00'),
+(453, 42, 1, 0, '4.0000', '0000-00-00', '0000-00-00'),
+(456, 48, 1, 0, '345.0000', '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -2754,38 +2650,52 @@ CREATE TABLE IF NOT EXISTS `product_to_category` (
 --
 
 INSERT INTO `product_to_category` (`product_id`, `category_id`, `main_category`) VALUES
-(28, 20, 1),
-(28, 24, 0),
-(29, 24, 0),
-(29, 20, 1),
-(30, 20, 1),
-(30, 33, 0),
-(31, 33, 1),
-(32, 34, 1),
+(40, 65, 1),
+(64, 60, 0),
+(30, 20, 0),
+(48, 20, 0),
+(44, 64, 0),
+(31, 62, 1),
+(34, 27, 1),
+(34, 20, 0),
+(29, 64, 1),
+(49, 61, 0),
+(49, 20, 0),
+(64, 65, 1),
+(32, 20, 0),
+(41, 60, 0),
+(29, 60, 0),
+(43, 59, 1),
+(49, 67, 1),
 (33, 20, 0),
-(33, 28, 1),
-(34, 34, 1),
-(35, 20, 1),
-(36, 34, 1),
-(40, 20, 1),
-(40, 24, 0),
-(41, 27, 1),
-(42, 20, 0),
-(42, 28, 1),
-(43, 18, 0),
-(43, 20, 1),
-(44, 18, 0),
-(44, 20, 0),
-(45, 18, 0),
-(46, 18, 0),
-(46, 20, 1),
-(47, 18, 0),
+(44, 59, 1),
+(30, 62, 1),
+(45, 59, 1),
 (47, 20, 1),
-(48, 20, 1),
-(48, 34, 0),
-(49, 57, 1),
-(64, 20, 1),
-(64, 24, 0);
+(46, 20, 0),
+(29, 20, 0),
+(31, 20, 0),
+(43, 20, 0),
+(33, 65, 1),
+(47, 72, 0),
+(36, 20, 0),
+(28, 60, 0),
+(46, 59, 1),
+(40, 60, 0),
+(28, 63, 1),
+(45, 20, 0),
+(32, 27, 1),
+(36, 26, 1),
+(48, 26, 1),
+(40, 20, 0),
+(41, 20, 0),
+(41, 66, 1),
+(64, 20, 0),
+(28, 20, 0),
+(42, 20, 0),
+(42, 63, 1),
+(33, 60, 0),
+(47, 71, 0);
 
 -- --------------------------------------------------------
 
@@ -2836,7 +2746,6 @@ INSERT INTO `product_to_store` (`product_id`, `store_id`) VALUES
 (32, 0),
 (33, 0),
 (34, 0),
-(35, 0),
 (36, 0),
 (40, 0),
 (41, 0),
@@ -2996,7 +2905,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1222 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1305 ;
 
 --
 -- Дамп данных таблицы `setting`
@@ -3173,22 +3082,22 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (203, 0, 'simple', 'simple_empty_email', '', 0),
 (204, 0, 'simple', 'simple_debug', '0', 0),
 (205, 0, 'simple', 'simple_common_template', '{help}{left_column}{cart}{customer}{/left_column}{right_column}{shipping}{payment}{agreement}{/right_column}{payment_form}', 0),
-(532, 0, 'deadcow_seo', 'deadcow_seo_yahoo_id', '', 0),
-(533, 0, 'deadcow_seo', 'deadcow_seo_yahoo_checkbox', '0', 0),
-(534, 0, 'deadcow_seo', 'deadcow_seo_source_language_code', 'ru', 0),
-(530, 0, 'deadcow_seo', 'deadcow_seo_meta_template', '[product_name], [model_name], [manufacturer_name], [categories_names]', 0),
-(531, 0, 'deadcow_seo', 'deadcow_seo_tags_template', '[product_name], [model_name], [manufacturer_name], [categories_names]', 0),
-(529, 0, 'deadcow_seo', 'deadcow_seo_manufacturers_suffix', '', 0),
-(528, 0, 'deadcow_seo', 'deadcow_seo_manufacturers_template', '[manufacturer_name]', 0),
-(527, 0, 'deadcow_seo', 'deadcow_seo_products_suffix', '', 0),
-(526, 0, 'deadcow_seo', 'deadcow_seo_products_template', '[product_name]', 0),
-(524, 0, 'deadcow_seo', 'deadcow_seo_categories_template', '[category_name]', 0),
-(525, 0, 'deadcow_seo', 'deadcow_seo_categories_suffix', '', 0),
-(1215, 0, 'filterpro', 'option', 'a:4:{i:1;a:2:{s:7:"tooltip";s:0:"";s:9:"option_id";s:1:"2";}i:2;a:2:{s:7:"tooltip";s:0:"";s:9:"option_id";s:1:"1";}i:3;a:2:{s:7:"tooltip";s:0:"";s:9:"option_id";s:1:"5";}i:4;a:2:{s:7:"tooltip";s:0:"";s:9:"option_id";s:2:"11";}}', 1),
-(1216, 0, 'filterpro', 'attribute_group', 'a:1:{i:1;a:2:{s:23:"attribute_group_tooltip";s:0:"";s:18:"attribute_group_id";s:1:"7";}}', 1),
-(1217, 0, 'filterpro', 'attribute', 'a:2:{i:1;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:2:"13";}i:2;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:2:"12";}}', 1),
-(1214, 0, 'filterpro', 'filterpro_setting', 'a:23:{s:12:"price_slider";s:1:"1";s:7:"filters";s:1:"1";s:20:"display_manufacturer";s:8:"checkbox";s:18:"display_categories";s:8:"checkbox";s:12:"display_tags";s:8:"checkbox";s:16:"display_option_2";s:8:"checkbox";s:16:"display_option_1";s:8:"checkbox";s:16:"display_option_5";s:8:"checkbox";s:17:"display_option_11";s:8:"checkbox";s:20:"display_attribute_13";s:8:"checkbox";s:20:"display_attribute_12";s:8:"checkbox";s:11:"option_mode";s:2:"or";s:14:"attribute_mode";s:2:"or";s:14:"attr_delimeter";s:1:":";s:3:"tax";s:1:"0";s:20:"attribute_value_mode";s:2:"or";s:10:"attr_group";s:1:"0";s:15:"option_images_w";s:2:"20";s:15:"option_images_h";s:2:"20";s:19:"filterpro_container";s:15:".product-{view}";s:14:"filterpro_name";s:9:"FilterPro";s:19:"filterpro_afterload";s:0:"";s:9:"news_days";s:1:"0";}', 1),
-(1221, 0, 'category_menu', 'category_menu_module', 'a:1:{i:1;a:14:{s:11:"module_name";s:0:"";s:10:"menu_title";a:1:{i:1;s:0:"";}s:12:"title_status";a:1:{i:1;s:1:"1";}s:11:"title_style";s:0:"";s:5:"style";s:3:"box";s:6:"toggle";s:3:"btn";s:17:"category_selected";a:8:{i:0;s:2:"20";i:1;s:2:"18";i:2;s:2:"25";i:3;s:2:"57";i:4;s:2:"17";i:5;s:2:"24";i:6;s:2:"33";i:7;s:2:"34";}s:5:"width";s:3:"172";s:6:"height";s:2:"90";s:5:"image";s:1:"0";s:9:"layout_id";s:1:"3";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
+(1299, 0, 'deadcow_seo', 'deadcow_seo_yahoo_checkbox', '0', 0),
+(1300, 0, 'deadcow_seo', 'deadcow_seo_source_language_code', 'ru', 0),
+(1298, 0, 'deadcow_seo', 'deadcow_seo_yahoo_id', '', 0),
+(1296, 0, 'deadcow_seo', 'deadcow_seo_meta_template', '[product_name], [model_name], [manufacturer_name], [categories_names]', 0),
+(1297, 0, 'deadcow_seo', 'deadcow_seo_tags_template', '[product_name], [model_name], [manufacturer_name], [categories_names]', 0),
+(1295, 0, 'deadcow_seo', 'deadcow_seo_manufacturers_suffix', '', 0),
+(1294, 0, 'deadcow_seo', 'deadcow_seo_manufacturers_template', '[manufacturer_name]', 0),
+(1293, 0, 'deadcow_seo', 'deadcow_seo_products_suffix', '', 0),
+(1292, 0, 'deadcow_seo', 'deadcow_seo_products_template', '[product_name]', 0),
+(1290, 0, 'deadcow_seo', 'deadcow_seo_categories_template', '[category_name]', 0),
+(1291, 0, 'deadcow_seo', 'deadcow_seo_categories_suffix', '', 0),
+(1274, 0, 'filterpro', 'attribute_group', 'a:1:{i:1;a:2:{s:23:"attribute_group_tooltip";s:0:"";s:18:"attribute_group_id";s:1:"7";}}', 1),
+(1275, 0, 'filterpro', 'attribute', 'a:2:{i:1;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:2:"13";}i:2;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:2:"12";}}', 1),
+(1276, 0, 'filterpro', 'filterpro_module', 'a:1:{i:0;a:5:{s:4:"type";s:1:"0";s:9:"layout_id";s:1:"3";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
+(1272, 0, 'filterpro', 'filterpro_setting', 'a:25:{s:12:"price_slider";s:1:"1";s:7:"filters";s:1:"0";s:20:"display_manufacturer";s:8:"checkbox";s:18:"display_categories";s:8:"checkbox";s:12:"display_tags";s:8:"checkbox";s:16:"display_option_2";s:8:"checkbox";s:16:"display_option_1";s:8:"checkbox";s:16:"display_option_5";s:8:"checkbox";s:17:"display_option_11";s:8:"checkbox";s:20:"display_attribute_13";s:8:"checkbox";s:20:"display_attribute_12";s:8:"checkbox";s:11:"option_mode";s:2:"or";s:14:"attribute_mode";s:2:"or";s:14:"attr_delimeter";s:1:":";s:3:"tax";s:1:"0";s:20:"attribute_value_mode";s:2:"or";s:10:"attr_group";s:1:"0";s:13:"subcategories";s:2:"on";s:20:"option_main_checkbox";s:2:"on";s:15:"option_images_w";s:2:"20";s:15:"option_images_h";s:2:"20";s:19:"filterpro_container";s:15:".product-{view}";s:14:"filterpro_name";s:9:"FilterPro";s:19:"filterpro_afterload";s:0:"";s:9:"news_days";s:1:"0";}', 1),
+(1302, 0, 'category', 'category_module', 'a:1:{i:0;a:4:{s:9:"layout_id";s:1:"3";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
 (973, 0, 'coin_slider', 'coin_slider_module', 'a:1:{i:0;a:7:{s:14:"coin_slider_id";s:1:"1";s:5:"width";s:3:"980";s:6:"height";s:3:"280";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
 (786, 0, 'config', 'config_review_status', '1', 0),
 (787, 0, 'config', 'config_download', '1', 0),
@@ -3248,7 +3157,7 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (383, 0, 'callbackphone', 'callbackphone_module', 'a:1:{i:0;a:4:{s:9:"layout_id";s:1:"0";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
 (830, 0, 'config', 'config_image_wishlist_width', '47', 0),
 (766, 0, 'config', 'config_owner', 'Мое Имя', 0),
-(523, 0, 'deadcow_seo', 'deadcow_seo_transliteration', '1', 0),
+(1289, 0, 'deadcow_seo', 'deadcow_seo_transliteration', '1', 0),
 (872, 0, 'config', 'config_sms_alert', '0', 0),
 (873, 0, 'config', 'config_sms_gatename', 'testsms', 0),
 (874, 0, 'config', 'config_sms_from', '', 0),
@@ -3261,7 +3170,7 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (1150, 0, 'special', 'special_module', 'a:1:{i:0;a:7:{s:5:"limit";s:3:"100";s:11:"image_width";s:3:"195";s:12:"image_height";s:3:"195";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
 (982, 0, 'actions', 'actions_module', 'a:1:{i:0;a:5:{s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:5:"limit";s:1:"4";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
 (984, 0, 'actions_setting', 'actions_setting', 'a:14:{s:13:"actions_limit";s:1:"5";s:11:"image_width";s:3:"120";s:12:"image_height";s:3:"120";s:10:"show_image";s:1:"1";s:9:"show_date";s:1:"1";s:22:"image_relproduct_width";s:2:"80";s:23:"image_relproduct_height";s:2:"80";s:17:"show_actions_date";s:1:"1";s:18:"image_module_width";s:3:"212";s:19:"image_module_height";s:3:"218";s:13:"module_maxlen";s:2:"80";s:17:"show_module_image";s:1:"1";s:16:"show_module_date";s:1:"1";s:3:"seo";a:1:{i:1;a:4:{s:2:"h1";s:0:"";s:5:"title";s:0:"";s:8:"keywords";s:0:"";s:11:"description";s:0:"";}}}', 1),
-(1218, 0, 'filterpro', 'filterpro_module', 'a:1:{i:0;a:5:{s:4:"type";s:1:"0";s:9:"layout_id";s:1:"3";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
+(1273, 0, 'filterpro', 'option', 'a:4:{i:1;a:2:{s:7:"tooltip";s:0:"";s:9:"option_id";s:1:"2";}i:2;a:2:{s:7:"tooltip";s:0:"";s:9:"option_id";s:1:"1";}i:3;a:2:{s:7:"tooltip";s:0:"";s:9:"option_id";s:1:"5";}i:4;a:2:{s:7:"tooltip";s:0:"";s:9:"option_id";s:2:"11";}}', 1),
 (1143, 0, 'latest', 'latest_module', 'a:1:{i:0;a:8:{s:9:"id_status";s:1:"1";s:5:"limit";s:3:"100";s:11:"image_width";s:3:"195";s:12:"image_height";s:3:"195";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"2";}}', 1),
 (1210, 0, 'html_block', 'html_block_module', 'a:3:{i:0;a:5:{s:13:"html_block_id";s:1:"1";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}i:1;a:5:{s:13:"html_block_id";s:1:"2";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"4";}i:2;a:5:{s:13:"html_block_id";s:1:"3";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"5";}}', 1),
 (1211, 0, 'html_block', 'html_block_1', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:2099:"&lt;div class=&quot;site-content box-offer-manager&quot;&gt;\r\n&lt;div class=&quot;box-offer&quot;&gt;\r\n&lt;h3 class=&quot;title-style&quot;&gt;Мы предлагаем&lt;/h3&gt;\r\n\r\n&lt;ul class=&quot;offer-list&quot;&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – выезд инженера-консультанта на дом, для оценки технического состояния пола, замера, расчет количества необходимого материала.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – доставка образцов на дом. Вы можете подобрать напольное покрытие в соответствии обстановки, цветовой гаммы вашего помещения.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – при покупке у нас ламината, укладка бесплатно.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – при покупке у нас ламината, подложка бесплатно.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;box-manager&quot;&gt;\r\n&lt;h3 class=&quot;title-style&quot;&gt;Менеджеры&lt;/h3&gt;\r\n\r\n&lt;div class=&quot;manager-1&quot;&gt;&lt;img alt=&quot;Менеджер&quot; src=&quot;/catalog/view/theme/default/image/manager-1.png&quot; /&gt;\r\n&lt;div class=&quot;info&quot;&gt;\r\n&lt;div class=&quot;name&quot;&gt;Наталья&lt;/div&gt;\r\n\r\n&lt;div class=&quot;phone&quot;&gt;тел. 44-74-55&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;manager-2&quot;&gt;&lt;img alt=&quot;Менеджер&quot; src=&quot;/catalog/view/theme/default/image/manager-2.png&quot; /&gt;\r\n&lt;div class=&quot;info&quot;&gt;\r\n&lt;div class=&quot;name&quot;&gt;Николай&lt;/div&gt;\r\n\r\n&lt;div class=&quot;phone&quot;&gt;тел. 44-74-55&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}s:6:"editor";a:1:{i:1;s:1:"1";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
@@ -3445,7 +3354,7 @@ CREATE TABLE IF NOT EXISTS `url_alias` (
   `keyword` varchar(255) NOT NULL,
   PRIMARY KEY (`url_alias_id`),
   KEY `query` (`query`(64))
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=967 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1019 ;
 
 --
 -- Дамп данных таблицы `url_alias`
@@ -3489,72 +3398,48 @@ INSERT INTO `url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (776, 'affiliate/register', 'create-affiliate-account'),
 (775, 'affiliate/login', 'affiliate-login'),
 (774, 'common/home', ''),
-(965, 'product_id=48', 'ipod-classic'),
-(909, 'category_id=20', 'kompyutery'),
-(856, 'category_id=26', 'pc'),
-(863, 'category_id=27', 'mac'),
-(891, 'manufacturer_id=8', 'apple-1'),
+(1005, 'product_id=48', 'ipod-classic'),
+(987, 'category_id=20', 'laminat'),
+(986, 'category_id=26', 'alloc-1'),
+(988, 'category_id=27', 'aller'),
+(991, 'manufacturer_id=8', 'alloc-2'),
 (897, 'information_id=4', 'about_us'),
-(962, 'product_id=42', 'apple-cinema-30'),
-(906, 'category_id=34', 'mp3-pleery'),
-(842, 'category_id=36', 'test-2'),
-(955, 'product_id=35', 'tovar-8'),
-(940, 'product_id=30', 'canon-eos-5d'),
-(941, 'product_id=47', 'hp-lp3065'),
-(942, 'product_id=28', 'htc-touch-hd'),
-(943, 'product_id=64', 'htc-touch-hd-1'),
-(966, 'product_id=41', 'imac'),
-(964, 'product_id=40', 'iphone'),
-(947, 'product_id=36', 'ipod-nano'),
-(948, 'product_id=34', 'ipod-shuffle'),
-(949, 'product_id=32', 'ipod-touch'),
-(917, 'product_id=43', 'macbook'),
+(996, 'product_id=42', 'apple-cinema-30'),
+(976, 'category_id=59', 'alloc'),
+(997, 'product_id=30', 'canon-eos-5d'),
+(1016, 'product_id=47', 'hp-lp3065'),
+(999, 'product_id=28', 'htc-touch-hd'),
+(1000, 'product_id=64', 'htc-touch-hd-1'),
+(1001, 'product_id=41', 'imac'),
+(1002, 'product_id=40', 'iphone'),
+(1004, 'product_id=36', 'ipod-nano'),
+(1006, 'product_id=34', 'ipod-shuffle'),
+(1007, 'product_id=32', 'ipod-touch'),
+(1010, 'product_id=43', 'macbook'),
 (883, 'product_id=44', 'macbook-air'),
-(884, 'product_id=45', 'macbook-pro'),
-(950, 'product_id=31', 'nikon-d300'),
-(951, 'product_id=29', 'palm-treo-pro'),
-(952, 'product_id=49', 'samsung-galaxy-tab-101'),
-(953, 'product_id=33', 'samsung-syncmaster-941bw'),
-(954, 'product_id=46', 'sony-vaio'),
+(1008, 'product_id=45', 'macbook-pro'),
+(1009, 'product_id=31', 'nikon-d300'),
+(1011, 'product_id=29', 'palm-treo-pro'),
+(1012, 'product_id=49', 'samsung-galaxy-tab-101'),
+(1014, 'product_id=33', 'samsung-syncmaster-941bw'),
+(1015, 'product_id=46', 'sony-vaio'),
 (832, 'information_id=6', 'qwe'),
-(833, 'category_id=46', 'macs'),
-(834, 'category_id=35', 'test-1'),
-(835, 'category_id=43', 'test-11'),
-(836, 'category_id=44', 'test-12'),
-(837, 'category_id=47', 'test-15'),
-(838, 'category_id=48', 'test-16'),
-(839, 'category_id=49', 'test-17'),
-(840, 'category_id=50', 'test-18'),
-(841, 'category_id=51', 'test-19'),
-(843, 'category_id=52', 'test-20'),
-(844, 'category_id=53', 'test-21'),
-(845, 'category_id=54', 'test-22'),
-(846, 'category_id=55', 'test-23'),
-(847, 'category_id=56', 'test-24'),
-(848, 'category_id=58', 'test-25'),
-(849, 'category_id=38', 'test-4'),
-(850, 'category_id=37', 'test-5'),
-(851, 'category_id=39', 'test-6'),
-(852, 'category_id=40', 'test-7'),
-(853, 'category_id=41', 'test-8'),
-(854, 'category_id=42', 'test-9'),
-(855, 'category_id=45', 'windows'),
-(857, 'category_id=32', 'veb-kamery'),
-(859, 'category_id=28', 'monitory'),
-(860, 'category_id=29', 'myshki'),
-(861, 'category_id=30', 'printery'),
-(862, 'category_id=31', 'skanery'),
-(901, 'category_id=18', 'noutbuki'),
-(902, 'category_id=25', 'komponenty'),
-(903, 'category_id=57', 'planshety'),
-(904, 'category_id=17', 'programnoe-obespechenie'),
-(907, 'category_id=24', 'telefony-i-pda'),
-(905, 'category_id=33', 'kamery'),
-(892, 'manufacturer_id=9', 'canon'),
-(893, 'manufacturer_id=7', 'hewlett-packard'),
-(894, 'manufacturer_id=5', 'htc'),
-(895, 'manufacturer_id=6', 'palm'),
-(896, 'manufacturer_id=10', 'sony');
+(985, 'category_id=68', 'wood-4v'),
+(1018, 'category_id=73', 'wert'),
+(984, 'category_id=66', 'victori'),
+(982, 'category_id=67', 'original'),
+(983, 'category_id=65', 'quick-style'),
+(981, 'category_id=63', 'komfort'),
+(979, 'category_id=62', 'artholtz'),
+(980, 'category_id=64', 'castello'),
+(978, 'category_id=61', 'aqua-step'),
+(977, 'category_id=60', 'alstenn'),
+(990, 'manufacturer_id=9', 'aller-1'),
+(993, 'manufacturer_id=7', 'aqua-step-1'),
+(989, 'manufacturer_id=5', 'aberhof'),
+(992, 'manufacturer_id=6', 'alstenn-1'),
+(994, 'manufacturer_id=10', 'artholtz-1'),
+(1017, 'category_id=74', 'qwee');
 
 -- --------------------------------------------------------
 
@@ -3603,7 +3488,7 @@ CREATE TABLE IF NOT EXISTS `user_group` (
 --
 
 INSERT INTO `user_group` (`user_group_id`, `name`, `permission`) VALUES
-(1, 'Главный администратор', 'a:2:{s:6:"access";a:144:{i:0;s:15:"catalog/actions";i:1;s:17:"catalog/attribute";i:2;s:23:"catalog/attribute_group";i:3;s:16:"catalog/category";i:4;s:20:"catalog/category_mgr";i:5;s:16:"catalog/download";i:6;s:14:"catalog/filter";i:7;s:19:"catalog/information";i:8;s:20:"catalog/manufacturer";i:9;s:14:"catalog/option";i:10;s:15:"catalog/product";i:11;s:14:"catalog/review";i:12;s:18:"common/filemanager";i:13;s:13:"design/banner";i:14;s:18:"design/coin_slider";i:15;s:19:"design/custom_field";i:16;s:13:"design/layout";i:17;s:14:"extension/feed";i:18;s:17:"extension/manager";i:19;s:16:"extension/module";i:20;s:17:"extension/payment";i:21;s:18:"extension/shipping";i:22;s:15:"extension/total";i:23;s:16:"feed/google_base";i:24;s:19:"feed/google_sitemap";i:25;s:20:"localisation/country";i:26;s:21:"localisation/currency";i:27;s:21:"localisation/geo_zone";i:28;s:21:"localisation/language";i:29;s:25:"localisation/length_class";i:30;s:25:"localisation/order_status";i:31;s:26:"localisation/return_action";i:32;s:26:"localisation/return_reason";i:33;s:26:"localisation/return_status";i:34;s:25:"localisation/stock_status";i:35;s:22:"localisation/tax_class";i:36;s:21:"localisation/tax_rate";i:37;s:25:"localisation/weight_class";i:38;s:17:"localisation/zone";i:39;s:14:"module/account";i:40;s:14:"module/actions";i:41;s:16:"module/affiliate";i:42;s:13:"module/banner";i:43;s:17:"module/bestseller";i:44;s:20:"module/callbackphone";i:45;s:15:"module/carousel";i:46;s:15:"module/category";i:47;s:19:"module/category_mgr";i:48;s:18:"module/coin_slider";i:49;s:18:"module/deadcow_seo";i:50;s:15:"module/featured";i:51;s:13:"module/filter";i:52;s:16:"module/filterpro";i:53;s:18:"module/google_talk";i:54;s:17:"module/html_block";i:55;s:18:"module/information";i:56;s:13:"module/latest";i:57;s:13:"module/simple";i:58;s:16:"module/slideshow";i:59;s:14:"module/special";i:60;s:12:"module/store";i:61;s:12:"module/timer";i:62;s:14:"module/welcome";i:63;s:14:"octeam/toolset";i:64;s:18:"octeam_tools/dummy";i:65;s:32:"octeam_tools/seo_keyword_checker";i:66;s:24:"payment/authorizenet_aim";i:67;s:21:"payment/bank_transfer";i:68;s:14:"payment/cheque";i:69;s:11:"payment/cod";i:70;s:21:"payment/free_checkout";i:71;s:22:"payment/klarna_account";i:72;s:22:"payment/klarna_invoice";i:73;s:14:"payment/liqpay";i:74;s:20:"payment/moneybookers";i:75;s:14:"payment/nochex";i:76;s:15:"payment/paymate";i:77;s:16:"payment/paypoint";i:78;s:13:"payment/payza";i:79;s:26:"payment/perpetual_payments";i:80;s:14:"payment/pp_pro";i:81;s:17:"payment/pp_pro_uk";i:82;s:19:"payment/pp_standard";i:83;s:15:"payment/sagepay";i:84;s:22:"payment/sagepay_direct";i:85;s:18:"payment/sagepay_us";i:86;s:19:"payment/twocheckout";i:87;s:28:"payment/web_payment_software";i:88;s:16:"payment/worldpay";i:89;s:27:"report/affiliate_commission";i:90;s:22:"report/customer_credit";i:91;s:22:"report/customer_online";i:92;s:21:"report/customer_order";i:93;s:22:"report/customer_reward";i:94;s:24:"report/product_purchased";i:95;s:21:"report/product_viewed";i:96;s:18:"report/sale_coupon";i:97;s:17:"report/sale_order";i:98;s:18:"report/sale_return";i:99;s:20:"report/sale_shipping";i:100;s:15:"report/sale_tax";i:101;s:14:"sale/affiliate";i:102;s:12:"sale/contact";i:103;s:11:"sale/coupon";i:104;s:13:"sale/customer";i:105;s:20:"sale/customer_ban_ip";i:106;s:19:"sale/customer_group";i:107;s:10:"sale/order";i:108;s:11:"sale/return";i:109;s:12:"sale/voucher";i:110;s:18:"sale/voucher_theme";i:111;s:15:"setting/setting";i:112;s:13:"setting/store";i:113;s:16:"shipping/auspost";i:114;s:17:"shipping/citylink";i:115;s:14:"shipping/fedex";i:116;s:13:"shipping/flat";i:117;s:13:"shipping/free";i:118;s:13:"shipping/item";i:119;s:23:"shipping/parcelforce_48";i:120;s:15:"shipping/pickup";i:121;s:19:"shipping/royal_mail";i:122;s:12:"shipping/ups";i:123;s:13:"shipping/usps";i:124;s:15:"shipping/weight";i:125;s:11:"tool/backup";i:126;s:14:"tool/error_log";i:127;s:12:"total/coupon";i:128;s:12:"total/credit";i:129;s:14:"total/handling";i:130;s:16:"total/klarna_fee";i:131;s:19:"total/low_order_fee";i:132;s:12:"total/reward";i:133;s:14:"total/shipping";i:134;s:15:"total/sub_total";i:135;s:9:"total/tax";i:136;s:11:"total/total";i:137;s:13:"total/voucher";i:138;s:9:"user/user";i:139;s:20:"user/user_permission";i:140;s:13:"module/latest";i:141;s:21:"module/product_status";i:142;s:14:"module/special";i:143;s:20:"module/category_menu";}s:6:"modify";a:144:{i:0;s:15:"catalog/actions";i:1;s:17:"catalog/attribute";i:2;s:23:"catalog/attribute_group";i:3;s:16:"catalog/category";i:4;s:20:"catalog/category_mgr";i:5;s:16:"catalog/download";i:6;s:14:"catalog/filter";i:7;s:19:"catalog/information";i:8;s:20:"catalog/manufacturer";i:9;s:14:"catalog/option";i:10;s:15:"catalog/product";i:11;s:14:"catalog/review";i:12;s:18:"common/filemanager";i:13;s:13:"design/banner";i:14;s:18:"design/coin_slider";i:15;s:19:"design/custom_field";i:16;s:13:"design/layout";i:17;s:14:"extension/feed";i:18;s:17:"extension/manager";i:19;s:16:"extension/module";i:20;s:17:"extension/payment";i:21;s:18:"extension/shipping";i:22;s:15:"extension/total";i:23;s:16:"feed/google_base";i:24;s:19:"feed/google_sitemap";i:25;s:20:"localisation/country";i:26;s:21:"localisation/currency";i:27;s:21:"localisation/geo_zone";i:28;s:21:"localisation/language";i:29;s:25:"localisation/length_class";i:30;s:25:"localisation/order_status";i:31;s:26:"localisation/return_action";i:32;s:26:"localisation/return_reason";i:33;s:26:"localisation/return_status";i:34;s:25:"localisation/stock_status";i:35;s:22:"localisation/tax_class";i:36;s:21:"localisation/tax_rate";i:37;s:25:"localisation/weight_class";i:38;s:17:"localisation/zone";i:39;s:14:"module/account";i:40;s:14:"module/actions";i:41;s:16:"module/affiliate";i:42;s:13:"module/banner";i:43;s:17:"module/bestseller";i:44;s:20:"module/callbackphone";i:45;s:15:"module/carousel";i:46;s:15:"module/category";i:47;s:19:"module/category_mgr";i:48;s:18:"module/coin_slider";i:49;s:18:"module/deadcow_seo";i:50;s:15:"module/featured";i:51;s:13:"module/filter";i:52;s:16:"module/filterpro";i:53;s:18:"module/google_talk";i:54;s:17:"module/html_block";i:55;s:18:"module/information";i:56;s:13:"module/latest";i:57;s:13:"module/simple";i:58;s:16:"module/slideshow";i:59;s:14:"module/special";i:60;s:12:"module/store";i:61;s:12:"module/timer";i:62;s:14:"module/welcome";i:63;s:14:"octeam/toolset";i:64;s:18:"octeam_tools/dummy";i:65;s:32:"octeam_tools/seo_keyword_checker";i:66;s:24:"payment/authorizenet_aim";i:67;s:21:"payment/bank_transfer";i:68;s:14:"payment/cheque";i:69;s:11:"payment/cod";i:70;s:21:"payment/free_checkout";i:71;s:22:"payment/klarna_account";i:72;s:22:"payment/klarna_invoice";i:73;s:14:"payment/liqpay";i:74;s:20:"payment/moneybookers";i:75;s:14:"payment/nochex";i:76;s:15:"payment/paymate";i:77;s:16:"payment/paypoint";i:78;s:13:"payment/payza";i:79;s:26:"payment/perpetual_payments";i:80;s:14:"payment/pp_pro";i:81;s:17:"payment/pp_pro_uk";i:82;s:19:"payment/pp_standard";i:83;s:15:"payment/sagepay";i:84;s:22:"payment/sagepay_direct";i:85;s:18:"payment/sagepay_us";i:86;s:19:"payment/twocheckout";i:87;s:28:"payment/web_payment_software";i:88;s:16:"payment/worldpay";i:89;s:27:"report/affiliate_commission";i:90;s:22:"report/customer_credit";i:91;s:22:"report/customer_online";i:92;s:21:"report/customer_order";i:93;s:22:"report/customer_reward";i:94;s:24:"report/product_purchased";i:95;s:21:"report/product_viewed";i:96;s:18:"report/sale_coupon";i:97;s:17:"report/sale_order";i:98;s:18:"report/sale_return";i:99;s:20:"report/sale_shipping";i:100;s:15:"report/sale_tax";i:101;s:14:"sale/affiliate";i:102;s:12:"sale/contact";i:103;s:11:"sale/coupon";i:104;s:13:"sale/customer";i:105;s:20:"sale/customer_ban_ip";i:106;s:19:"sale/customer_group";i:107;s:10:"sale/order";i:108;s:11:"sale/return";i:109;s:12:"sale/voucher";i:110;s:18:"sale/voucher_theme";i:111;s:15:"setting/setting";i:112;s:13:"setting/store";i:113;s:16:"shipping/auspost";i:114;s:17:"shipping/citylink";i:115;s:14:"shipping/fedex";i:116;s:13:"shipping/flat";i:117;s:13:"shipping/free";i:118;s:13:"shipping/item";i:119;s:23:"shipping/parcelforce_48";i:120;s:15:"shipping/pickup";i:121;s:19:"shipping/royal_mail";i:122;s:12:"shipping/ups";i:123;s:13:"shipping/usps";i:124;s:15:"shipping/weight";i:125;s:11:"tool/backup";i:126;s:14:"tool/error_log";i:127;s:12:"total/coupon";i:128;s:12:"total/credit";i:129;s:14:"total/handling";i:130;s:16:"total/klarna_fee";i:131;s:19:"total/low_order_fee";i:132;s:12:"total/reward";i:133;s:14:"total/shipping";i:134;s:15:"total/sub_total";i:135;s:9:"total/tax";i:136;s:11:"total/total";i:137;s:13:"total/voucher";i:138;s:9:"user/user";i:139;s:20:"user/user_permission";i:140;s:13:"module/latest";i:141;s:21:"module/product_status";i:142;s:14:"module/special";i:143;s:20:"module/category_menu";}}');
+(1, 'Главный администратор', 'a:2:{s:6:"access";a:145:{i:0;s:15:"catalog/actions";i:1;s:17:"catalog/attribute";i:2;s:23:"catalog/attribute_group";i:3;s:16:"catalog/category";i:4;s:20:"catalog/category_mgr";i:5;s:16:"catalog/download";i:6;s:14:"catalog/filter";i:7;s:19:"catalog/information";i:8;s:20:"catalog/manufacturer";i:9;s:14:"catalog/option";i:10;s:15:"catalog/product";i:11;s:14:"catalog/review";i:12;s:18:"common/filemanager";i:13;s:13:"design/banner";i:14;s:18:"design/coin_slider";i:15;s:19:"design/custom_field";i:16;s:13:"design/layout";i:17;s:14:"extension/feed";i:18;s:17:"extension/manager";i:19;s:16:"extension/module";i:20;s:17:"extension/payment";i:21;s:18:"extension/shipping";i:22;s:15:"extension/total";i:23;s:16:"feed/google_base";i:24;s:19:"feed/google_sitemap";i:25;s:20:"localisation/country";i:26;s:21:"localisation/currency";i:27;s:21:"localisation/geo_zone";i:28;s:21:"localisation/language";i:29;s:25:"localisation/length_class";i:30;s:25:"localisation/order_status";i:31;s:26:"localisation/return_action";i:32;s:26:"localisation/return_reason";i:33;s:26:"localisation/return_status";i:34;s:25:"localisation/stock_status";i:35;s:22:"localisation/tax_class";i:36;s:21:"localisation/tax_rate";i:37;s:25:"localisation/weight_class";i:38;s:17:"localisation/zone";i:39;s:14:"module/account";i:40;s:14:"module/actions";i:41;s:16:"module/affiliate";i:42;s:13:"module/banner";i:43;s:17:"module/bestseller";i:44;s:20:"module/callbackphone";i:45;s:15:"module/carousel";i:46;s:15:"module/category";i:47;s:19:"module/category_mgr";i:48;s:18:"module/coin_slider";i:49;s:18:"module/deadcow_seo";i:50;s:15:"module/featured";i:51;s:13:"module/filter";i:52;s:16:"module/filterpro";i:53;s:18:"module/google_talk";i:54;s:17:"module/html_block";i:55;s:18:"module/information";i:56;s:13:"module/latest";i:57;s:13:"module/simple";i:58;s:16:"module/slideshow";i:59;s:14:"module/special";i:60;s:12:"module/store";i:61;s:12:"module/timer";i:62;s:14:"module/welcome";i:63;s:14:"octeam/toolset";i:64;s:18:"octeam_tools/dummy";i:65;s:32:"octeam_tools/seo_keyword_checker";i:66;s:24:"payment/authorizenet_aim";i:67;s:21:"payment/bank_transfer";i:68;s:14:"payment/cheque";i:69;s:11:"payment/cod";i:70;s:21:"payment/free_checkout";i:71;s:22:"payment/klarna_account";i:72;s:22:"payment/klarna_invoice";i:73;s:14:"payment/liqpay";i:74;s:20:"payment/moneybookers";i:75;s:14:"payment/nochex";i:76;s:15:"payment/paymate";i:77;s:16:"payment/paypoint";i:78;s:13:"payment/payza";i:79;s:26:"payment/perpetual_payments";i:80;s:14:"payment/pp_pro";i:81;s:17:"payment/pp_pro_uk";i:82;s:19:"payment/pp_standard";i:83;s:15:"payment/sagepay";i:84;s:22:"payment/sagepay_direct";i:85;s:18:"payment/sagepay_us";i:86;s:19:"payment/twocheckout";i:87;s:28:"payment/web_payment_software";i:88;s:16:"payment/worldpay";i:89;s:27:"report/affiliate_commission";i:90;s:22:"report/customer_credit";i:91;s:22:"report/customer_online";i:92;s:21:"report/customer_order";i:93;s:22:"report/customer_reward";i:94;s:24:"report/product_purchased";i:95;s:21:"report/product_viewed";i:96;s:18:"report/sale_coupon";i:97;s:17:"report/sale_order";i:98;s:18:"report/sale_return";i:99;s:20:"report/sale_shipping";i:100;s:15:"report/sale_tax";i:101;s:14:"sale/affiliate";i:102;s:12:"sale/contact";i:103;s:11:"sale/coupon";i:104;s:13:"sale/customer";i:105;s:20:"sale/customer_ban_ip";i:106;s:19:"sale/customer_group";i:107;s:10:"sale/order";i:108;s:11:"sale/return";i:109;s:12:"sale/voucher";i:110;s:18:"sale/voucher_theme";i:111;s:15:"setting/setting";i:112;s:13:"setting/store";i:113;s:16:"shipping/auspost";i:114;s:17:"shipping/citylink";i:115;s:14:"shipping/fedex";i:116;s:13:"shipping/flat";i:117;s:13:"shipping/free";i:118;s:13:"shipping/item";i:119;s:23:"shipping/parcelforce_48";i:120;s:15:"shipping/pickup";i:121;s:19:"shipping/royal_mail";i:122;s:12:"shipping/ups";i:123;s:13:"shipping/usps";i:124;s:15:"shipping/weight";i:125;s:11:"tool/backup";i:126;s:14:"tool/error_log";i:127;s:12:"total/coupon";i:128;s:12:"total/credit";i:129;s:14:"total/handling";i:130;s:16:"total/klarna_fee";i:131;s:19:"total/low_order_fee";i:132;s:12:"total/reward";i:133;s:14:"total/shipping";i:134;s:15:"total/sub_total";i:135;s:9:"total/tax";i:136;s:11:"total/total";i:137;s:13:"total/voucher";i:138;s:9:"user/user";i:139;s:20:"user/user_permission";i:140;s:13:"module/latest";i:141;s:21:"module/product_status";i:142;s:14:"module/special";i:143;s:20:"module/category_menu";i:144;s:15:"module/category";}s:6:"modify";a:145:{i:0;s:15:"catalog/actions";i:1;s:17:"catalog/attribute";i:2;s:23:"catalog/attribute_group";i:3;s:16:"catalog/category";i:4;s:20:"catalog/category_mgr";i:5;s:16:"catalog/download";i:6;s:14:"catalog/filter";i:7;s:19:"catalog/information";i:8;s:20:"catalog/manufacturer";i:9;s:14:"catalog/option";i:10;s:15:"catalog/product";i:11;s:14:"catalog/review";i:12;s:18:"common/filemanager";i:13;s:13:"design/banner";i:14;s:18:"design/coin_slider";i:15;s:19:"design/custom_field";i:16;s:13:"design/layout";i:17;s:14:"extension/feed";i:18;s:17:"extension/manager";i:19;s:16:"extension/module";i:20;s:17:"extension/payment";i:21;s:18:"extension/shipping";i:22;s:15:"extension/total";i:23;s:16:"feed/google_base";i:24;s:19:"feed/google_sitemap";i:25;s:20:"localisation/country";i:26;s:21:"localisation/currency";i:27;s:21:"localisation/geo_zone";i:28;s:21:"localisation/language";i:29;s:25:"localisation/length_class";i:30;s:25:"localisation/order_status";i:31;s:26:"localisation/return_action";i:32;s:26:"localisation/return_reason";i:33;s:26:"localisation/return_status";i:34;s:25:"localisation/stock_status";i:35;s:22:"localisation/tax_class";i:36;s:21:"localisation/tax_rate";i:37;s:25:"localisation/weight_class";i:38;s:17:"localisation/zone";i:39;s:14:"module/account";i:40;s:14:"module/actions";i:41;s:16:"module/affiliate";i:42;s:13:"module/banner";i:43;s:17:"module/bestseller";i:44;s:20:"module/callbackphone";i:45;s:15:"module/carousel";i:46;s:15:"module/category";i:47;s:19:"module/category_mgr";i:48;s:18:"module/coin_slider";i:49;s:18:"module/deadcow_seo";i:50;s:15:"module/featured";i:51;s:13:"module/filter";i:52;s:16:"module/filterpro";i:53;s:18:"module/google_talk";i:54;s:17:"module/html_block";i:55;s:18:"module/information";i:56;s:13:"module/latest";i:57;s:13:"module/simple";i:58;s:16:"module/slideshow";i:59;s:14:"module/special";i:60;s:12:"module/store";i:61;s:12:"module/timer";i:62;s:14:"module/welcome";i:63;s:14:"octeam/toolset";i:64;s:18:"octeam_tools/dummy";i:65;s:32:"octeam_tools/seo_keyword_checker";i:66;s:24:"payment/authorizenet_aim";i:67;s:21:"payment/bank_transfer";i:68;s:14:"payment/cheque";i:69;s:11:"payment/cod";i:70;s:21:"payment/free_checkout";i:71;s:22:"payment/klarna_account";i:72;s:22:"payment/klarna_invoice";i:73;s:14:"payment/liqpay";i:74;s:20:"payment/moneybookers";i:75;s:14:"payment/nochex";i:76;s:15:"payment/paymate";i:77;s:16:"payment/paypoint";i:78;s:13:"payment/payza";i:79;s:26:"payment/perpetual_payments";i:80;s:14:"payment/pp_pro";i:81;s:17:"payment/pp_pro_uk";i:82;s:19:"payment/pp_standard";i:83;s:15:"payment/sagepay";i:84;s:22:"payment/sagepay_direct";i:85;s:18:"payment/sagepay_us";i:86;s:19:"payment/twocheckout";i:87;s:28:"payment/web_payment_software";i:88;s:16:"payment/worldpay";i:89;s:27:"report/affiliate_commission";i:90;s:22:"report/customer_credit";i:91;s:22:"report/customer_online";i:92;s:21:"report/customer_order";i:93;s:22:"report/customer_reward";i:94;s:24:"report/product_purchased";i:95;s:21:"report/product_viewed";i:96;s:18:"report/sale_coupon";i:97;s:17:"report/sale_order";i:98;s:18:"report/sale_return";i:99;s:20:"report/sale_shipping";i:100;s:15:"report/sale_tax";i:101;s:14:"sale/affiliate";i:102;s:12:"sale/contact";i:103;s:11:"sale/coupon";i:104;s:13:"sale/customer";i:105;s:20:"sale/customer_ban_ip";i:106;s:19:"sale/customer_group";i:107;s:10:"sale/order";i:108;s:11:"sale/return";i:109;s:12:"sale/voucher";i:110;s:18:"sale/voucher_theme";i:111;s:15:"setting/setting";i:112;s:13:"setting/store";i:113;s:16:"shipping/auspost";i:114;s:17:"shipping/citylink";i:115;s:14:"shipping/fedex";i:116;s:13:"shipping/flat";i:117;s:13:"shipping/free";i:118;s:13:"shipping/item";i:119;s:23:"shipping/parcelforce_48";i:120;s:15:"shipping/pickup";i:121;s:19:"shipping/royal_mail";i:122;s:12:"shipping/ups";i:123;s:13:"shipping/usps";i:124;s:15:"shipping/weight";i:125;s:11:"tool/backup";i:126;s:14:"tool/error_log";i:127;s:12:"total/coupon";i:128;s:12:"total/credit";i:129;s:14:"total/handling";i:130;s:16:"total/klarna_fee";i:131;s:19:"total/low_order_fee";i:132;s:12:"total/reward";i:133;s:14:"total/shipping";i:134;s:15:"total/sub_total";i:135;s:9:"total/tax";i:136;s:11:"total/total";i:137;s:13:"total/voucher";i:138;s:9:"user/user";i:139;s:20:"user/user_permission";i:140;s:13:"module/latest";i:141;s:21:"module/product_status";i:142;s:14:"module/special";i:143;s:20:"module/category_menu";i:144;s:15:"module/category";}}');
 
 -- --------------------------------------------------------
 

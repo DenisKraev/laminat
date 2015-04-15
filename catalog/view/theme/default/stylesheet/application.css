@@ -94,12 +94,12 @@ input:focus, textarea:focus, button:focus, select:focus, a:focus {
 
 #column-left {
   float: left;
-  width: 180px;
+  width: 230px;
 }
 
 #column-right {
   float: right;
-  width: 180px;
+  width: 230px;
 }
 
 #content {
@@ -107,11 +107,11 @@ input:focus, textarea:focus, button:focus, select:focus, a:focus {
 }
 
 #column-left + #column-right + #content, #column-left + #content {
-  margin-left: 195px;
+  margin-left: 250px;
 }
 
 #column-right + #content {
-  margin-right: 195px;
+  margin-right: 250px;
 }
 
 /* стандартные элементы */
