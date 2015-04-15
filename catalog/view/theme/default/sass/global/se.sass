@@ -42,15 +42,14 @@ a.title-style
 .breadcrumbs
   font-family: Arial, sans-serif
   font-size: 12px
-  color: #845d45
-  +pie-clearfix
+  color: #8b8a8a
   list-style: none
   margin: 0px
   padding: 0px
   margin-bottom: 20px
   li
-    float: left
-    margin-left: 15px
+    +inline-block(top)
+    margin-left: 13px
     position: relative
     &:first-child
       margin-left: 0px
@@ -64,7 +63,7 @@ a.title-style
       height: 100%
       content: '»'
   a
-    color: #845d45
+    color: #8b8a8a
     text-decoration: underline
     &:hover
       text-decoration: none
