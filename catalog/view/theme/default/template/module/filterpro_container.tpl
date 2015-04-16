@@ -1,5 +1,4 @@
 <div class="product-filter">
-	<div class="display"><b><?php echo $text_display; ?></b> <?php echo $text_list; ?> <b>/</b> <a onclick="display('grid');"><?php echo $text_grid; ?></a></div>
 	<div class="limit"><b><?php echo $text_limit; ?></b>
 		<select onchange="location = this.value;">
 			<?php foreach($limits as $limits) { ?>
@@ -33,37 +32,30 @@ function display(view) {
 		$('.product-grid').attr('class', 'product-list');
 		
 		$('.product-list > div.product-item').each(function(index, element) {
-			html  = '<div class="right">';
-			html += '  <div class="cart">' + $(element).find('.cart').html() + '</div>';
-			html += '  <div class="wishlist">' + $(element).find('.wishlist').html() + '</div>';
-			html += '  <div class="compare">' + $(element).find('.compare').html() + '</div>';
-			html += '</div>';			
+
 			
 			html += '<div class="left">';
 			
-			var image = $(element).find('.image').html();
+			var image = $(element).find('.box-img').html();
 			
 			if (image != null) { 
-				html += '<div class="image">' + image + '</div>';
-        html += '  <div class="statuses">' + $(element).find('.statuses').html() + '</div>';
+				html += '<div class="box-img">' + image + '<div class="statuses">' + $(element).find('.statuses').html() + '</div></div>';
 			}
-			
+
+      html += '  <div class="name">' + $(element).find('.name').html() + '</div>';
+
+      var params = $(element).find('.params').html();
+
+      if (params != null) {
+          html += '<div class="params">' + params  + '</div>';
+      }
+
 			var price = $(element).find('.price').html();
 			
 			if (price != null) {
 				html += '<div class="price">' + price  + '</div>';
 			}
-					
-			html += '  <div class="name">' + $(element).find('.name').html() + '</div>';
-			html += '  <div class="description">' + $(element).find('.description').html() + '</div>';
 
-			
-			var rating = $(element).find('.rating').html();
-			
-			if (rating != null) {
-				html += '<div class="rating">' + rating + '</div>';
-			}
-				
 			html += '</div>';
 						
 			$(element).html(html);
@@ -71,46 +63,50 @@ function display(view) {
 		
 		$('.display').html('<b><?php echo $text_display; ?></b> <?php echo $text_list; ?> <b>/</b> <a onclick="display(\'grid\');"><?php echo $text_grid; ?></a>');
 		
-		$.totalStorage('display', 'list'); 
-	} else {
+		$.totalStorage('display', 'list');
+
+    $('.product-status img').tooltipster({
+        position: 'left'
+    });
+  } else {
 		$('.product-list').attr('class', 'product-grid');
 		
 		$('.product-grid > div.product-item').each(function(index, element) {
 			html = '';
 			
-			var image = $(element).find('.image').html();
+			var image = $(element).find('.box-img').html();
 			
 			if (image != null) {
-				html += '<div class="image">' + image + '</div>';
-        html += '  <div class="statuses">' + $(element).find('.statuses').html() + '</div>';
+				html += '<div class="box-img">' + image + '<div class="statuses">' + $(element).find('.statuses').html() + '</div></div>';
 			}
 			
 			html += '<div class="name">' + $(element).find('.name').html() + '</div>';
-			html += '<div class="description">' + $(element).find('.description').html() + '</div>';
+
+      var params = $(element).find('.params').html();
+
+      if (params != null) {
+          html += '<div class="params">' + params  + '</div>';
+      }
 
 			var price = $(element).find('.price').html();
 			
 			if (price != null) {
 				html += '<div class="price">' + price  + '</div>';
 			}
-			
-			var rating = $(element).find('.rating').html();
-			
-			if (rating != null) {
-				html += '<div class="rating">' + rating + '</div>';
-			}
-						
-			html += '<div class="cart">' + $(element).find('.cart').html() + '</div>';
-			html += '<div class="wishlist">' + $(element).find('.wishlist').html() + '</div>';
-			html += '<div class="compare">' + $(element).find('.compare').html() + '</div>';
-			
+
+			html += '<div class="actions">' + $(element).find('.actions').html() + '</div>';
+
 			$(element).html(html);
 		});	
 					
 		$('.display').html('<b><?php echo $text_display; ?></b> <a onclick="display(\'list\');"><?php echo $text_list; ?></a> <b>/</b> <?php echo $text_grid; ?>');
 		
 		$.totalStorage('display', 'grid');
-	}
+
+    $('.product-status img').tooltipster({
+        position: 'left'
+    });
+  }
 }
 
 view = $.totalStorage('display');

@@ -41,6 +41,7 @@
 
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/callbackphone/callbackphone.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/callbackphone/jquery-ui-timepicker-addon.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/tooltipster.css" />
 
 
 
@@ -48,6 +49,7 @@
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" />
 <script type="text/javascript" src="catalog/view/javascript/lib/jquery.placeholder.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/lib/jquery.tooltipster.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/common.js"></script>
 
 
@@ -75,7 +77,8 @@
 <?php } ?>
 
 <?php echo $google_analytics; ?>
-    <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/application.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/application.css" />
+
 </head>
 <body>
 <div id="notification"></div>

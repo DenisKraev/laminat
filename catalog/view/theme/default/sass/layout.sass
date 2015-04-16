@@ -78,12 +78,22 @@ input, textarea, button, select, a
   float: right
   width: 230px
 
-#content
-  min-height: 400px
-
 #column-left +
   #column-right + #content, #content
     margin-left: 250px
 
 #column-right + #content
   margin-right: 250px
+
+#column-left +
+  #column-right + #content.catalog-content, #content.catalog-content
+    margin-right: 0px
+    margin-left: 0px
+    float: right
+    width: 730px
+
+#column-right + #content.catalog-content
+  margin-right: 0px
+  margin-left: 0px
+  float: left
+  width: 730px

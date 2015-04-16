@@ -589,15 +589,17 @@ class ControllerModuleFilterPro extends Controller {
 
     $this->load->model('catalog/product_status');
 
+    $this->load->helper('truncate');
+
 		$this->data['use_lazyload'] = isset($filterpro_setting['use_lazyload']) ? 1 : 0;
 
 		$this->data['products'] = array();
 
 		foreach ($results as $result) {
 			if ($result['image']) {
-				$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
+        $image = $this->model_tool_image->crop($result['image'], 195, 195, 'center', '_cat');
 			} else {
-				$image = false;
+        $image = $this->model_tool_image->crop('no_image.jpg', 195, 195, 'center', '_cat');
 			}
 
 			if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
@@ -624,15 +626,31 @@ class ControllerModuleFilterPro extends Controller {
 				$rating = false;
 			}
 
+      $attribute_groups = $this->model_catalog_product->getProductAttributes($result['product_id']);
+
+      $attribute_data = array();
+      $attribute_data['name'] = null;
+      $attribute_data['text'] = null;
+      if(!empty($attribute_groups)) {
+        foreach($attribute_groups[0]['attribute'] as $item) {
+          if($item['name'] == 'Класс') {
+            $attribute_data['name'] = $item['name'];
+            $attribute_data['text'] = $item['text'];
+          }
+        }
+      }
+
 			$this->data['products'][] = array(
 				'product_id'  => $result['product_id'],
 				'thumb'       => $image,
-				'name'        => $result['name'],
+        'name'    	 => truncate($result['name'], 40),
 				'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, 100) . '..',
         'statuses'    => $this->model_catalog_product_status->getHTMLProductStatuses($result['product_id']),
         'price'       => $price,
 				'special'     => $special,
 				'tax'         => $tax,
+        'attribute_data'     => $attribute_data,
+        'art'        => $result['sku'],
 				'rating'      => $result['rating'],
 				'reviews'     => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
 				'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'])

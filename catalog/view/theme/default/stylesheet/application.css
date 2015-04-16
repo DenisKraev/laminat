@@ -102,16 +102,26 @@ input:focus, textarea:focus, button:focus, select:focus, a:focus {
   width: 230px;
 }
 
-#content {
-  min-height: 400px;
-}
-
 #column-left + #column-right + #content, #column-left + #content {
   margin-left: 250px;
 }
 
 #column-right + #content {
   margin-right: 250px;
+}
+
+#column-left + #column-right + #content.catalog-content, #column-left + #content.catalog-content {
+  margin-right: 0px;
+  margin-left: 0px;
+  float: right;
+  width: 730px;
+}
+
+#column-right + #content.catalog-content {
+  margin-right: 0px;
+  margin-left: 0px;
+  float: left;
+  width: 730px;
 }
 
 /* стандартные элементы */
@@ -351,10 +361,10 @@ a.title-style:hover {
 }
 
 /* Списки продукции */
-.product-list {
+.product-list, .product-grid {
   word-spacing: 18px;
 }
-.product-list * {
+.product-list *, .product-grid * {
   word-spacing: normal;
 }
 
@@ -370,12 +380,14 @@ a.title-style:hover {
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
+  margin-bottom: 20px;
 }
 .product-item .box-img {
+  position: relative;
   display: block;
   margin-bottom: 12px;
 }
-.product-item .box-img:hover {
+.product-item .box-img:hover a img {
   opacity: 0.9;
 }
 .product-item .name {
@@ -983,6 +995,7 @@ a.title-style:hover {
   -moz-box-shadow: 3px 3px 3px #ededed;
   -webkit-box-shadow: 3px 3px 3px #ededed;
   box-shadow: 3px 3px 3px #ededed;
+  margin-bottom: 35px;
 }
 #filterpro .option_box {
   min-width: 0px;
@@ -1378,4 +1391,73 @@ a.title-style:hover {
   left: 7px;
   text-transform: lowercase;
   padding: 10px 35px;
+}
+
+/* статусы */
+.statuses {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+.statuses .product-status {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.tooltipster-base {
+  background: #fff;
+  border-radius: 0px;
+  border: 1px solid #ede5df;
+  color: #6e6e6e;
+  font-family: Verdana, sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+  -moz-box-shadow: 2px 2px 5px #8d8d8d;
+  -webkit-box-shadow: 2px 2px 5px #8d8d8d;
+  box-shadow: 2px 2px 5px #8d8d8d;
+}
+
+.tooltipster-content {
+  max-width: 200px;
+}
+
+/* блок над каталогом, с заголовком и сортировками */
+.top-sort {
+  padding-bottom: 2px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e3e3e3;
+}
+.top-sort h1 {
+  font-family: "OpenSans-bold-wf";
+  font-size: 20px;
+  line-height: 32px;
+  color: #333333;
+  float: left;
+  margin: 0px;
+  max-width: 350px;
+}
+.top-sort .product-sorting {
+  float: right;
+}
+.top-sort .product-sorting .limit, .top-sort .product-sorting .sort {
+  display: inline-block;
+  vertical-align: top;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+.top-sort .product-sorting .limit b, .top-sort .product-sorting .sort b {
+  font-size: 13px;
+  font-weight: normal;
+  color: #444444;
+}
+.top-sort .product-sorting .limit select, .top-sort .product-sorting .sort select {
+  width: auto;
+  font-family: Arial, sans-serif;
+  color: #5E5E5E;
+  padding: 5px;
+  border: 2px solid #eaeaea;
+}
+.top-sort .product-sorting .limit select:hover, .top-sort .product-sorting .sort select:hover {
+  cursor: pointer;
 }

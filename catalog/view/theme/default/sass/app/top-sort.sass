@@ -1,0 +1,29 @@
+/* блок над каталогом, с заголовком и сортировками
+.top-sort
+  padding-bottom: 2px
+  margin-bottom: 20px
+  border-bottom: 1px solid #e3e3e3
+  h1
+    +font-family-2(bold)
+    font-size: 20px
+    line-height: 32px
+    color: #333333
+    float: left
+    margin: 0px
+    max-width: 350px
+  .product-sorting
+    float: right
+    .limit, .sort
+      +inline-block(top)
+      b
+        font-size: 13px
+        font-weight: normal
+        color: #444444
+      select
+        width: auto
+        font-family: Arial, sans-serif
+        color: #5E5E5E
+        padding: 5px
+        border: 2px solid #eaeaea
+        &:hover
+          cursor: pointer

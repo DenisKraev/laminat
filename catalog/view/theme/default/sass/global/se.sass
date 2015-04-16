@@ -174,7 +174,7 @@ a.title-style
       cursor: default
 
 /* Списки продукции
-.product-list
+.product-list, .product-grid
   word-spacing:  18px
   *
     word-spacing: normal
@@ -187,10 +187,12 @@ a.title-style
   height: 367px
   border: 1px solid #e3e3e3
   +inline-block(top)
+  margin-bottom: 20px
   .box-img
+    position: relative
     display: block
     margin-bottom: 12px
-    &:hover
+    &:hover a img
       opacity: 0.9
   .name
     font-family: Calibri, sans-serif

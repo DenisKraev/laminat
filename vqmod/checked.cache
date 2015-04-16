@@ -163,3 +163,14 @@ catalog\controller\module\special.php
 catalog\language\russian\module\special.php
 catalog\view\theme\default\template\module\special.tpl
 catalog\view\theme\default\template\common\home.tpl
+admin\controller\localisation\tax_class.php
+admin\language\russian\localisation\tax_class.php
+admin\view\template\localisation\tax_class_list.tpl
+admin\model\localisation\tax_rate.php
+admin\view\template\localisation\tax_class_form.tpl
+admin\controller\common\filemanager.php
+admin\language\russian\common\filemanager.php
+admin\view\template\common\filemanager.tpl
+admin\controller\module\product_status.php
+admin\view\template\module\product_status.tpl
+admin\view\template\module\product_status_form.tpl

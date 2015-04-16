@@ -68,7 +68,6 @@ $(document).ready(function(){
        }
     });
 
-
 //    $('.prod-slider').lightSlider({
 //        gallery: true,
 //        loop: true,
