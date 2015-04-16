@@ -975,21 +975,86 @@ a.title-style:hover {
 
 /* фильтр */
 #filterpro {
+  position: relative;
   background: url('/catalog/view/theme/default/image/app/bg-grid.png?1429100775') 0px 0px repeat, #f2f2f2;
   border: 1px solid #e3e3e3;
   padding: 10px;
+  padding-right: 135px;
   -moz-box-shadow: 3px 3px 3px #ededed;
   -webkit-box-shadow: 3px 3px 3px #ededed;
   box-shadow: 3px 3px 3px #ededed;
 }
 #filterpro .option_box {
+  min-width: 0px;
   position: relative;
   padding: 0px;
+  min-height: 32px;
+  line-height: 32px;
   display: inline-block;
   vertical-align: top;
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
+}
+#filterpro select {
+  width: auto;
+  font-family: Arial, sans-serif;
+  color: #5E5E5E;
+  padding: 5px;
+  border: 2px solid #eaeaea;
+}
+#filterpro select:hover {
+  cursor: pointer;
+}
+#filterpro .price_slider {
+  padding: 0px 5px;
+}
+#filterpro .price_slider #min_price, #filterpro .price_slider #max_price {
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  color: #8c8c8c;
+  font-size: 13px;
+  line-height: 14px;
+  text-align: center;
+  background: #fff;
+  padding: 5px;
+  margin: 0px;
+  border: 2px solid #eaeaea;
+}
+#filterpro .price_slider .ui-slider-range {
+  background: #eb8c2a;
+}
+#filterpro .price_slider .ui-slider-handle {
+  width: 19px;
+  height: 19px;
+  border: none;
+  background: url('/catalog/view/theme/default/image/app/dot-gray-skeuo-19x19.png?1429163752') 50% 50% no-repeat;
+  cursor: pointer;
+}
+#filterpro .action-filter {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+#filterpro .more {
+  position: absolute;
+  top: 65px;
+  right: 31px;
+  color: #8c8c8c;
+  text-transform: lowercase;
+  font-size: 11px;
+  font-family: Arial, sans-serif;
+  border-bottom: 1px dashed #8c8c8c;
+}
+#filterpro .more:hover {
+  cursor: pointer;
+  border-bottom: 1px dotted #8c8c8c;
+}
+#filterpro input[type="checkbox"], #filterpro input[type="radio"], #filterpro label {
+  vertical-align: middle;
+}
+#filterpro .box-add {
+  display: none;
 }
 
 /* подвал */

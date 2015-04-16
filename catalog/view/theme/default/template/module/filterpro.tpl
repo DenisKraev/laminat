@@ -3,7 +3,7 @@
 <div class="box-content filterpro">
 <form id="filterpro">
 
-<div class="option_box" <?php if(!$instock_visible) echo 'style="display:none"'; ?>>
+<div class="option_box <?php if(!$instock_visible) echo 'hide'; ?>">
 	<input type="checkbox" class="filtered" name="instock" id="instock" <?php if($instock_checked) echo 'checked="checked"'; ?>><label for="instock"><?php echo $text_instock?></label>
 </div>
 	<?php if($manufacturers) { ?>
@@ -37,8 +37,8 @@
 	}
 </script>
 
-<div class="option_box" <?php if(!$price_slider) { echo 'style="display:none"';}?>>
-  <div class="option_name"><?php echo $text_price_range?></div>
+<div class="option_box <?php if(!$price_slider) { echo 'hide';}?>">
+<!--  <div class="option_name">--><?php //echo $text_price_range?><!--</div>-->
   <div class="price_slider collapsible">
   <table>
     <tr>
@@ -54,10 +54,10 @@
 </div>
 
 <?php if($filter_groups) { ?>
-  <ul class="box-filter option_box">
+  <ul class="box-filter option_box <?php if(!$expanded_filters){echo 'hide';}?>">
     <?php foreach ($filter_groups as $filter_group) { ?>
     <li><span id="filter-group<?php echo $filter_group['filter_group_id']; ?>" class="option_name <?php if(!$expanded_filters){echo "hided";}?>"><?php echo $filter_group['name']; ?></span>
-    <ul class="collapsible" <?php if(!$expanded_filters){echo 'style="display:none"';}?>>
+    <ul class="collapsible  <?php if(!$expanded_filters){echo 'hide';}?>">
       <?php foreach ($filter_group['filter'] as $filter) { ?>
       <li>
       <input type="checkbox" class="filtered" name="filter[]" value="<?php echo $filter['filter_id']; ?>" id="filter<?php echo $filter['filter_id']; ?>" />
@@ -71,13 +71,13 @@
 <?php } ?>
 
 <?php if($categories) { ?>
-  <div class="option_box">
-    <div class="option_name <?php if(!$expanded_categories){echo "hided";}?>"><?php echo $text_categories; ?></div>
-    <div class="collapsible" <?php if(!$expanded_categories){echo 'style="display:none"';}?>>
+  <div class="option_box <?php if(!$expanded_categories){echo 'hide';}?>">
+<!--    <div class="option_name --><?php //if(!$expanded_categories){echo "hided";}?><!--">--><?php //echo $text_categories; ?><!--</div>-->
+    <div class="collapsible <?php if(!$expanded_categories){echo 'hide';}?>" >
       <?php if($display_categories == 'select') { ?>
         <div>
             <select name="categories[]" class="filtered">
-                <option value=""><?php echo $text_all?></option>
+                <option value=""><?php echo $text_categories; ?></option>
               <?php foreach($categories as $category) { ?>
                 <option id="cat_<?php echo $category['category_id']?>" class="category_value"
                         value="<?php echo $category['category_id']?>"><?php echo $category['name']?></option>
@@ -105,9 +105,9 @@
 <?php } ?>
 
 <?php if($tags) { ?>
-  <div class="option_box">
-    <div class="option_name <?php if(!$expanded_tags){echo "hided";}?>"><?php echo $text_tags; ?></div>
-    <div class="collapsible" <?php if(!$expanded_tags){echo 'style="display:none"';}?>>
+  <div class="option_box <?php if(!$expanded_tags){echo 'hide';}?>">
+<!--    <div class="option_name --><?php //if(!$expanded_tags){echo "hided";}?><!--">--><?php //echo $text_tags; ?><!--</div>-->
+    <div class="collapsible <?php if(!$expanded_tags){echo 'hide';}?>">
       <table id="filter_tags">
         <?php foreach($tags as $tag) { ?>
         <tr>
@@ -128,13 +128,13 @@
 
 
 <?php if($manufacturers) { ?>
-  <div class="option_box">
-    <div class="option_name <?php if(!$expanded_manufacturer){echo "hided";}?>"><?php echo $text_manufacturers; ?></div>
-    <div class="collapsible" <?php if(!$expanded_manufacturer){echo 'style="display:none"';}?>>
+  <div class="option_box <?php if(!$expanded_manufacturer){echo 'hide';}?>">
+<!--    <div class="option_name --><?php //if(!$expanded_manufacturer){echo "hided";}?><!--">--><?php //echo $text_manufacturers; ?><!--</div>-->
+    <div class="collapsible <?php if(!$expanded_manufacturer){echo 'hide';}?>" >
       <?php if($display_manufacturer == 'select') { ?>
       <div>
         <select name="manufacturer[]" class="filtered">
-          <option value=""><?php echo $text_all?></option>
+          <option value=""><?php echo $text_manufacturers; ?></option>
           <?php foreach($manufacturers as $manufacturer) { ?>
           <option id="manufacturer_<?php echo $manufacturer['manufacturer_id']?>" class="manufacturer_value"
               value="<?php echo $manufacturer['manufacturer_id']?>"><?php echo $manufacturer['name']?></option>
@@ -190,19 +190,14 @@
     <?php } ?>
 
     <?php foreach($attribute['attribute_values'] as $attribute_value_id => $attribute_value) { ?>
-      <div class="attribute_box <?php if($attr_group=="0") echo "option_box"; ?>">
+      <div class="attribute_box <?php if($attr_group=="0") echo "option_box"; ?> <?php if(!$attribute_value['expanded']){echo 'hide';}?>">
 
-        <div class="option_name <?php if(!$attribute_value['expanded']){echo "hided";}?>">
-                  <?php echo $attribute_value['name']; ?>
-                  <?php if ($attribute_value['tooltip']) { ?>
-                <img class="attribute-tooltip" style="cursor: pointer" src="catalog/view/theme/default/image/tooltip.png" title="<?php echo $attribute_value['tooltip']; ?>" alt="<?php echo $attribute_value['name']; ?>" />
-                <?php } ?>
-              </div>
-        <div class="collapsible" <?php if(!$attribute_value['expanded']){echo 'style="display:none"';}?>>
+
+        <div class="collapsible <?php if(!$attribute_value['expanded']){echo 'hide';}?>">
           <?php if($attribute_value['display'] == 'select') { ?>
           <div>
             <select class="filtered" name="attribute_value[<?php echo $attribute_value_id?>][]">
-              <option value=""><?php echo $text_all?></option>
+              <option value=""><?php echo $attribute_value['name']; ?></option>
               <?php foreach($attribute_value['values'] as $i => $value) { ?>
               <option class="a_name"
                   at_v_i="<?php echo $attribute_value_id . '_' . $value ?>"
@@ -305,7 +300,7 @@
 
 <?php if($options) { ?>
   <?php foreach($options as $option) { ?>
-  <div class="option_box">
+  <div class="option_box <?php if(!$option['expanded']){echo 'hide';}?>">
     <div class="option_name <?php if(!$option['expanded']){echo "hided";}?>">
             <?php if($option_main_checkbox && $option['display'] == 'checkbox') { ?><input type="checkbox" style="margin-left: 6px;"/><?php } ?><?php echo $option['name']; ?>
             <?php if ($option['tooltip']) { ?>
@@ -313,7 +308,7 @@
             <?php } ?>
         </div>
     <?php if($option['display'] == 'select') { ?>
-    <div class="collapsible" <?php if(!$option['expanded']){echo 'style="display:none"';}?>>
+    <div class="collapsible <?php if(!$option['expanded']){echo 'hide';}?>">
       <select class="filtered" name="option_value[<?php echo $option['option_id']?>][]">
         <option value=""><?php echo $text_all?></option>
         <?php foreach($option['option_values'] as $option_value) { ?>
@@ -323,7 +318,7 @@
       </select>
     </div>
     <?php } elseif($option['display'] == 'checkbox') { ?>
-    <div class="collapsible" <?php if(!$option['expanded']){echo 'style="display:none"';}?>>
+    <div class="collapsible <?php if(!$option['expanded']){echo 'hide';}?>">
     <table>
       <?php foreach($option['option_values'] as $option_value) { ?>
       <tr>
@@ -340,7 +335,7 @@
     </table>
     </div>
     <?php } elseif($option['display'] == 'radio') { ?>
-    <table class="collapsible" <?php if(!$option['expanded']){echo 'style="display:none"';}?>>
+    <table class="collapsible <?php if(!$option['expanded']){echo 'hide';}?>">
       <?php foreach($option['option_values'] as $option_value) { ?>
       <tr>
         <td>
@@ -355,7 +350,7 @@
       <?php } ?>
     </table>
     <?php } elseif($option['display'] == 'image') { ?>
-    <div class="collapsible" <?php if(!$option['expanded']) { echo 'style="display:none"'; }?>>
+    <div class="collapsible <?php if(!$option['expanded']){echo 'hide';}?>">
       <?php foreach($option['option_values'] as $option_value) { ?>
 
           <input style="display: none;" class="filtered option_value" id="option_value_<?php echo $option_value['option_value_id']?>"
@@ -387,7 +382,9 @@
 	</div>
 </div>
 <?php } ?>
-
+<div class="box-add"></div>
+<div class="action-filter btn-style volume">Применить</div>
+<span class="more">Раширенный поиск</span>
 </form>
 </div>
 

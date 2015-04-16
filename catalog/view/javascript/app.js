@@ -53,6 +53,21 @@ $(document).ready(function(){
         });
     }
 
+    $('#filterpro .more').click(function(){
+        $('#filterpro .box-add').slideToggle(100);
+    });
+
+    $('.action-filter').click(function(){
+        doFilter(false, false);
+    });
+
+    $('#filterpro .option_box').each(function(){
+       if($(this).hasClass('hide') == true) {
+           var removeBox = $(this).detach();
+           removeBox.appendTo('.box-add');
+       }
+    });
+
 
 //    $('.prod-slider').lightSlider({
 //        gallery: true,
