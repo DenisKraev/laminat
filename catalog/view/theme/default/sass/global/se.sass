@@ -142,41 +142,27 @@ a.title-style
 /* Пагинация
 .pagination
   width: 100%
-  list-style: none
   padding: 0px
   margin: 0px
-  text-align: center
   margin-bottom: 20px
-  > li
-    margin: 0px 3px
-    +inline-block(top)
-    &.selected a, &:hover a, &.active a, &.selected:hover a, &.active:hover a
-      background: #845d45
-      background-color: #845d45
-      color: #fff
+  text-align: center
+  .links
+    margin-bottom: 10px
+    > *
+      +inline-block(top)
+    a
+      color: #000000
+      padding: 5px 8px
       text-decoration: none
-      border-color: transparent
-    &.hidden, &.disabled
-      display: none
-    > a, > span
-      display: block
-      +font-family-2(bold)
-      font-size: 12px
-      line-height: 12px
-      background: none
-      color: #845d45
-      padding: 8px 10px
-      border: none
-      border-radius: 3px
-      border: 1px solid #845d45
-      cursor: pointer
-      margin: 0px
+      &:hover
+        background: #eb8c2a
+        color: #fff
+    b
+      background: #eb8c2a
+      color: #fff
       font-weight: normal
-    &:hover span
-      background: none
-      border: 1px solid #845d45
-      color: #845d45
-      cursor: default
+      padding: 5px 8px
+      border: 1px solid e7e7e7
 
 /* Списки продукции
 .product-list, .product-grid
