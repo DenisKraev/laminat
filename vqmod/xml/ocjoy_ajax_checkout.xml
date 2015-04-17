@@ -1,0 +1,335 @@
+<modification>
+  <id>AjaxCheckout - OcJoy</id>
+  <version>1.0</version>
+  <vqmver>1.1.0</vqmver>
+  <author>Ocjoy</author>
+  <file name="catalog/language/english/english.php">
+     <operation error="skip">
+      <search position="after"><![CDATA[<?php]]></search>
+      <add><![CDATA[
+        $_['ajaxbutton_cart'] = 'Buy it now!';
+      ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/language/russian/russian.php">
+     <operation error="skip">
+      <search position="after"><![CDATA[<?php]]></search>
+      <add><![CDATA[
+        $_['ajaxbutton_cart'] = 'Купить в 1 клик!';
+      ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/controller/product/product.php">
+     <operation error="skip">
+      <search position="before"><![CDATA[$this->data['button_cart'] = $this->language->get('button_cart');]]></search>
+      <add><![CDATA[
+        $this->data['ajaxbutton_cart'] = $this->language->get('ajaxbutton_cart');
+        $this->data['show_on_product'] = $this->config->get('config_show_on_product');
+        $this->data['quantity'] = $product_info['quantity'];
+      ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/controller/product/category.php">
+     <operation error="skip">
+      <search position="before"><![CDATA[$this->data['button_cart'] = $this->language->get('button_cart');]]></search>
+      <add><![CDATA[
+        $this->data['ajaxbutton_cart'] = $this->language->get('ajaxbutton_cart');
+        $this->data['show_on_category'] = $this->config->get('config_show_on_category');
+      ]]></add>
+    </operation>
+     <operation error="skip">
+      <search position="before"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+        $ajxcheckout_info = $this->model_catalog_product->getProduct($result['product_id']);
+        $ajxcheckout_info_quantity = $ajxcheckout_info['quantity'];
+      ]]></add>
+    </operation>
+     <operation error="skip">
+      <search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+        'quantity'  => $ajxcheckout_info_quantity,
+      ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/controller/product/search.php">
+     <operation error="skip">
+      <search position="before"><![CDATA[$this->data['button_cart'] = $this->language->get('button_cart');]]></search>
+      <add><![CDATA[
+        $this->data['ajaxbutton_cart'] = $this->language->get('ajaxbutton_cart');
+        $this->data['show_on_search'] = $this->config->get('config_show_on_search');
+      ]]></add>
+    </operation>
+     <operation error="skip">
+      <search position="before"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+        $ajxcheckout_info = $this->model_catalog_product->getProduct($result['product_id']);
+        $ajxcheckout_info_quantity = $ajxcheckout_info['quantity'];
+      ]]></add>
+    </operation>
+     <operation error="skip">
+      <search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+        'quantity'  => $ajxcheckout_info_quantity,
+      ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/controller/product/special.php">
+     <operation error="skip">
+      <search position="before"><![CDATA[$this->data['button_cart'] = $this->language->get('button_cart');]]></search>
+      <add><![CDATA[
+        $this->data['ajaxbutton_cart'] = $this->language->get('ajaxbutton_cart');
+        $this->data['show_on_specials'] = $this->config->get('config_show_on_specials');
+      ]]></add>
+    </operation>
+     <operation error="skip">
+      <search position="before"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+        $ajxcheckout_info = $this->model_catalog_product->getProduct($result['product_id']);
+        $ajxcheckout_info_quantity = $ajxcheckout_info['quantity'];
+      ]]></add>
+    </operation>
+     <operation error="skip">
+      <search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+        'quantity'  => $ajxcheckout_info_quantity,
+      ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/controller/product/manufacturer.php">
+     <operation error="skip">
+      <search position="before"><![CDATA[$this->data['button_cart'] = $this->language->get('button_cart');]]></search>
+      <add><![CDATA[
+        $this->data['ajaxbutton_cart'] = $this->language->get('ajaxbutton_cart');
+        $this->data['show_on_manufacturer'] = $this->config->get('config_show_on_manufacturer');
+      ]]></add>
+    </operation>
+     <operation error="skip">
+      <search position="before"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+        $ajxcheckout_info = $this->model_catalog_product->getProduct($result['product_id']);
+        $ajxcheckout_info_quantity = $ajxcheckout_info['quantity'];
+      ]]></add>
+    </operation>
+     <operation error="skip">
+      <search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+        'quantity'  => $ajxcheckout_info_quantity,
+      ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/controller/module/special.php">
+     <operation error="skip">
+      <search position="before"><![CDATA[$this->data['button_cart'] = $this->language->get('button_cart');]]></search>
+      <add><![CDATA[
+        $this->data['ajaxbutton_cart'] = $this->language->get('ajaxbutton_cart');
+        $this->data['show_on_module_special'] = $this->config->get('config_show_on_module_special');
+      ]]></add>
+    </operation>
+     <operation error="skip">
+      <search position="before"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+        $ajxcheckout_info = $this->model_catalog_product->getProduct($result['product_id']);
+        $ajxcheckout_info_quantity = $ajxcheckout_info['quantity'];
+      ]]></add>
+    </operation>
+     <operation error="skip">
+      <search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+        'quantity'  => $ajxcheckout_info_quantity,
+      ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/controller/module/bestseller.php">
+    <operation error="skip">
+      <search position="before"><![CDATA[$this->data['button_cart'] = $this->language->get('button_cart');]]></search>
+      <add><![CDATA[
+        $this->data['ajaxbutton_cart'] = $this->language->get('ajaxbutton_cart');
+        $this->data['show_on_module_bestseller'] = $this->config->get('config_show_on_module_bestseller');
+      ]]></add>
+    </operation>
+     <operation error="skip">
+      <search position="before"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+        $ajxcheckout_info = $this->model_catalog_product->getProduct($result['product_id']);
+        $ajxcheckout_info_quantity = $ajxcheckout_info['quantity'];
+      ]]></add>
+    </operation>
+     <operation error="skip">
+      <search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+        'quantity'  => $ajxcheckout_info_quantity,
+      ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/controller/module/latest.php">
+    <operation error="skip">
+      <search position="before"><![CDATA[$this->data['button_cart'] = $this->language->get('button_cart');]]></search>
+      <add><![CDATA[
+        $this->data['ajaxbutton_cart'] = $this->language->get('ajaxbutton_cart');
+        $this->data['show_on_module_latest'] = $this->config->get('config_show_on_module_latest');
+      ]]></add>
+    </operation>
+     <operation error="skip">
+      <search position="before"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+        $ajxcheckout_info = $this->model_catalog_product->getProduct($result['product_id']);
+        $ajxcheckout_info_quantity = $ajxcheckout_info['quantity'];
+      ]]></add>
+    </operation>
+     <operation error="skip">
+      <search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+        'quantity'  => $ajxcheckout_info_quantity,
+      ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/controller/module/featured.php">
+     <operation error="skip">
+      <search position="before"><![CDATA[$this->data['button_cart'] = $this->language->get('button_cart');]]></search>
+      <add><![CDATA[
+        $this->data['ajaxbutton_cart'] = $this->language->get('ajaxbutton_cart');
+        $this->data['show_on_module_featured'] = $this->config->get('config_show_on_module_featured');
+      ]]></add>
+    </operation>
+      <operation error="skip">
+      <search position="before"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+        $ajxcheckout_info_quantity = $product_info['quantity'];
+      ]]></add>
+    </operation>
+     <operation error="skip">
+      <search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+        'quantity'  => $ajxcheckout_info_quantity,
+      ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/view/theme/*/template/product/product.tpl">
+       <operation error="skip">
+        <search position="after"><![CDATA[<input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button" />]]></search>
+        <add><![CDATA[
+          <?php if ($this->data['show_on_product'] == 1 && $this->data['quantity'] > 0) { ?>
+          <a onclick="AjaxCheckoutOcjoy('<?php echo $product_id; ?>');" class="ajaxbutton button"><?php echo $ajaxbutton_cart; ?></a>
+          <?php } ?>
+        ]]></add>
+      </operation>
+    </file>
+  <file name="catalog/view/theme/*/template/product/category.tpl">
+     <operation error="skip">
+      <search position="after"><![CDATA[<input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />]]></search>
+      <add><![CDATA[
+        <?php if ($this->data['show_on_category'] == 1 && $product['quantity'] > 0) { ?>
+        <br /><br /><a onclick="AjaxCheckoutOcjoy('<?php echo $product['product_id']; ?>');" class="ajaxbutton button"><?php echo $ajaxbutton_cart; ?></a>
+        <?php } ?>
+        ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/view/theme/*/template/product/special.tpl">
+     <operation error="skip">
+      <search position="replace"><![CDATA[<div class="cart"><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" /></div>]]></search>
+      <add><![CDATA[
+        <div class="cart"><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />
+        <?php if ($this->data['show_on_specials'] == 1 && $product['quantity'] > 0) { ?>
+        <br /><br /><a onclick="AjaxCheckoutOcjoy('<?php echo $product['product_id']; ?>');" class="ajaxbutton button"><?php echo $ajaxbutton_cart; ?></a>
+        <?php } ?></div>
+        ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/view/theme/*/template/product/search.tpl">
+     <operation error="skip">
+      <search position="replace"><![CDATA[<div class="cart"><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" /></div>]]></search>
+      <add><![CDATA[
+        <div class="cart"><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />
+        <?php if ($this->data['show_on_search'] == 1 && $product['quantity'] > 0) { ?>
+        <br /><br /><a onclick="AjaxCheckoutOcjoy('<?php echo $product['product_id']; ?>');" class="ajaxbutton button"><?php echo $ajaxbutton_cart; ?></a>
+        <?php } ?></div>
+        ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/view/theme/*/template/product/manufacturer_info.tpl">
+     <operation error="skip">
+      <search position="after"><![CDATA[<input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />]]></search>
+      <add><![CDATA[
+        <?php if ($this->data['show_on_brands'] == 1 && $product['quantity'] > 0) { ?>
+        <br /><br /><a onclick="AjaxCheckoutOcjoy('<?php echo $product['product_id']; ?>');" class="ajaxbutton button"><?php echo $ajaxbutton_cart; ?></a>
+        <?php } ?>
+        ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/view/theme/*/template/module/bestseller.tpl">
+     <operation error="skip">
+      <search position="after"><![CDATA[<input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />]]></search>
+      <add><![CDATA[
+        <?php if ($this->data['show_on_module_bestseller'] == 1 && $product['quantity'] > 0) { ?>
+        <br /><a onclick="AjaxCheckoutOcjoy('<?php echo $product['product_id']; ?>');" class="ajaxbutton button"><?php echo $ajaxbutton_cart; ?></a>
+        <?php } ?>
+        ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/view/theme/*/template/module/featured.tpl">
+     <operation error="skip">
+      <search position="after"><![CDATA[<input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />]]></search>
+      <add><![CDATA[
+        <?php if ($this->data['show_on_module_featured'] == 1 && $product['quantity'] > 0) { ?>
+        <br /><a onclick="AjaxCheckoutOcjoy('<?php echo $product['product_id']; ?>');" class="ajaxbutton button"><?php echo $ajaxbutton_cart; ?></a>
+        <?php } ?>
+        ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/view/theme/*/template/module/special.tpl">
+     <operation error="skip">
+      <search position="after"><![CDATA[<input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />]]></search>
+      <add><![CDATA[
+        <?php if ($this->data['show_on_module_special'] == 1 && $product['quantity'] > 0) { ?>
+        <br /><a onclick="AjaxCheckoutOcjoy('<?php echo $product['product_id']; ?>');" class="ajaxbutton button"><?php echo $ajaxbutton_cart; ?></a>
+        <?php } ?>
+        ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/view/theme/*/template/module/latest.tpl">
+     <operation error="skip">
+      <search position="after"><![CDATA[<input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />]]></search>
+      <add><![CDATA[
+        <?php if ($this->data['show_on_module_latest'] == 1 && $product['quantity'] > 0) { ?>
+        <br /><a onclick="AjaxCheckoutOcjoy('<?php echo $product['product_id']; ?>');" class="ajaxbutton button"><?php echo $ajaxbutton_cart; ?></a>
+        <?php } ?>
+        ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/controller/module/filterpro.php">
+     <operation error="skip">
+      <search position="before"><![CDATA[$this->data['button_cart'] = $this->language->get('button_cart');]]></search>
+      <add><![CDATA[
+        $this->data['ajaxbutton_cart'] = $this->language->get('ajaxbutton_cart');
+        $this->data['show_on_category'] = $this->config->get('config_show_on_category');
+      ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/view/theme/*/template/module/filterpro_products.tpl">
+     <operation error="skip">
+      <search position="after"><![CDATA[<input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />]]></search>
+      <add><![CDATA[
+        <?php if ($this->data['show_on_category'] == 1) { ?>
+        <br /><br /><a onclick="AjaxCheckoutOcjoy('<?php echo $product['product_id']; ?>');" class="ajaxbutton button"><?php echo $ajaxbutton_cart; ?></a>
+        <?php } ?>
+        ]]></add>
+    </operation>
+  </file>
+  <!--<file name="catalog/view/theme/*/template/common/header.tpl">-->
+     <!--<operation error="skip">-->
+      <!--<search position="before"><![CDATA[</head>]]></search>-->
+      <!--<add><![CDATA[-->
+        <!--&lt;!&ndash; AjaxCheckout[OcJoy] v1.4.3 &ndash;&gt;-->
+        <!--<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/ocjoyajaxcheckout/ocjoyajaxcheckout.css"/>-->
+        <!--<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/colorbox/colorbox.css" media="screen" />-->
+        <!--<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/ocjoyajaxcheckout/font-awesome.min.css"/>-->
+        <!--<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/ocjoyajaxcheckout/jquery.loadmask.css"/>-->
+        <!--<script type="text/javascript" src="catalog/view/javascript/ocjoyajaxcheckout/ocjoyajaxcheckout.js"></script>-->
+        <!--<script type="text/javascript" src="catalog/view/javascript/jquery/colorbox/jquery.colorbox.js"></script>-->
+        <!--<script type="text/javascript" src="catalog/view/javascript/ocjoyajaxcheckout/inputmask.js"></script>-->
+        <!--<script type="text/javascript" src="catalog/view/javascript/ocjoyajaxcheckout/jquery.placeholder.js"></script>-->
+        <!--<script type="text/javascript" src="catalog/view/javascript/ocjoyajaxcheckout/jquery.loadmask.js"></script>-->
+        <!--]]></add>-->
+    <!--</operation>-->
+  <!--</file>-->
+</modification>

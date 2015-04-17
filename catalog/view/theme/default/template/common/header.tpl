@@ -42,21 +42,33 @@
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/callbackphone/callbackphone.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/callbackphone/jquery-ui-timepicker-addon.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/tooltipster.css" />
-
-
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/jquery.fancybox.css" />
 
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" />
+
+<!--<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/colorbox/colorbox.css" media="screen" />-->
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/ocjoyajaxcheckout/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/ocjoyajaxcheckout/jquery.loadmask.css"/>
+
+
+
 <script type="text/javascript" src="catalog/view/javascript/lib/jquery.placeholder.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/lib/jquery.tooltipster.min.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/lib/jquery.fancybox.pack.thumb.media.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/common.js"></script>
-
 
 <script type="text/javascript" src="catalog/view/javascript/callbackphone/jquery-ui-timepicker-addon.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/callbackphone/jquery-ui-timepicker-ru.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/callbackphone/simplemodal.js"></script>
 <!--<script type="text/javascript" src="catalog/view/javascript/callbackphone/mask.js"></script>-->
+
+<script type="text/javascript" src="catalog/view/javascript/ocjoyajaxcheckout/ocjoyajaxcheckout.js"></script>
+<!--<script type="text/javascript" src="catalog/view/javascript/jquery/colorbox/jquery.colorbox.js"></script>-->
+<script type="text/javascript" src="catalog/view/javascript/ocjoyajaxcheckout/inputmask.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/ocjoyajaxcheckout/jquery.placeholder.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/ocjoyajaxcheckout/jquery.loadmask.js"></script>
 
 <?php foreach ($scripts as $script) { ?>
   <script type="text/javascript" src="<?php echo $script; ?>"></script>

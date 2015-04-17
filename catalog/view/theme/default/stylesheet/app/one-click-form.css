@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* форма заказа в один клик */
+#ajaxorder {
+  width: 410px;
+}
+#ajaxorder .hide {
+  display: none;
+}
+#ajaxorder input[type="text"] {
+  width: 280px;
+}
+#ajaxorder .actions {
+  margin-top: 20px;
+  word-spacing: 20px;
+}
+#ajaxorder .actions .btn-style {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.box-product-info {
+  background: #fff;
+  padding: 9px;
+  border: 1px solid #e4e4e4;
+  margin-bottom: 10px;
+}
+.box-product-info .left {
+  float: left;
+  width: 75px;
+}
+.box-product-info .right {
+  width: 290px;
+  float: right;
+}
+.box-product-info .top {
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+.box-product-info .name {
+  font-family: Calibri, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+}
+.box-product-info .params, .box-product-info .count, .box-product-info .price {
+  color: #8c8c8c;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: Arial, sans-serif;
+  text-transform: lowercase;
+}
+.box-product-info .count, .box-product-info .price {
+  color: #444444;
+  text-transform: none;
+  margin-bottom: 5px;
+  font-weight: bold;
+}

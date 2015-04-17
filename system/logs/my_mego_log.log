@@ -8065,3 +8065,72 @@
 2015-04-17 8:31:41 - PHP Notice:  Undefined index: show_on_category in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\filterpro_products.tpl on line 37
 2015-04-17 8:31:41 - PHP Notice:  Undefined index: show_on_category in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\filterpro_products.tpl on line 37
 2015-04-17 8:31:41 - PHP Notice:  Undefined index: show_on_category in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\module\filterpro_products.tpl on line 37
+2015-04-17 10:51:06 - PHP Notice:  Undefined variable: Класс in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\ocjoyajaxcheckout.tpl on line 127
+2015-04-17 10:52:27 - PHP Notice:  Undefined variable: Класс in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\ocjoyajaxcheckout.tpl on line 127
+2015-04-17 10:54:54 - PHP Notice:  Undefined variable: Класс in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\ocjoyajaxcheckout.tpl on line 127
+2015-04-17 13:53:06 - PHP Notice:  Undefined variable: quantity in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 300
+2015-04-17 13:53:06 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 13:53:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 13:53:06 - PHP Notice:  Undefined variable: product in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 334
+2015-04-17 13:53:06 - PHP Notice:  Undefined variable: product in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 334
+2015-04-17 13:53:06 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 13:53:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 13:53:06 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 13:53:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 13:53:06 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 13:53:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:22:17 - PHP Notice:  Undefined variable: quantity in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 300
+2015-04-17 14:22:17 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:22:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:22:17 - PHP Notice:  Undefined variable: product in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 334
+2015-04-17 14:22:17 - PHP Notice:  Undefined variable: product in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 334
+2015-04-17 14:22:17 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:22:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:22:17 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:22:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:22:17 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:22:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:39:06 - PHP Notice:  Undefined variable: quantity in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 300
+2015-04-17 14:39:06 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:39:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:39:06 - PHP Notice:  Undefined variable: product in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 334
+2015-04-17 14:39:06 - PHP Notice:  Undefined variable: product in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 334
+2015-04-17 14:39:06 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:39:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:39:06 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:39:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:39:06 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:39:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:56:17 - PHP Notice:  Undefined variable: quantity in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 300
+2015-04-17 14:56:17 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:56:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:56:17 - PHP Notice:  Undefined variable: product in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 334
+2015-04-17 14:56:17 - PHP Notice:  Undefined variable: product in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 334
+2015-04-17 14:56:17 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:56:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:56:17 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:56:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:56:17 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 14:56:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 15:01:35 - PHP Notice:  Undefined variable: quantity in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 300
+2015-04-17 15:01:35 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 15:01:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 15:01:35 - PHP Notice:  Undefined variable: product in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 334
+2015-04-17 15:01:35 - PHP Notice:  Undefined variable: product in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 334
+2015-04-17 15:01:35 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 15:01:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 15:01:35 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 15:01:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 15:01:35 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 15:01:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 15:02:33 - PHP Notice:  Undefined variable: quantity in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 300
+2015-04-17 15:02:33 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 15:02:33 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 15:02:33 - PHP Notice:  Undefined variable: product in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 334
+2015-04-17 15:02:33 - PHP Notice:  Undefined variable: product in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 334
+2015-04-17 15:02:33 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 15:02:33 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 15:02:33 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 15:02:33 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 15:02:33 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-17 15:02:33 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
