@@ -57,7 +57,7 @@ class ControllerModuleCallbackphone extends Controller {
 					$ourmail = $this->config->get('config_email');
 				}
 
-	            $mail = new Mail();
+	      $mail = new Mail();
 				$mail->protocol = $this->config->get('config_mail_protocol');
 				$mail->parameter = $this->config->get('config_mail_parameter');
 				$mail->hostname = $this->config->get('config_smtp_host');
@@ -65,12 +65,12 @@ class ControllerModuleCallbackphone extends Controller {
 				$mail->password = $this->config->get('config_smtp_password');
 				$mail->port = $this->config->get('config_smtp_port');
 				$mail->timeout = $this->config->get('config_smtp_timeout');
-	            $mail->setTo($ourmail);
-	            $mail->setFrom('info@'.substr(preg_replace("#/$#", "", $this->config->get('config_url')), 7));
-	            $mail->setSender('info@'.substr(preg_replace("#/$#", "", $this->config->get('config_url')), 7));
-	            $mail->setSubject("Заказ обратного звонка");
+        $mail->setTo($ourmail);
+        $mail->setFrom('info@'.substr(preg_replace("#/$#", "", $this->config->get('config_url')), 7));
+        $mail->setSender('info@'.substr(preg_replace("#/$#", "", $this->config->get('config_url')), 7));
+        $mail->setSubject("Заказ обратного звонка");
 	           
-	            $callbackphonename = $this->request->post['callbackphonename'];
+        $callbackphonename = $this->request->post['callbackphonename'];
 				$callbackphonetel = $this->request->post['callbackphonetel'];
 				$callbackphonecomment = $this->request->post['callbackphonecomment'];
 				$callup = $this->request->post['callup'];
@@ -82,25 +82,21 @@ class ControllerModuleCallbackphone extends Controller {
 				$email_callbackphone_callup = $this->language->get('email_callbackphone_callup');
 				$email_callbackphone_callto = $this->language->get('email_callbackphone_callto');
 
-	           	$MailCom = "$email_callbackphone_name: $callbackphonename\r\n$email_callbackphone_tel: $callbackphonetel\r\n$email_callbackphone_comment: $callbackphonecomment\r\n$email_callbackphone_callup: $callup\r\n$email_callbackphone_callto: $callto";
-	           
-	            $mail->setText(strip_tags(html_entity_decode($MailCom, ENT_QUOTES, 'UTF-8')));
+        $MailCom = "$email_callbackphone_name: $callbackphonename\r\n$email_callbackphone_tel: $callbackphonetel\r\n$email_callbackphone_comment: $callbackphonecomment\r\n$email_callbackphone_callup: $callup\r\n$email_callbackphone_callto: $callto";
+
+        $mail->setText(strip_tags(html_entity_decode($MailCom, ENT_QUOTES, 'UTF-8')));
 
 				if (!empty($callbackphonename) && !empty($callbackphonetel) && preg_match('/^\p{L}+$/u', $callbackphonename)) {
 
-				echo $success = "Заказ обратного звонка отправлен успешно!<br />Наш менеджер Вам перезвонит.";
+          echo $success = "Заказ обратного звонка отправлен успешно!<br />Наш менеджер Вам перезвонит.";
 
-	            $mail->send();
+          $mail->send();
 				
 				} else {
 
 				echo $error = "Вы не заполнили обязательные поля!";
 				
 				}
-
-
-      
-
 
 	}
 

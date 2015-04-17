@@ -240,7 +240,7 @@ a.title-style:hover {
   resize: none;
 }
 
-.ocjoyajaxcheckout_errorfields, style-error {
+.ocjoyajaxcheckout_errorfields, .style-error {
   font-size: 11px;
   color: #f25727;
 }
@@ -1007,6 +1007,11 @@ a.title-style:hover {
 .box-timer .clock {
   margin: 0px;
   margin-top: 20px;
+}
+
+/* форма заказ звонка */
+.callback-form .form-row .icon-user, .callback-form .form-row .icon-phone {
+  width: 100%;
 }
 
 /* меню категорий в каталоге */

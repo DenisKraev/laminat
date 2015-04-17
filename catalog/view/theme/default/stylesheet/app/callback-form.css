@@ -1,0 +1,5 @@
+@charset "UTF-8";
+/* форма заказ звонка */
+.callback-form .form-row .icon-user, .callback-form .form-row .icon-phone {
+  width: 100%;
+}

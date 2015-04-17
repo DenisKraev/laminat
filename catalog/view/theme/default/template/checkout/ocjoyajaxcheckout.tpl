@@ -121,7 +121,7 @@ function minuscon(pid) {
       <?php if ($required_fio == 1) { ?>
       <div class="sections_block_rquaired form-row">
         <div class="icon-user">
-          <input type="text" name="firstname" class="ajaxorderinputsnorequired style-form-text icon-user" placeholder="<?php echo $text_ocjoyajaxcheckout_entername; ?>"/>
+          <input type="text" name="firstname" class="ajaxorderinputsnorequired style-form-text" placeholder="<?php echo $text_ocjoyajaxcheckout_entername; ?>"/>
         </div>
         <div id="error_firstname" class="ocjoyajaxcheckout_errorfields"></div>
       </div>
@@ -138,7 +138,7 @@ function minuscon(pid) {
     <?php if ($required_telephone == 1) { ?>
           <div class="sections_block_rquaired form-row">
               <div class="icon-phone">
-                <input type="text" name="telephone" class="ajaxorderinputsnorequired style-form-text icon-phone" id="fortelephonemask" placeholder="<?php echo $text_ocjoyajaxcheckout_entertelephone; ?>"/>
+                <input type="text" name="telephone" class="ajaxorderinputsnorequired style-form-text" id="fortelephonemask" placeholder="<?php echo $text_ocjoyajaxcheckout_entertelephone; ?>"/>
               </div>
               <div id="error_telephone" class="ocjoyajaxcheckout_errorfields"></div>
           </div>
