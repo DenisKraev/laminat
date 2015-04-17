@@ -80,7 +80,13 @@
       </div>
       <?php } ?>
 
-      <div class="actions"><div class="btn-cart-style" onclick="addToCart('<?php echo $product['product_id']; ?>');"><?php echo $button_cart; ?></div></div>
+      <div class="actions">
+          <div class="btn-cart-style" onclick="addToCart('<?php echo $product['product_id']; ?>');"><?php echo $button_cart; ?></div>
+
+          <?php if ($product['quantity'] > 0) { ?>
+            <a onclick="AjaxCheckoutOcjoy('<?php echo $product['product_id']; ?>');" class="btn-style ajaxbutton button"><?php echo $ajaxbutton_cart; ?></a>
+          <?php } ?>
+      </div>
 
     </div>
     <?php } ?>

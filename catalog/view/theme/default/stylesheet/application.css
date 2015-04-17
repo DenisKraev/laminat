@@ -430,6 +430,15 @@ a.title-style:hover {
   bottom: 15px;
 }
 
+.catalog-content .product-item {
+  height: 405px;
+  padding-bottom: 90px;
+}
+.catalog-content .product-item .ajaxbutton {
+  margin-top: 7px;
+  padding: 7px 10px;
+}
+
 /* о компании на главной */
 .box-about {
   padding: 40px 0px;

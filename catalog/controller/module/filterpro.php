@@ -169,6 +169,10 @@ class ControllerModuleFilterPro extends Controller {
 
 			$this->data['text_tax'] = $this->language->get('text_tax');
 			$this->data['button_cart'] = $this->language->get('button_cart');
+
+      $this->data['ajaxbutton_cart'] = $this->language->get('ajaxbutton_cart');
+      $this->data['show_on_category'] = $this->config->get('config_show_on_category');
+
 			$this->data['button_wishlist'] = $this->language->get('button_wishlist');
 			$this->data['button_compare'] = $this->language->get('button_compare');
 			$this->data['text_price_range'] = $this->language->get('text_price_range');
@@ -640,6 +644,9 @@ class ControllerModuleFilterPro extends Controller {
         }
       }
 
+      $ajxcheckout_info = $this->model_catalog_product->getProduct($result['product_id']);
+      $ajxcheckout_info_quantity = $ajxcheckout_info['quantity'];
+
 			$this->data['products'][] = array(
 				'product_id'  => $result['product_id'],
 				'thumb'       => $image,
@@ -649,6 +656,7 @@ class ControllerModuleFilterPro extends Controller {
         'price'       => $price,
 				'special'     => $special,
 				'tax'         => $tax,
+        'quantity'  => $ajxcheckout_info_quantity,
         'attribute_data'     => $attribute_data,
         'art'        => $result['sku'],
 				'rating'      => $result['rating'],
