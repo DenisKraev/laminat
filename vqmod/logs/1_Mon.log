@@ -1,44 +1,14 @@
----------- Date: 2015-03-30 11:38:23 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /admin/index.php?route=module/category_mgr&amp;token=a750a1b9529890d7da87b0978485a796
+---------- Date: 2015-04-20 08:26:07 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /alloc-2
 MOD DETAILS:
-   modFile   : D:\OpenServer\domains\laminat\vqmod/xml/allpagelayout.xml
-   id        : All Page Layout
-   version   : 1.0.0
-   vqmver    : 2.4.1
-   author    : LongNH
+   modFile   : D:\OpenServer\domains\laminat\vqmod/xml/filterpro_seo.xml
+   id        : Filterpro seo
+   version   : 1.5.[1-4]
+   vqmver    : 2.1.6(7)
+   author    : s-m-o-k@list.ru
 
-File Name    : admin/controller/module/*.php(0)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->data['layouts'] = $this->model_design_layout->getLayouts();
-
-----------------------------------------------------------------------
-
-
----------- Date: 2015-03-30 11:58:39 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /admin/index.php?route=module/category_mgr&amp;token=a750a1b9529890d7da87b0978485a796
-MOD DETAILS:
-   modFile   : D:\OpenServer\domains\laminat\vqmod/xml/allpagelayout.xml
-   id        : All Page Layout
-   version   : 1.0.0
-   vqmver    : 2.4.1
-   author    : LongNH
-
-File Name    : admin/controller/module/*.php(0)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->data['layouts'] = $this->model_design_layout->getLayouts();
-
-----------------------------------------------------------------------
-
-
----------- Date: 2015-03-30 14:10:42 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /index.php?route=common/home
-MOD DETAILS:
-   modFile   : D:\OpenServer\domains\laminat\vqmod/xml/coin-slider.xml
-   id        : Coin Slider Module - OpenCart 1.5.3 core file modifications
-   version   : 1.5.3
-   vqmver    : 2.2.2
-   author    : Aleksandr
-
-File Name    : system/library/image.php(1)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): if (isset($this->info['mime']) && $this->info['mime'] == 'image/png')
+File Name    : catalog/controller/product/manufacturer.php(2)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $product_total = $this->model_catalog_product->getTotalProducts($data);
 ----------------------------------------------------------------------
 
 

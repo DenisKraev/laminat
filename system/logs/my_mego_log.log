@@ -8134,3 +8134,7 @@
 2015-04-17 15:02:33 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
 2015-04-17 15:02:33 - PHP Notice:  Undefined index: cart in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
 2015-04-17 15:02:33 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\system\library\cart.php on line 22
+2015-04-20 9:07:53 - PHP Notice:  Undefined index: thumb in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_product.php on line 316
+2015-04-20 9:07:54 - PHP Notice:  Undefined variable: thumb in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_view_theme_default_template_product_product.tpl on line 21
+2015-04-20 9:07:54 - PHP Notice:  Undefined variable: thumb in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_view_theme_default_template_product_product.tpl on line 23
+2015-04-20 9:07:54 - PHP Notice:  Undefined variable: thumb in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_view_theme_default_template_product_product.tpl on line 233

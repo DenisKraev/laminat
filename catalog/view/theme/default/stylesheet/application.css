@@ -176,7 +176,7 @@ a.title-style:hover {
 }
 
 /* хлебные крошки */
-.breadcrumbs {
+.breadcrumb {
   font-family: Arial, sans-serif;
   font-size: 12px;
   color: #8b8a8a;
@@ -185,7 +185,7 @@ a.title-style:hover {
   padding: 0px;
   margin-bottom: 20px;
 }
-.breadcrumbs li {
+.breadcrumb li {
   display: inline-block;
   vertical-align: top;
   *vertical-align: auto;
@@ -194,25 +194,25 @@ a.title-style:hover {
   margin-left: 13px;
   position: relative;
 }
-.breadcrumbs li:first-child {
+.breadcrumb li:first-child {
   margin-left: 0px;
   padding-left: 0px;
 }
-.breadcrumbs li:first-child:before {
+.breadcrumb li:first-child:before {
   display: none;
 }
-.breadcrumbs li:before {
+.breadcrumb li:before {
   position: absolute;
   top: 0px;
   left: -10px;
   height: 100%;
   content: "»";
 }
-.breadcrumbs a {
+.breadcrumb a {
   color: #8b8a8a;
   text-decoration: underline;
 }
-.breadcrumbs a:hover {
+.breadcrumb a:hover {
   text-decoration: none;
 }
 
@@ -1458,6 +1458,7 @@ a.title-style:hover {
   font-weight: bold;
 }
 
+/* страница продукта */
 /* слайдер */
 .box-slider {
   position: relative;

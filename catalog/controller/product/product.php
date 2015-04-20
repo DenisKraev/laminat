@@ -298,16 +298,16 @@ class ControllerProductProduct extends Controller {
 			$this->load->model('tool/image');
 
 			if ($product_info['image']) {
-				$this->data['popup'] = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_height'));
+				$this->data['popup'] = $this->model_tool_image->resize($product_info['image'], 1920, 1080, '_popup');
 			} else {
-				$this->data['popup'] = $this->model_tool_image->resize('no_image.jpg', $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_height'));
+				$this->data['popup'] = $this->model_tool_image->resize('no_image.jpg', 1920, 1080, '_popup');
 			}
 			
 			if ($product_info['image']) {
-				$this->data['thumb'] = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_thumb_width'), $this->config->get('config_image_thumb_height'));
+				$this->data['thumb'] = $this->model_tool_image->crop($product_info['image'], 275, 275, 'center', '_thumb_prod');
 				$this->document->setOgImage($this->data['thumb']);
 			} else {
-				$this->data['thumb'] = $this->model_tool_image->resize('no_image.jpg', $this->config->get('config_image_thumb_width'), $this->config->get('config_image_thumb_height'));
+				$this->data['thumb'] = $this->model_tool_image->crop('no_image.jpg', 275, 275, 'center', '_thumb_prod');
 			}
 			
 			$this->data['images'] = array();
@@ -413,7 +413,7 @@ class ControllerProductProduct extends Controller {
 			
 			foreach ($results as $result) {
 				if ($result['image']) {
-					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_related_width'), $this->config->get('config_image_related_height'));
+					$image = $this->model_tool_image->crop($result['image'], 275, 275, 'center', '_thumb_prod');
 				} else {
 					$image = false;
 				}

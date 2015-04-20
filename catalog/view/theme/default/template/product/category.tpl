@@ -4,7 +4,7 @@
 <?php echo $column_right; ?>
 <div id="content" class="catalog-content">
 
-  <ul class="breadcrumbs">
+  <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $i => $breadcrumb) { ?>
       <?php if (count($breadcrumbs) == $i + 1) { ?>
 

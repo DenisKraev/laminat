@@ -68,6 +68,14 @@ class Image {
     $h = $height;
     $w = $width;
 
+    // если размеры меньше заданных
+    if (($w > 0) && ($this->info['width'] <= $w)) {
+      $w = $this->info['width'];
+    }
+    if (($h > 0) && ($this->info['height'] <= $h)) {
+      $h = $this->info['height'];
+    }
+
     if ($h == null) {
       $k = $w / $this->info['width'];
       $h = round($this->info['height'] * $k);

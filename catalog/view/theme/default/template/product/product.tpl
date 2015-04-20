@@ -1,28 +1,32 @@
-<?php echo $header; ?><?php echo $column_left; ?><?php echo $column_right; ?>
-<div id="content"><?php echo $content_top; ?>
-  <div class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
+<?php echo $header; ?>
+<div class="site-content inner-pages">
+<?php echo $column_left; ?>
+<?php echo $column_right; ?>
+<div id="content">
+
+  <ul class="breadcrumb">
+    <?php foreach ($breadcrumbs as $i => $breadcrumb) { ?>
+    <?php if (count($breadcrumbs) == $i + 1) { ?>
+
+          <li><span><?php echo $breadcrumb['text']; ?></span></li>
+      <?php } else { ?>
+          <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+      <?php } ?>
     <?php } ?>
-  </div>
+  </ul>
+
+  <?php echo $content_top; ?>
+
   <div class="product-info">
-    <div class="statuses"><?php echo $statuses; ?></div>
     <?php if ($thumb || $images) { ?>
     <div class="left">
       <?php if ($thumb) { ?>
       <div class="image"><a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" /></a></div>
       <?php } ?>
-      <?php if ($images) { ?>
-      <div class="image-additional">
-        <?php foreach ($images as $image) { ?>
-        <a href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a>
-        <?php } ?>
-      </div>
-      <?php } ?>
     </div>
     <?php } ?>
     <div class="right">
-	<h1><?php echo $heading_title; ?></h1>
+	    <h1><?php echo $heading_title; ?></h1>
       <div class="description">
         <?php if ($manufacturer) { ?>
         <span><?php echo $text_manufacturer; ?></span> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a><br />
@@ -474,5 +478,6 @@ $(document).ready(function() {
 	});
 	$('.time').timepicker({timeFormat: 'h:m'});
 });
-//--></script> 
+//--></script>
+</div>
 <?php echo $footer; ?>
