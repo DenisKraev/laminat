@@ -298,6 +298,7 @@ a.title-style:hover {
   padding: 8px;
   padding-left: 43px;
   background: #fff;
+  background: url('/catalog/view/theme/default/image/app/ico-cart-orange-20x20.png?1428661160') 10px 50% no-repeat, #fff;
   border: 1px solid #e7e7e7;
   display: inline-block;
   vertical-align: top;
@@ -308,16 +309,6 @@ a.title-style:hover {
 .btn-cart-style:hover {
   cursor: pointer;
   opacity: 0.9;
-}
-.btn-cart-style:before {
-  position: absolute;
-  content: "";
-  top: 0px;
-  left: 0px;
-  width: 32px;
-  height: 100%;
-  border-right: 1px solid #e7e7e7;
-  background: url('/catalog/view/theme/default/image/app/ico-cart-orange-20x20.png?1428661160') 50% 50% no-repeat;
 }
 
 /* Пагинация */
@@ -1459,6 +1450,23 @@ a.title-style:hover {
 }
 
 /* страница продукта */
+.product-info {
+  overflow: auto;
+  margin-bottom: 20px;
+}
+.product-info > .left {
+  float: left;
+  margin-right: 15px;
+}
+.product-info > .left + .right {
+  margin-left: 290px;
+}
+.product-info .image {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #e3e3e3;
+}
+
 /* слайдер */
 .box-slider {
   position: relative;
@@ -1567,6 +1575,12 @@ a.title-style:hover {
 .statuses .product-status {
   display: block;
   margin-bottom: 3px;
+}
+
+.product-info .statuses {
+  top: 0px;
+  right: auto;
+  left: 0px;
 }
 
 .tooltipster-base {

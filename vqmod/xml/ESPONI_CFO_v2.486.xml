@@ -1,0 +1,296 @@
+<modification>
+	<id>CFO</id>
+	<vqmver>1.0.8</vqmver>
+    <version>see below</version>    
+    <author>Poniyoco</author>
+
+	<file name="admin/view/template/catalog/product_form.tpl">
+		<operation>
+			<search position="after" index="1"><![CDATA[<?php echo $header; ?>]]></search>
+            <add><![CDATA[<?php echo '<span style="font-weight:bold;padding:2px;padding-right:4px;padding-left:2px;display:inline;margin-right:15px;background-color:#ebf9fe;float:right;">CFO v2.486</span>'; ?>]]></add>
+		</operation>
+
+		<operation>
+			<search position="replace" index="1" offset="1"><![CDATA[<td><input type="text" name="price" value="<?php echo $price; ?>" /></td>]]></search>
+            <add><![CDATA[
+					<td><input type="text" name="price" value="<?php echo $price; ?>" /></td>
+				</tr>
+				<tr>
+					<td>CFO (Custom Formula):</td>
+					<td>
+						<textarea type="text" name="esponi_priceFormula" rows="4"style="width:600px;" ><?php echo $esponi_priceFormula; ?></textarea>
+					</td>
+				</tr>
+			]]></add>
+		</operation>	
+		
+		<operation>
+			<search position="after" index="1"><![CDATA[<div id="tab-option-<?php echo $option_row; ?>" class="vtabs-content">]]></search>
+            <add><![CDATA[
+				<?php 
+				if(!isset($esponi_option_id_showed)) {
+					$esponi_option_id_showed = "CFO";
+				}
+				if($esponi_option_id_showed=="CFO") {
+					?>
+					<table class="form" style="margin-bottom:0px;">
+					  <tr>
+						<td><strong>Option id</strong></td>
+						<td><strong><?php echo $product_option['option_id']; ?></strong></td>
+					  </tr>
+					</table>
+				<?php } ?>
+			]]></add>
+		</operation>
+
+		<operation>
+			<search position="after" index="1"><![CDATA[html  = '<div id="tab-option-' + option_row + '" class="vtabs-content">';]]></search>
+            <add><![CDATA[
+				html += '	<table class="form" style="margin-bottom:0px;">';
+				html += '	  <tr>';
+				html += '		<td>Option id for CFO</td>';
+				html += '		<td><strong>{' + ui.item.value + '}</strong></td>';
+				html += '	  </tr>';
+				html += '	</table>';
+			]]></add>
+		</operation>		
+	</file>	
+
+	<file name="admin/model/catalog/product.php">
+		<operation>
+			<search position="after" index="1"><![CDATA[$product_id = $this->db->getLastId();]]></search>
+            <add><![CDATA[
+				$this->db->query("UPDATE " . DB_PREFIX . "product SET esponi_priceFormula = '" . $this->db->escape($data['esponi_priceFormula']) . "'  WHERE product_id = '" . (int)$product_id . "'");
+			]]></add>
+		</operation>
+
+		<operation>
+			<search position="after" index="1"><![CDATA[public function editProduct($product_id, $data) {]]></search>
+            <add><![CDATA[
+				$this->db->query("UPDATE " . DB_PREFIX . "product SET esponi_priceFormula = '" . $this->db->escape($data['esponi_priceFormula']) . "'  WHERE product_id = '" . (int)$product_id . "'");
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="admin/controller/catalog/product.php">
+		<operation>
+			<search position="before" index="1"><![CDATA[if (isset($this->request->post['price'])) {]]></search>
+            <add><![CDATA[
+				if (isset($this->request->post['esponi_priceFormula'])) {
+					$this->data['esponi_priceFormula'] = $this->request->post['esponi_priceFormula'];
+				} else if (isset($product_info)) {
+					$this->data['esponi_priceFormula'] = $product_info['esponi_priceFormula'];
+				} else {
+					$this->data['esponi_priceFormula'] = '';
+				}
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="admin/controller/catalog/product.php">
+		<operation>
+			<search position="after" index="1"><![CDATA[$this->load->model('catalog/product');]]></search>
+            <add><![CDATA[
+				$query = $this->db->query("SHOW COLUMNS FROM " . DB_PREFIX . "product LIKE 'esponi_priceFormula'");
+				if (!$query->num_rows) {				
+					$query = $this->db->query("ALTER TABLE " . DB_PREFIX . "product ADD esponi_priceFormula varchar(1024) COLLATE utf8_bin NOT NULL after price;"); 
+				}
+			]]></add>
+		</operation>
+	</file>	
+
+	<file name="system/library/cart.php">
+		<operation>
+			<search position="after" index="1"><![CDATA[class Cart {]]></search>
+            <add><![CDATA[			
+			public function esponi_lookFor($options, $id, $TextOrValue) {
+				foreach ($options as $option) {
+					if($option["option_id"]==$id) {
+						if($TextOrValue=="Text") {
+							$this->session->data['OTFCart_CFODebug'] = $this->session->data['OTFCart_CFODebug'] . "{" . $id . "} is {" . $option["name"] . "} as Text = " . $option["option_value"] . "<BR>";
+							return $option["option_value"];
+						} elseif($TextOrValue=="Price") {
+							$this->session->data['OTFCart_CFODebug'] = $this->session->data['OTFCart_CFODebug'] . "{" . $id . "} is {" . $option["name"] . "} as Price = " . $option["price"] . "<BR>";
+							return (double)$option["price"];
+						} else {							
+							if($option["type"]=="checkbox") {
+								$this->session->data['OTFCart_CFODebug'] = $this->session->data['OTFCart_CFODebug'] . "{" . $id . "} is {" . $option["name"] . "} as Checkbox Value = " . 1 . "<BR>";
+								return 1;
+							} else {			
+								$preConvert = $this->CFO_Convert($option["option_value"], 'm');
+								$this->session->data['OTFCart_CFODebug'] = $this->session->data['OTFCart_CFODebug'] . "{" . $id . "} is {" . $option["name"] . "} as Value = " . $preConvert . "<BR>";
+								return $preConvert;
+							}
+						}
+					}
+				}
+				if($TextOrValue=="Text") {
+					$this->session->data['OTFCart_CFODebug'] = $this->session->data['OTFCart_CFODebug'] . "{" . $id . "} Not found! assumed ''<BR>";
+					return '';
+				} else {
+					$this->session->data['OTFCart_CFODebug'] = $this->session->data['OTFCart_CFODebug'] . "{" . $id . "} Not found! assumed 0<BR>";
+					return 0;
+				}
+			}
+			]]></add>
+		</operation>
+	
+		<operation>
+			<search position="after" index="1"><![CDATA[class Cart {]]></search>
+            <add><![CDATA[
+			public function CFO_iDiscounts($price, $value, $sections, $values = array()) {
+				if(isset($values) && !$values=="") {
+					$vvalues = $values;
+				} else {
+					$vvalues = $sections;
+				}
+				$iDiscount = $this->CFO_Sections($value, $sections, $vvalues);
+				return ($price - ($price*$iDiscount/100));
+			}
+			public function CFO_Sections($value, $sections, $values = array()) {
+				// OJO: hay que hacer this->
+				$vsections = explode("|", $sections);
+				if(isset($values) && !$values=="") {
+					$vvalues = explode("|", $values);
+				} else {
+					$vvalues = explode("|", $sections);
+				}
+				$index = 0;
+				foreach ($vsections as $section) {
+					if((double)$value<=(double)$section) {						
+						return (double)$vvalues[$index];
+					}
+					$index++;
+				}
+				return $value;
+			}
+			public function CFO_Convert($value, $convertTo = "m") {
+				// OJO: hay que hacer this->
+				$esponi_ancho = 1;
+				$esponi_alto = 1;
+				$esponi_unidad = 100;
+				$esponi_ctmp = trim($value);
+				$esponi_res = 0;
+				if(strpos('-'.$esponi_ctmp, '(')>1 && strpos('-'.$esponi_ctmp, ')')>1) {														      
+					$vslist = explode('\(', $esponi_ctmp); // list($esponi_beforeDims, $esponi_Dimensions) = split('\(', $esponi_ctmp, 2);
+					$esponi_beforeDims = $vslist[0];
+					$esponi_Dimensions = $vslist[1];
+					$esponi_ctmp = trim(str_replace(')', '', $esponi_Dimensions));
+					$esponi_ctmp = trim(str_replace('!', '', $esponi_ctmp));
+				}
+				if(strpos('-'.$esponi_ctmp, 'cm')>1) {
+					$esponi_ctmp = str_replace('cm', '', $esponi_ctmp);
+					$esponi_unidad = 100;
+				} elseif(strpos('-'.$esponi_ctmp, 'mm')>1) {
+					$esponi_ctmp = str_replace('mm', '', $esponi_ctmp);
+					$esponi_unidad = 1000;
+				} else {						
+					$esponi_unidad = 1;
+				}
+				if(strpos('-'.$esponi_ctmp, 'x')>1) {					
+					$vslist = explode('x', $esponi_ctmp); // list($esponi_ancho, $esponi_alto) = split('x', $esponi_ctmp, 2);
+					$esponi_ancho = $vslist[0];
+					$esponi_alto = $vslist[1];
+				} else {
+					$esponi_ancho = $esponi_ctmp;
+					$esponi_alto = $esponi_unidad;
+				}
+				$esponi_res = ($esponi_ancho/$esponi_unidad) * ($esponi_alto/$esponi_unidad);
+				switch ($convertTo) {
+					case "m":	break;
+					case "mm":	$esponi_res = $esponi_res * 1000; break;
+					case "cm":	$esponi_res = $esponi_res * 100;  break;
+				}
+				return $esponi_res;
+			}
+			public function CFO_Max() {
+				$max_value = 0;
+				for($i=0; $i<func_num_args(); $i++) {
+					if(func_get_arg($i)>$max_value) $max_value = func_get_arg($i);
+				}
+				return $max_value;
+			}
+			public function CFO_Min() {
+				$min_value = 0;
+				for($i=0; $i<func_num_args(); $i++) {
+					if(func_get_arg($i)<$min_value) $min_value = func_get_arg($i);
+				}
+				return $min_value;
+			}			
+			]]></add>
+		</operation>	
+
+		<operation>
+			<search position="before" index="1"><![CDATA[// Reward Points]]></search>
+            <add><![CDATA[		
+				$this->session->data['OTFCart_CFODebug'] = "";
+				$esponi_FormulaTrick = trim($product_query->row['esponi_priceFormula']);
+				if($esponi_FormulaTrick!="") {
+					$esponi_OrgFormulaTrick = $esponi_FormulaTrick . ";";
+					if(!isset($option_price)) { $option_price = 0; }
+					if(!isset($esponi_option_SquareMeters)) {$esponi_option_SquareMeters = 1; }
+					if(!isset($esponi_option_price_Additive)) {$esponi_option_price_Additive = 0; }
+					$incIpos = strpos('_'.$esponi_FormulaTrick, '{');
+					while ($incIpos>=1) {
+						$incFpos = strpos('_'.$esponi_FormulaTrick, '}');
+						if($incFpos>$incIpos) {
+							$tmpCompleteTag = substr($esponi_FormulaTrick, $incIpos-1, ($incFpos-$incIpos+1));
+							$tmpnumber = substr($esponi_FormulaTrick, $incIpos, ($incFpos-$incIpos-1));							
+							if(strpos('_'.$tmpCompleteTag, 'P')>1) {
+								$TextOrValue = "Price";								
+							} elseif(strpos('_'.$tmpCompleteTag, 'T')>1) {
+								$TextOrValue = "Text";
+							} else {
+								$TextOrValue = "Value";
+							}
+							$tmpnumber = (double)$tmpnumber;								
+							if(is_numeric($tmpnumber)) {
+								$option_value = $this->esponi_lookFor($option_data, $tmpnumber, $TextOrValue);	
+								$esponi_FormulaTrick = str_replace($tmpCompleteTag, $option_value, $esponi_FormulaTrick);							
+							}
+						}
+						$incIpos = strpos('_'.$esponi_FormulaTrick, '{');	
+					}
+					$esponi_FormulaTrick = preg_replace('/\$/i', '\$esponi_local_', $esponi_FormulaTrick);
+					$esponi_FormulaTrick = preg_replace('/\n/i', '', $esponi_FormulaTrick);
+					$esponi_FormulaTrick = preg_replace('/CFO_Max/i', '\$this->CFO_Max', $esponi_FormulaTrick);
+					$esponi_FormulaTrick = preg_replace('/CFO_Min/i', '\$this->CFO_Min', $esponi_FormulaTrick);
+					$esponi_FormulaTrick = preg_replace('/CFO_Sections/i', '\$this->CFO_Sections', $esponi_FormulaTrick);
+					$esponi_FormulaTrick = preg_replace('/CFO_Convert/i', '\$this->CFO_Convert', $esponi_FormulaTrick);
+					$esponi_FormulaTrick = preg_replace('/CFO_iDiscounts/i', '\$this->CFO_iDiscounts', $esponi_FormulaTrick);					
+					$esponi_FormulaTrick = preg_replace('/qty/i', $quantity, $esponi_FormulaTrick);
+					$esponi_FormulaTrick = preg_replace('/quantity/i', $quantity, $esponi_FormulaTrick);
+					$esponi_FormulaTrick = preg_replace('/price/i', $price, $esponi_FormulaTrick);
+					$esponi_FormulaTrick = preg_replace('/MSU/i', $esponi_option_SquareMeters, $esponi_FormulaTrick);
+					$esponi_FormulaTrick = preg_replace('/ADD/i', $esponi_option_price_Additive, $esponi_FormulaTrick);
+					$esponi_FormulaTrick = preg_replace('/PLUS/i', $option_price, $esponi_FormulaTrick);
+					$esponi_FormulaTrick = $esponi_FormulaTrick . ";";
+					if(strpos('_'.$esponi_FormulaTrick, '!')>1) {
+						$this->session->data['OTFCart_CFODebug'] = $this->session->data['OTFCart_CFODebug'] . "Err 2<BR>";
+					} else {	
+						$tmpprice = 0;
+						$evalContent = "";
+						ob_start();						
+						eval("\$tmpprice=" . $esponi_FormulaTrick);	
+						$evalContent = ob_get_contents();																					
+						ob_end_clean();
+						if(!($evalContent=="")) {
+							$tmpprice = 0;
+							$this->session->data['OTFCart_CFODebug'] = $this->session->data['OTFCart_CFODebug'] . "<BR><strong><u>Your formula has errors:</u></strong><BR><font color=red>" . $evalContent . "</font><BR>";
+						}						
+						$price = $tmpprice;
+						$option_price = 0;
+						$esponi_option_SquareMeters = 1;
+						$esponi_option_price_Additive = 0;
+					}
+					//
+					// DEBUG
+					$esponi_FormulaTrick = preg_replace('/\$esponi_local_/i', '\$', $esponi_FormulaTrick);
+					$esponi_FormulaTrick = preg_replace('/\$this->/i', '', $esponi_FormulaTrick);
+					//$esponi_FormulaTrick = highlight_string('php ' . $esponi_FormulaTrick . '?', 'php');
+					$this->session->data['OTFCart_CFODebug'] = "<div style='font-size:16px;text-decoration:underline;margin-bottom:5px;'><strong>CFO: Formula debug for Admins</strong></div><div style='display:block; line-height:18px;font-weight:normal;clear:both;'>" . $this->session->data['OTFCart_CFODebug'] . "<BR><strong><u>Formula:</u></strong><BR>" . $esponi_OrgFormulaTrick . "<BR><BR><strong><u>Result:</u></strong><BR>" . $esponi_FormulaTrick . "</div>";
+				}
+			]]></add>
+		</operation>
+	</file>	
+</modification>

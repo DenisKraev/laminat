@@ -103,10 +103,30 @@
               <td><?php echo $entry_location; ?></td>
               <td><input type="text" name="location" value="<?php echo $location; ?>" /></td>
             </tr>
+
+            <tr>
+                <td>Единицы измерения</td>
+                <td>
+                    <select name="unit_count">
+                      <?php if ($unit_count) { ?>
+                        <option value="1" selected="selected">м2</option>
+                        <option value="2">шт</option>
+                      <?php } else { ?>
+                        <option value="1">м2</option>
+                        <option value="2" selected="selected">шт</option>
+                      <?php } ?>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Квадратных метров в упаковке</td>
+                <td><input type="text" name="meters_package" value="<?php echo $meters_package; ?>" /></td>
+            </tr>
             <tr>
               <td><?php echo $entry_price; ?></td>
               <td><input type="text" name="price" value="<?php echo $price; ?>" /></td>
             </tr>
+
             <tr>
               <td><?php echo $entry_tax_class; ?></td>
               <td><select name="tax_class_id">

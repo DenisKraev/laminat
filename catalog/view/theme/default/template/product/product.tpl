@@ -17,15 +17,26 @@
 
   <?php echo $content_top; ?>
 
-  <div class="product-info">
-    <?php if ($thumb || $images) { ?>
+  <div class="product-info cf">
+
+    <?php if ($thumb) { ?>
     <div class="left">
       <?php if ($thumb) { ?>
-      <div class="image"><a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" /></a></div>
+        <div class="image">
+            <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" /></a>
+            <div class="statuses"><?php echo $statuses; ?></div>
+        </div>
       <?php } ?>
     </div>
     <?php } ?>
+
     <div class="right">
+
+      <div class="share">
+        <div class="share42init" data-image="<?php echo $thumb; ?>"></div>
+        <script type="text/javascript" src="catalog/view/javascript/jquery/share42/share42.js"></script>
+      </div>
+
 	    <h1><?php echo $heading_title; ?></h1>
       <div class="description">
         <?php if ($manufacturer) { ?>
@@ -206,31 +217,23 @@
         <?php } ?>
       </div>
       <?php } ?>
+
       <div class="cart">
-        <div><?php echo $text_qty; ?>
-          <input type="text" name="quantity" size="2" value="<?php echo $minimum; ?>" />
-          <input type="hidden" name="product_id" size="2" value="<?php echo $product_id; ?>" />
-          &nbsp;
-          <input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button" />
-          <span>&nbsp;&nbsp;<?php echo $text_or; ?>&nbsp;&nbsp;</span>
-          <span class="links"><a onclick="addToWishList('<?php echo $product_id; ?>');"><?php echo $button_wishlist; ?></a><br />
-            <a onclick="addToCompare('<?php echo $product_id; ?>');"><?php echo $button_compare; ?></a></span>
-        </div>
+        <?php echo $text_qty; ?>
+        <input type="text" name="quantity" size="2" value="<?php echo $minimum; ?>" />
+        <input type="hidden" name="product_id" size="2" value="<?php echo $product_id; ?>" />
+        &nbsp;
+        <input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button btn-cart-style" />
+
+        <?php if ($this->data['show_on_product'] == 1 && $this->data['quantity'] > 0) { ?>
+          <a onclick="AjaxCheckoutOcjoy('<?php echo $product_id; ?>');" class="ajaxbutton button btn-style"><?php echo $ajaxbutton_cart; ?></a>
+        <?php } ?>
+
         <?php if ($minimum > 1) { ?>
         <div class="minimum"><?php echo $text_minimum; ?></div>
         <?php } ?>
       </div>
-      <?php if ($review_status) { ?>
-      <div class="review">
-        <div><img src="catalog/view/theme/default/image/stars-<?php echo $rating; ?>.png" alt="<?php echo $reviews; ?>" />&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $reviews; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $text_write; ?></a></div>
-        <div class="share">
-		<!-- AddThis Button BEGIN -->
-			<div class="share42init" data-image="<?php echo $thumb; ?>"></div>
-			<script type="text/javascript" src="catalog/view/javascript/jquery/share42/share42.js"></script> 
-		<!-- AddThis Button END --> 
-        </div>
-      </div>
-      <?php } ?>
+
     </div>
   </div>
   <div id="tabs" class="htabs"><a href="#tab-description"><?php echo $tab_description; ?></a>

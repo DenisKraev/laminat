@@ -1,0 +1,235 @@
+<modification>
+	<id>OPA</id>
+	<vqmver>1.0.8</vqmver>
+    <version>see below</version>    
+    <author>Poniyoco</author>
+
+	<file name="admin/view/template/catalog/product_form.tpl">
+		<operation>
+			<search position="after" index="1"><![CDATA[<?php echo $header; ?>]]></search>
+            <add><![CDATA[<?php echo '<span style="font-weight:bold;padding:2px;padding-right:4px;padding-left:2px;display:inline;margin-right:15px;background-color:#ebf9fe;float:right;">OPA v1.55</span>'; ?>]]></add>
+		</operation>
+	</file>
+
+	<file name="catalog/controller/checkout/cart.php">
+		<operation>
+			<search position="before" index="1"><![CDATA[public function index() {]]></search>
+            <add><![CDATA[
+			public function esponi_OTF() {
+				$this->language->load('checkout/cart');				
+				$this->load->model('catalog/product');				
+				$result_OTF = "0";
+				$resultText_OTF = "0xOPAx0xOPAx0";
+				$product_id = 0;
+				$this->session->data['OTFCart_CFODebug'] = "";
+				if (isset($this->request->post['product_id'])) {
+					$product_id = (int) $this->request->post['product_id'];
+				}
+				if (!empty($product_id)) {
+					$product_info = $this->model_catalog_product->getProduct($product_id);
+					if ($product_info) {
+						// Minimum quantity validation
+						$quantity = 1;
+						if (isset($this->request->post['quantity'])) {
+							$quantity = (int) $this->request->post['quantity'];
+						}						
+						if (!$quantity) {
+							$quantity = 1;
+						}
+						$product_total = 0;											
+						if ($product_info['minimum'] > ($product_total + $quantity)) {
+							$result_OTF = "FAIL";
+						}
+						// Option validation
+						$option = array();
+						if (isset($this->request->post['option'])) {
+							$option = array_filter((array) $this->request->post['option']);
+						}
+						$product_options = $this->model_catalog_product->getProductOptions($product_id);
+						foreach ($product_options as $product_option) {
+							if(!($product_option['type']=='file')) {
+								if ($product_option['required'] && (!isset($this->request->post['option'][$product_option['product_option_id']]) ||
+									!$this->request->post['option'][$product_option['product_option_id']])) {
+									$result_OTF = "FAIL";
+								}
+							}
+						}
+					}
+					if (!($result_OTF=="FAIL")) {
+						//
+						// ESPONI: on-the-fly get price	
+						$cartTotal_OTF = 0;
+				      	$this->session->data['OTFCart'] = array();
+						if(!$option) {
+							$key = (int)$product_id;
+						} else {
+							$key = (int)$product_id . ':' . base64_encode(serialize($option));
+						}
+						$this->session->data['OTFCart_CFODebug'] = "";
+						$this->session->data['OTFCart'][$key] = (int)$quantity;		
+						$product_data = $this->cart->getProducts("OTF");	
+						$this->session->data['OTFCart'] = array();
+						foreach ($product_data as $product) {
+							$cartTotal_OTF = $cartTotal_OTF + $product["price"];
+						}
+						$resultText_OTF = $this->currency->format($this->tax->calculate($cartTotal_OTF, $product_info['tax_class_id'], $this->config->get('config_tax')));
+						$resultText_OTF = $resultText_OTF . "xOPAx" . $quantity . "xOPAx" . $this->currency->format($this->tax->calculate(($cartTotal_OTF * $quantity), $product_info['tax_class_id'], $this->config->get('config_tax')));
+						$result_OTF = "Ok";
+					}
+				}
+				// Show site if logged in as admin
+				$this->load->library('user');			
+				$this->user = new User($this->registry);	
+				$esponi_isAdmin = $this->user->isLogged() && $this->user->hasPermission('modify', 'catalog/product');
+				//
+				// $esponi_isAdmin = true;
+				//
+				$esponi_result = $result_OTF . "xOPAx" . $resultText_OTF . "xOPAx" . $this->request->get['timestamp'] . "xOPAx" . (($esponi_isAdmin)?$this->session->data['OTFCart_CFODebug']:"off");
+				$this->response->setOutput($esponi_result);
+			}
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="system/library/cart.php">
+		<operation>
+			<search position="replace" index="1"><![CDATA[public function getProducts() {]]></search>
+            <add><![CDATA[public function getProducts($mode = "NORMAL") {]]></add>
+		</operation>
+
+		<operation>
+			<search position="after" index="1"><![CDATA[public function getProducts(]]></search>
+            <add><![CDATA[
+				if($mode=="OTF") {
+					$esponi_data = $this->session->data['OTFCart'];
+				} else {		
+					$esponi_data = $this->session->data['cart'];					
+				}	
+			]]></add>
+		</operation>
+
+		<operation>
+			<search position="replace" index="1"><![CDATA[foreach ($this->session->data['cart'] as $key => $quantity) {]]></search>
+            <add><![CDATA[foreach ($esponi_data as $key => $quantity) {]]></add>
+		</operation>
+
+		<operation>
+			<search position="replace" index="1"><![CDATA[foreach ($this->session->data['cart'] as $key_2 => $quantity_2) {]]></search>
+            <add><![CDATA[foreach ($esponi_data as $key_2 => $quantity_2) {]]></add>
+		</operation>		
+	</file>
+	
+
+	<file name="catalog/view/theme/*/template/product/product.tpl">	
+		<operation>
+			<search position="replace" index="1"><![CDATA[<div class="product-info cf">]]></search>
+            <add><![CDATA[<div class="product-info" id="product_add_to_cart_form">]]></add>
+		</operation>
+	
+		<operation>
+			<search position="before" index="1"><![CDATA[<div class="cart">]]></search>
+            <add><![CDATA[
+				<div id="esponi_OTF_Container">
+					<?php $this->language->load('checkout/cart'); ?>
+					<div id="esponi_OTF">
+						<span id="esponi_OTF_LeftColumn">
+							<span id="esponi_OTF_UnitText"><?php echo $this->language->get('column_price'); ?>:</span>
+							<span id="esponi_OTF_TotalText"><?php echo $this->language->get('column_total'); ?>:</span>
+						</span>
+						<span id="esponi_OTF_RightColumn">
+							<span id="esponi_OTF_Unit"></span>
+							<span id="esponi_OTF_Total"></span>
+						</span>
+						<div id="esponi_OTF_CFODebug"></div>
+					</div>
+					<?php $this->language->load('product/product'); ?>
+				</div>
+			]]></add>
+		</operation>
+
+		<operation>
+			<search position="after" index="1"><![CDATA[id="content"]]></search>
+            <add><![CDATA[
+			<script type="text/javascript">
+			$(document).ready(function() {
+				var timestamp = 0;
+				$('#product_add_to_cart_form div[class=\'price\']').append($('#esponi_OTF_Container'));
+				$('#product_add_to_cart_form input[type=\'radio\'], #product_add_to_cart_form input[type=\'checkbox\'], #product_add_to_cart_form select').bind("change", function(){ esponi_OTF($(this)); });
+				$('#product_add_to_cart_form input[type=\'text\'], #product_add_to_cart_form textarea').bind("keyup", function(){ esponi_OTF($(this)); });
+				$('#product_add_to_cart_form input[type=\'hidden\']').bind("change", function(){ esponi_OTF($(this)); });
+				function esponi_OTF(el) {
+					var esponi_name = el.prop("name");							
+					if(esponi_name.substr(0, 11)=="ESPONI_CHK_") return;
+					var esponi_data = $('#product_add_to_cart_form input[type=\'text\'], #product_add_to_cart_form input[type=\'hidden\'], #product_add_to_cart_form input[type=\'radio\']:checked, #product_add_to_cart_form input[type=\'checkbox\']:checked, #product_add_to_cart_form select, #product_add_to_cart_form textarea');
+					timestamp = timestamp + 1;
+					blurStand("blur");
+					$.ajax({
+						url: 'index.php?route=checkout/cart/esponi_OTF&timestamp=' + timestamp,
+						type: 'post',
+						data: esponi_data,
+						dataType: 'html',
+						success: function(rhtml) {
+							if(rhtml!="") {								
+								recv = rhtml.split("xOPAx");
+								if(recv.length>0) {
+									thisok = recv[0];
+									thisunit = recv[1];
+									thisqt = recv[2];
+									thistotal = recv[3];
+									thistimestamp = recv[4];
+									thisdebug = recv[5];
+								}								
+								if(thistimestamp==timestamp) {
+									if(thisok=="Ok") {										
+										$('#esponi_OTF_Unit').html(thisunit);
+										$('#esponi_OTF_Total').html(thistotal);
+										if(!(thisqt=="1")) {
+											$('#esponi_OTF_Unit').css("display","block");
+											$('#esponi_OTF_UnitText').css("display","block");
+										} else {
+											$('#esponi_OTF_Unit').css("display","none");
+											$('#esponi_OTF_UnitText').css("display","none");
+										}
+										if(!(thisdebug=="off" || thisdebug=="")) {
+											$('#esponi_OTF_CFODebug').html(thisdebug);
+											$('#esponi_OTF_CFODebug').css("display","block");
+										} else {
+											$('#esponi_OTF_CFODebug').html('');
+											$('#esponi_OTF_CFODebug').css("display","none");
+										}
+										$('#esponi_OTF').css("display","block");
+										blurStand("show");
+									} else {										
+										esponi_hideAll();
+									}	
+								}							
+							}
+						}
+					});
+				}
+				function esponi_hideAll() {					
+					$('#esponi_OTF').css("display","none");
+					$('#esponi_OTF_Unit').css("display","none");
+					$('#esponi_OTF_UnitText').css("display","none");
+					$('#esponi_OTF_Unit').html('');
+					$('#esponi_OTF_Total').html('');
+					$('#esponi_OTF_CFODebug').html('');
+					$('#esponi_OTF_CFODebug').css("display","none");
+				}
+				function blurStand(state) {
+					if($('#esponi_OTF').css("display")=="block") {
+						if(state=='blur') {
+							ealpha = 0.45;
+						} else {
+							ealpha = 1;
+						}
+						if($('#esponi_OTF_Unit').css("display")=="block") $('#esponi_OTF_Unit').fadeTo(150, ealpha);
+						if($('#esponi_OTF_Total').css("display")=="block") $('#esponi_OTF_Total').fadeTo(150, ealpha);
+					}
+				}
+			});
+			</script>
+			]]></add>
+		</operation>
+	</file>
+</modification>

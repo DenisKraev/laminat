@@ -1170,7 +1170,23 @@ class ControllerCatalogProduct extends Controller {
     	} else {
 			$this->data['subtract'] = 1;
 		}
-		
+
+    if (isset($this->request->post['unit_count'])) {
+      $this->data['unit_count'] = $this->request->post['unit_count'];
+    } elseif (!empty($product_info)) {
+      $this->data['unit_count'] = $product_info['unit_count'];
+    } else {
+      $this->data['unit_count'] = 2;
+    }
+
+    if (isset($this->request->post['meters_package'])) {
+      $this->data['meters_package'] = $this->request->post['meters_package'];
+    } elseif (!empty($product_info)) {
+      $this->data['meters_package'] = $product_info['meters_package'];
+    } else {
+      $this->data['meters_package'] = '';
+    }
+
 		if (isset($this->request->post['sort_order'])) {
       		$this->data['sort_order'] = $this->request->post['sort_order'];
     	} elseif (!empty($product_info)) {

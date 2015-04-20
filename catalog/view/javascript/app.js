@@ -88,6 +88,10 @@ $(document).ready(function(){
         $.fancybox.close();
     });
 
+    $('.product-info .statuses img').tooltipster({
+        position: 'right'
+    });
+
 //    $('.prod-slider').lightSlider({
 //        gallery: true,
 //        loop: true,

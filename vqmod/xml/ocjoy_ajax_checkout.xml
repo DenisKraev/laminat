@@ -204,26 +204,26 @@
       ]]></add>
     </operation>
   </file>
-  <file name="catalog/view/theme/*/template/product/product.tpl">
-       <operation error="skip">
-        <search position="after"><![CDATA[<input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button" />]]></search>
-        <add><![CDATA[
-          <?php if ($this->data['show_on_product'] == 1 && $this->data['quantity'] > 0) { ?>
-          <a onclick="AjaxCheckoutOcjoy('<?php echo $product_id; ?>');" class="ajaxbutton button"><?php echo $ajaxbutton_cart; ?></a>
-          <?php } ?>
-        ]]></add>
-      </operation>
-    </file>
-  <file name="catalog/view/theme/*/template/product/category.tpl">
-     <operation error="skip">
-      <search position="after"><![CDATA[<input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />]]></search>
-      <add><![CDATA[
-        <?php if ($this->data['show_on_category'] == 1 && $product['quantity'] > 0) { ?>
-        <br /><br /><a onclick="AjaxCheckoutOcjoy('<?php echo $product['product_id']; ?>');" class="ajaxbutton button"><?php echo $ajaxbutton_cart; ?></a>
-        <?php } ?>
-        ]]></add>
-    </operation>
-  </file>
+  <!--<file name="catalog/view/theme/*/template/product/product.tpl">-->
+       <!--<operation error="skip">-->
+        <!--<search position="after"><![CDATA[<input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button btn-cart-style" />]]></search>-->
+        <!--<add><![CDATA[-->
+          <!--<?php if ($this->data['show_on_product'] == 1 && $this->data['quantity'] > 0) { ?>-->
+          <!--<a onclick="AjaxCheckoutOcjoy('<?php echo $product_id; ?>');" class="ajaxbutton button btn-style"><?php echo $ajaxbutton_cart; ?></a>-->
+          <!--<?php } ?>-->
+        <!--]]></add>-->
+      <!--</operation>-->
+    <!--</file>-->
+  <!--<file name="catalog/view/theme/*/template/product/category.tpl">-->
+     <!--<operation error="skip">-->
+      <!--<search position="after"><![CDATA[<input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />]]></search>-->
+      <!--<add><![CDATA[-->
+        <!--<?php if ($this->data['show_on_category'] == 1 && $product['quantity'] > 0) { ?>-->
+        <!--<br /><br /><a onclick="AjaxCheckoutOcjoy('<?php echo $product['product_id']; ?>');" class="ajaxbutton button"><?php echo $ajaxbutton_cart; ?></a>-->
+        <!--<?php } ?>-->
+        <!--]]></add>-->
+    <!--</operation>-->
+  <!--</file>-->
   <file name="catalog/view/theme/*/template/product/special.tpl">
      <operation error="skip">
       <search position="replace"><![CDATA[<div class="cart"><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" /></div>]]></search>

@@ -1,20 +1,20 @@
 /*
 Error: Undefined mixin 'box-shadow'.
-        on line 18 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/statuses.sass, in `box-shadow'
-        from line 18 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/statuses.sass
+        on line 23 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/statuses.sass, in `box-shadow'
+        from line 23 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/statuses.sass
 
-13:   border: 1px solid #ede5df
-14:   color: #6e6e6e
-15:   font-family: Verdana, sans-serif
-16:   font-size: 10px
-17:   line-height: 14px
-18:   +box-shadow(2px 2px 5px #8d8d8d)
-19: .tooltipster-content
-20:   max-width: 200px
+18:   border: 1px solid #ede5df
+19:   color: #6e6e6e
+20:   font-family: Verdana, sans-serif
+21:   font-size: 10px
+22:   line-height: 14px
+23:   +box-shadow(2px 2px 5px #8d8d8d)
+24: .tooltipster-content
+25:   max-width: 200px
 
 Backtrace:
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/statuses.sass:18:in `box-shadow'
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/statuses.sass:18
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/statuses.sass:23:in `box-shadow'
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/statuses.sass:23
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
@@ -70,4 +70,4 @@ C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/ada
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'box-shadow'.\A         on line 18 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/statuses.sass, in `box-shadow'\A         from line 18 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/statuses.sass\A \A 13:   border: 1px solid #ede5df\A 14:   color: #6e6e6e\A 15:   font-family: Verdana, sans-serif\A 16:   font-size: 10px\A 17:   line-height: 14px\A 18:   +box-shadow(2px 2px 5px #8d8d8d)\A 19: .tooltipster-content\A 20:   max-width: 200px"; }
+  content: "Error: Undefined mixin 'box-shadow'.\A         on line 23 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/statuses.sass, in `box-shadow'\A         from line 23 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/statuses.sass\A \A 18:   border: 1px solid #ede5df\A 19:   color: #6e6e6e\A 20:   font-family: Verdana, sans-serif\A 21:   font-size: 10px\A 22:   line-height: 14px\A 23:   +box-shadow(2px 2px 5px #8d8d8d)\A 24: .tooltipster-content\A 25:   max-width: 200px"; }

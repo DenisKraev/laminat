@@ -1,2 +1,18 @@
 @charset "UTF-8";
 /* страница продукта */
+.product-info {
+  overflow: auto;
+  margin-bottom: 20px;
+}
+.product-info > .left {
+  float: left;
+  margin-right: 15px;
+}
+.product-info > .left + .right {
+  margin-left: 290px;
+}
+.product-info .image {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #e3e3e3;
+}
