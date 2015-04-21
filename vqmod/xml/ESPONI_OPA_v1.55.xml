@@ -30,9 +30,11 @@
 					if ($product_info) {
 						// Minimum quantity validation
 						$quantity = 1;
+
 						if (isset($this->request->post['quantity'])) {
 							$quantity = (int) $this->request->post['quantity'];
-						}						
+						}
+
 						if (!$quantity) {
 							$quantity = 1;
 						}
@@ -66,8 +68,8 @@
 							$key = (int)$product_id . ':' . base64_encode(serialize($option));
 						}
 						$this->session->data['OTFCart_CFODebug'] = "";
-						$this->session->data['OTFCart'][$key] = (int)$quantity;		
-						$product_data = $this->cart->getProducts("OTF");	
+						$this->session->data['OTFCart'][$key] = (int)$quantity;
+						$product_data = $this->cart->getProducts("OTF");
 						$this->session->data['OTFCart'] = array();
 						foreach ($product_data as $product) {
 							$cartTotal_OTF = $cartTotal_OTF + $product["price"];

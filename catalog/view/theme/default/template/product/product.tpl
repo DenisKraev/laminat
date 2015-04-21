@@ -221,6 +221,9 @@
       <div class="cart">
         <?php echo $text_qty; ?>
         <input type="text" name="quantity" size="2" value="<?php echo $minimum; ?>" />
+
+<!--        <input type="text" name="count_meter" size="2" value="" />-->
+
         <input type="hidden" name="product_id" size="2" value="<?php echo $product_id; ?>" />
         &nbsp;
         <input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button btn-cart-style" />

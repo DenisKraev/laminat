@@ -1070,8 +1070,9 @@ a.title-style:hover {
   background: url('/catalog/view/theme/default/image/app/dot-grey-7x7.png?1429095096') 0px 50% no-repeat;
   padding-left: 14px;
 }
-.category-menu > ul > li > ul > li > ul > li > a:hover {
+.category-menu > ul > li > ul > li > ul > li > a:hover, .category-menu > ul > li > ul > li > ul > li > a.active {
   text-decoration: none;
+  color: #eb8c2a;
 }
 .category-menu > ul > li > ul > li > ul ul {
   padding-left: 14px;
@@ -1079,7 +1080,8 @@ a.title-style:hover {
 .category-menu > ul > li > ul > li > ul a {
   color: #817f7f;
 }
-.category-menu > ul > li > ul > li > ul a:hover {
+.category-menu > ul > li > ul > li > ul a:hover, .category-menu > ul > li > ul > li > ul a.active {
+  color: #eb8c2a;
   text-decoration: none;
 }
 
@@ -1459,7 +1461,7 @@ a.title-style:hover {
   margin-right: 15px;
 }
 .product-info > .left + .right {
-  margin-left: 290px;
+  margin-left: 312px;
 }
 .product-info .image {
   position: relative;

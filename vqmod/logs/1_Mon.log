@@ -56,3 +56,63 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div class="product-inf
 ----------------------------------------------------------------------
 
 
+---------- Date: 2015-04-20 16:01:55 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=module/simple/custom&amp;set=order&amp;token=4183f32c648069f648d64f1aeafb0d7b&amp;type=order&amp;id=3
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\laminat\vqmod/xml/allpagelayout.xml
+   id        : All Page Layout
+   version   : 1.0.0
+   vqmver    : 2.4.1
+   author    : LongNH
+
+File Name    : admin/controller/module/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->data['layouts'] = $this->model_design_layout->getLayouts();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-04-20 16:01:55 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=module/simple/custom&amp;set=payment_address&amp;token=4183f32c648069f648d64f1aeafb0d7b&amp;type=order&amp;id=3
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\laminat\vqmod/xml/allpagelayout.xml
+   id        : All Page Layout
+   version   : 1.0.0
+   vqmver    : 2.4.1
+   author    : LongNH
+
+File Name    : admin/controller/module/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->data['layouts'] = $this->model_design_layout->getLayouts();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-04-20 17:05:00 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=module/simple/custom&amp;set=payment_address&amp;token=4183f32c648069f648d64f1aeafb0d7b&amp;type=order&amp;id=8
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\laminat\vqmod/xml/allpagelayout.xml
+   id        : All Page Layout
+   version   : 1.0.0
+   vqmver    : 2.4.1
+   author    : LongNH
+
+File Name    : admin/controller/module/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->data['layouts'] = $this->model_design_layout->getLayouts();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-04-20 17:05:00 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=module/simple/custom&amp;set=order&amp;token=4183f32c648069f648d64f1aeafb0d7b&amp;type=order&amp;id=8
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\laminat\vqmod/xml/allpagelayout.xml
+   id        : All Page Layout
+   version   : 1.0.0
+   vqmver    : 2.4.1
+   author    : LongNH
+
+File Name    : admin/controller/module/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->data['layouts'] = $this->model_design_layout->getLayouts();
+
+----------------------------------------------------------------------
+
+

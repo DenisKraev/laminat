@@ -294,6 +294,8 @@ class ControllerProductProduct extends Controller {
 			} else {
 				$this->data['stock'] = $this->language->get('text_instock');
 			}
+
+      //$this->data['count_meter'] = $product_info['meters_package'];
 			
 			$this->load->model('tool/image');
 
@@ -401,7 +403,9 @@ class ControllerProductProduct extends Controller {
 				$this->data['minimum'] = 1;
 			}
 			
-			$this->data['review_status'] = $this->config->get('config_review_status');
+			$this->data['unit_count'] = $product_info['unit_count'];
+
+      $this->data['review_status'] = $this->config->get('config_review_status');
 			$this->data['reviews'] = sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']);
 			$this->data['rating'] = (int)$product_info['rating'];
 			$this->data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');

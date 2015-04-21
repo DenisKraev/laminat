@@ -104,6 +104,7 @@
 			<search position="after" index="1"><![CDATA[class Cart {]]></search>
             <add><![CDATA[			
 			public function esponi_lookFor($options, $id, $TextOrValue) {
+
 				foreach ($options as $option) {
 					if($option["option_id"]==$id) {
 						if($TextOrValue=="Text") {
@@ -222,7 +223,10 @@
 
 		<operation>
 			<search position="before" index="1"><![CDATA[// Reward Points]]></search>
-            <add><![CDATA[		
+            <add><![CDATA[
+            	$unit_count = $product_query->row['unit_count'];
+            	$meters_package = $product_query->row['meters_package'];
+
 				$this->session->data['OTFCart_CFODebug'] = "";
 				$esponi_FormulaTrick = trim($product_query->row['esponi_priceFormula']);
 				if($esponi_FormulaTrick!="") {
@@ -260,6 +264,10 @@
 					$esponi_FormulaTrick = preg_replace('/CFO_iDiscounts/i', '\$this->CFO_iDiscounts', $esponi_FormulaTrick);					
 					$esponi_FormulaTrick = preg_replace('/qty/i', $quantity, $esponi_FormulaTrick);
 					$esponi_FormulaTrick = preg_replace('/quantity/i', $quantity, $esponi_FormulaTrick);
+
+					$esponi_FormulaTrick = preg_replace('/meters_package/i', $meters_package, $esponi_FormulaTrick);
+					$esponi_FormulaTrick = preg_replace('/unit_count/i', $unit_count, $esponi_FormulaTrick);
+
 					$esponi_FormulaTrick = preg_replace('/price/i', $price, $esponi_FormulaTrick);
 					$esponi_FormulaTrick = preg_replace('/MSU/i', $esponi_option_SquareMeters, $esponi_FormulaTrick);
 					$esponi_FormulaTrick = preg_replace('/ADD/i', $esponi_option_price_Additive, $esponi_FormulaTrick);

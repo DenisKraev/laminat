@@ -154,7 +154,7 @@ class Cart {
 								);						
 							}
 						}
-					} 
+					}
 				
 					if ($this->customer->isLogged()) {
 						$customer_group_id = $this->customer->getCustomerGroupId();
