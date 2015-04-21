@@ -16,7 +16,7 @@ define('DIR_IMAGE', 'D:\OpenServer\domains\laminat/image/');
 define('DIR_CACHE', 'D:\OpenServer\domains\laminat/system/cache/');
 define('DIR_DOWNLOAD', 'D:\OpenServer\domains\laminat/download/');
 define('DIR_LOGS', 'D:\OpenServer\domains\laminat/system/logs/');
-
+//wsegerge5g
 // DB
 define('DB_DRIVER', 'mysql');
 define('DB_HOSTNAME', '127.0.0.1');
