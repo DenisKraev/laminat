@@ -295,8 +295,9 @@ class ControllerProductProduct extends Controller {
 				$this->data['stock'] = $this->language->get('text_instock');
 			}
 
-      //$this->data['count_meter'] = $product_info['meters_package'];
-			
+      $this->data['meters_package'] = $product_info['meters_package'];
+      $this->data['unit_count'] = $product_info['unit_count'];
+
 			$this->load->model('tool/image');
 
 			if ($product_info['image']) {

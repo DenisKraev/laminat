@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 20 2015 г., 11:27
+-- Время создания: Апр 21 2015 г., 16:16
 -- Версия сервера: 5.5.41-log
 -- Версия PHP: 5.3.29
 
@@ -1789,7 +1789,14 @@ CREATE TABLE IF NOT EXISTS `option` (
   `type` varchar(32) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`option_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+
+--
+-- Дамп данных таблицы `option`
+--
+
+INSERT INTO `option` (`option_id`, `type`, `sort_order`) VALUES
+(13, 'text', 0);
 
 -- --------------------------------------------------------
 
@@ -1803,6 +1810,13 @@ CREATE TABLE IF NOT EXISTS `option_description` (
   `name` varchar(128) NOT NULL,
   PRIMARY KEY (`option_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `option_description`
+--
+
+INSERT INTO `option_description` (`option_id`, `language_id`, `name`) VALUES
+(13, 1, 'Покупаемое количество');
 
 -- --------------------------------------------------------
 
@@ -1921,14 +1935,38 @@ CREATE TABLE IF NOT EXISTS `order` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
 
 --
 -- Дамп данных таблицы `order`
 --
 
 INSERT INTO `order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, `store_name`, `store_url`, `customer_id`, `customer_group_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `payment_firstname`, `payment_lastname`, `payment_company`, `payment_company_id`, `payment_tax_id`, `payment_address_1`, `payment_address_2`, `payment_city`, `payment_postcode`, `payment_country`, `payment_country_id`, `payment_zone`, `payment_zone_id`, `payment_address_format`, `payment_method`, `payment_code`, `shipping_firstname`, `shipping_lastname`, `shipping_company`, `shipping_address_1`, `shipping_address_2`, `shipping_city`, `shipping_postcode`, `shipping_country`, `shipping_country_id`, `shipping_zone`, `shipping_zone_id`, `shipping_address_format`, `shipping_method`, `shipping_code`, `comment`, `total`, `order_status_id`, `affiliate_id`, `commission`, `language_id`, `currency_id`, `currency_code`, `currency_value`, `ip`, `forwarded_ip`, `user_agent`, `accept_language`, `date_added`, `date_modified`) VALUES
-(1, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'srtghdrt', '', 'nomail@nomail.com', '52346546', '', 'srtghdrt', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'srtghdrt', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '100.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-17 16:06:02', '2015-04-17 16:06:02');
+(1, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'srtghdrt', '', 'nomail@nomail.com', '52346546', '', 'srtghdrt', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'srtghdrt', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '100.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-17 16:06:02', '2015-04-17 16:06:02'),
+(2, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'нергвен', '', 'nomail@nomail.com', '4657567', '', 'нергвен', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'нергвен', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '18.7648', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-20 16:56:43', '2015-04-20 16:56:43'),
+(3, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'врвкер', '', 'nomail@nomail.com', '123', '', 'врвкер', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'врвкер', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '0.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-20 16:59:07', '2015-04-20 16:59:07'),
+(4, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'рвекр', '', 'nomail@nomail.com', '46345', '', 'рвекр', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'рвекр', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '0.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-20 17:58:09', '2015-04-20 17:58:09'),
+(5, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'ыпарвкпр', '', 'nomail@nomail.com', '23452345', '', 'ыпарвкпр', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'ыпарвкпр', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '0.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-20 17:59:43', '2015-04-20 17:59:43'),
+(6, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'парвапр', '', 'nomail@nomail.com', '3452345', '', 'парвапр', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'парвапр', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '9.3824', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-20 18:03:17', '2015-04-20 18:03:17'),
+(7, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'екрвке', '', 'nomail@nomail.com', '345345345', '', 'екрвке', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'екрвке', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '9.3824', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-20 18:04:04', '2015-04-20 18:04:04'),
+(8, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'ыпкрвкер', '', 'nomail@nomail.com', '345635345', '', 'ыпкрвкер', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'ыпкрвкер', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '9.3824', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-20 18:04:21', '2015-04-20 18:04:21'),
+(9, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'првкервке', '', 'nomail@nomail.com', '34563456345', '', 'првкервке', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'првкервке', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '400.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-20 18:06:44', '2015-04-20 18:06:44'),
+(10, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'ыварпывап', '', 'nomail@nomail.com', '345345', '', 'ыварпывап', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'ыварпывап', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '100.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-20 18:08:29', '2015-04-20 18:08:29'),
+(11, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'ывапывп', '', 'nomail@nomail.com', '345345', '', 'ывапывп', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'ывапывп', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '2300.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-20 18:10:05', '2015-04-20 18:10:05'),
+(12, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'esrgserg', '', 'nomail@nomail.com', '123454534', '', 'esrgserg', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'esrgserg', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '0.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 10:06:48', '2015-04-21 10:06:48'),
+(13, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'sthgstrh45234', '', 'nomail@nomail.com', '23452345', '', 'sthgstrh45234', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'sthgstrh45234', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '2300.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 10:08:20', '2015-04-21 10:08:20'),
+(14, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'dyhjdyj', '', 'nomail@nomail.com', '56346', '', 'dyhjdyj', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'dyhjdyj', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '0.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 10:11:37', '2015-04-21 10:11:37'),
+(15, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'sdhs', '', 'nomail@nomail.com', '5463456', '', 'sdhs', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'sdhs', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '0.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 10:13:53', '2015-04-21 10:13:53'),
+(16, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'xdghsdgh', '', 'nomail@nomail.com', '563456', '', 'xdghsdgh', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'xdghsdgh', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '18.7648', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 10:20:53', '2015-04-21 10:20:53'),
+(17, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'sghdrt', '', 'nomail@nomail.com', '563456345', '', 'sghdrt', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'sghdrt', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '18.7648', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 10:21:26', '2015-04-21 10:21:26'),
+(18, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'efawef', '', 'nomail@nomail.com', '23451235', '', 'efawef', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'efawef', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '0.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 10:22:37', '2015-04-21 10:22:37'),
+(19, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'sdfhgdf', '', 'nomail@nomail.com', '345345', '', 'sdfhgdf', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'sdfhgdf', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '0.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 10:37:19', '2015-04-21 10:37:19'),
+(20, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'sfghdgh', '', 'nomail@nomail.com', '345234', '', 'sfghdgh', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'sfghdgh', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '18.7648', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 10:39:11', '2015-04-21 10:39:11'),
+(21, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'wteghwse', 'sthrt', 'hser@rg.er', '564363456', '', 'wteghwse', 'sthrt', '', '', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', 'Оплата при доставке', 'cod', 'wteghwse', 'sthrt', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', 'Фиксированная стоимость доставки', 'flat.flat', '', '98.8240', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4', '2015-04-21 10:44:15', '2015-04-21 10:44:21'),
+(22, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'ырые', '', 'nomail@nomail.com', '456345', '', 'ырые', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'ырые', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '0.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 10:47:28', '2015-04-21 10:47:28'),
+(23, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'првпр', '', 'nomail@nomail.com', '35623456', '', 'првпр', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'првпр', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '4.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 11:01:59', '2015-04-21 11:01:59'),
+(24, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'впра', '', 'nomail@nomail.com', '345345', '', 'впра', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'впра', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '2300.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 12:09:17', '2015-04-21 12:09:17'),
+(25, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'явапява', '', 'nomail@nomail.com', 'п123124', '', 'явапява', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'явапява', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '0.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 12:11:59', '2015-04-21 12:11:59');
 
 -- --------------------------------------------------------
 
@@ -2040,14 +2078,38 @@ CREATE TABLE IF NOT EXISTS `order_history` (
   `comment` text NOT NULL,
   `date_added` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`order_history_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
 
 --
 -- Дамп данных таблицы `order_history`
 --
 
 INSERT INTO `order_history` (`order_history_id`, `order_id`, `order_status_id`, `notify`, `comment`, `date_added`) VALUES
-(1, 1, 1, 1, '', '2015-04-17 16:06:02');
+(1, 1, 1, 1, '', '2015-04-17 16:06:02'),
+(2, 2, 1, 1, '', '2015-04-20 16:56:43'),
+(3, 3, 1, 1, '', '2015-04-20 16:59:07'),
+(4, 4, 1, 1, '', '2015-04-20 17:58:09'),
+(5, 5, 1, 1, '', '2015-04-20 17:59:43'),
+(6, 6, 1, 1, '', '2015-04-20 18:03:17'),
+(7, 7, 1, 1, '', '2015-04-20 18:04:04'),
+(8, 8, 1, 1, '', '2015-04-20 18:04:21'),
+(9, 9, 1, 1, '', '2015-04-20 18:06:44'),
+(10, 10, 1, 1, '', '2015-04-20 18:08:29'),
+(11, 11, 1, 1, '', '2015-04-20 18:10:05'),
+(12, 12, 1, 1, '', '2015-04-21 10:06:48'),
+(13, 13, 1, 1, '', '2015-04-21 10:08:20'),
+(14, 14, 1, 1, '', '2015-04-21 10:11:37'),
+(15, 15, 1, 1, '', '2015-04-21 10:13:53'),
+(16, 16, 1, 1, '', '2015-04-21 10:20:53'),
+(17, 17, 1, 1, '', '2015-04-21 10:21:26'),
+(18, 18, 1, 1, '', '2015-04-21 10:22:37'),
+(19, 19, 1, 1, '', '2015-04-21 10:37:19'),
+(20, 20, 1, 1, '', '2015-04-21 10:39:11'),
+(21, 21, 1, 1, '', '2015-04-21 10:44:21'),
+(22, 22, 1, 1, '', '2015-04-21 10:47:28'),
+(23, 23, 1, 1, '', '2015-04-21 11:01:59'),
+(24, 24, 1, 1, '', '2015-04-21 12:09:17'),
+(25, 25, 1, 1, '', '2015-04-21 12:11:59');
 
 -- --------------------------------------------------------
 
@@ -2065,7 +2127,14 @@ CREATE TABLE IF NOT EXISTS `order_option` (
   `value` text NOT NULL,
   `type` varchar(32) NOT NULL,
   PRIMARY KEY (`order_option_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Дамп данных таблицы `order_option`
+--
+
+INSERT INTO `order_option` (`order_option_id`, `order_id`, `order_product_id`, `product_option_id`, `product_option_value_id`, `name`, `value`, `type`) VALUES
+(1, 21, 21, 227, 0, 'Количество метров', '23', 'text');
 
 -- --------------------------------------------------------
 
@@ -2085,14 +2154,38 @@ CREATE TABLE IF NOT EXISTS `order_product` (
   `tax` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `reward` int(8) NOT NULL,
   PRIMARY KEY (`order_product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
 
 --
 -- Дамп данных таблицы `order_product`
 --
 
 INSERT INTO `order_product` (`order_product_id`, `order_id`, `product_id`, `name`, `model`, `quantity`, `price`, `total`, `tax`, `reward`) VALUES
-(1, 1, 28, 'HTC Touch HD', 'Товар 1', 1, '100.0000', '100.0000', '0.0000', 400);
+(1, 1, 28, 'HTC Touch HD', 'Товар 1', 1, '100.0000', '100.0000', '0.0000', 400),
+(2, 2, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '18.7648', '18.7648', '0.0000', 0),
+(3, 3, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
+(4, 4, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
+(5, 5, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
+(6, 6, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '9.3824', '9.3824', '0.0000', 0),
+(7, 7, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '9.3824', '9.3824', '0.0000', 0),
+(8, 8, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '9.3824', '9.3824', '0.0000', 0),
+(9, 9, 30, 'Canon EOS 5D', 'Товар 3', 1, '400.0000', '400.0000', '0.0000', 0),
+(10, 10, 30, 'Canon EOS 5D', 'Товар 3', 1, '100.0000', '100.0000', '0.0000', 0),
+(11, 11, 30, 'Canon EOS 5D', 'Товар 3', 1, '2300.0000', '2300.0000', '0.0000', 0),
+(12, 12, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
+(13, 13, 30, 'Canon EOS 5D', 'Товар 3', 1, '2300.0000', '2300.0000', '0.0000', 0),
+(14, 14, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
+(15, 15, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
+(16, 16, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '18.7648', '18.7648', '0.0000', 0),
+(17, 17, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '18.7648', '18.7648', '0.0000', 0),
+(18, 18, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
+(19, 19, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
+(20, 20, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '18.7648', '18.7648', '0.0000', 0),
+(21, 21, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '93.8240', '93.8240', '0.0000', 0),
+(22, 22, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
+(23, 23, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '4.0000', '4.0000', '0.0000', 0),
+(24, 24, 30, 'Canon EOS 5D', 'Товар 3', 1, '2300.0000', '2300.0000', '0.0000', 0),
+(25, 25, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0);
 
 -- --------------------------------------------------------
 
@@ -2140,7 +2233,7 @@ CREATE TABLE IF NOT EXISTS `order_total` (
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`order_total_id`),
   KEY `idx_orders_total_orders_id` (`order_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=52 ;
 
 --
 -- Дамп данных таблицы `order_total`
@@ -2148,7 +2241,56 @@ CREATE TABLE IF NOT EXISTS `order_total` (
 
 INSERT INTO `order_total` (`order_total_id`, `order_id`, `code`, `title`, `text`, `value`, `sort_order`) VALUES
 (1, 1, 'sub_total', 'Сумма', '100.00 р.', '100.0000', 1),
-(2, 1, 'total', 'Итого', '100.00 р.', '100.0000', 9);
+(2, 1, 'total', 'Итого', '100.00 р.', '100.0000', 9),
+(3, 2, 'sub_total', 'Сумма', '18.76 р.', '18.7648', 1),
+(4, 2, 'total', 'Итого', '18.76 р.', '18.7648', 9),
+(5, 3, 'sub_total', 'Сумма', '0.00 р.', '0.0000', 1),
+(6, 3, 'total', 'Итого', '0.00 р.', '0.0000', 9),
+(7, 4, 'sub_total', 'Сумма', '0.00 р.', '0.0000', 1),
+(8, 4, 'total', 'Итого', '0.00 р.', '0.0000', 9),
+(9, 5, 'sub_total', 'Сумма', '0.00 р.', '0.0000', 1),
+(10, 5, 'total', 'Итого', '0.00 р.', '0.0000', 9),
+(11, 6, 'sub_total', 'Сумма', '9.38 р.', '9.3824', 1),
+(12, 6, 'total', 'Итого', '9.38 р.', '9.3824', 9),
+(13, 7, 'sub_total', 'Сумма', '9.38 р.', '9.3824', 1),
+(14, 7, 'total', 'Итого', '9.38 р.', '9.3824', 9),
+(15, 8, 'sub_total', 'Сумма', '9.38 р.', '9.3824', 1),
+(16, 8, 'total', 'Итого', '9.38 р.', '9.3824', 9),
+(17, 9, 'sub_total', 'Сумма', '400.00 р.', '400.0000', 1),
+(18, 9, 'total', 'Итого', '400.00 р.', '400.0000', 9),
+(19, 10, 'sub_total', 'Сумма', '100.00 р.', '100.0000', 1),
+(20, 10, 'total', 'Итого', '100.00 р.', '100.0000', 9),
+(21, 11, 'sub_total', 'Сумма', '2 300.00 р.', '2300.0000', 1),
+(22, 11, 'total', 'Итого', '2 300.00 р.', '2300.0000', 9),
+(23, 12, 'sub_total', 'Сумма', '0.00 р.', '0.0000', 1),
+(24, 12, 'total', 'Итого', '0.00 р.', '0.0000', 9),
+(25, 13, 'sub_total', 'Сумма', '2 300.00 р.', '2300.0000', 1),
+(26, 13, 'total', 'Итого', '2 300.00 р.', '2300.0000', 9),
+(27, 14, 'sub_total', 'Сумма', '0.00 р.', '0.0000', 1),
+(28, 14, 'total', 'Итого', '0.00 р.', '0.0000', 9),
+(29, 15, 'sub_total', 'Сумма', '0.00 р.', '0.0000', 1),
+(30, 15, 'total', 'Итого', '0.00 р.', '0.0000', 9),
+(31, 16, 'sub_total', 'Сумма', '18.76 р.', '18.7648', 1),
+(32, 16, 'total', 'Итого', '18.76 р.', '18.7648', 9),
+(33, 17, 'sub_total', 'Сумма', '18.76 р.', '18.7648', 1),
+(34, 17, 'total', 'Итого', '18.76 р.', '18.7648', 9),
+(35, 18, 'sub_total', 'Сумма', '0.00 р.', '0.0000', 1),
+(36, 18, 'total', 'Итого', '0.00 р.', '0.0000', 9),
+(37, 19, 'sub_total', 'Сумма', '0.00 р.', '0.0000', 1),
+(38, 19, 'total', 'Итого', '0.00 р.', '0.0000', 9),
+(39, 20, 'sub_total', 'Сумма', '18.76 р.', '18.7648', 1),
+(40, 20, 'total', 'Итого', '18.76 р.', '18.7648', 9),
+(41, 21, 'sub_total', 'Сумма', '93.82 р.', '93.8240', 1),
+(42, 21, 'shipping', 'Фиксированная стоимость доставки', '5.00 р.', '5.0000', 3),
+(43, 21, 'total', 'Итого', '98.82 р.', '98.8240', 9),
+(44, 22, 'sub_total', 'Сумма', '0.00 р.', '0.0000', 1),
+(45, 22, 'total', 'Итого', '0.00 р.', '0.0000', 9),
+(46, 23, 'sub_total', 'Сумма', '4.00 р.', '4.0000', 1),
+(47, 23, 'total', 'Итого', '4.00 р.', '4.0000', 9),
+(48, 24, 'sub_total', 'Сумма', '2 300.00 р.', '2300.0000', 1),
+(49, 24, 'total', 'Итого', '2 300.00 р.', '2300.0000', 9),
+(50, 25, 'sub_total', 'Сумма', '0.00 р.', '0.0000', 1),
+(51, 25, 'total', 'Итого', '0.00 р.', '0.0000', 9);
 
 -- --------------------------------------------------------
 
@@ -2223,7 +2365,7 @@ CREATE TABLE IF NOT EXISTS `product` (
 INSERT INTO `product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `unit_count`, `meters_package`, `price`, `esponi_priceFormula`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `date_added`, `date_modified`, `viewed`) VALUES
 (28, 'Товар 1', '', '', '', '', '', '', '', 938, 7, 'data/demo/htc_touch_hd_1.jpg', 5, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:06:50', '2015-04-20 09:41:25', 0),
 (29, 'Товар 2', '', '', '', '', '', '', '', 999, 6, 'data/demo/palm_treo_pro_1.jpg', 6, 1, 1, NULL, '279.9900', '', 0, 0, '2009-02-03', '133.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:42:17', '2015-04-14 17:21:04', 0),
-(30, 'Товар 3', '0907', '', '', '', '', '', '', 7, 6, 'data/demo/canon_eos_5d_1.jpg', 9, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:59:00', '2015-04-20 09:40:44', 17),
+(30, 'Товар 3', '0907', '', '', '', '', '', '', 3, 6, 'data/demo/canon_eos_5d_1.jpg', 9, 1, 2, '', '100.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:59:00', '2015-04-21 17:06:38', 48),
 (31, 'Товар 4', '', '', '', '', '', '', '', 1000, 6, 'data/demo/nikon_d300_1.jpg', 0, 1, 1, NULL, '80.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 17:00:10', '2015-04-14 17:19:41', 0),
 (32, 'Товар 5', '', '', '', '', '', '', '', 999, 6, 'data/demo/ipod_touch_1.jpg', 8, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 17:07:26', '2015-04-14 17:19:05', 0),
 (33, 'Товар 6', '', '', '', '', '', '', '', 1000, 6, 'data/demo/samsung_syncmaster_941bw.jpg', 0, 1, 1, NULL, '200.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 17:08:31', '2015-04-14 17:21:59', 0),
@@ -2231,7 +2373,7 @@ INSERT INTO `product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`
 (36, 'Товар 9', '', '', '', '', '', '', '', 994, 6, 'data/demo/ipod_nano_1.jpg', 8, 0, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 18:09:19', '2015-04-20 09:41:49', 0),
 (40, 'Товар 11', '', '', '', '', '', '', '', 970, 5, 'data/demo/iphone_1.jpg', 8, 1, 1, NULL, '101.0000', '', 0, 0, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:12', '2015-04-14 17:16:31', 0),
 (41, 'Товар 14', '', '', '', '', '', '', '', 977, 5, 'data/demo/imac_1.jpg', 8, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:26', '2015-04-14 17:16:08', 0),
-(42, 'Товар 15', '0709', '', '', '', '', '', '', 990, 7, 'data/products/img4.jpg', 8, 1, 1, '2,3456', '100.0000', '', 0, 0, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:37', '2015-04-20 12:27:03', 58),
+(42, 'Товар 15', '0709', '', '', '', '', '', '', 972, 7, 'data/products/img4.jpg', 8, 1, 1, '2.3456', '100.0000', '(unit_count == 1) ? (ceil({13}/meters_package)*meters_package)*price : price', 0, 0, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:37', '2015-04-21 10:42:26', 322),
 (43, 'Товар 16', '', '', '', '', '', '', '', 929, 5, 'data/demo/macbook_1.jpg', 8, 0, 1, NULL, '500.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:07:49', '2015-04-20 09:42:06', 2),
 (44, 'Товар 17', '', '', '', '', '', '', '', 1000, 5, 'data/demo/macbook_air_1.jpg', 8, 1, 1, NULL, '1000.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:00', '2015-04-20 09:42:12', 0),
 (45, 'Товар 18', '', '', '', '', '', '', '', 998, 5, 'data/demo/macbook_pro_1.jpg', 8, 1, 1, NULL, '2000.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:17', '2015-04-20 09:42:17', 0),
@@ -2260,8 +2402,8 @@ CREATE TABLE IF NOT EXISTS `product_attribute` (
 --
 
 INSERT INTO `product_attribute` (`product_id`, `attribute_id`, `language_id`, `text`) VALUES
-(42, 12, 1, '31'),
-(42, 13, 1, '32 гр');
+(42, 13, 1, '32 гр'),
+(42, 12, 1, '31');
 
 -- --------------------------------------------------------
 
@@ -2351,14 +2493,14 @@ CREATE TABLE IF NOT EXISTS `product_image` (
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_image_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2738 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2913 ;
 
 --
 -- Дамп данных таблицы `product_image`
 --
 
 INSERT INTO `product_image` (`product_image_id`, `product_id`, `image`, `sort_order`) VALUES
-(2666, 30, 'data/demo/canon_eos_5d_3.jpg', 0),
+(2912, 30, 'data/demo/canon_eos_5d_2.jpg', 0),
 (2668, 47, 'data/demo/hp_2.jpg', 0),
 (2670, 28, 'data/demo/htc_touch_hd_2.jpg', 0),
 (2588, 41, 'data/demo/imac_3.jpg', 0),
@@ -2385,7 +2527,7 @@ INSERT INTO `product_image` (`product_image_id`, `product_id`, `image`, `sort_or
 (2602, 48, 'data/demo/ipod_classic_3.jpg', 0),
 (2592, 40, 'data/demo/iphone_3.jpg', 0),
 (2591, 40, 'data/demo/iphone_5.jpg', 0),
-(2665, 30, 'data/demo/canon_eos_5d_2.jpg', 0),
+(2911, 30, 'data/demo/canon_eos_5d_3.jpg', 0),
 (2667, 47, 'data/demo/hp_3.jpg', 0),
 (2669, 28, 'data/demo/htc_touch_hd_3.jpg', 0),
 (2587, 41, 'data/demo/imac_2.jpg', 0),
@@ -2414,13 +2556,13 @@ INSERT INTO `product_image` (`product_image_id`, `product_id`, `image`, `sort_or
 (2689, 49, 'data/demo/samsung_tab_5.jpg', 0),
 (2688, 49, 'data/demo/samsung_tab_6.jpg', 0),
 (2687, 49, 'data/demo/samsung_tab_7.jpg', 0),
-(2737, 42, 'data/demo/canon_eos_5d_1.jpg', 0),
-(2736, 42, 'data/demo/compaq_presario.jpg', 0),
-(2735, 42, 'data/demo/hp_1.jpg', 0),
-(2734, 42, 'data/demo/canon_logo.jpg', 0),
+(2908, 42, 'data/demo/canon_eos_5d_2.jpg', 0),
+(2907, 42, 'data/demo/canon_logo.jpg', 0),
+(2906, 42, 'data/demo/hp_1.jpg', 0),
+(2905, 42, 'data/demo/compaq_presario.jpg', 0),
 (2672, 64, 'data/demo/htc_touch_hd_2.jpg', 0),
 (2671, 64, 'data/demo/htc_touch_hd_3.jpg', 0),
-(2733, 42, 'data/demo/canon_eos_5d_2.jpg', 0);
+(2904, 42, 'data/demo/canon_eos_5d_1.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -2435,7 +2577,14 @@ CREATE TABLE IF NOT EXISTS `product_option` (
   `option_value` text NOT NULL,
   `required` tinyint(1) NOT NULL,
   PRIMARY KEY (`product_option_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=227 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=228 ;
+
+--
+-- Дамп данных таблицы `product_option`
+--
+
+INSERT INTO `product_option` (`product_option_id`, `product_id`, `option_id`, `option_value`, `required`) VALUES
+(227, 42, 13, '', 0);
 
 -- --------------------------------------------------------
 
@@ -2494,21 +2643,21 @@ CREATE TABLE IF NOT EXISTS `product_reward` (
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_reward_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=650 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=688 ;
 
 --
 -- Дамп данных таблицы `product_reward`
 --
 
 INSERT INTO `product_reward` (`product_reward_id`, `product_id`, `customer_group_id`, `points`) VALUES
-(649, 42, 1, 0),
+(685, 42, 1, 0),
 (633, 47, 1, 0),
 (634, 28, 1, 0),
 (637, 43, 1, 0),
 (619, 29, 1, 0),
 (613, 48, 1, 0),
 (610, 40, 1, 0),
-(632, 30, 1, 0),
+(687, 30, 1, 0),
 (638, 44, 1, 0),
 (639, 45, 1, 0),
 (617, 31, 1, 0),
@@ -2537,7 +2686,7 @@ CREATE TABLE IF NOT EXISTS `product_special` (
   `date_end` date NOT NULL DEFAULT '0000-00-00',
   PRIMARY KEY (`product_special_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=469 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=502 ;
 
 --
 -- Дамп данных таблицы `product_special`
@@ -2545,7 +2694,7 @@ CREATE TABLE IF NOT EXISTS `product_special` (
 
 INSERT INTO `product_special` (`product_special_id`, `product_id`, `customer_group_id`, `priority`, `price`, `date_start`, `date_end`) VALUES
 (454, 40, 1, 0, '345.0000', '0000-00-00', '0000-00-00'),
-(468, 42, 1, 0, '4.0000', '0000-00-00', '0000-00-00'),
+(501, 42, 1, 0, '4.0000', '0000-00-00', '0000-00-00'),
 (456, 48, 1, 0, '345.0000', '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
@@ -2596,7 +2745,7 @@ CREATE TABLE IF NOT EXISTS `product_to_category` (
 INSERT INTO `product_to_category` (`product_id`, `category_id`, `main_category`) VALUES
 (40, 65, 1),
 (64, 60, 0),
-(30, 20, 0),
+(30, 62, 1),
 (48, 20, 0),
 (44, 64, 0),
 (31, 62, 1),
@@ -2613,7 +2762,7 @@ INSERT INTO `product_to_category` (`product_id`, `category_id`, `main_category`)
 (49, 20, 0),
 (33, 20, 0),
 (44, 59, 1),
-(30, 62, 1),
+(30, 20, 0),
 (45, 20, 0),
 (47, 72, 0),
 (46, 20, 0),
@@ -2636,8 +2785,8 @@ INSERT INTO `product_to_category` (`product_id`, `category_id`, `main_category`)
 (41, 66, 1),
 (64, 65, 1),
 (28, 63, 1),
-(42, 20, 0),
 (42, 63, 1),
+(42, 20, 0),
 (33, 60, 0),
 (47, 20, 1);
 
@@ -2849,7 +2998,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1501 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1579 ;
 
 --
 -- Дамп данных таблицы `setting`
@@ -2891,8 +3040,7 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (1369, 0, 'product_status', 'product_status_options', 'a:2:{s:7:"product";a:5:{s:11:"image_width";s:2:"45";s:12:"image_height";s:2:"45";s:12:"name_display";s:3:"tip";s:14:"status_display";s:6:"inline";s:3:"css";s:0:"";}s:8:"category";a:5:{s:11:"image_width";s:2:"45";s:12:"image_height";s:2:"45";s:12:"name_display";s:3:"tip";s:14:"status_display";s:6:"inline";s:3:"css";s:0:"";}}', 1),
 (962, 0, 'featured', 'product', '', 0),
 (963, 0, 'featured', 'featured_product', '43,40,42,49,46,47,28', 0),
-(1499, 0, 'ocjoyajaxcheckout', 'config_ukey_ch', '', 0),
-(1498, 0, 'ocjoyajaxcheckout', 'config_required_telephone', '1', 0),
+(1578, 0, 'ocjoyajaxcheckout', 'config_ukey_ch', '', 0),
 (41, 0, 'flat', 'flat_cost', '5.00', 0),
 (42, 0, 'credit', 'credit_sort_order', '7', 0),
 (43, 0, 'credit', 'credit_status', '1', 0),
@@ -2909,10 +3057,11 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (866, 0, 'config', 'config_compression', '0', 0),
 (867, 0, 'config', 'config_error_display', '1', 0),
 (868, 0, 'config', 'config_error_log', '1', 0),
-(1497, 0, 'ocjoyajaxcheckout', 'config_type_hidetelephone', '1', 0),
-(1496, 0, 'ocjoyajaxcheckout', 'config_required_email', '', 0),
-(1495, 0, 'ocjoyajaxcheckout', 'config_type_hideemail', '', 0),
-(1494, 0, 'ocjoyajaxcheckout', 'config_required_fio', '1', 0),
+(1577, 0, 'ocjoyajaxcheckout', 'config_required_telephone', '1', 0),
+(1576, 0, 'ocjoyajaxcheckout', 'config_type_hidetelephone', '1', 0),
+(1575, 0, 'ocjoyajaxcheckout', 'config_required_email', '', 0),
+(1574, 0, 'ocjoyajaxcheckout', 'config_type_hideemail', '', 0),
+(1573, 0, 'ocjoyajaxcheckout', 'config_required_fio', '1', 0),
 (865, 0, 'config', 'config_encryption', '753e0db21b8f4e89378e7134e22a2707', 0),
 (864, 0, 'config', 'config_password', '1', 0),
 (863, 0, 'config', 'config_maintenance', '0', 0),
@@ -3043,16 +3192,16 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (1292, 0, 'deadcow_seo', 'deadcow_seo_products_template', '[product_name]', 0),
 (1290, 0, 'deadcow_seo', 'deadcow_seo_categories_template', '[category_name]', 0),
 (1291, 0, 'deadcow_seo', 'deadcow_seo_categories_suffix', '', 0),
-(1493, 0, 'ocjoyajaxcheckout', 'config_type_hidefio', '1', 0),
-(1492, 0, 'ocjoyajaxcheckout', 'config_type_hidedescription', '', 0),
-(1491, 0, 'ocjoyajaxcheckout', 'config_type_hideoptions', '', 0),
-(1490, 0, 'ocjoyajaxcheckout', 'config_type_hidepayment', '', 0),
-(1489, 0, 'ocjoyajaxcheckout', 'config_type_hideshipping', '', 0),
-(1488, 0, 'ocjoyajaxcheckout', 'config_type_hideimg', '1', 0),
-(1487, 0, 'ocjoyajaxcheckout', 'config_show_on_module_bestseller', '', 0),
-(1484, 0, 'ocjoyajaxcheckout', 'config_show_on_module_latest', '', 0),
+(1572, 0, 'ocjoyajaxcheckout', 'config_type_hidefio', '1', 0),
+(1571, 0, 'ocjoyajaxcheckout', 'config_type_hidedescription', '', 0),
+(1570, 0, 'ocjoyajaxcheckout', 'config_type_hideoptions', '1', 0),
+(1569, 0, 'ocjoyajaxcheckout', 'config_type_hidepayment', '', 0),
+(1568, 0, 'ocjoyajaxcheckout', 'config_type_hideshipping', '', 0),
+(1567, 0, 'ocjoyajaxcheckout', 'config_type_hideimg', '1', 0),
+(1566, 0, 'ocjoyajaxcheckout', 'config_show_on_module_bestseller', '', 0),
+(1563, 0, 'ocjoyajaxcheckout', 'config_show_on_module_latest', '', 0),
 (1367, 0, 'filterpro', 'filterpro_module', 'a:1:{i:0;a:5:{s:4:"type";s:1:"0";s:9:"layout_id";s:1:"3";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
-(1486, 0, 'ocjoyajaxcheckout', 'config_show_on_module_featured', '', 0),
+(1565, 0, 'ocjoyajaxcheckout', 'config_show_on_module_featured', '', 0),
 (1365, 0, 'filterpro', 'attribute_group', 'a:1:{i:1;a:2:{s:23:"attribute_group_tooltip";s:0:"";s:18:"attribute_group_id";s:1:"7";}}', 1),
 (1366, 0, 'filterpro', 'attribute', 'a:2:{i:1;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:2:"13";}i:2;a:2:{s:17:"attribute_tooltip";s:38:"Подсказка для класса";s:12:"attribute_id";s:2:"12";}}', 1),
 (1364, 0, 'filterpro', 'filterpro_setting', 'a:27:{s:12:"price_slider";s:1:"1";s:7:"filters";s:1:"0";s:16:"expanded_filters";s:2:"on";s:20:"display_manufacturer";s:6:"select";s:21:"expanded_manufacturer";s:2:"on";s:18:"display_categories";s:4:"none";s:19:"expanded_categories";s:2:"on";s:12:"display_tags";s:6:"select";s:13:"expanded_tags";s:2:"on";s:20:"display_attribute_13";s:6:"select";s:20:"display_attribute_12";s:6:"select";s:21:"expanded_attribute_12";s:2:"on";s:11:"option_mode";s:2:"or";s:14:"attribute_mode";s:2:"or";s:14:"attr_delimeter";s:1:":";s:3:"tax";s:1:"0";s:20:"attribute_value_mode";s:2:"or";s:10:"attr_group";s:1:"0";s:13:"subcategories";s:2:"on";s:20:"option_main_checkbox";s:2:"on";s:12:"disable_mask";s:2:"on";s:15:"option_images_w";s:2:"20";s:15:"option_images_h";s:2:"20";s:19:"filterpro_container";s:15:".product-{view}";s:14:"filterpro_name";s:9:"FilterPro";s:19:"filterpro_afterload";s:0:"";s:9:"news_days";s:1:"0";}', 1),
@@ -3126,25 +3275,25 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (879, 0, 'config', 'config_sms_gate_password', '', 0),
 (1119, 0, 'timer', 'timer_module', 'a:1:{i:1;a:11:{s:11:"description";a:1:{i:1;s:31:"&lt;p&gt;\r\n	[Timer]&lt;/p&gt;\r\n";}s:4:"date";s:10:"2015-04-09";s:4:"time";s:5:"0:0:0";s:8:"interval";s:2:"24";s:5:"image";s:19:"data/timer/img2.png";s:5:"title";s:32:"Плинтус в подарок";s:15:"title_font_size";s:2:"34";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
 (1150, 0, 'special', 'special_module', 'a:1:{i:0;a:7:{s:5:"limit";s:3:"100";s:11:"image_width";s:3:"195";s:12:"image_height";s:3:"195";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
-(1485, 0, 'ocjoyajaxcheckout', 'config_show_on_module_special', '', 0),
+(1564, 0, 'ocjoyajaxcheckout', 'config_show_on_module_special', '', 0),
 (1500, 0, 'category', 'category_module', 'a:2:{i:0;a:4:{s:9:"layout_id";s:1:"3";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}i:1;a:4:{s:9:"layout_id";s:1:"2";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
 (982, 0, 'actions', 'actions_module', 'a:1:{i:0;a:5:{s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:5:"limit";s:1:"4";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
 (984, 0, 'actions_setting', 'actions_setting', 'a:14:{s:13:"actions_limit";s:1:"5";s:11:"image_width";s:3:"120";s:12:"image_height";s:3:"120";s:10:"show_image";s:1:"1";s:9:"show_date";s:1:"1";s:22:"image_relproduct_width";s:2:"80";s:23:"image_relproduct_height";s:2:"80";s:17:"show_actions_date";s:1:"1";s:18:"image_module_width";s:3:"212";s:19:"image_module_height";s:3:"218";s:13:"module_maxlen";s:2:"80";s:17:"show_module_image";s:1:"1";s:16:"show_module_date";s:1:"1";s:3:"seo";a:1:{i:1;a:4:{s:2:"h1";s:0:"";s:5:"title";s:0:"";s:8:"keywords";s:0:"";s:11:"description";s:0:"";}}}', 1),
-(1483, 0, 'ocjoyajaxcheckout', 'config_show_on_specials', '', 0),
-(1482, 0, 'ocjoyajaxcheckout', 'config_show_on_search', '', 0),
-(1481, 0, 'ocjoyajaxcheckout', 'config_show_on_brands', '', 0),
-(1478, 0, 'ocjoyajaxcheckout', 'config_info_payment_text', '', 0),
-(1479, 0, 'ocjoyajaxcheckout', 'config_show_on_product', '1', 0),
+(1562, 0, 'ocjoyajaxcheckout', 'config_show_on_specials', '', 0),
+(1561, 0, 'ocjoyajaxcheckout', 'config_show_on_search', '', 0),
+(1560, 0, 'ocjoyajaxcheckout', 'config_show_on_brands', '', 0),
+(1559, 0, 'ocjoyajaxcheckout', 'config_show_on_category', '1', 0),
+(1558, 0, 'ocjoyajaxcheckout', 'config_show_on_product', '1', 0),
 (1143, 0, 'latest', 'latest_module', 'a:1:{i:0;a:8:{s:9:"id_status";s:1:"1";s:5:"limit";s:3:"100";s:11:"image_width";s:3:"195";s:12:"image_height";s:3:"195";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"2";}}', 1),
 (1210, 0, 'html_block', 'html_block_module', 'a:3:{i:0;a:5:{s:13:"html_block_id";s:1:"1";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}i:1;a:5:{s:13:"html_block_id";s:1:"2";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"4";}i:2;a:5:{s:13:"html_block_id";s:1:"3";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"5";}}', 1),
 (1211, 0, 'html_block', 'html_block_1', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:2099:"&lt;div class=&quot;site-content box-offer-manager&quot;&gt;\r\n&lt;div class=&quot;box-offer&quot;&gt;\r\n&lt;h3 class=&quot;title-style&quot;&gt;Мы предлагаем&lt;/h3&gt;\r\n\r\n&lt;ul class=&quot;offer-list&quot;&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – выезд инженера-консультанта на дом, для оценки технического состояния пола, замера, расчет количества необходимого материала.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – доставка образцов на дом. Вы можете подобрать напольное покрытие в соответствии обстановки, цветовой гаммы вашего помещения.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – при покупке у нас ламината, укладка бесплатно.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – при покупке у нас ламината, подложка бесплатно.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;box-manager&quot;&gt;\r\n&lt;h3 class=&quot;title-style&quot;&gt;Менеджеры&lt;/h3&gt;\r\n\r\n&lt;div class=&quot;manager-1&quot;&gt;&lt;img alt=&quot;Менеджер&quot; src=&quot;/catalog/view/theme/default/image/manager-1.png&quot; /&gt;\r\n&lt;div class=&quot;info&quot;&gt;\r\n&lt;div class=&quot;name&quot;&gt;Наталья&lt;/div&gt;\r\n\r\n&lt;div class=&quot;phone&quot;&gt;тел. 44-74-55&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;manager-2&quot;&gt;&lt;img alt=&quot;Менеджер&quot; src=&quot;/catalog/view/theme/default/image/manager-2.png&quot; /&gt;\r\n&lt;div class=&quot;info&quot;&gt;\r\n&lt;div class=&quot;name&quot;&gt;Николай&lt;/div&gt;\r\n\r\n&lt;div class=&quot;phone&quot;&gt;тел. 44-74-55&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}s:6:"editor";a:1:{i:1;s:1:"1";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
 (1212, 0, 'html_block', 'html_block_2', 'a:7:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:2627:"&lt;div class=&quot;box-about&quot;&gt;\r\n&lt;div class=&quot;site-content&quot;&gt;\r\n&lt;h2 class=&quot;title-style&quot;&gt;Интернет-магазин Ламинат-бонус&lt;/h2&gt;\r\n\r\n&lt;p class=&quot;text-style&quot;&gt;Не можете определиться с выбором напольного покрытия? У Вас нет возможности посетить наш магазин? Этот ли цвет подойдет для вашей комнаты, дверям, мебели, обоям и т.д.? Ведь не привезешь &quot;весь магазин&quot; домой, что бы подобрать нужный оттенок. В этом вам поможет КОНСУЛЬТАНТ, которого вы можете ВЫЗВАТЬ К СЕБЕ ДОМОЙ. Наш сотрудник привезет с собой достаточное количество образцов ламината, проконсультирует по качеству, особенностями укладки и ухода, при необходимости произведет замер помещения, просчитает стоимость планируемой покупи.&lt;/p&gt;\r\n\r\n&lt;p class=&quot;text-style&quot;&gt;Услуга включает в себя информирование по материалам,сферам их применения,условиям эксплуатации , ухода и хранения, необходимым аксессуарам, инсталляции, ценам , скидкам, условиям и формам оплаты за товар,порядок предоставления дополнительных услуг.&lt;/p&gt;\r\n\r\n&lt;p class=&quot;text-style&quot;&gt;При единовременной покупке ламината в рамках акции покупатель имеет право получить бесплатно плинтус с кабель-каналом марки ИДЕАЛ ), выбор декора (расцветки)осуществляется покупателем из присутствующих в наличии в магазине. Количество плинтуса рассчитывается по следующей формуле: N=S/2.5, с округлением до целого числа в меньшую сторону. где: N – количество палок плинтуса (1 палка = 2,5 пог.м.) S – количество квадратных метров ламината.&amp;nbsp;&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}s:6:"editor";a:1:{i:1;s:1:"1";}s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
 (1213, 0, 'html_block', 'html_block_3', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:3885:"&lt;div class=&quot;box-memo&quot;&gt;\r\n&lt;div class=&quot;site-content&quot;&gt;\r\n&lt;div class=&quot;memo-list cf&quot;&gt;\r\n&lt;div class=&quot;left&quot;&gt;\r\n&lt;h3 class=&quot;title&quot;&gt;Памятка покупателю купившему пробковое покрытие, паркетную доску или ламинат у нас.&lt;/h3&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;01&lt;/div&gt;\r\nХранение упаковок с напольным покрытием (в горизонтальном положении!) всегда осуществляется в сухом помещении с температурой не ниже +16°С.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;02&lt;/div&gt;\r\nМатериал должен пройти акклиматизацию не менее 48 часов в помещении, предназначенном для укладки. Упаковки должны вскрываться непосредственно перед началом работ.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;03&lt;/div&gt;\r\nУкладка напольных покрытий начинается только после контроля готовности данного помещения, включающего в себя: § контроль влажности основания, которая должна быть не выше 2,5%. § контроля влажности воздуха, которая должна быть не выше 65%, но и не ниже 40%. § контроля ровности основания, у которого перепад по высоте не должен превышать 2мм на 2м длины в любой точке. § контроля температуры, которая должна быть в пределах 20°…22°С.&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;right&quot;&gt;\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;04&lt;/div&gt;\r\nРаботы по укладке материала производятся строго после окончания всех общестроительных работ (штукатурные, окрасочные, оклеечные), а так же работ, связанных с проветриванием помещений.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;05&lt;/div&gt;\r\nВсе доски напольных покрытий проверяются до укладки. В случае обнаружения несоответствующего качества досок следует приостановить укладку и связаться с Продавцом. Все претензии к материалу (за исключением скрытых дефектов, выявленных в процессе эксплуатации) принимаются только до момента укладки.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;06&lt;/div&gt;\r\nВ соответствии с федеральным Законом &quot;О защите прав потребителей&quot; возврату подлежит только материал, признанный несоответствующим качеству.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;07&lt;/div&gt;\r\nК обмену (не по причине качества) могут быть приняты только невскрытые и неповрежденные упаковки.&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}s:6:"editor";a:1:{i:1;s:1:"1";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
-(1480, 0, 'ocjoyajaxcheckout', 'config_show_on_category', '1', 0),
-(1477, 0, 'ocjoyajaxcheckout', 'config_info_payment', '', 0),
-(1476, 0, 'ocjoyajaxcheckout', 'config_info_shipping_text', '', 0),
-(1474, 0, 'ocjoyajaxcheckout', 'config_mask_telephone', '', 0),
-(1475, 0, 'ocjoyajaxcheckout', 'config_info_shipping', '', 0);
+(1557, 0, 'ocjoyajaxcheckout', 'config_info_payment_text', '', 0),
+(1556, 0, 'ocjoyajaxcheckout', 'config_info_payment', '', 0),
+(1555, 0, 'ocjoyajaxcheckout', 'config_info_shipping_text', '', 0),
+(1554, 0, 'ocjoyajaxcheckout', 'config_info_shipping', '', 0),
+(1553, 0, 'ocjoyajaxcheckout', 'config_mask_telephone', '', 0);
 
 -- --------------------------------------------------------
 
@@ -3159,6 +3308,13 @@ CREATE TABLE IF NOT EXISTS `simple_custom_data` (
   `data` text NOT NULL,
   PRIMARY KEY (`object_type`,`object_id`,`customer_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `simple_custom_data`
+--
+
+INSERT INTO `simple_custom_data` (`object_type`, `object_id`, `customer_id`, `data`) VALUES
+(1, 21, 0, 'a:0:{}');
 
 -- --------------------------------------------------------
 
@@ -3315,7 +3471,7 @@ CREATE TABLE IF NOT EXISTS `url_alias` (
   `keyword` varchar(255) NOT NULL,
   PRIMARY KEY (`url_alias_id`),
   KEY `query` (`query`(64))
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1045 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1083 ;
 
 --
 -- Дамп данных таблицы `url_alias`
@@ -3365,9 +3521,9 @@ INSERT INTO `url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (988, 'category_id=27', 'aller'),
 (991, 'manufacturer_id=8', 'alloc-2'),
 (897, 'information_id=4', 'about_us'),
-(1044, 'product_id=42', 'apple-cinema-30'),
 (976, 'category_id=59', 'alloc'),
-(1027, 'product_id=30', 'canon-eos-5d'),
+(1080, 'product_id=42', 'apple-cinema-30'),
+(1082, 'product_id=30', 'canon-eos-5d'),
 (1028, 'product_id=47', 'hp-lp3065'),
 (1029, 'product_id=28', 'htc-touch-hd'),
 (1030, 'product_id=64', 'htc-touch-hd-1'),

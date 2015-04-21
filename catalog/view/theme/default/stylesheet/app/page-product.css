@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* страница продукта */
+#esponi_OTF_CFODebug {
+  display: none !important;
+}
+
 .product-info {
   overflow: auto;
   margin-bottom: 20px;

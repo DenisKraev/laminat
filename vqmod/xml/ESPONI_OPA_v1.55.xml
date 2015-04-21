@@ -155,10 +155,18 @@
 			<script type="text/javascript">
 			$(document).ready(function() {
 				var timestamp = 0;
-				$('#product_add_to_cart_form div[class=\'price\']').append($('#esponi_OTF_Container'));
+				$('#product_add_to_cart_form div[class=\'options\']').append($('#esponi_OTF_Container'));
 				$('#product_add_to_cart_form input[type=\'radio\'], #product_add_to_cart_form input[type=\'checkbox\'], #product_add_to_cart_form select').bind("change", function(){ esponi_OTF($(this)); });
 				$('#product_add_to_cart_form input[type=\'text\'], #product_add_to_cart_form textarea').bind("keyup", function(){ esponi_OTF($(this)); });
 				$('#product_add_to_cart_form input[type=\'hidden\']').bind("change", function(){ esponi_OTF($(this)); });
+
+                // считаем при загрузке
+				if($('.product-info #option-227 input').size() > 0){
+					esponi_OTF($('.product-info #option-227 input'));
+				} else {
+					esponi_OTF($('.cart input[type="text"]'));
+				}
+
 				function esponi_OTF(el) {
 					var esponi_name = el.prop("name");							
 					if(esponi_name.substr(0, 11)=="ESPONI_CHK_") return;
