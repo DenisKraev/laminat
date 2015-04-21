@@ -38,39 +38,23 @@
       </div>
 
 	    <h1><?php echo $heading_title; ?></h1>
+
       <div class="description">
         <?php if ($manufacturer) { ?>
-        <span><?php echo $text_manufacturer; ?></span> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a>
-        <?php } ?>
-        <span><?php echo $text_model; ?></span> <?php echo $model; ?>
-        <?php if ($reward) { ?>
-        <span><?php echo $text_reward; ?></span> <?php echo $reward; ?>
-        <?php } ?>
-        <span><?php echo $text_stock; ?></span> <?php echo $stock; ?></div>
-      <?php if ($price) { ?>
-      <div class="price"><?php echo $text_price; ?>
-        <?php if (!$special) { ?>
-        <?php echo $price; ?>
-        <?php } else { ?>
-        <span class="price-old"><?php echo $price; ?></span> <span class="price-new"><?php echo $special; ?></span>
-        <?php } ?>
-        
-        <?php if ($tax) { ?>
-        <span class="price-tax"><?php echo $text_tax; ?> <?php echo $tax; ?></span>
-        <?php } ?>
-        <?php if ($points) { ?>
-        <span class="reward"><small><?php echo $text_points; ?> <?php echo $points; ?></small></span>
-        <?php } ?>
-        <?php if ($discounts) { ?>
-        
-        <div class="discount">
-          <?php foreach ($discounts as $discount) { ?>
-          <?php echo sprintf($text_discount, $discount['quantity'], $discount['price']); ?>
-          <?php } ?>
-        </div>
+          <span><?php echo $text_manufacturer; ?></span> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a>
         <?php } ?>
       </div>
+
+      <?php if ($price) { ?>
+        <div class="price"><?php echo $text_price; ?>
+          <?php if (!$special) { ?>
+          <?php echo $price; ?>
+          <?php } else { ?>
+          <span class="price-old"><?php echo $price; if($unit_count == 1){echo '/м&#178;';}?></span> <span class="price-new"><?php echo $special; if($unit_count == 1){echo '/м&#178;';}?></span>
+          <?php } ?>
+        </div>
       <?php } ?>
+
       <?php if ($options) { ?>
       <div class="options">
         <?php foreach ($options as $option) { ?>

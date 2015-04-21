@@ -17,9 +17,10 @@
 
   <?php echo $content_top; ?>
 
+  <?php if ($products) { ?>
   <div class="top-sort cf">
     <h1><?php echo $heading_title; ?></h1>
-    <?php if ($products) { ?>
+
     <div class="product-filter product-sorting">
       <div class="limit"><b><?php echo $text_limit; ?></b>
         <select onchange="location = this.value;">
@@ -112,7 +113,7 @@ function display(view) {
 			var image = $(element).find('.box-img').html();
 			
 			if (image != null) {
-				html += '<div class="box-img">' + image + '</div>';
+          html += '<div class="box-img">' + image + '<div class="statuses">' + $(element).find('.statuses').html() + '</div></div>';
 			}
 
       html += '  <div class="name">' + $(element).find('.name').html() + '</div>';
@@ -149,7 +150,7 @@ function display(view) {
 			var image = $(element).find('.box-img').html();
 			
 			if (image != null) {
-				html += '<div class="box-img">' + image + '</div>';
+          html += '<div class="box-img">' + image + '<div class="statuses">' + $(element).find('.statuses').html() + '</div></div>';
 			}
 
 			html += '<div class="name">' + $(element).find('.name').html() + '</div>';

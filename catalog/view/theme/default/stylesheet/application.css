@@ -1467,6 +1467,17 @@ a.title-style:hover {
 .product-info > .left + .right {
   margin-left: 312px;
 }
+.product-info .share {
+  margin-bottom: 10px;
+}
+.product-info h1 {
+  font-family: "OpenSans-bold-wf";
+  color: #333333;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0px;
+  margin-bottom: 25px;
+}
 .product-info .image {
   position: relative;
   padding: 10px;

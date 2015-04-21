@@ -1,4 +1,6 @@
-<?php echo $header; ?><?php echo $column_left; ?><?php echo $column_right; ?>
+<?php echo $header; ?>
+<div class="site-content inner-pages">
+<?php echo $column_left; ?><?php echo $column_right; ?>
 <div id="content"><?php echo $content_top; ?>
   <div class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -38,4 +40,5 @@
   </div>
   <?php } ?>
   <?php echo $content_bottom; ?></div>
+</div>
 <?php echo $footer; ?>

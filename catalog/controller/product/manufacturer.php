@@ -78,7 +78,9 @@ class ControllerProductManufacturer extends Controller {
 		
 		$this->load->model('catalog/product');
 		
-		$this->load->model('tool/image'); 
+		$this->load->model('tool/image');
+
+    $this->load->helper('truncate');
 		
 		if (isset($this->request->get['manufacturer_id'])) {
 			$manufacturer_id = (int)$this->request->get['manufacturer_id'];
@@ -208,11 +210,11 @@ class ControllerProductManufacturer extends Controller {
 			$product_total = $this->model_catalog_product->getFoundProducts(); 
 					
 			foreach ($results as $result) {
-				if ($result['image']) {
-					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
-				} else {
-					$image = false;
-				}
+        if ($result['image']) {
+          $image = $this->model_tool_image->crop($result['image'], 195, 195, 'center', '_manufacture');
+        } else {
+          $image = $this->model_tool_image->crop('no_image.jpg', 195, 195, 'center', '_manufacture');
+        }
 				
 				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
@@ -237,15 +239,32 @@ class ControllerProductManufacturer extends Controller {
 				} else {
 					$rating = false;
 				}
+
+        $attribute_groups = $this->model_catalog_product->getProductAttributes($result['product_id']);
+
+        $attribute_data = array();
+        $attribute_data['name'] = null;
+        $attribute_data['text'] = null;
+        if(!empty($attribute_groups)) {
+          foreach($attribute_groups[0]['attribute'] as $item) {
+            if($item['name'] == 'Класс') {
+              $attribute_data['name'] = $item['name'];
+              $attribute_data['text'] = $item['text'];
+            }
+          }
+        }
 			
 				$this->data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
-					'name'        => $result['name'],
+					'name'        => truncate($result['name'], 40),
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, 300) . '..',
 					'price'       => $price,
 					'special'     => $special,
 					'tax'         => $tax,
+          'statuses'    => $result['statuses']['category'],
+          'attribute_data'     => $attribute_data,
+          'art'        => $result['sku'],
 					'rating'      => $result['rating'],
 					'reviews'     => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
 					'href'        => $this->url->link('product/product', '&manufacturer_id=' . $result['manufacturer_id'] . '&product_id=' . $result['product_id'] . $url)
