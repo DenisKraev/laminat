@@ -252,68 +252,69 @@ a.title-style
     &:hover
       text-decoration: none
 
-// модальные окна
-.fancybox-wrap
+// модальные окна для форм
+.fancybox-wrap.fancybox-type-inline
   width: auto !important
-.fancybox-skin
-  border-radius: 0px
-  background: #f2f2f2
-  .modal-header
-    background: #eb8c2a
+.fancybox-type-inline
+  .fancybox-skin
+    border-radius: 0px
+    background: #f2f2f2
+    .modal-header
+      background: #eb8c2a
+      padding: 15px
+      margin: 0px -15px
+      margin-top: -15px
+      font-family: Tahoma, sans-serif
+      font-size: 13px
+      line-height: 15px
+      color: #fff
+      margin-bottom: 25px
+  .fancybox-inner
     padding: 15px
-    margin: 0px -15px
-    margin-top: -15px
-    font-family: Tahoma, sans-serif
-    font-size: 13px
-    line-height: 15px
-    color: #fff
-    margin-bottom: 25px
-.fancybox-inner
-  padding: 15px
-  width: 440px !important
-.fancybox-outer, .fancybox-skin
-  width: 440px !important
-.fancybox-close
-  top: 0px
-  right: 0px
-  width: 45px
-  height: 45px
-  background-image: image-url('app/close-white-17x18.png')
-  background-position: 50% 50%
-  background-repeat: no-repeat
-  &:hover
-    opacity: 0.9
+    width: 440px !important
+  .fancybox-outer, .fancybox-skin
+    width: 440px !important
+  .fancybox-close
+    top: 0px
+    right: 0px
+    width: 45px
+    height: 45px
+    background-image: image-url('app/close-white-17x18.png')
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    &:hover
+      opacity: 0.9
 
-.fancybox-skin
-  .style-form-text
-    width: 100%
-    font-family: Arial, sans-serif
-    color: #8c8c8c
-    font-size: 12px
-    background: #fff
-    border: 1px solid #e3e3e3
-    padding: 8px
-    +placeholder
+  .fancybox-skin
+    .style-form-text
+      width: 100%
       font-family: Arial, sans-serif
       color: #8c8c8c
       font-size: 12px
-  .form-row
-    .icon-user, .icon-phone
-      position: relative
-      +inline-block(top)
-      input
-        padding-right: 40px
-    .icon-user:after, .icon-phone:after
-      position: absolute
-      content: ''
-      top: 4px
-      right: 0px
-      width: 38px
-      height: 24px
-      border-left: 1px solid #e3e3e3
-    .icon-user
-      &:after
-        background: image-url("app/ico-user-grey-21x20.png") 50% 50% no-repeat
-    .icon-phone
-      &:after
-        background: image-url("app/ico-phone-grey-21x21.png") 50% 50% no-repeat
+      background: #fff
+      border: 1px solid #e3e3e3
+      padding: 8px
+      +placeholder
+        font-family: Arial, sans-serif
+        color: #8c8c8c
+        font-size: 12px
+    .form-row
+      .icon-user, .icon-phone
+        position: relative
+        +inline-block(top)
+        input
+          padding-right: 40px
+      .icon-user:after, .icon-phone:after
+        position: absolute
+        content: ''
+        top: 4px
+        right: 0px
+        width: 38px
+        height: 24px
+        border-left: 1px solid #e3e3e3
+      .icon-user
+        &:after
+          background: image-url("app/ico-user-grey-21x20.png") 50% 50% no-repeat
+      .icon-phone
+        &:after
+          background: image-url("app/ico-phone-grey-21x21.png") 50% 50% no-repeat

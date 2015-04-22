@@ -207,3 +207,9 @@ catalog\view\theme\default\template\module\latest.tpl
 catalog\language\russian\module\special.php
 catalog\view\theme\default\template\module\special.tpl
 catalog\view\theme\default\template\common\home.tpl
+catalog\language\russian\product\category.php
+catalog\language\russian\module\filterpro.php
+catalog\model\module\filterpro.php
+catalog\view\theme\default\template\module\filterpro.tpl
+catalog\view\theme\default\template\product\category.tpl
+catalog\view\theme\default\template\module\filterpro_products.tpl

@@ -23,7 +23,7 @@
     <div class="left">
       <?php if ($thumb) { ?>
         <div class="image">
-            <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" /></a>
+            <a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="js-popup-img"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" /></a>
             <div class="statuses"><?php echo $statuses; ?></div>
         </div>
       <?php } ?>

@@ -464,15 +464,15 @@ a.title-style:hover {
   text-decoration: none;
 }
 
-.fancybox-wrap {
+.fancybox-wrap.fancybox-type-inline {
   width: auto !important;
 }
 
-.fancybox-skin {
+.fancybox-type-inline .fancybox-skin {
   border-radius: 0px;
   background: #f2f2f2;
 }
-.fancybox-skin .modal-header {
+.fancybox-type-inline .fancybox-skin .modal-header {
   background: #eb8c2a;
   padding: 15px;
   margin: 0px -15px;
@@ -483,17 +483,14 @@ a.title-style:hover {
   color: #fff;
   margin-bottom: 25px;
 }
-
-.fancybox-inner {
+.fancybox-type-inline .fancybox-inner {
   padding: 15px;
   width: 440px !important;
 }
-
-.fancybox-outer, .fancybox-skin {
+.fancybox-type-inline .fancybox-outer, .fancybox-type-inline .fancybox-skin {
   width: 440px !important;
 }
-
-.fancybox-close {
+.fancybox-type-inline .fancybox-close {
   top: 0px;
   right: 0px;
   width: 45px;
@@ -502,11 +499,10 @@ a.title-style:hover {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-.fancybox-close:hover {
+.fancybox-type-inline .fancybox-close:hover {
   opacity: 0.9;
 }
-
-.fancybox-skin .style-form-text {
+.fancybox-type-inline .fancybox-skin .style-form-text {
   width: 100%;
   font-family: Arial, sans-serif;
   color: #8c8c8c;
@@ -515,27 +511,27 @@ a.title-style:hover {
   border: 1px solid #e3e3e3;
   padding: 8px;
 }
-.fancybox-skin .style-form-text::-webkit-input-placeholder {
+.fancybox-type-inline .fancybox-skin .style-form-text::-webkit-input-placeholder {
   font-family: Arial, sans-serif;
   color: #8c8c8c;
   font-size: 12px;
 }
-.fancybox-skin .style-form-text:-moz-placeholder {
+.fancybox-type-inline .fancybox-skin .style-form-text:-moz-placeholder {
   font-family: Arial, sans-serif;
   color: #8c8c8c;
   font-size: 12px;
 }
-.fancybox-skin .style-form-text:-ms-input-placeholder {
+.fancybox-type-inline .fancybox-skin .style-form-text:-ms-input-placeholder {
   font-family: Arial, sans-serif;
   color: #8c8c8c;
   font-size: 12px;
 }
-.fancybox-skin .style-form-text.placeholder {
+.fancybox-type-inline .fancybox-skin .style-form-text.placeholder {
   font-family: Arial, sans-serif;
   color: #8c8c8c;
   font-size: 12px;
 }
-.fancybox-skin .form-row .icon-user, .fancybox-skin .form-row .icon-phone {
+.fancybox-type-inline .fancybox-skin .form-row .icon-user, .fancybox-type-inline .fancybox-skin .form-row .icon-phone {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -543,10 +539,10 @@ a.title-style:hover {
   *zoom: 1;
   *display: inline;
 }
-.fancybox-skin .form-row .icon-user input, .fancybox-skin .form-row .icon-phone input {
+.fancybox-type-inline .fancybox-skin .form-row .icon-user input, .fancybox-type-inline .fancybox-skin .form-row .icon-phone input {
   padding-right: 40px;
 }
-.fancybox-skin .form-row .icon-user:after, .fancybox-skin .form-row .icon-phone:after {
+.fancybox-type-inline .fancybox-skin .form-row .icon-user:after, .fancybox-type-inline .fancybox-skin .form-row .icon-phone:after {
   position: absolute;
   content: "";
   top: 4px;
@@ -555,10 +551,10 @@ a.title-style:hover {
   height: 24px;
   border-left: 1px solid #e3e3e3;
 }
-.fancybox-skin .form-row .icon-user:after {
+.fancybox-type-inline .fancybox-skin .form-row .icon-user:after {
   background: url('/catalog/view/theme/default/image/app/ico-user-grey-21x20.png?1429269923') 50% 50% no-repeat;
 }
-.fancybox-skin .form-row .icon-phone:after {
+.fancybox-type-inline .fancybox-skin .form-row .icon-phone:after {
   background: url('/catalog/view/theme/default/image/app/ico-phone-grey-21x21.png?1429270019') 50% 50% no-repeat;
 }
 
@@ -1644,6 +1640,9 @@ a.title-style:hover {
   background: #f2f2f2;
 }
 
+.box-product-actions {
+  margin-bottom: 10px;
+}
 .box-product-actions .item {
   padding: 18px;
   margin-top: 10px;
@@ -1676,6 +1675,35 @@ a.title-style:hover {
 }
 .box-product-actions .more a:hover {
   text-decoration: none;
+}
+
+.box-consultants {
+  margin-bottom: 10px;
+}
+.box-consultants .manager-1 {
+  color: #000;
+  margin-bottom: 10px;
+  background: #fcd634;
+}
+.box-consultants .manager-2 {
+  color: #fff;
+  background: #eb8d2b;
+}
+.box-consultants img {
+  float: left;
+}
+.box-consultants .info {
+  min-height: 81px;
+  float: right;
+  width: 109px;
+  font-size: 13px;
+  padding: 20px 5px 0px 10px;
+}
+.box-consultants .name {
+  font-family: "OpenSans-bold-wf";
+}
+.box-consultants .phone {
+  font-family: "OpenSans-regular-wf";
 }
 
 /* слайдер */
