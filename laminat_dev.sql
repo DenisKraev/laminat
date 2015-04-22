@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 22 2015 г., 15:17
+-- Время создания: Апр 22 2015 г., 17:08
 -- Версия сервера: 5.5.41-log
 -- Версия PHP: 5.3.29
 
@@ -1789,13 +1789,14 @@ CREATE TABLE IF NOT EXISTS `option` (
   `type` varchar(32) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`option_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Дамп данных таблицы `option`
 --
 
 INSERT INTO `option` (`option_id`, `type`, `sort_order`) VALUES
+(14, 'checkbox', 0),
 (13, 'text', 0);
 
 -- --------------------------------------------------------
@@ -1816,7 +1817,8 @@ CREATE TABLE IF NOT EXISTS `option_description` (
 --
 
 INSERT INTO `option_description` (`option_id`, `language_id`, `name`) VALUES
-(13, 1, 'Покупаемое количество');
+(13, 1, 'Покупаемое количество'),
+(14, 1, 'Тест');
 
 -- --------------------------------------------------------
 
@@ -1853,7 +1855,14 @@ CREATE TABLE IF NOT EXISTS `option_value` (
   `image` varchar(255) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`option_value_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=50 ;
+
+--
+-- Дамп данных таблицы `option_value`
+--
+
+INSERT INTO `option_value` (`option_value_id`, `option_id`, `image`, `sort_order`) VALUES
+(49, 14, '', 0);
 
 -- --------------------------------------------------------
 
@@ -1868,6 +1877,13 @@ CREATE TABLE IF NOT EXISTS `option_value_description` (
   `name` varchar(128) NOT NULL,
   PRIMARY KEY (`option_value_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `option_value_description`
+--
+
+INSERT INTO `option_value_description` (`option_value_id`, `language_id`, `option_id`, `name`) VALUES
+(49, 1, 14, 'Значение');
 
 -- --------------------------------------------------------
 
@@ -1935,7 +1951,7 @@ CREATE TABLE IF NOT EXISTS `order` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=37 ;
 
 --
 -- Дамп данных таблицы `order`
@@ -1967,7 +1983,17 @@ INSERT INTO `order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, `st
 (23, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'првпр', '', 'nomail@nomail.com', '35623456', '', 'првпр', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'првпр', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '4.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 11:01:59', '2015-04-21 11:01:59'),
 (24, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'впра', '', 'nomail@nomail.com', '345345', '', 'впра', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'впра', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '2300.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 12:09:17', '2015-04-21 12:09:17'),
 (25, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'явапява', '', 'nomail@nomail.com', 'п123124', '', 'явапява', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'явапява', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '0.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 12:11:59', '2015-04-21 12:11:59'),
-(26, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'wteghwse', 'sthrt', 'hser@rg.er', '564363456', '', 'wteghwse', 'sthrt', '', '', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', 'Оплата при доставке', 'cod', 'wteghwse', 'sthrt', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', 'Фиксированная стоимость доставки', 'flat.flat', '', '14.3824', 0, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4', '2015-04-22 14:41:29', '2015-04-22 14:41:29');
+(26, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'wteghwse', 'sthrt', 'hser@rg.er', '564363456', '', 'wteghwse', 'sthrt', '', '', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', 'Оплата при доставке', 'cod', 'wteghwse', 'sthrt', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', 'Фиксированная стоимость доставки', 'flat.flat', '', '14.3824', 0, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4', '2015-04-22 14:41:29', '2015-04-22 14:41:29'),
+(27, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'sfhgsdfh', '', 'nomail@nomail.com', '452345234', '', 'sfhgsdfh', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'sfhgsdfh', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '5.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-22 17:04:17', '2015-04-22 17:04:17'),
+(28, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'zdfbxdf', '', 'nomail@nomail.com', '23456346', '', 'zdfbxdf', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'zdfbxdf', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '5.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-22 17:06:33', '2015-04-22 17:06:33'),
+(29, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'zxcvzxfv', '', 'nomail@nomail.com', '5423452364', '', 'zxcvzxfv', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'zxcvzxfv', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '5.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-22 17:15:45', '2015-04-22 17:15:45'),
+(30, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'sdfgsdf', '', 'nomail@nomail.com', '435646', '', 'sdfgsdf', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'sdfgsdf', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '5.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-22 17:16:25', '2015-04-22 17:16:25'),
+(31, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'ывапвяап', '', 'nomail@nomail.com', '5435345', '', 'ывапвяап', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'ывапвяап', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '105.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-22 17:26:32', '2015-04-22 17:26:32'),
+(32, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'вапыва', '', 'nomail@nomail.com', '235245', '', 'вапыва', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'вапыва', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '105.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-22 17:27:57', '2015-04-22 17:27:57'),
+(33, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'явапыява', '', 'nomail@nomail.com', '345345', '', 'явапыява', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'явапыява', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '105.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-22 17:28:58', '2015-04-22 17:28:58'),
+(34, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'яваипав', '', 'nomail@nomail.com', '345345', '', 'яваипав', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'яваипав', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '105.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-22 17:44:49', '2015-04-22 17:44:49'),
+(35, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'апывап', '', 'nomail@nomail.com', '3452345', '', 'апывап', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'апывап', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '5.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-22 17:53:57', '2015-04-22 17:53:57'),
+(36, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'ыпаы', '', 'nomail@nomail.com', '52345234', '', 'ыпаы', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'ыпаы', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '23.7648', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-22 17:54:16', '2015-04-22 17:54:16');
 
 -- --------------------------------------------------------
 
@@ -2079,7 +2105,7 @@ CREATE TABLE IF NOT EXISTS `order_history` (
   `comment` text NOT NULL,
   `date_added` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`order_history_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=36 ;
 
 --
 -- Дамп данных таблицы `order_history`
@@ -2110,7 +2136,17 @@ INSERT INTO `order_history` (`order_history_id`, `order_id`, `order_status_id`, 
 (22, 22, 1, 1, '', '2015-04-21 10:47:28'),
 (23, 23, 1, 1, '', '2015-04-21 11:01:59'),
 (24, 24, 1, 1, '', '2015-04-21 12:09:17'),
-(25, 25, 1, 1, '', '2015-04-21 12:11:59');
+(25, 25, 1, 1, '', '2015-04-21 12:11:59'),
+(26, 27, 1, 1, '', '2015-04-22 17:04:17'),
+(27, 28, 1, 1, '', '2015-04-22 17:06:33'),
+(28, 29, 1, 1, '', '2015-04-22 17:15:45'),
+(29, 30, 1, 1, '', '2015-04-22 17:16:25'),
+(30, 31, 1, 1, '', '2015-04-22 17:26:32'),
+(31, 32, 1, 1, '', '2015-04-22 17:27:57'),
+(32, 33, 1, 1, '', '2015-04-22 17:28:58'),
+(33, 34, 1, 1, '', '2015-04-22 17:44:49'),
+(34, 35, 1, 1, '', '2015-04-22 17:53:57'),
+(35, 36, 1, 1, '', '2015-04-22 17:54:16');
 
 -- --------------------------------------------------------
 
@@ -2128,7 +2164,7 @@ CREATE TABLE IF NOT EXISTS `order_option` (
   `value` text NOT NULL,
   `type` varchar(32) NOT NULL,
   PRIMARY KEY (`order_option_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
 -- Дамп данных таблицы `order_option`
@@ -2136,7 +2172,17 @@ CREATE TABLE IF NOT EXISTS `order_option` (
 
 INSERT INTO `order_option` (`order_option_id`, `order_id`, `order_product_id`, `product_option_id`, `product_option_value_id`, `name`, `value`, `type`) VALUES
 (1, 21, 21, 227, 0, 'Количество метров', '23', 'text'),
-(2, 26, 26, 227, 0, 'Покупаемое количество', '2.3456', 'text');
+(2, 26, 26, 227, 0, 'Покупаемое количество', '2.3456', 'text'),
+(3, 29, 29, 0, 0, '', '2.34', ''),
+(4, 30, 30, 0, 0, '', '2.34', ''),
+(5, 31, 31, 0, 0, '', '2.34', ''),
+(6, 32, 32, 230, 17, 'Тест', 'Значение', 'checkbox'),
+(7, 32, 32, 0, 0, '', '2.34', ''),
+(8, 33, 33, 230, 17, 'Тест', 'Значение', 'checkbox'),
+(9, 33, 33, 0, 0, '', '2.34', ''),
+(10, 34, 34, 230, 17, 'Тест', 'Значение', 'checkbox'),
+(11, 35, 35, 227, 0, 'Покупаемое количество', '', 'text'),
+(12, 36, 36, 227, 0, 'Покупаемое количество', '3', 'text');
 
 -- --------------------------------------------------------
 
@@ -2156,7 +2202,7 @@ CREATE TABLE IF NOT EXISTS `order_product` (
   `tax` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `reward` int(8) NOT NULL,
   PRIMARY KEY (`order_product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=37 ;
 
 --
 -- Дамп данных таблицы `order_product`
@@ -2188,7 +2234,17 @@ INSERT INTO `order_product` (`order_product_id`, `order_id`, `product_id`, `name
 (23, 23, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '4.0000', '4.0000', '0.0000', 0),
 (24, 24, 30, 'Canon EOS 5D', 'Товар 3', 1, '2300.0000', '2300.0000', '0.0000', 0),
 (25, 25, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
-(26, 26, 42, 'Ламинат Kronospan Komfort', 'Товар 15', 1, '9.3824', '9.3824', '0.0000', 0);
+(26, 26, 42, 'Ламинат Kronospan Komfort', 'Товар 15', 1, '9.3824', '9.3824', '0.0000', 0),
+(27, 27, 42, 'Ламинат Kronospan Komfort', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
+(28, 28, 42, 'Ламинат Kronospan Komfort', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
+(29, 29, 42, 'Ламинат Kronospan Komfort', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
+(30, 30, 42, 'Ламинат Kronospan Komfort', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
+(31, 31, 30, 'Canon EOS 5D', 'Товар 3', 1, '100.0000', '100.0000', '0.0000', 0),
+(32, 32, 30, 'Canon EOS 5D', 'Товар 3', 1, '100.0000', '100.0000', '0.0000', 0),
+(33, 33, 30, 'Canon EOS 5D', 'Товар 3', 1, '100.0000', '100.0000', '0.0000', 0),
+(34, 34, 30, 'Canon EOS 5D', 'Товар 3', 1, '100.0000', '100.0000', '0.0000', 0),
+(35, 35, 42, 'Ламинат Kronospan Komfort', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
+(36, 36, 42, 'Ламинат Kronospan Komfort', 'Товар 15', 1, '18.7648', '18.7648', '0.0000', 0);
 
 -- --------------------------------------------------------
 
@@ -2236,7 +2292,7 @@ CREATE TABLE IF NOT EXISTS `order_total` (
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`order_total_id`),
   KEY `idx_orders_total_orders_id` (`order_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=55 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=85 ;
 
 --
 -- Дамп данных таблицы `order_total`
@@ -2296,7 +2352,37 @@ INSERT INTO `order_total` (`order_total_id`, `order_id`, `code`, `title`, `text`
 (51, 25, 'total', 'Итого', '0.00 р.', '0.0000', 9),
 (52, 26, 'sub_total', 'Сумма', '9.38 р.', '9.3824', 1),
 (53, 26, 'shipping', 'Фиксированная стоимость доставки', '5.00 р.', '5.0000', 3),
-(54, 26, 'total', 'Итого', '14.38 р.', '14.3824', 9);
+(54, 26, 'total', 'Итого', '14.38 р.', '14.3824', 9),
+(55, 27, 'sub_total', 'Сумма', '0.00 р.', '0.0000', 1),
+(56, 27, 'shipping', 'Фиксированная стоимость доставки', '5.00 р.', '5.0000', 3),
+(57, 27, 'total', 'Итого', '5.00 р.', '5.0000', 9),
+(58, 28, 'sub_total', 'Сумма', '0.00 р.', '0.0000', 1),
+(59, 28, 'shipping', 'Фиксированная стоимость доставки', '5.00 р.', '5.0000', 3),
+(60, 28, 'total', 'Итого', '5.00 р.', '5.0000', 9),
+(61, 29, 'sub_total', 'Сумма', '0.00 р.', '0.0000', 1),
+(62, 29, 'shipping', 'Фиксированная стоимость доставки', '5.00 р.', '5.0000', 3),
+(63, 29, 'total', 'Итого', '5.00 р.', '5.0000', 9),
+(64, 30, 'sub_total', 'Сумма', '0.00 р.', '0.0000', 1),
+(65, 30, 'shipping', 'Фиксированная стоимость доставки', '5.00 р.', '5.0000', 3),
+(66, 30, 'total', 'Итого', '5.00 р.', '5.0000', 9),
+(67, 31, 'sub_total', 'Сумма', '100.00 р.', '100.0000', 1),
+(68, 31, 'shipping', 'Фиксированная стоимость доставки', '5.00 р.', '5.0000', 3),
+(69, 31, 'total', 'Итого', '105.00 р.', '105.0000', 9),
+(70, 32, 'sub_total', 'Сумма', '100.00 р.', '100.0000', 1),
+(71, 32, 'shipping', 'Фиксированная стоимость доставки', '5.00 р.', '5.0000', 3),
+(72, 32, 'total', 'Итого', '105.00 р.', '105.0000', 9),
+(73, 33, 'sub_total', 'Сумма', '100.00 р.', '100.0000', 1),
+(74, 33, 'shipping', 'Фиксированная стоимость доставки', '5.00 р.', '5.0000', 3),
+(75, 33, 'total', 'Итого', '105.00 р.', '105.0000', 9),
+(76, 34, 'sub_total', 'Сумма', '100.00 р.', '100.0000', 1),
+(77, 34, 'shipping', 'Фиксированная стоимость доставки', '5.00 р.', '5.0000', 3),
+(78, 34, 'total', 'Итого', '105.00 р.', '105.0000', 9),
+(79, 35, 'sub_total', 'Сумма', '0.00 р.', '0.0000', 1),
+(80, 35, 'shipping', 'Фиксированная стоимость доставки', '5.00 р.', '5.0000', 3),
+(81, 35, 'total', 'Итого', '5.00 р.', '5.0000', 9),
+(82, 36, 'sub_total', 'Сумма', '18.76 р.', '18.7648', 1),
+(83, 36, 'shipping', 'Фиксированная стоимость доставки', '5.00 р.', '5.0000', 3),
+(84, 36, 'total', 'Итого', '23.76 р.', '23.7648', 9);
 
 -- --------------------------------------------------------
 
@@ -2371,7 +2457,7 @@ CREATE TABLE IF NOT EXISTS `product` (
 INSERT INTO `product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `unit_count`, `meters_package`, `price`, `esponi_priceFormula`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `date_added`, `date_modified`, `viewed`) VALUES
 (28, 'Товар 1', '', '', '', '', '', '', '', 938, 7, 'data/demo/htc_touch_hd_1.jpg', 5, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:06:50', '2015-04-20 09:41:25', 0),
 (29, 'Товар 2', '', '', '', '', '', '', '', 999, 6, 'data/demo/palm_treo_pro_1.jpg', 6, 1, 1, NULL, '279.9900', '', 0, 0, '2009-02-03', '133.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:42:17', '2015-04-14 17:21:04', 0),
-(30, 'Товар 3', '0907', '', '', '', '', '', '', 3, 6, 'data/demo/canon_eos_5d_1.jpg', 9, 1, 2, '', '100.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:59:00', '2015-04-21 17:06:38', 59),
+(30, 'Товар 3', '0907', '', '', '', '', '', '', 212, 6, 'data/demo/canon_eos_5d_1.jpg', 9, 1, 2, '12', '100.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:59:00', '2015-04-22 17:43:18', 84),
 (31, 'Товар 4', '', '', '', '', '', '', '', 1000, 6, 'data/demo/nikon_d300_1.jpg', 0, 1, 1, NULL, '80.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 17:00:10', '2015-04-14 17:19:41', 0),
 (32, 'Товар 5', '', '', '', '', '', '', '', 999, 6, 'data/demo/ipod_touch_1.jpg', 8, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 17:07:26', '2015-04-14 17:19:05', 0),
 (33, 'Товар 6', '', '', '', '', '', '', '', 1000, 6, 'data/demo/samsung_syncmaster_941bw.jpg', 0, 1, 1, NULL, '200.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 17:08:31', '2015-04-14 17:21:59', 0),
@@ -2379,7 +2465,7 @@ INSERT INTO `product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`
 (36, 'Товар 9', '', '', '', '', '', '', '', 994, 6, 'data/demo/ipod_nano_1.jpg', 8, 0, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 18:09:19', '2015-04-20 09:41:49', 0),
 (40, 'Товар 11', '', '', '', '', '', '', '', 970, 5, 'data/demo/iphone_1.jpg', 8, 1, 1, NULL, '101.0000', '', 0, 0, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:12', '2015-04-14 17:16:31', 0),
 (41, 'Товар 14', '', '', '', '', '', '', '', 977, 5, 'data/demo/imac_1.jpg', 8, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:26', '2015-04-14 17:16:08', 0),
-(42, 'Товар 15', '0709', '', '', '', '', '', '', 972, 7, 'data/products/img4.jpg', 8, 1, 1, '2.3456', '100.0000', '(unit_count == 1) ? (ceil({13}/meters_package)*meters_package)*price : price', 0, 0, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:37', '2015-04-22 11:54:24', 505),
+(42, 'Товар 15', '0709', '', '', '', '', '', '', 966, 7, 'data/products/img4.jpg', 8, 1, 1, '2.3456', '100.0000', '(unit_count == 1) ? (ceil({13}/meters_package)*meters_package)*price : price', 0, 0, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:37', '2015-04-22 11:54:24', 517),
 (43, 'Товар 16', '', '', '', '', '', '', '', 929, 5, 'data/demo/macbook_1.jpg', 8, 0, 1, NULL, '500.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:07:49', '2015-04-20 09:42:06', 2),
 (44, 'Товар 17', '', '', '', '', '', '', '', 1000, 5, 'data/demo/macbook_air_1.jpg', 8, 1, 1, NULL, '1000.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:00', '2015-04-20 09:42:12', 0),
 (45, 'Товар 18', '', '', '', '', '', '', '', 998, 5, 'data/demo/macbook_pro_1.jpg', 8, 1, 1, NULL, '2000.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:17', '2015-04-20 09:42:17', 6),
@@ -2499,14 +2585,14 @@ CREATE TABLE IF NOT EXISTS `product_image` (
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_image_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2928 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2968 ;
 
 --
 -- Дамп данных таблицы `product_image`
 --
 
 INSERT INTO `product_image` (`product_image_id`, `product_id`, `image`, `sort_order`) VALUES
-(2912, 30, 'data/demo/canon_eos_5d_2.jpg', 0),
+(2967, 30, 'data/demo/canon_eos_5d_2.jpg', 0),
 (2668, 47, 'data/demo/hp_2.jpg', 0),
 (2670, 28, 'data/demo/htc_touch_hd_2.jpg', 0),
 (2588, 41, 'data/demo/imac_3.jpg', 0),
@@ -2533,7 +2619,7 @@ INSERT INTO `product_image` (`product_image_id`, `product_id`, `image`, `sort_or
 (2602, 48, 'data/demo/ipod_classic_3.jpg', 0),
 (2592, 40, 'data/demo/iphone_3.jpg', 0),
 (2591, 40, 'data/demo/iphone_5.jpg', 0),
-(2911, 30, 'data/demo/canon_eos_5d_3.jpg', 0),
+(2966, 30, 'data/demo/canon_eos_5d_3.jpg', 0),
 (2667, 47, 'data/demo/hp_3.jpg', 0),
 (2669, 28, 'data/demo/htc_touch_hd_3.jpg', 0),
 (2587, 41, 'data/demo/imac_2.jpg', 0),
@@ -2583,14 +2669,15 @@ CREATE TABLE IF NOT EXISTS `product_option` (
   `option_value` text NOT NULL,
   `required` tinyint(1) NOT NULL,
   PRIMARY KEY (`product_option_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=228 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=231 ;
 
 --
 -- Дамп данных таблицы `product_option`
 --
 
 INSERT INTO `product_option` (`product_option_id`, `product_id`, `option_id`, `option_value`, `required`) VALUES
-(227, 42, 13, '', 0);
+(227, 42, 13, '', 0),
+(230, 30, 14, '', 0);
 
 -- --------------------------------------------------------
 
@@ -2613,7 +2700,14 @@ CREATE TABLE IF NOT EXISTS `product_option_value` (
   `weight` decimal(15,8) NOT NULL,
   `weight_prefix` varchar(1) NOT NULL,
   PRIMARY KEY (`product_option_value_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
+
+--
+-- Дамп данных таблицы `product_option_value`
+--
+
+INSERT INTO `product_option_value` (`product_option_value_id`, `product_option_id`, `product_id`, `option_id`, `option_value_id`, `quantity`, `subtract`, `price`, `price_prefix`, `points`, `points_prefix`, `weight`, `weight_prefix`) VALUES
+(17, 230, 30, 14, 49, 7, 1, '0.0000', '+', 0, '+', '0.00000000', '+');
 
 -- --------------------------------------------------------
 
@@ -2653,7 +2747,7 @@ CREATE TABLE IF NOT EXISTS `product_reward` (
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_reward_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=691 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=711 ;
 
 --
 -- Дамп данных таблицы `product_reward`
@@ -2667,7 +2761,7 @@ INSERT INTO `product_reward` (`product_reward_id`, `product_id`, `customer_group
 (619, 29, 1, 0),
 (613, 48, 1, 0),
 (610, 40, 1, 0),
-(687, 30, 1, 0),
+(710, 30, 1, 0),
 (638, 44, 1, 0),
 (639, 45, 1, 0),
 (617, 31, 1, 0),
@@ -3484,7 +3578,7 @@ CREATE TABLE IF NOT EXISTS `url_alias` (
   `keyword` varchar(255) NOT NULL,
   PRIMARY KEY (`url_alias_id`),
   KEY `query` (`query`(64))
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1086 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1106 ;
 
 --
 -- Дамп данных таблицы `url_alias`
@@ -3535,7 +3629,7 @@ INSERT INTO `url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (897, 'information_id=4', 'about_us'),
 (1085, 'product_id=42', 'apple-cinema-30'),
 (976, 'category_id=59', 'alloc'),
-(1082, 'product_id=30', 'canon-eos-5d'),
+(1105, 'product_id=30', 'canon-eos-5d'),
 (1028, 'product_id=47', 'hp-lp3065'),
 (1029, 'product_id=28', 'htc-touch-hd'),
 (1030, 'product_id=64', 'htc-touch-hd-1'),

@@ -1171,13 +1171,9 @@ class ControllerCatalogProduct extends Controller {
 			$this->data['subtract'] = 1;
 		}
 
-    if (isset($this->request->post['unit_count'])) {
-      $this->data['unit_count'] = $this->request->post['unit_count'];
-    } elseif (!empty($product_info)) {
+
       $this->data['unit_count'] = $product_info['unit_count'];
-    } else {
-      $this->data['unit_count'] = 2;
-    }
+
 
     if (isset($this->request->post['meters_package'])) {
       $this->data['meters_package'] = $this->request->post['meters_package'];

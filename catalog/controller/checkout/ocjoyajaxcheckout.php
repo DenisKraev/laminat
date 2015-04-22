@@ -310,8 +310,12 @@ class ControllerCheckoutOcjoyajaxcheckout extends Controller {
                 $opts[$k] = $opt;
                 $opts[$k]['value'] = $opts[$k]['option_value'];
             }
+
+
             $product['option'] = $opts;
         }
+
+      print_r($product['option']);
 
         $this->load->model('catalog/product');  
         $product_info = $this->model_catalog_product->getProduct($product_id);

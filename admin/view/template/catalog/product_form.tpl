@@ -108,10 +108,10 @@
                 <td>Единицы измерения</td>
                 <td>
                     <select name="unit_count">
-                      <?php if ($unit_count) { ?>
+                      <?php if ($unit_count == 1) { ?>
                         <option value="1" selected="selected">м2</option>
                         <option value="2">шт</option>
-                      <?php } else { ?>
+                      <?php } elseif ($unit_count == 2) { ?>
                         <option value="1">м2</option>
                         <option value="2" selected="selected">шт</option>
                       <?php } ?>

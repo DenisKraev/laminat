@@ -464,15 +464,15 @@ a.title-style:hover {
   text-decoration: none;
 }
 
-.fancybox-wrap.fancybox-type-inline {
+.fancybox-type-inline, .fancybox-type-html {
   width: auto !important;
 }
 
-.fancybox-type-inline .fancybox-skin {
+.fancybox-type-inline .fancybox-skin, .fancybox-type-html .fancybox-skin {
   border-radius: 0px;
   background: #f2f2f2;
 }
-.fancybox-type-inline .fancybox-skin .modal-header {
+.fancybox-type-inline .fancybox-skin .modal-header, .fancybox-type-html .fancybox-skin .modal-header {
   background: #eb8c2a;
   padding: 15px;
   margin: 0px -15px;
@@ -483,14 +483,14 @@ a.title-style:hover {
   color: #fff;
   margin-bottom: 25px;
 }
-.fancybox-type-inline .fancybox-inner {
+.fancybox-type-inline .fancybox-inner, .fancybox-type-html .fancybox-inner {
   padding: 15px;
   width: 440px !important;
 }
-.fancybox-type-inline .fancybox-outer, .fancybox-type-inline .fancybox-skin {
+.fancybox-type-inline .fancybox-outer, .fancybox-type-inline .fancybox-skin, .fancybox-type-html .fancybox-outer, .fancybox-type-html .fancybox-skin {
   width: 440px !important;
 }
-.fancybox-type-inline .fancybox-close {
+.fancybox-type-inline .fancybox-close, .fancybox-type-html .fancybox-close {
   top: 0px;
   right: 0px;
   width: 45px;
@@ -499,10 +499,10 @@ a.title-style:hover {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-.fancybox-type-inline .fancybox-close:hover {
+.fancybox-type-inline .fancybox-close:hover, .fancybox-type-html .fancybox-close:hover {
   opacity: 0.9;
 }
-.fancybox-type-inline .fancybox-skin .style-form-text {
+.fancybox-type-inline .fancybox-skin .style-form-text, .fancybox-type-html .fancybox-skin .style-form-text {
   width: 100%;
   font-family: Arial, sans-serif;
   color: #8c8c8c;
@@ -511,27 +511,27 @@ a.title-style:hover {
   border: 1px solid #e3e3e3;
   padding: 8px;
 }
-.fancybox-type-inline .fancybox-skin .style-form-text::-webkit-input-placeholder {
+.fancybox-type-inline .fancybox-skin .style-form-text::-webkit-input-placeholder, .fancybox-type-html .fancybox-skin .style-form-text::-webkit-input-placeholder {
   font-family: Arial, sans-serif;
   color: #8c8c8c;
   font-size: 12px;
 }
-.fancybox-type-inline .fancybox-skin .style-form-text:-moz-placeholder {
+.fancybox-type-inline .fancybox-skin .style-form-text:-moz-placeholder, .fancybox-type-html .fancybox-skin .style-form-text:-moz-placeholder {
   font-family: Arial, sans-serif;
   color: #8c8c8c;
   font-size: 12px;
 }
-.fancybox-type-inline .fancybox-skin .style-form-text:-ms-input-placeholder {
+.fancybox-type-inline .fancybox-skin .style-form-text:-ms-input-placeholder, .fancybox-type-html .fancybox-skin .style-form-text:-ms-input-placeholder {
   font-family: Arial, sans-serif;
   color: #8c8c8c;
   font-size: 12px;
 }
-.fancybox-type-inline .fancybox-skin .style-form-text.placeholder {
+.fancybox-type-inline .fancybox-skin .style-form-text.placeholder, .fancybox-type-html .fancybox-skin .style-form-text.placeholder {
   font-family: Arial, sans-serif;
   color: #8c8c8c;
   font-size: 12px;
 }
-.fancybox-type-inline .fancybox-skin .form-row .icon-user, .fancybox-type-inline .fancybox-skin .form-row .icon-phone {
+.fancybox-type-inline .fancybox-skin .form-row .icon-user, .fancybox-type-inline .fancybox-skin .form-row .icon-phone, .fancybox-type-html .fancybox-skin .form-row .icon-user, .fancybox-type-html .fancybox-skin .form-row .icon-phone {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -539,10 +539,10 @@ a.title-style:hover {
   *zoom: 1;
   *display: inline;
 }
-.fancybox-type-inline .fancybox-skin .form-row .icon-user input, .fancybox-type-inline .fancybox-skin .form-row .icon-phone input {
+.fancybox-type-inline .fancybox-skin .form-row .icon-user input, .fancybox-type-inline .fancybox-skin .form-row .icon-phone input, .fancybox-type-html .fancybox-skin .form-row .icon-user input, .fancybox-type-html .fancybox-skin .form-row .icon-phone input {
   padding-right: 40px;
 }
-.fancybox-type-inline .fancybox-skin .form-row .icon-user:after, .fancybox-type-inline .fancybox-skin .form-row .icon-phone:after {
+.fancybox-type-inline .fancybox-skin .form-row .icon-user:after, .fancybox-type-inline .fancybox-skin .form-row .icon-phone:after, .fancybox-type-html .fancybox-skin .form-row .icon-user:after, .fancybox-type-html .fancybox-skin .form-row .icon-phone:after {
   position: absolute;
   content: "";
   top: 4px;
@@ -551,10 +551,10 @@ a.title-style:hover {
   height: 24px;
   border-left: 1px solid #e3e3e3;
 }
-.fancybox-type-inline .fancybox-skin .form-row .icon-user:after {
+.fancybox-type-inline .fancybox-skin .form-row .icon-user:after, .fancybox-type-html .fancybox-skin .form-row .icon-user:after {
   background: url('/catalog/view/theme/default/image/app/ico-user-grey-21x20.png?1429269923') 50% 50% no-repeat;
 }
-.fancybox-type-inline .fancybox-skin .form-row .icon-phone:after {
+.fancybox-type-inline .fancybox-skin .form-row .icon-phone:after, .fancybox-type-html .fancybox-skin .form-row .icon-phone:after {
   background: url('/catalog/view/theme/default/image/app/ico-phone-grey-21x21.png?1429270019') 50% 50% no-repeat;
 }
 

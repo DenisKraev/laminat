@@ -167,6 +167,7 @@ function minuscon(pid) {
     <?php } ?>
 
     <input class="hide" type="text" name="quantity" id="quant-<?php echo $product_id; ?>" size="3" maxlength="3" disabled="disabled" value="1" />
+<!--    <input class="hide" type="text" name="count_meters" id="count_meters---><?php //echo $product_id; ?><!--" size="3" maxlength="3" disabled="disabled" value="2.34" />-->
 
     <?php if ($hidedescription == 1) { ?>
         <textarea name="description" class="ajaxorderinputs" placeholder="<?php echo $text_ocjoyajaxcheckout_enterdescription; ?>"></textarea>
@@ -196,6 +197,11 @@ function minuscon(pid) {
       <?php if ($options) { ?>
         <div class="options">
           <?php foreach ($options as $option) { ?>
+
+            <?php if ($option['type'] == 'text') { ?>
+                <input type="text" name="option[<?php echo $option['product_option_id']; ?>]" id="option-<?php echo $option['product_option_id']; ?>" size="3" maxlength="3" value="" />
+            <?php } ?>
+
             <?php if ($option['type'] == 'select') { ?>
               <div id="option-<?php echo $option['product_option_id']; ?>" class="option">
                 <b><?php echo $option['name']; ?>:</b><br />
