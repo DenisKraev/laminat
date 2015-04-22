@@ -155,7 +155,7 @@
 			<script type="text/javascript">
 			$(document).ready(function() {
 				var timestamp = 0;
-				$('#product_add_to_cart_form div[class=\'options\']').append($('#esponi_OTF_Container'));
+				$('#product_add_to_cart_form div[class=\'actions\']').prepend($('#esponi_OTF_Container'));
 				$('#product_add_to_cart_form input[type=\'radio\'], #product_add_to_cart_form input[type=\'checkbox\'], #product_add_to_cart_form select').bind("change", function(){ esponi_OTF($(this)); });
 				$('#product_add_to_cart_form input[type=\'text\'], #product_add_to_cart_form textarea').bind("keyup", function(){ esponi_OTF($(this)); });
 				$('#product_add_to_cart_form input[type=\'hidden\']').bind("change", function(){ esponi_OTF($(this)); });

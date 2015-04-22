@@ -418,7 +418,7 @@ class ControllerProductProduct extends Controller {
 			
 			foreach ($results as $result) {
 				if ($result['image']) {
-					$image = $this->model_tool_image->crop($result['image'], 275, 275, 'center', '_thumb_prod');
+					$image = $this->model_tool_image->crop($result['image'], 227, 185, 'center', '_thumb_accompanying');
 				} else {
 					$image = false;
 				}

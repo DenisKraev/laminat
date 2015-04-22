@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'font-family-2'.
-        on line 16 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-product.sass, in `font-family-2'
-        from line 16 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-product.sass
+        on line 33 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-product.sass, in `font-family-2'
+        from line 33 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-product.sass
 
-11:     + .right
-12:       margin-left: 312px
-13:   .share
-14:     margin-bottom: 10px
-15:   h1
-16:     +font-family-2(bold)
-17:     color: #333333
-18:     font-size: 20px
-19:     line-height: 24px
-20:     margin: 0px
-21:     margin-bottom: 25px
+28:     &.left
+29:       text-align: left
+30:     &.right
+31:       text-align: left
+32:   h1
+33:     +font-family-2(bold)
+34:     color: #333333
+35:     font-size: 20px
+36:     line-height: 24px
+37:     margin: 0px
+38:     margin-bottom: 25px
 
 Backtrace:
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-product.sass:16:in `font-family-2'
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-product.sass:16
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-product.sass:33:in `font-family-2'
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-product.sass:33
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
@@ -84,4 +84,4 @@ C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/ada
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'font-family-2'.\A         on line 16 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-product.sass, in `font-family-2'\A         from line 16 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-product.sass\A \A 11:     + .right\A 12:       margin-left: 312px\A 13:   .share\A 14:     margin-bottom: 10px\A 15:   h1\A 16:     +font-family-2(bold)\A 17:     color: #333333\A 18:     font-size: 20px\A 19:     line-height: 24px\A 20:     margin: 0px\A 21:     margin-bottom: 25px"; }
+  content: "Error: Undefined mixin 'font-family-2'.\A         on line 33 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-product.sass, in `font-family-2'\A         from line 33 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-product.sass\A \A 28:     &.left\A 29:       text-align: left\A 30:     &.right\A 31:       text-align: left\A 32:   h1\A 33:     +font-family-2(bold)\A 34:     color: #333333\A 35:     font-size: 20px\A 36:     line-height: 24px\A 37:     margin: 0px\A 38:     margin-bottom: 25px"; }

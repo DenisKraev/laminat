@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 21 2015 г., 17:19
+-- Время создания: Апр 22 2015 г., 11:05
 -- Версия сервера: 5.5.41-log
 -- Версия PHP: 5.3.29
 
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `actions` (
 --
 
 INSERT INTO `actions` (`actions_id`, `image`, `image_size`, `date_start`, `date_end`, `interval`, `status`, `fancybox`, `product_related`) VALUES
-(1, 'data/actions/img3.jpg', 0, '1428406080', '1429788480', NULL, 1, 0, '30,42'),
+(1, 'data/actions/img3.jpg', 0, '1428406080', '1429788480', 0, 1, 0, '42'),
 (2, 'data/actions/img3.jpg', 0, '1428408180', '1428408180', NULL, 1, 0, ''),
 (3, 'data/actions/img3.jpg', 0, '1428440400', '', 24, 1, 0, ''),
 (4, '', 0, '1428526800', '', 240, 1, 0, '');
@@ -74,9 +74,9 @@ CREATE TABLE IF NOT EXISTS `actions_description` (
 --
 
 INSERT INTO `actions_description` (`actions_id`, `language_id`, `title`, `meta_keywords`, `meta_description`, `h1`, `caption`, `anonnce`, `description`, `content`) VALUES
-(1, 1, '', '', '', '', 'Плинтус в подарок', '', '&lt;div&gt;\r\n	Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n&lt;div&gt;\r\n	в бесплатную укладку не входит.Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n&lt;div&gt;\r\n	в бесплатную укладку не входит.Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n&lt;div&gt;\r\n	в бесплатную укладку не входит.&lt;/div&gt;\r\n', '&lt;div&gt;\r\n	Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n&lt;div&gt;\r\n	в бесплатную укладку не входит.&lt;/div&gt;\r\n'),
 (2, 1, '', '', '', '', 'Еще акция', '', '&lt;p&gt;\r\n	фкпыфукп фкпыукп&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	укпыукп ыукпыур&lt;/p&gt;\r\n'),
 (3, 1, '', '', '', '', 'Акция', '', '&lt;p&gt;\r\n	фыпфкуп&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	фукпыукп&lt;/p&gt;\r\n'),
+(1, 1, '', '', '', '', 'Плинтус в подарок', '', '&lt;div&gt;Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n\r\n&lt;div&gt;в бесплатную укладку не входит.Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n\r\n&lt;div&gt;в бесплатную укладку не входит.Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n\r\n&lt;div&gt;в бесплатную укладку не входит.&lt;/div&gt;\r\n', '&lt;div&gt;Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n\r\n&lt;div&gt;в бесплатную укладку не входит.&lt;/div&gt;\r\n'),
 (4, 1, '', '', '', '', 'ewgaweg', '', '&lt;p&gt;\r\n	wegaw&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	waegaweg&lt;/p&gt;\r\n');
 
 -- --------------------------------------------------------
@@ -2365,7 +2365,7 @@ CREATE TABLE IF NOT EXISTS `product` (
 INSERT INTO `product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `unit_count`, `meters_package`, `price`, `esponi_priceFormula`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `date_added`, `date_modified`, `viewed`) VALUES
 (28, 'Товар 1', '', '', '', '', '', '', '', 938, 7, 'data/demo/htc_touch_hd_1.jpg', 5, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:06:50', '2015-04-20 09:41:25', 0),
 (29, 'Товар 2', '', '', '', '', '', '', '', 999, 6, 'data/demo/palm_treo_pro_1.jpg', 6, 1, 1, NULL, '279.9900', '', 0, 0, '2009-02-03', '133.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:42:17', '2015-04-14 17:21:04', 0),
-(30, 'Товар 3', '0907', '', '', '', '', '', '', 3, 6, 'data/demo/canon_eos_5d_1.jpg', 9, 1, 2, '', '100.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:59:00', '2015-04-21 17:06:38', 48),
+(30, 'Товар 3', '0907', '', '', '', '', '', '', 3, 6, 'data/demo/canon_eos_5d_1.jpg', 9, 1, 2, '', '100.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:59:00', '2015-04-21 17:06:38', 57),
 (31, 'Товар 4', '', '', '', '', '', '', '', 1000, 6, 'data/demo/nikon_d300_1.jpg', 0, 1, 1, NULL, '80.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 17:00:10', '2015-04-14 17:19:41', 0),
 (32, 'Товар 5', '', '', '', '', '', '', '', 999, 6, 'data/demo/ipod_touch_1.jpg', 8, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 17:07:26', '2015-04-14 17:19:05', 0),
 (33, 'Товар 6', '', '', '', '', '', '', '', 1000, 6, 'data/demo/samsung_syncmaster_941bw.jpg', 0, 1, 1, NULL, '200.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 17:08:31', '2015-04-14 17:21:59', 0),
@@ -2373,10 +2373,10 @@ INSERT INTO `product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`
 (36, 'Товар 9', '', '', '', '', '', '', '', 994, 6, 'data/demo/ipod_nano_1.jpg', 8, 0, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 18:09:19', '2015-04-20 09:41:49', 0),
 (40, 'Товар 11', '', '', '', '', '', '', '', 970, 5, 'data/demo/iphone_1.jpg', 8, 1, 1, NULL, '101.0000', '', 0, 0, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:12', '2015-04-14 17:16:31', 0),
 (41, 'Товар 14', '', '', '', '', '', '', '', 977, 5, 'data/demo/imac_1.jpg', 8, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:26', '2015-04-14 17:16:08', 0),
-(42, 'Товар 15', '0709', '', '', '', '', '', '', 972, 7, 'data/products/img4.jpg', 8, 1, 1, '2.3456', '100.0000', '(unit_count == 1) ? (ceil({13}/meters_package)*meters_package)*price : price', 0, 0, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:37', '2015-04-21 10:42:26', 329),
+(42, 'Товар 15', '0709', '', '', '', '', '', '', 972, 7, 'data/products/img4.jpg', 8, 1, 1, '2.3456', '100.0000', '(unit_count == 1) ? (ceil({13}/meters_package)*meters_package)*price : price', 0, 0, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:37', '2015-04-22 11:54:24', 437),
 (43, 'Товар 16', '', '', '', '', '', '', '', 929, 5, 'data/demo/macbook_1.jpg', 8, 0, 1, NULL, '500.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:07:49', '2015-04-20 09:42:06', 2),
 (44, 'Товар 17', '', '', '', '', '', '', '', 1000, 5, 'data/demo/macbook_air_1.jpg', 8, 1, 1, NULL, '1000.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:00', '2015-04-20 09:42:12', 0),
-(45, 'Товар 18', '', '', '', '', '', '', '', 998, 5, 'data/demo/macbook_pro_1.jpg', 8, 1, 1, NULL, '2000.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:17', '2015-04-20 09:42:17', 0),
+(45, 'Товар 18', '', '', '', '', '', '', '', 998, 5, 'data/demo/macbook_pro_1.jpg', 8, 1, 1, NULL, '2000.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:17', '2015-04-20 09:42:17', 6),
 (46, 'Товар 19', '', '', '', '', '', '', '', 1000, 5, 'data/demo/sony_vaio_1.jpg', 10, 1, 1, NULL, '1000.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:29', '2015-04-14 17:22:14', 1),
 (47, 'Товар 21', '', '', '', '', '', '', '', 1000, 5, 'data/demo/hp_1.jpg', 7, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, '2009-02-03 21:08:40', '2015-04-20 09:41:17', 2),
 (48, 'Товар 20', 'test 1', '', '', '', '', '', 'test 2', 995, 5, 'data/demo/ipod_classic_1.jpg', 8, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-08', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-08 17:21:51', '2015-04-14 17:18:36', 0),
@@ -2402,8 +2402,8 @@ CREATE TABLE IF NOT EXISTS `product_attribute` (
 --
 
 INSERT INTO `product_attribute` (`product_id`, `attribute_id`, `language_id`, `text`) VALUES
-(42, 13, 1, '32 гр'),
-(42, 12, 1, '31');
+(42, 12, 1, '31'),
+(42, 13, 1, '32 гр');
 
 -- --------------------------------------------------------
 
@@ -2446,7 +2446,7 @@ INSERT INTO `product_description` (`product_id`, `language_id`, `name`, `descrip
 (43, 1, 'MacBook', '&lt;div&gt;\r\n&lt;p&gt;&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', '', '', ''),
 (31, 1, 'Nikon D300', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n&lt;div&gt;Engineered with pro-level features and performance, the 12.3-effective-megapixel D300 combines brand new technologies with advanced features inherited from Nikon''s newly announced D3 professional digital SLR camera to offer serious photographers remarkable performance combined with agility.&lt;br /&gt;\r\n&lt;br /&gt;\r\nSimilar to the D3, the D300 features Nikon''s exclusive EXPEED Image Processing System that is central to driving the speed and processing power needed for many of the camera''s new features. The D300 features a new 51-point autofocus system with Nikon''s 3D Focus Tracking feature and two new LiveView shooting modes that allow users to frame a photograph using the camera''s high-resolution LCD monitor. The D300 shares a similar Scene Recognition System as is found in the D3; it promises to greatly enhance the accuracy of autofocus, autoexposure, and auto white balance by recognizing the subject or scene being photographed and applying this information to the calculations for the three functions.&lt;br /&gt;\r\n&lt;br /&gt;\r\nThe D300 reacts with lightning speed, powering up in a mere 0.13 seconds and shooting with an imperceptible 45-millisecond shutter release lag time. The D300 is capable of shooting at a rapid six frames per second and can go as fast as eight frames per second when using the optional MB-D10 multi-power battery pack. In continuous bursts, the D300 can shoot up to 100 shots at full 12.3-megapixel resolution. (NORMAL-LARGE image setting, using a SanDisk Extreme IV 1GB CompactFlash card.)&lt;br /&gt;\r\n&lt;br /&gt;\r\nThe D300 incorporates a range of innovative technologies and features that will significantly improve the accuracy, control, and performance photographers can get from their equipment. Its new Scene Recognition System advances the use of Nikon''s acclaimed 1,005-segment sensor to recognize colors and light patterns that help the camera determine the subject and the type of scene being photographed before a picture is taken. This information is used to improve the accuracy of autofocus, autoexposure, and auto white balance functions in the D300. For example, the camera can track moving subjects better and by identifying them, it can also automatically select focus points faster and with greater accuracy. It can also analyze highlights and more accurately determine exposure, as well as infer light sources to deliver more accurate white balance detection.&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', '', ''),
 (49, 1, 'Samsung Galaxy Tab 10.1', '&lt;p&gt;Samsung Galaxy Tab 10.1, is the world’s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.&lt;/p&gt;\r\n\r\n&lt;p&gt;Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 – includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick – a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.&lt;/p&gt;\r\n\r\n&lt;p&gt;Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader’s Hub, Music Hub and Samsung Mini Apps Tray – which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.&amp;nbsp;äö&lt;/p&gt;\r\n', '', '', '', '', ''),
-(42, 1, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', '&lt;p&gt;описание&lt;/p&gt;\r\n', '', '', '', '', ''),
+(42, 1, 'Ламинат Kronospan Komfort', '&lt;p&gt;описание&lt;/p&gt;\r\n', '', '', '', '', ''),
 (30, 1, 'Canon EOS 5D', '&lt;p&gt;Canon''s press material for the EOS 5D states that it ''defines (a) new D-SLR category'', while we''re not typically too concerned with marketing talk this particular statement is clearly pretty accurate. The EOS 5D is unlike any previous digital SLR in that it combines a full-frame (35 mm sized) high resolution sensor (12.8 megapixels) with a relatively compact body (slightly larger than the EOS 20D, although in your hand it feels noticeably ''chunkier''). The EOS 5D is aimed to slot in between the EOS 20D and the EOS-1D professional digital SLR''s, an important difference when compared to the latter is that the EOS 5D doesn''t have any environmental seals. While Canon don''t specifically refer to the EOS 5D as a ''professional'' digital SLR it will have obvious appeal to professionals who want a high quality digital SLR in a body lighter than the EOS-1D. It will also no doubt appeal to current EOS 20D owners (although lets hope they''ve not bought too many EF-S lenses...) ??&lt;/p&gt;\r\n', '', '', '', '', ''),
 (64, 1, 'HTC Touch HD', '&lt;p&gt;HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high definition clarity for a mobile experience you never thought possible. Seductively sleek, the HTC Touch HD provides the next generation of mobile functionality, all at a simple touch. Fully integrated with Windows Mobile Professional 6.1, ultrafast 3.5G, GPS, 5MP camera, plus lots more - all delivered on a breathtakingly crisp 3.8&quot; WVGA touchscreen - you can take control of your mobile world with the HTC Touch HD.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Processor Qualcomm® MSM 7201A™ 528 MHz&lt;/li&gt;\r\n	&lt;li&gt;Windows Mobile® 6.1 Professional Operating System&lt;/li&gt;\r\n	&lt;li&gt;Memory: 512 MB ROM, 288 MB RAM&lt;/li&gt;\r\n	&lt;li&gt;Dimensions: 115 mm x 62.8 mm x 12 mm / 146.4 grams&lt;/li&gt;\r\n	&lt;li&gt;3.8-inch TFT-LCD flat touch-sensitive screen with 480 x 800 WVGA resolution&lt;/li&gt;\r\n	&lt;li&gt;HSDPA/WCDMA: Europe/Asia: 900/2100 MHz; Up to 2 Mbps up-link and 7.2 Mbps down-link speeds&lt;/li&gt;\r\n	&lt;li&gt;Quad-band GSM/GPRS/EDGE: Europe/Asia: 850/900/1800/1900 MHz (Band frequency, HSUPA availability, and data speed are operator dependent.)&lt;/li&gt;\r\n	&lt;li&gt;Device Control via HTC TouchFLO™ 3D &amp;amp; Touch-sensitive front panel buttons&lt;/li&gt;\r\n	&lt;li&gt;GPS and A-GPS ready&lt;/li&gt;\r\n	&lt;li&gt;Bluetooth® 2.0 with Enhanced Data Rate and A2DP for wireless stereo headsets&lt;/li&gt;\r\n	&lt;li&gt;Wi-Fi®: IEEE 802.11 b/g&lt;/li&gt;\r\n	&lt;li&gt;HTC ExtUSB™ (11-pin mini-USB 2.0)&lt;/li&gt;\r\n	&lt;li&gt;5 megapixel color camera with auto focus&lt;/li&gt;\r\n	&lt;li&gt;VGA CMOS color camera&lt;/li&gt;\r\n	&lt;li&gt;Built-in 3.5 mm audio jack, microphone, speaker, and FM radio&lt;/li&gt;\r\n	&lt;li&gt;Ring tone formats: AAC, AAC+, eAAC+, AMR-NB, AMR-WB, QCP, MP3, WMA, WAV&lt;/li&gt;\r\n	&lt;li&gt;40 polyphonic and standard MIDI format 0 and 1 (SMF)/SP MIDI&lt;/li&gt;\r\n	&lt;li&gt;Rechargeable Lithium-ion or Lithium-ion polymer 1350 mAh battery&lt;/li&gt;\r\n	&lt;li&gt;Expansion Slot: microSD™ memory card (SD 2.0 compatible)&lt;/li&gt;\r\n	&lt;li&gt;AC Adapter Voltage range/frequency: 100 ~ 240V AC, 50/60 Hz DC output: 5V and 1A&lt;/li&gt;\r\n	&lt;li&gt;Special Features: FM Radio, G-Sensor&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '', '', '', '');
 
@@ -2493,7 +2493,7 @@ CREATE TABLE IF NOT EXISTS `product_image` (
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_image_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2913 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2928 ;
 
 --
 -- Дамп данных таблицы `product_image`
@@ -2556,13 +2556,13 @@ INSERT INTO `product_image` (`product_image_id`, `product_id`, `image`, `sort_or
 (2689, 49, 'data/demo/samsung_tab_5.jpg', 0),
 (2688, 49, 'data/demo/samsung_tab_6.jpg', 0),
 (2687, 49, 'data/demo/samsung_tab_7.jpg', 0),
-(2908, 42, 'data/demo/canon_eos_5d_2.jpg', 0),
-(2907, 42, 'data/demo/canon_logo.jpg', 0),
-(2906, 42, 'data/demo/hp_1.jpg', 0),
-(2905, 42, 'data/demo/compaq_presario.jpg', 0),
+(2927, 42, 'data/demo/canon_eos_5d_1.jpg', 0),
+(2926, 42, 'data/demo/compaq_presario.jpg', 0),
+(2925, 42, 'data/demo/hp_1.jpg', 0),
+(2924, 42, 'data/demo/canon_logo.jpg', 0),
 (2672, 64, 'data/demo/htc_touch_hd_2.jpg', 0),
 (2671, 64, 'data/demo/htc_touch_hd_3.jpg', 0),
-(2904, 42, 'data/demo/canon_eos_5d_1.jpg', 0);
+(2923, 42, 'data/demo/canon_eos_5d_2.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -2629,7 +2629,11 @@ INSERT INTO `product_related` (`product_id`, `related_id`) VALUES
 (40, 42),
 (41, 42),
 (42, 40),
-(42, 41);
+(42, 41),
+(42, 43),
+(42, 45),
+(43, 42),
+(45, 42);
 
 -- --------------------------------------------------------
 
@@ -2643,14 +2647,14 @@ CREATE TABLE IF NOT EXISTS `product_reward` (
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_reward_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=688 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=691 ;
 
 --
 -- Дамп данных таблицы `product_reward`
 --
 
 INSERT INTO `product_reward` (`product_reward_id`, `product_id`, `customer_group_id`, `points`) VALUES
-(685, 42, 1, 0),
+(690, 42, 1, 0),
 (633, 47, 1, 0),
 (634, 28, 1, 0),
 (637, 43, 1, 0),
@@ -2686,7 +2690,7 @@ CREATE TABLE IF NOT EXISTS `product_special` (
   `date_end` date NOT NULL DEFAULT '0000-00-00',
   PRIMARY KEY (`product_special_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=502 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=505 ;
 
 --
 -- Дамп данных таблицы `product_special`
@@ -2694,7 +2698,7 @@ CREATE TABLE IF NOT EXISTS `product_special` (
 
 INSERT INTO `product_special` (`product_special_id`, `product_id`, `customer_group_id`, `priority`, `price`, `date_start`, `date_end`) VALUES
 (454, 40, 1, 0, '345.0000', '0000-00-00', '0000-00-00'),
-(501, 42, 1, 0, '4.0000', '0000-00-00', '0000-00-00'),
+(504, 42, 1, 0, '4.0000', '0000-00-00', '0000-00-00'),
 (456, 48, 1, 0, '345.0000', '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
@@ -2785,8 +2789,8 @@ INSERT INTO `product_to_category` (`product_id`, `category_id`, `main_category`)
 (41, 66, 1),
 (64, 65, 1),
 (28, 63, 1),
-(42, 63, 1),
 (42, 20, 0),
+(42, 63, 1),
 (33, 60, 0),
 (47, 20, 1);
 
@@ -2998,7 +3002,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1579 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1581 ;
 
 --
 -- Дамп данных таблицы `setting`
@@ -3277,7 +3281,6 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (1150, 0, 'special', 'special_module', 'a:1:{i:0;a:7:{s:5:"limit";s:3:"100";s:11:"image_width";s:3:"195";s:12:"image_height";s:3:"195";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
 (1564, 0, 'ocjoyajaxcheckout', 'config_show_on_module_special', '', 0),
 (1500, 0, 'category', 'category_module', 'a:2:{i:0;a:4:{s:9:"layout_id";s:1:"3";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}i:1;a:4:{s:9:"layout_id";s:1:"2";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
-(982, 0, 'actions', 'actions_module', 'a:1:{i:0;a:5:{s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:5:"limit";s:1:"4";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
 (984, 0, 'actions_setting', 'actions_setting', 'a:14:{s:13:"actions_limit";s:1:"5";s:11:"image_width";s:3:"120";s:12:"image_height";s:3:"120";s:10:"show_image";s:1:"1";s:9:"show_date";s:1:"1";s:22:"image_relproduct_width";s:2:"80";s:23:"image_relproduct_height";s:2:"80";s:17:"show_actions_date";s:1:"1";s:18:"image_module_width";s:3:"212";s:19:"image_module_height";s:3:"218";s:13:"module_maxlen";s:2:"80";s:17:"show_module_image";s:1:"1";s:16:"show_module_date";s:1:"1";s:3:"seo";a:1:{i:1;a:4:{s:2:"h1";s:0:"";s:5:"title";s:0:"";s:8:"keywords";s:0:"";s:11:"description";s:0:"";}}}', 1),
 (1562, 0, 'ocjoyajaxcheckout', 'config_show_on_specials', '', 0),
 (1561, 0, 'ocjoyajaxcheckout', 'config_show_on_search', '', 0),
@@ -3293,7 +3296,8 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (1556, 0, 'ocjoyajaxcheckout', 'config_info_payment', '', 0),
 (1555, 0, 'ocjoyajaxcheckout', 'config_info_shipping_text', '', 0),
 (1554, 0, 'ocjoyajaxcheckout', 'config_info_shipping', '', 0),
-(1553, 0, 'ocjoyajaxcheckout', 'config_mask_telephone', '', 0);
+(1553, 0, 'ocjoyajaxcheckout', 'config_mask_telephone', '', 0),
+(1580, 0, 'actions', 'actions_module', 'a:1:{i:0;a:5:{s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:5:"limit";s:1:"4";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1);
 
 -- --------------------------------------------------------
 
@@ -3471,7 +3475,7 @@ CREATE TABLE IF NOT EXISTS `url_alias` (
   `keyword` varchar(255) NOT NULL,
   PRIMARY KEY (`url_alias_id`),
   KEY `query` (`query`(64))
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1083 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1086 ;
 
 --
 -- Дамп данных таблицы `url_alias`
@@ -3520,8 +3524,8 @@ INSERT INTO `url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (986, 'category_id=26', 'alloc-1'),
 (988, 'category_id=27', 'aller'),
 (897, 'information_id=4', 'about_us'),
+(1085, 'product_id=42', 'apple-cinema-30'),
 (976, 'category_id=59', 'alloc'),
-(1080, 'product_id=42', 'apple-cinema-30'),
 (1082, 'product_id=30', 'canon-eos-5d'),
 (1028, 'product_id=47', 'hp-lp3065'),
 (1029, 'product_id=28', 'htc-touch-hd'),

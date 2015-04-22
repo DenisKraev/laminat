@@ -149,11 +149,14 @@ class ControllerCatalogActions extends Controller {
 			$action = array();
 			$action[] = array('text' => $this->language->get('text_edit'), 'href' => $this->url->link('catalog/actions/update', 'token=' . $this->session->data['token'] . '&actions_id=' . $result['actions_id'] . $url, 'SSL'));
 
-			$this->data['actionss'][] = array(
+      if ($result['date_end'] != ''){$date_end = date("d-m-Y H:i", $result['date_end']);} else {$date_end = "";}
+      if ($result['date_start'] != ''){$date_start = date("d-m-Y H:i", $result['date_start']);} else {$date_start = "";}
+
+      $this->data['actionss'][] = array(
 			'actions_id' => $result['actions_id'], 
 			'caption' => $result['caption'],
-			'date_start' => date("d-m-Y H:i", $result['date_start']), 
-			'date_end' => date("d-m-Y H:i", $result['date_end']),
+			'date_start' => $date_start,
+			'date_end' => $date_end,
 			'status' => $result['status'], 
 			'selected' => isset($this->request->post['selected']) && in_array($result['actions_id'], $this->request->post['selected']), 
 			'action' => $action

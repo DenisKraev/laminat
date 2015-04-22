@@ -8782,3 +8782,6 @@
 2015-04-21 17:12:52 - PHP Notice:  Undefined index: statuses in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\manufacturer_info.tpl on line 52
 2015-04-21 17:12:52 - PHP Notice:  Undefined index: statuses in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\manufacturer_info.tpl on line 52
 2015-04-21 17:12:52 - PHP Notice:  Undefined index: statuses in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\manufacturer_info.tpl on line 52
+2015-04-22 10:56:13 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-22 10:56:13 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
+2015-04-22 11:00:31 - PHP Notice:  Undefined variable: text_actions_setting in D:\OpenServer\domains\laminat\admin\view\template\catalog\actions_form_setting.tpl on line 33

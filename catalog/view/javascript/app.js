@@ -98,8 +98,8 @@ $(document).ready(function(){
 
         count_meter_p = $('.product-info .meters-package').data('metersPackage');
 
-        box_calc = "<div class='wrap-need-meters'><label>Требуемая площадь <input type='text' class='need-meters'></label></div>";
-        box_calc_boxes = "<div class='count-box'>Коробки <span></span></div>";
+        box_calc = "<div class='wrap-need-meters table'><label class='cell'>Требуемая площадь: </label><div class='cell'><input type='text' class='need-meters style-form-text'> (м&#178)</div></div>";
+        box_calc_boxes = "<div class='count-box table'><div class=' cell'>Коробки: </div> <span class='cell'></span></div>";
 
         $('.product-info #option-227').prepend(box_calc).append(box_calc_boxes);
 
@@ -107,7 +107,7 @@ $(document).ready(function(){
             count_need_m = obj.val();
             whole_box = Math.ceil(count_need_m/count_meter_p);
             $('.product-info #option-227 .count-box span').text(whole_box);
-            $('.product-info #option-227 .count-meters').val(parseFloat(whole_box*count_meter_p).toFixed(3));
+            $('.product-info #option-227 .count-meters').val(parseFloat(whole_box*count_meter_p).toFixed(4));
         }
 
         calc_meter($('.product-info #option-227 .count-meters'));
