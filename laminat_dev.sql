@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 22 2015 г., 11:05
+-- Время создания: Апр 22 2015 г., 14:26
 -- Версия сервера: 5.5.41-log
 -- Версия PHP: 5.3.29
 
@@ -74,9 +74,9 @@ CREATE TABLE IF NOT EXISTS `actions_description` (
 --
 
 INSERT INTO `actions_description` (`actions_id`, `language_id`, `title`, `meta_keywords`, `meta_description`, `h1`, `caption`, `anonnce`, `description`, `content`) VALUES
+(1, 1, '', '', '', '', 'Плинтус в подарок', '', '&lt;div&gt;Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n\r\n&lt;div&gt;в бесплатную укладку не входит.Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n\r\n&lt;div&gt;в бесплатную укладку не входит.Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n\r\n&lt;div&gt;в бесплатную укладку не входит.&lt;/div&gt;\r\n', '&lt;div&gt;Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n\r\n&lt;div&gt;в бесплатную укладку не входит.&lt;/div&gt;\r\n'),
 (2, 1, '', '', '', '', 'Еще акция', '', '&lt;p&gt;\r\n	фкпыфукп фкпыукп&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	укпыукп ыукпыур&lt;/p&gt;\r\n'),
 (3, 1, '', '', '', '', 'Акция', '', '&lt;p&gt;\r\n	фыпфкуп&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	фукпыукп&lt;/p&gt;\r\n'),
-(1, 1, '', '', '', '', 'Плинтус в подарок', '', '&lt;div&gt;Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n\r\n&lt;div&gt;в бесплатную укладку не входит.Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n\r\n&lt;div&gt;в бесплатную укладку не входит.Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n\r\n&lt;div&gt;в бесплатную укладку не входит.&lt;/div&gt;\r\n', '&lt;div&gt;Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n\r\n&lt;div&gt;в бесплатную укладку не входит.&lt;/div&gt;\r\n'),
 (4, 1, '', '', '', '', 'ewgaweg', '', '&lt;p&gt;\r\n	wegaw&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	waegaweg&lt;/p&gt;\r\n');
 
 -- --------------------------------------------------------
@@ -1935,7 +1935,7 @@ CREATE TABLE IF NOT EXISTS `order` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
 
 --
 -- Дамп данных таблицы `order`
@@ -1966,7 +1966,8 @@ INSERT INTO `order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, `st
 (22, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'ырые', '', 'nomail@nomail.com', '456345', '', 'ырые', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'ырые', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '0.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 10:47:28', '2015-04-21 10:47:28'),
 (23, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'првпр', '', 'nomail@nomail.com', '35623456', '', 'првпр', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'првпр', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '4.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 11:01:59', '2015-04-21 11:01:59'),
 (24, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'впра', '', 'nomail@nomail.com', '345345', '', 'впра', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'впра', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '2300.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 12:09:17', '2015-04-21 12:09:17'),
-(25, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'явапява', '', 'nomail@nomail.com', 'п123124', '', 'явапява', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'явапява', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '0.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 12:11:59', '2015-04-21 12:11:59');
+(25, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'явапява', '', 'nomail@nomail.com', 'п123124', '', 'явапява', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'явапява', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '0.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-21 12:11:59', '2015-04-21 12:11:59'),
+(26, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'wteghwse', 'sthrt', 'hser@rg.er', '564363456', '', 'wteghwse', 'sthrt', '', '', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', 'Оплата при доставке', 'cod', 'wteghwse', 'sthrt', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', 'Фиксированная стоимость доставки', 'flat.flat', '', '14.3824', 0, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4', '2015-04-22 14:41:29', '2015-04-22 14:41:29');
 
 -- --------------------------------------------------------
 
@@ -2127,14 +2128,15 @@ CREATE TABLE IF NOT EXISTS `order_option` (
   `value` text NOT NULL,
   `type` varchar(32) NOT NULL,
   PRIMARY KEY (`order_option_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Дамп данных таблицы `order_option`
 --
 
 INSERT INTO `order_option` (`order_option_id`, `order_id`, `order_product_id`, `product_option_id`, `product_option_value_id`, `name`, `value`, `type`) VALUES
-(1, 21, 21, 227, 0, 'Количество метров', '23', 'text');
+(1, 21, 21, 227, 0, 'Количество метров', '23', 'text'),
+(2, 26, 26, 227, 0, 'Покупаемое количество', '2.3456', 'text');
 
 -- --------------------------------------------------------
 
@@ -2154,7 +2156,7 @@ CREATE TABLE IF NOT EXISTS `order_product` (
   `tax` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `reward` int(8) NOT NULL,
   PRIMARY KEY (`order_product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
 
 --
 -- Дамп данных таблицы `order_product`
@@ -2185,7 +2187,8 @@ INSERT INTO `order_product` (`order_product_id`, `order_id`, `product_id`, `name
 (22, 22, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
 (23, 23, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '4.0000', '4.0000', '0.0000', 0),
 (24, 24, 30, 'Canon EOS 5D', 'Товар 3', 1, '2300.0000', '2300.0000', '0.0000', 0),
-(25, 25, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0);
+(25, 25, 42, 'Apple Cinema 30&quot; rwgserg sergserg sergsergser', 'Товар 15', 1, '0.0000', '0.0000', '0.0000', 0),
+(26, 26, 42, 'Ламинат Kronospan Komfort', 'Товар 15', 1, '9.3824', '9.3824', '0.0000', 0);
 
 -- --------------------------------------------------------
 
@@ -2233,7 +2236,7 @@ CREATE TABLE IF NOT EXISTS `order_total` (
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`order_total_id`),
   KEY `idx_orders_total_orders_id` (`order_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=52 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=55 ;
 
 --
 -- Дамп данных таблицы `order_total`
@@ -2290,7 +2293,10 @@ INSERT INTO `order_total` (`order_total_id`, `order_id`, `code`, `title`, `text`
 (48, 24, 'sub_total', 'Сумма', '2 300.00 р.', '2300.0000', 1),
 (49, 24, 'total', 'Итого', '2 300.00 р.', '2300.0000', 9),
 (50, 25, 'sub_total', 'Сумма', '0.00 р.', '0.0000', 1),
-(51, 25, 'total', 'Итого', '0.00 р.', '0.0000', 9);
+(51, 25, 'total', 'Итого', '0.00 р.', '0.0000', 9),
+(52, 26, 'sub_total', 'Сумма', '9.38 р.', '9.3824', 1),
+(53, 26, 'shipping', 'Фиксированная стоимость доставки', '5.00 р.', '5.0000', 3),
+(54, 26, 'total', 'Итого', '14.38 р.', '14.3824', 9);
 
 -- --------------------------------------------------------
 
@@ -2365,7 +2371,7 @@ CREATE TABLE IF NOT EXISTS `product` (
 INSERT INTO `product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `unit_count`, `meters_package`, `price`, `esponi_priceFormula`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `date_added`, `date_modified`, `viewed`) VALUES
 (28, 'Товар 1', '', '', '', '', '', '', '', 938, 7, 'data/demo/htc_touch_hd_1.jpg', 5, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:06:50', '2015-04-20 09:41:25', 0),
 (29, 'Товар 2', '', '', '', '', '', '', '', 999, 6, 'data/demo/palm_treo_pro_1.jpg', 6, 1, 1, NULL, '279.9900', '', 0, 0, '2009-02-03', '133.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:42:17', '2015-04-14 17:21:04', 0),
-(30, 'Товар 3', '0907', '', '', '', '', '', '', 3, 6, 'data/demo/canon_eos_5d_1.jpg', 9, 1, 2, '', '100.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:59:00', '2015-04-21 17:06:38', 57),
+(30, 'Товар 3', '0907', '', '', '', '', '', '', 3, 6, 'data/demo/canon_eos_5d_1.jpg', 9, 1, 2, '', '100.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:59:00', '2015-04-21 17:06:38', 58),
 (31, 'Товар 4', '', '', '', '', '', '', '', 1000, 6, 'data/demo/nikon_d300_1.jpg', 0, 1, 1, NULL, '80.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 17:00:10', '2015-04-14 17:19:41', 0),
 (32, 'Товар 5', '', '', '', '', '', '', '', 999, 6, 'data/demo/ipod_touch_1.jpg', 8, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 17:07:26', '2015-04-14 17:19:05', 0),
 (33, 'Товар 6', '', '', '', '', '', '', '', 1000, 6, 'data/demo/samsung_syncmaster_941bw.jpg', 0, 1, 1, NULL, '200.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 17:08:31', '2015-04-14 17:21:59', 0),
@@ -2373,7 +2379,7 @@ INSERT INTO `product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`
 (36, 'Товар 9', '', '', '', '', '', '', '', 994, 6, 'data/demo/ipod_nano_1.jpg', 8, 0, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 18:09:19', '2015-04-20 09:41:49', 0),
 (40, 'Товар 11', '', '', '', '', '', '', '', 970, 5, 'data/demo/iphone_1.jpg', 8, 1, 1, NULL, '101.0000', '', 0, 0, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:12', '2015-04-14 17:16:31', 0),
 (41, 'Товар 14', '', '', '', '', '', '', '', 977, 5, 'data/demo/imac_1.jpg', 8, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:26', '2015-04-14 17:16:08', 0),
-(42, 'Товар 15', '0709', '', '', '', '', '', '', 972, 7, 'data/products/img4.jpg', 8, 1, 1, '2.3456', '100.0000', '(unit_count == 1) ? (ceil({13}/meters_package)*meters_package)*price : price', 0, 0, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:37', '2015-04-22 11:54:24', 437),
+(42, 'Товар 15', '0709', '', '', '', '', '', '', 972, 7, 'data/products/img4.jpg', 8, 1, 1, '2.3456', '100.0000', '(unit_count == 1) ? (ceil({13}/meters_package)*meters_package)*price : price', 0, 0, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:37', '2015-04-22 11:54:24', 485),
 (43, 'Товар 16', '', '', '', '', '', '', '', 929, 5, 'data/demo/macbook_1.jpg', 8, 0, 1, NULL, '500.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:07:49', '2015-04-20 09:42:06', 2),
 (44, 'Товар 17', '', '', '', '', '', '', '', 1000, 5, 'data/demo/macbook_air_1.jpg', 8, 1, 1, NULL, '1000.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:00', '2015-04-20 09:42:12', 0),
 (45, 'Товар 18', '', '', '', '', '', '', '', 998, 5, 'data/demo/macbook_pro_1.jpg', 8, 1, 1, NULL, '2000.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:17', '2015-04-20 09:42:17', 6),
@@ -3002,7 +3008,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1581 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1611 ;
 
 --
 -- Дамп данных таблицы `setting`
@@ -3277,6 +3283,7 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (877, 0, 'config', 'config_sms_message', '', 0),
 (878, 0, 'config', 'config_sms_gate_username', '', 0),
 (879, 0, 'config', 'config_sms_gate_password', '', 0),
+(1610, 0, 'html_block', 'html_block_4', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:117:"&lt;?php include($_SERVER[''DOCUMENT_ROOT''].''/catalog/view/theme/default/template/partials/product-actions.tpl'') ?&gt;";}s:6:"editor";a:1:{i:1;s:1:"0";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
 (1119, 0, 'timer', 'timer_module', 'a:1:{i:1;a:11:{s:11:"description";a:1:{i:1;s:31:"&lt;p&gt;\r\n	[Timer]&lt;/p&gt;\r\n";}s:4:"date";s:10:"2015-04-09";s:4:"time";s:5:"0:0:0";s:8:"interval";s:2:"24";s:5:"image";s:19:"data/timer/img2.png";s:5:"title";s:32:"Плинтус в подарок";s:15:"title_font_size";s:2:"34";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
 (1150, 0, 'special', 'special_module', 'a:1:{i:0;a:7:{s:5:"limit";s:3:"100";s:11:"image_width";s:3:"195";s:12:"image_height";s:3:"195";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
 (1564, 0, 'ocjoyajaxcheckout', 'config_show_on_module_special', '', 0),
@@ -3288,10 +3295,10 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (1559, 0, 'ocjoyajaxcheckout', 'config_show_on_category', '1', 0),
 (1558, 0, 'ocjoyajaxcheckout', 'config_show_on_product', '1', 0),
 (1143, 0, 'latest', 'latest_module', 'a:1:{i:0;a:8:{s:9:"id_status";s:1:"1";s:5:"limit";s:3:"100";s:11:"image_width";s:3:"195";s:12:"image_height";s:3:"195";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"2";}}', 1),
-(1210, 0, 'html_block', 'html_block_module', 'a:3:{i:0;a:5:{s:13:"html_block_id";s:1:"1";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}i:1;a:5:{s:13:"html_block_id";s:1:"2";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"4";}i:2;a:5:{s:13:"html_block_id";s:1:"3";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"5";}}', 1),
-(1211, 0, 'html_block', 'html_block_1', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:2099:"&lt;div class=&quot;site-content box-offer-manager&quot;&gt;\r\n&lt;div class=&quot;box-offer&quot;&gt;\r\n&lt;h3 class=&quot;title-style&quot;&gt;Мы предлагаем&lt;/h3&gt;\r\n\r\n&lt;ul class=&quot;offer-list&quot;&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – выезд инженера-консультанта на дом, для оценки технического состояния пола, замера, расчет количества необходимого материала.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – доставка образцов на дом. Вы можете подобрать напольное покрытие в соответствии обстановки, цветовой гаммы вашего помещения.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – при покупке у нас ламината, укладка бесплатно.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – при покупке у нас ламината, подложка бесплатно.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;box-manager&quot;&gt;\r\n&lt;h3 class=&quot;title-style&quot;&gt;Менеджеры&lt;/h3&gt;\r\n\r\n&lt;div class=&quot;manager-1&quot;&gt;&lt;img alt=&quot;Менеджер&quot; src=&quot;/catalog/view/theme/default/image/manager-1.png&quot; /&gt;\r\n&lt;div class=&quot;info&quot;&gt;\r\n&lt;div class=&quot;name&quot;&gt;Наталья&lt;/div&gt;\r\n\r\n&lt;div class=&quot;phone&quot;&gt;тел. 44-74-55&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;manager-2&quot;&gt;&lt;img alt=&quot;Менеджер&quot; src=&quot;/catalog/view/theme/default/image/manager-2.png&quot; /&gt;\r\n&lt;div class=&quot;info&quot;&gt;\r\n&lt;div class=&quot;name&quot;&gt;Николай&lt;/div&gt;\r\n\r\n&lt;div class=&quot;phone&quot;&gt;тел. 44-74-55&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}s:6:"editor";a:1:{i:1;s:1:"1";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
-(1212, 0, 'html_block', 'html_block_2', 'a:7:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:2627:"&lt;div class=&quot;box-about&quot;&gt;\r\n&lt;div class=&quot;site-content&quot;&gt;\r\n&lt;h2 class=&quot;title-style&quot;&gt;Интернет-магазин Ламинат-бонус&lt;/h2&gt;\r\n\r\n&lt;p class=&quot;text-style&quot;&gt;Не можете определиться с выбором напольного покрытия? У Вас нет возможности посетить наш магазин? Этот ли цвет подойдет для вашей комнаты, дверям, мебели, обоям и т.д.? Ведь не привезешь &quot;весь магазин&quot; домой, что бы подобрать нужный оттенок. В этом вам поможет КОНСУЛЬТАНТ, которого вы можете ВЫЗВАТЬ К СЕБЕ ДОМОЙ. Наш сотрудник привезет с собой достаточное количество образцов ламината, проконсультирует по качеству, особенностями укладки и ухода, при необходимости произведет замер помещения, просчитает стоимость планируемой покупи.&lt;/p&gt;\r\n\r\n&lt;p class=&quot;text-style&quot;&gt;Услуга включает в себя информирование по материалам,сферам их применения,условиям эксплуатации , ухода и хранения, необходимым аксессуарам, инсталляции, ценам , скидкам, условиям и формам оплаты за товар,порядок предоставления дополнительных услуг.&lt;/p&gt;\r\n\r\n&lt;p class=&quot;text-style&quot;&gt;При единовременной покупке ламината в рамках акции покупатель имеет право получить бесплатно плинтус с кабель-каналом марки ИДЕАЛ ), выбор декора (расцветки)осуществляется покупателем из присутствующих в наличии в магазине. Количество плинтуса рассчитывается по следующей формуле: N=S/2.5, с округлением до целого числа в меньшую сторону. где: N – количество палок плинтуса (1 палка = 2,5 пог.м.) S – количество квадратных метров ламината.&amp;nbsp;&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}s:6:"editor";a:1:{i:1;s:1:"1";}s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
-(1213, 0, 'html_block', 'html_block_3', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:3885:"&lt;div class=&quot;box-memo&quot;&gt;\r\n&lt;div class=&quot;site-content&quot;&gt;\r\n&lt;div class=&quot;memo-list cf&quot;&gt;\r\n&lt;div class=&quot;left&quot;&gt;\r\n&lt;h3 class=&quot;title&quot;&gt;Памятка покупателю купившему пробковое покрытие, паркетную доску или ламинат у нас.&lt;/h3&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;01&lt;/div&gt;\r\nХранение упаковок с напольным покрытием (в горизонтальном положении!) всегда осуществляется в сухом помещении с температурой не ниже +16°С.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;02&lt;/div&gt;\r\nМатериал должен пройти акклиматизацию не менее 48 часов в помещении, предназначенном для укладки. Упаковки должны вскрываться непосредственно перед началом работ.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;03&lt;/div&gt;\r\nУкладка напольных покрытий начинается только после контроля готовности данного помещения, включающего в себя: § контроль влажности основания, которая должна быть не выше 2,5%. § контроля влажности воздуха, которая должна быть не выше 65%, но и не ниже 40%. § контроля ровности основания, у которого перепад по высоте не должен превышать 2мм на 2м длины в любой точке. § контроля температуры, которая должна быть в пределах 20°…22°С.&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;right&quot;&gt;\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;04&lt;/div&gt;\r\nРаботы по укладке материала производятся строго после окончания всех общестроительных работ (штукатурные, окрасочные, оклеечные), а так же работ, связанных с проветриванием помещений.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;05&lt;/div&gt;\r\nВсе доски напольных покрытий проверяются до укладки. В случае обнаружения несоответствующего качества досок следует приостановить укладку и связаться с Продавцом. Все претензии к материалу (за исключением скрытых дефектов, выявленных в процессе эксплуатации) принимаются только до момента укладки.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;06&lt;/div&gt;\r\nВ соответствии с федеральным Законом &quot;О защите прав потребителей&quot; возврату подлежит только материал, признанный несоответствующим качеству.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;07&lt;/div&gt;\r\nК обмену (не по причине качества) могут быть приняты только невскрытые и неповрежденные упаковки.&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}s:6:"editor";a:1:{i:1;s:1:"1";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
+(1606, 0, 'html_block', 'html_block_module', 'a:4:{i:0;a:5:{s:13:"html_block_id";s:1:"1";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}i:1;a:5:{s:13:"html_block_id";s:1:"2";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"4";}i:2;a:5:{s:13:"html_block_id";s:1:"3";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"5";}i:3;a:5:{s:13:"html_block_id";s:1:"4";s:9:"layout_id";s:1:"2";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
+(1607, 0, 'html_block', 'html_block_1', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:2099:"&lt;div class=&quot;site-content box-offer-manager&quot;&gt;\r\n&lt;div class=&quot;box-offer&quot;&gt;\r\n&lt;h3 class=&quot;title-style&quot;&gt;Мы предлагаем&lt;/h3&gt;\r\n\r\n&lt;ul class=&quot;offer-list&quot;&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – выезд инженера-консультанта на дом, для оценки технического состояния пола, замера, расчет количества необходимого материала.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – доставка образцов на дом. Вы можете подобрать напольное покрытие в соответствии обстановки, цветовой гаммы вашего помещения.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – при покупке у нас ламината, укладка бесплатно.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – при покупке у нас ламината, подложка бесплатно.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;box-manager&quot;&gt;\r\n&lt;h3 class=&quot;title-style&quot;&gt;Менеджеры&lt;/h3&gt;\r\n\r\n&lt;div class=&quot;manager-1&quot;&gt;&lt;img alt=&quot;Менеджер&quot; src=&quot;/catalog/view/theme/default/image/manager-1.png&quot; /&gt;\r\n&lt;div class=&quot;info&quot;&gt;\r\n&lt;div class=&quot;name&quot;&gt;Наталья&lt;/div&gt;\r\n\r\n&lt;div class=&quot;phone&quot;&gt;тел. 44-74-55&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;manager-2&quot;&gt;&lt;img alt=&quot;Менеджер&quot; src=&quot;/catalog/view/theme/default/image/manager-2.png&quot; /&gt;\r\n&lt;div class=&quot;info&quot;&gt;\r\n&lt;div class=&quot;name&quot;&gt;Николай&lt;/div&gt;\r\n\r\n&lt;div class=&quot;phone&quot;&gt;тел. 44-74-55&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}s:6:"editor";a:1:{i:1;s:1:"1";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
+(1608, 0, 'html_block', 'html_block_2', 'a:7:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:2627:"&lt;div class=&quot;box-about&quot;&gt;\r\n&lt;div class=&quot;site-content&quot;&gt;\r\n&lt;h2 class=&quot;title-style&quot;&gt;Интернет-магазин Ламинат-бонус&lt;/h2&gt;\r\n\r\n&lt;p class=&quot;text-style&quot;&gt;Не можете определиться с выбором напольного покрытия? У Вас нет возможности посетить наш магазин? Этот ли цвет подойдет для вашей комнаты, дверям, мебели, обоям и т.д.? Ведь не привезешь &quot;весь магазин&quot; домой, что бы подобрать нужный оттенок. В этом вам поможет КОНСУЛЬТАНТ, которого вы можете ВЫЗВАТЬ К СЕБЕ ДОМОЙ. Наш сотрудник привезет с собой достаточное количество образцов ламината, проконсультирует по качеству, особенностями укладки и ухода, при необходимости произведет замер помещения, просчитает стоимость планируемой покупи.&lt;/p&gt;\r\n\r\n&lt;p class=&quot;text-style&quot;&gt;Услуга включает в себя информирование по материалам,сферам их применения,условиям эксплуатации , ухода и хранения, необходимым аксессуарам, инсталляции, ценам , скидкам, условиям и формам оплаты за товар,порядок предоставления дополнительных услуг.&lt;/p&gt;\r\n\r\n&lt;p class=&quot;text-style&quot;&gt;При единовременной покупке ламината в рамках акции покупатель имеет право получить бесплатно плинтус с кабель-каналом марки ИДЕАЛ ), выбор декора (расцветки)осуществляется покупателем из присутствующих в наличии в магазине. Количество плинтуса рассчитывается по следующей формуле: N=S/2.5, с округлением до целого числа в меньшую сторону. где: N – количество палок плинтуса (1 палка = 2,5 пог.м.) S – количество квадратных метров ламината.&amp;nbsp;&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}s:6:"editor";a:1:{i:1;s:1:"1";}s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
+(1609, 0, 'html_block', 'html_block_3', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:3885:"&lt;div class=&quot;box-memo&quot;&gt;\r\n&lt;div class=&quot;site-content&quot;&gt;\r\n&lt;div class=&quot;memo-list cf&quot;&gt;\r\n&lt;div class=&quot;left&quot;&gt;\r\n&lt;h3 class=&quot;title&quot;&gt;Памятка покупателю купившему пробковое покрытие, паркетную доску или ламинат у нас.&lt;/h3&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;01&lt;/div&gt;\r\nХранение упаковок с напольным покрытием (в горизонтальном положении!) всегда осуществляется в сухом помещении с температурой не ниже +16°С.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;02&lt;/div&gt;\r\nМатериал должен пройти акклиматизацию не менее 48 часов в помещении, предназначенном для укладки. Упаковки должны вскрываться непосредственно перед началом работ.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;03&lt;/div&gt;\r\nУкладка напольных покрытий начинается только после контроля готовности данного помещения, включающего в себя: § контроль влажности основания, которая должна быть не выше 2,5%. § контроля влажности воздуха, которая должна быть не выше 65%, но и не ниже 40%. § контроля ровности основания, у которого перепад по высоте не должен превышать 2мм на 2м длины в любой точке. § контроля температуры, которая должна быть в пределах 20°…22°С.&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;right&quot;&gt;\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;04&lt;/div&gt;\r\nРаботы по укладке материала производятся строго после окончания всех общестроительных работ (штукатурные, окрасочные, оклеечные), а так же работ, связанных с проветриванием помещений.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;05&lt;/div&gt;\r\nВсе доски напольных покрытий проверяются до укладки. В случае обнаружения несоответствующего качества досок следует приостановить укладку и связаться с Продавцом. Все претензии к материалу (за исключением скрытых дефектов, выявленных в процессе эксплуатации) принимаются только до момента укладки.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;06&lt;/div&gt;\r\nВ соответствии с федеральным Законом &quot;О защите прав потребителей&quot; возврату подлежит только материал, признанный несоответствующим качеству.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;07&lt;/div&gt;\r\nК обмену (не по причине качества) могут быть приняты только невскрытые и неповрежденные упаковки.&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}s:6:"editor";a:1:{i:1;s:1:"1";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
 (1557, 0, 'ocjoyajaxcheckout', 'config_info_payment_text', '', 0),
 (1556, 0, 'ocjoyajaxcheckout', 'config_info_payment', '', 0),
 (1555, 0, 'ocjoyajaxcheckout', 'config_info_shipping_text', '', 0),
@@ -3318,7 +3325,8 @@ CREATE TABLE IF NOT EXISTS `simple_custom_data` (
 --
 
 INSERT INTO `simple_custom_data` (`object_type`, `object_id`, `customer_id`, `data`) VALUES
-(1, 21, 0, 'a:0:{}');
+(1, 21, 0, 'a:0:{}'),
+(1, 26, 0, 'a:0:{}');
 
 -- --------------------------------------------------------
 

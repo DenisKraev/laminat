@@ -7,14 +7,7 @@ class ModelCatalogActions extends Model {
 
 	public function getActionsAll($start = 0, $limit = 5) {
 		$query = $this->db->query("SELECT
-				n.actions_id,
-				n.image,
-				n.date_start,
-				n.date_end,
-				n.interval,
-				nd.caption,
-				nd.description,
-				nd.anonnce
+				*
 			FROM `" . DB_PREFIX . "actions` n 
 				LEFT JOIN `" . DB_PREFIX . "actions_description` nd ON (n.actions_id = nd.actions_id)
 				LEFT JOIN `" . DB_PREFIX . "actions_to_store` n2s ON (n.actions_id = n2s.actions_id)

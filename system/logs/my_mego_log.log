@@ -8785,3 +8785,27 @@
 2015-04-22 10:56:13 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
 2015-04-22 10:56:13 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\admin\controller\catalog\actions.php on line 156
 2015-04-22 11:00:31 - PHP Notice:  Undefined variable: text_actions_setting in D:\OpenServer\domains\laminat\admin\view\template\catalog\actions_form_setting.tpl on line 33
+2015-04-22 11:28:57 - PHP Warning:  include(D:/OpenServer/domains/laminatlaminat/catalog/controller/product/test.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in D:\OpenServer\domains\laminat\catalog\controller\module\html_block.php(165) : eval()'d code on line 1
+2015-04-22 11:28:57 - PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'D:/OpenServer/domains/laminatlaminat/catalog/controller/product/test.php' for inclusion (include_path='.;d:/openserver/modules/php/PHP-5.3;d:/openserver/modules/php/PHP-5.3/PEAR/pear') in D:\OpenServer\domains\laminat\catalog\controller\module\html_block.php(165) : eval()'d code on line 1
+2015-04-22 11:29:25 - PHP Warning:  include(D:/OpenServer/domains/laminatcatalog/controller/product/test.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in D:\OpenServer\domains\laminat\catalog\controller\module\html_block.php(165) : eval()'d code on line 1
+2015-04-22 11:29:25 - PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'D:/OpenServer/domains/laminatcatalog/controller/product/test.php' for inclusion (include_path='.;d:/openserver/modules/php/PHP-5.3;d:/openserver/modules/php/PHP-5.3/PEAR/pear') in D:\OpenServer\domains\laminat\catalog\controller\module\html_block.php(165) : eval()'d code on line 1
+2015-04-22 13:52:27 - PHP Warning:  Division by zero in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\partials\test.tpl on line 23
+2015-04-22 13:54:57 - PHP Warning:  Division by zero in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\partials\test.tpl on line 23
+2015-04-22 13:54:58 - PHP Warning:  Division by zero in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\partials\test.tpl on line 23
+2015-04-22 13:55:13 - PHP Warning:  Division by zero in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\partials\test.tpl on line 23
+2015-04-22 13:55:14 - PHP Warning:  Division by zero in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\partials\test.tpl on line 23
+2015-04-22 13:56:31 - PHP Notice:  Undefined variable: actions_setting in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\partials\test.tpl on line 59
+2015-04-22 13:56:33 - PHP Notice:  Undefined variable: actions_setting in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\partials\test.tpl on line 59
+2015-04-22 13:57:28 - PHP Warning:  Division by zero in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 57
+2015-04-22 13:59:11 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-22 13:59:28 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-22 14:19:13 - PHP Notice:  Undefined index: product_id in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\partials\product-actions.tpl on line 10
+2015-04-22 14:19:13 - PHP Notice:  Undefined index: product_id in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\partials\product-actions.tpl on line 10
+2015-04-22 14:19:13 - PHP Notice:  Undefined index: product_id in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\partials\product-actions.tpl on line 10
+2015-04-22 14:19:13 - PHP Notice:  Undefined index: product_id in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\partials\product-actions.tpl on line 10

@@ -1047,6 +1047,7 @@ a.title-style:hover {
 /* меню категорий в каталоге */
 .box-category-menu {
   border: 1px solid #e3e3e3;
+  margin-bottom: 10px;
 }
 .box-category-menu .title {
   font-family: "OpenSans-bold-wf";
@@ -1641,6 +1642,40 @@ a.title-style:hover {
 }
 .attribute tr:nth-child(2n) {
   background: #f2f2f2;
+}
+
+.box-product-actions .item {
+  padding: 18px;
+  margin-top: 10px;
+  border: 1px solid #e3e3e3;
+}
+.box-product-actions .item:first-child {
+  margin-top: 0px;
+}
+.box-product-actions .mark {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.box-product-actions .mark:hover {
+  opacity: 1;
+  cursor: auto;
+}
+.box-product-actions .name, .box-product-actions .interval {
+  font-family: Calibri, sans-serif;
+  font-size: 21px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #010101;
+  margin-bottom: 10px;
+}
+.box-product-actions .more a {
+  font-size: 14px;
+  color: #444444;
+  font-family: Calibri, sans-serif;
+}
+.box-product-actions .more a:hover {
+  text-decoration: none;
 }
 
 /* слайдер */

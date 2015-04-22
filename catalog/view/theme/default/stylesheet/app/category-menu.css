@@ -1,22 +1,23 @@
 /*
 Error: Undefined mixin 'font-family-2'.
-        on line 5 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/category-menu.sass, in `font-family-2'
-        from line 5 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/category-menu.sass
+        on line 6 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/category-menu.sass, in `font-family-2'
+        from line 6 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/category-menu.sass
 
 1: /* меню категорий в каталоге
 2: .box-category-menu
 3:   border: 1px solid #e3e3e3
-4:   .title
-5:     +font-family-2(bold)
-6:     color: #333333
-7:     font-size: 20px
-8:     background: #f2f2f2
-9:     padding: 10px
-10:     border-bottom: 1px solid #e3e3e3
+4:   margin-bottom: 10px
+5:   .title
+6:     +font-family-2(bold)
+7:     color: #333333
+8:     font-size: 20px
+9:     background: #f2f2f2
+10:     padding: 10px
+11:     border-bottom: 1px solid #e3e3e3
 
 Backtrace:
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/category-menu.sass:5:in `font-family-2'
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/category-menu.sass:5
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/category-menu.sass:6:in `font-family-2'
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/category-menu.sass:6
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
@@ -83,4 +84,4 @@ C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/ada
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'font-family-2'.\A         on line 5 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/category-menu.sass, in `font-family-2'\A         from line 5 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/category-menu.sass\A \A 1: /* меню категорий в каталоге\A 2: .box-category-menu\A 3:   border: 1px solid #e3e3e3\A 4:   .title\A 5:     +font-family-2(bold)\A 6:     color: #333333\A 7:     font-size: 20px\A 8:     background: #f2f2f2\A 9:     padding: 10px\A 10:     border-bottom: 1px solid #e3e3e3"; }
+  content: "Error: Undefined mixin 'font-family-2'.\A         on line 6 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/category-menu.sass, in `font-family-2'\A         from line 6 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/category-menu.sass\A \A 1: /* меню категорий в каталоге\A 2: .box-category-menu\A 3:   border: 1px solid #e3e3e3\A 4:   margin-bottom: 10px\A 5:   .title\A 6:     +font-family-2(bold)\A 7:     color: #333333\A 8:     font-size: 20px\A 9:     background: #f2f2f2\A 10:     padding: 10px\A 11:     border-bottom: 1px solid #e3e3e3"; }

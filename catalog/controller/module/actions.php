@@ -40,7 +40,7 @@ class ControllerModuleActions extends Controller {
 			
 		foreach ($results as $result) {
 
-      if($result['interval'] != ''){
+      if($result['interval'] != '' && $result['interval'] != 0){
         $cur = getdate();
         $cur = $cur[0];
 
