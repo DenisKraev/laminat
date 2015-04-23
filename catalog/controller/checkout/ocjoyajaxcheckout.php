@@ -7,6 +7,10 @@ class ControllerCheckoutOcjoyajaxcheckout extends Controller {
             $product_id = $this->request->request['product_id'];
         }
 
+      if(!empty($this->request->request['product_detected'])) {
+        $product_detected = $this->request->request['product_detected'];
+      }
+
         $this->language->load('checkout/ocjoyajaxcheckout');
         $this->load->model('catalog/product');
 
@@ -96,6 +100,10 @@ class ControllerCheckoutOcjoyajaxcheckout extends Controller {
         } else {
             $this->data['tax'] = false;
         }
+
+        $this->data['meters_package'] = $product_info['meters_package'];
+        $this->data['unit_count'] = $product_info['unit_count'];
+        $this->data['product_detected'] = $product_detected;
 
         $discounts = $this->model_catalog_product->getProductDiscounts($product_id);
         $this->data['discounts'] = array();
@@ -314,8 +322,6 @@ class ControllerCheckoutOcjoyajaxcheckout extends Controller {
 
             $product['option'] = $opts;
         }
-
-      print_r($product['option']);
 
         $this->load->model('catalog/product');  
         $product_info = $this->model_catalog_product->getProduct($product_id);

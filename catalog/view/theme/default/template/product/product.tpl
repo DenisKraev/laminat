@@ -54,7 +54,7 @@
           <div class="cell"><?php echo $text_price; ?></div>
 
           <?php if (!$special) { ?>
-            <div class="cell"><?php echo $price; ?></div>
+            <div class="cell"><?php echo $price; if($unit_count == 1){echo '/м&#178;';}?></div>
           <?php } else { ?>
             <div class="cell"><span class="price-old"><?php echo $price; if($unit_count == 1){echo '/м&#178;';}?></span> <span class="price-new"><?php echo $special; if($unit_count == 1){echo '/м&#178;';}?></span></div>
           <?php } ?>
@@ -214,7 +214,7 @@
 
         <div class="table">
           <div class="cell"><?php if($unit_count == 2) { echo $text_qty; }?></div>
-          <div class="cell"><input type="<?php if($unit_count == 1){echo 'hidden';} elseif($unit_count == 2) {echo 'text';} ?>" name="quantity" size="2" value="<?php echo $minimum; ?>" class="style-form-text" /></div>
+          <div class="cell"><input type="<?php if($unit_count == 1){echo 'hidden';} elseif($unit_count == 2) {echo 'text';} ?>" name="quantity" size="2" value="<?php echo $minimum; ?>" class="style-form-text quantity" /></div>
         </div>
 
         <input type="hidden" name="product_id" size="2" value="<?php echo $product_id; ?>" />
@@ -223,7 +223,7 @@
           <input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button btn-cart-style" />
 
           <?php if ($this->data['show_on_product'] == 1 && $this->data['quantity'] > 0) { ?>
-            <a onclick="AjaxCheckoutOcjoy('<?php echo $product_id; ?>');" class="ajaxbutton button btn-style"><?php echo $ajaxbutton_cart; ?></a>
+            <a onclick="AjaxCheckoutOcjoy('<?php echo $product_id; ?>', true);" class="ajaxbutton button btn-style"><?php echo $ajaxbutton_cart; ?></a>
           <?php } ?>
         </div>
 

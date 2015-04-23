@@ -85,7 +85,7 @@
           <div class="btn-cart-style" onclick="addToCart('<?php echo $product['product_id']; ?>');"><?php echo $button_cart; ?></div>
 
           <?php if ($product['quantity'] > 0) { ?>
-            <a onclick="AjaxCheckoutOcjoy('<?php echo $product['product_id']; ?>');" class="btn-style ajaxbutton button"><?php echo $ajaxbutton_cart; ?></a>
+            <a onclick="AjaxCheckoutOcjoy('<?php echo $product['product_id']; ?>', false);" class="btn-style ajaxbutton button"><?php echo $ajaxbutton_cart; ?></a>
           <?php } ?>
       </div>
 

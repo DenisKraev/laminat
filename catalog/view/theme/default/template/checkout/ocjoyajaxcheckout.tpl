@@ -8,35 +8,28 @@ function checkout() {
         data: $('#ajaxorder input[type=\'text\'], #ajaxorder textarea, #ajaxorder input[type=\'hidden\'], #ajaxorder select, #ajaxorder input[type=\'radio\']:checked, #ajaxorder input[type=\'checkbox\']:checked'),
         success: function(json) {
             if (json['error']){
-                  $("#gotoorderajax").bind("click", function () {
-                    $("#cboxContent").mask("<?php echo $text_ocjoyajaxcheckout_loading; ?>");
-                  });
-                  //$(this).colorbox.resize();
                   if (json['error']['firstname']) {
                     $('#error_firstname').show().html(json['error']['firstname']);
-                    $("#cboxContent").unmask();
                   } else {
                     $('#error_firstname').hide();
                   };
                   if (json['error']['telephone']) {
                     $('#error_telephone').show().html(json['error']['telephone']);
-                    $("#cboxContent").unmask();
                   } else {
                     $('#error_telephone').hide();
                   };
                   if (json['error']['email']) {
                     $('#error_email').show().html(json['error']['email']);
-                    $("#cboxContent").unmask();
                   } else {
                     $('#error_email').hide();
                   };
-                  //$(this).colorbox.resize();
                   $('#gotoorderajax').attr("disabled", false);
             } else {
                 if (json['output']) {
-                  $("#cboxContent").unmask();
-                  $('#ajaxordermainbody').html('<div id="ocjoyajaxcheckoutsuccess">'+json['output']+'</div>');
-                  //$(this).colorbox.resize();
+                  $('#ajaxordermainbody').html('<div id="ocjoyajaxcheckoutsuccess">'+json['output']+'<div class="actions"><a class="btn-style volume grey popup-cancel">Ok</a></div></div>');
+                  $('.popup-cancel').on('click', function(){
+                      $.fancybox.close();
+                  });
                 }
             }
         }
@@ -94,6 +87,7 @@ function minuscon(pid) {
 </script>
 <div id="ajaxorder">
 <div id="ocjoyajaxcheckout" class="modal-header"><?php echo $text_ocjoyajaxcheckout_head; ?></div>
+<div id="ajaxordermainbody">
 
   <form enctype="multipart/form-data" method="post">
     <div class="box-product-info cf">
@@ -101,19 +95,34 @@ function minuscon(pid) {
             <div class="box-img"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="currentimg"/></div>
         </div>
         <div class="right">
-            <div class="top">
-                <div class="name"><?php echo $heading_title; ?></div>
-                <div class="params">
-                  <?php if (!empty($attribute_data_name)) {  ?>
-                    <span><?php echo $attribute_data_text ?> класс, </span>
+          <div class="top">
+              <div class="name"><?php echo $heading_title; ?></div>
+              <div class="params">
+                <?php if (!empty($attribute_data_name)) {  ?>
+                  <span><?php echo $attribute_data_text ?> класс, </span>
+                <?php } ?>
+                <?php if($art){ ?>
+                  <span>арт. <?php echo $art; ?></span>
+                <?php } ?>
+              </div>
+          </div>
+
+            <div class="count">Покупаемое количество:
+              <span>
+                <?php if($unit_count == 1){ // отображаем если тип м2?>
+                  <?php foreach ($options as $option) { ?>
+                    <?php if ($option['type'] == 'text' &&  $option['product_option_id'] == 227) { // если это опция текстовая и id равен 227 (покупаемое количество метров)?>
+                          <input type="text" name="option[<?php echo $option['product_option_id']; ?>]" id="option-<?php echo $option['product_option_id']; ?>" class="count-meters" value="<?php echo $meters_package; ?>" disabled="disabled"/>
+                      <?php } ?>
                   <?php } ?>
-                  <?php if($art){ ?>
-                    <span>арт. <?php echo $art; ?></span>
-                  <?php } ?>
-                </div>
+                <?php } ?>
+                <?php // меняем отображение, скрываем или показывем, выключем воод поля для количества шт ?>
+                <input class="<?php if($unit_count == 1) {echo ' hide ';} if($product_detected == 'true') {echo ' product-detected ';}?> style-form-text quantity" type="text" name="quantity" id="quant-<?php echo $product_id; ?>" <?php if($unit_count == 1 || $product_detected == 'true') {echo 'disabled=disabled';} ?> value="1" />
+              </span>
             </div>
-            <div class="count">Кол-во: <span>1</span></div>
-            <div class="price">Итого: <span><?php if ($special) {echo $special;} else { echo $price; }?></span></div>
+
+            <?php // меняем цену и итого в зависимости от типа (шт или м2 соответственно) ?>
+            <div class="price"><?php if($unit_count == 2){ echo 'Цена:';} elseif($unit_count == 1){echo 'Итого:';} ?> <span><?php if($unit_count == 2){if(!$special){echo $price;} else {echo $special;}} ?></span></div>
         </div>
     </div>
 
@@ -151,6 +160,17 @@ function minuscon(pid) {
       <?php } ?>
     <?php } ?>
 
+    <?php // собираем данные для подсчета ?>
+    <div class="meters-package" data-unit-count="<?php echo $unit_count; ?>" data-meters-package="<?php echo $meters_package; ?>" data-price-meter="<?php if(!$special){echo str_replace(' р.','',$price);} else {echo str_replace(' р.','',$special);} ?>"></div>
+
+    <?php if($unit_count == 1) { // требуемое количество отображать, если тип м2 ?>
+      <?php if($product_detected == 'false'){ // отображать если заказ из каталога?>
+        <div class="form-row">
+          <input class="style-form-text need-meters" type="text" placeholder="Требуемая площадь (м&#178)">
+        </div>
+      <?php }?>
+    <?php }?>
+
     <?php if ($hideemail == 1) { ?>
       <?php if ($required_email == 1) { ?>
       <div class="sections_block_rquaired">
@@ -165,9 +185,6 @@ function minuscon(pid) {
       </div>
       <?php } ?>
     <?php } ?>
-
-    <input class="hide" type="text" name="quantity" id="quant-<?php echo $product_id; ?>" size="3" maxlength="3" disabled="disabled" value="1" />
-<!--    <input class="hide" type="text" name="count_meters" id="count_meters---><?php //echo $product_id; ?><!--" size="3" maxlength="3" disabled="disabled" value="2.34" />-->
 
     <?php if ($hidedescription == 1) { ?>
         <textarea name="description" class="ajaxorderinputs" placeholder="<?php echo $text_ocjoyajaxcheckout_enterdescription; ?>"></textarea>
@@ -197,10 +214,6 @@ function minuscon(pid) {
       <?php if ($options) { ?>
         <div class="options">
           <?php foreach ($options as $option) { ?>
-
-            <?php if ($option['type'] == 'text') { ?>
-                <input type="text" name="option[<?php echo $option['product_option_id']; ?>]" id="option-<?php echo $option['product_option_id']; ?>" size="3" maxlength="3" value="" />
-            <?php } ?>
 
             <?php if ($option['type'] == 'select') { ?>
               <div id="option-<?php echo $option['product_option_id']; ?>" class="option">
@@ -260,5 +273,7 @@ function minuscon(pid) {
       <input type="button" class="btn-style volume" onclick="checkout('orderform');" id="gotoorderajax" value="Оформить">
       <a id="cancelorderajax" class="btn-style volume grey popup-cancel">Отмена</a>
   </div>
+
+</div>
 
 </div>

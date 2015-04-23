@@ -21,18 +21,11 @@ function right_carusel_checkout(){
         $(".carousel-items-checkout").css({"left":"0px"}); 
     }, 300);
 }
-$(document).ready(function() {
-    //var ocjoyajaxcheckoutresize = $('#ajaxorder').parents();
-    //ocjoyajaxcheckoutresize.colorbox.resize();
-//    $("#colorbox").draggable({
-//      cursor: "crosshair",
-//      containment: "parent"
-//    });
-});
-function AjaxCheckoutOcjoy(id) {  
+
+function AjaxCheckoutOcjoy(id, product) {
     $.ajax({
         type: 'post',
-        data: 'product_id=' + id,
+        data: {product_id: id, product_detected: product},
         url: 'index.php?route=checkout/ocjoyajaxcheckout',
         dataType: 'html',
         success:  function(data) {
@@ -49,7 +42,40 @@ function AjaxCheckoutOcjoy(id) {
                 }
             });
 
-            $('.popup-cancel').click(function(){
+            // если м2
+            if($('#ajaxorder .meters-package').size() > 0 && $('#ajaxorder .meters-package').data('unitCount') == 1){
+
+               // если из карточки товара
+               if($('#esponi_OTF_Total').size() > 0) {
+                   $('#ajaxorder .price span').text($('#esponi_OTF_Total').text());
+                   $('#ajaxorder .count .count-meters').val($('.product-info #option-227 .count-meters').val());
+               } else { // иначе из каталога
+                   count_meter_p = $('#ajaxorder .meters-package').data('metersPackage');
+
+                   var calc_meter = function(obj){
+                       count_need_m = obj.val();
+                       whole_box = Math.ceil(count_need_m/count_meter_p);
+                       price = $('#ajaxorder .meters-package').data('priceMeter');
+                       itogo =  (whole_box*count_meter_p)*price;
+
+                       $('#ajaxorder .price span').text(parseFloat(itogo).toFixed(2)+' р.');
+                       $('#ajaxorder .count-meters').val(parseFloat(whole_box*count_meter_p).toFixed(4));
+                   }
+
+                   calc_meter($('#ajaxorder .count-meters'));
+                   $('#ajaxorder .need-meters').bind("keyup", function(){calc_meter($(this));});
+               }
+            }
+
+            // если шт
+            if($('#ajaxorder .meters-package').size() > 0 && $('#ajaxorder .meters-package').data('unitCount') == 2){
+                if($('#esponi_OTF_Total').size() > 0) { // если из карточки товара
+                    $('#ajaxorder .count .quantity').val($('.product-info .cart .quantity').val());
+                }
+            }
+
+
+            $('.popup-cancel').on('click', function(){
                 $.fancybox.close();
             });
         }
