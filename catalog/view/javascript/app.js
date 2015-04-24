@@ -165,9 +165,7 @@ $(document).ready(function(){
 //    });
 //
     $('.js-popup-img').fancybox({
-        openEffect : 'elastic',
         openSpeed  : 150,
-        closeEffect : 'elastic',
         closeSpeed  : 150,
         closeBtn  : true,
         arrows    : true,

@@ -1,10 +1,5 @@
 <div class="simplecheckout-block-heading" <?php echo $simple_customer_hide_if_logged ? 'style="display:none"' : '' ?>>
     <?php echo $text_checkout_customer ?>
-    <?php if ($simple_customer_view_login) { ?>
-    <span class="simplecheckout-block-heading-button">
-        <a href="<?php echo $default_login_link ?>" <?php if (!$is_mobile) { ?>onclick="simple_login_open();return false;"<?php } ?> id="simplecheckout_customer_login"><?php echo $text_checkout_customer_login ?></a>
-    </span>
-    <?php } ?>
 </div>  
 <div class="simplecheckout-block-content" <?php echo $simple_customer_hide_if_logged ? 'style="display:none"' : '' ?>>
     <?php if ($simple_customer_registered) { ?>
@@ -33,19 +28,6 @@
         <?php $i = 0; ?>
         <?php $geo_selector_used = false; ?>
         <?php foreach ($checkout_customer_fields as $field) { ?>
-            <?php if ($i == 0 && !$customer_logged && $simple_customer_action_register == Simple::REGISTER_USER_CHOICE) { ?>
-                <tr>
-                    <td class="simplecheckout-customer-left">
-                       <?php echo $entry_register; ?>
-                    </td>
-                    <td class="simplecheckout-customer-right">
-                      <label><input type="radio" name="register" value="1" <?php echo $register == 1 ? 'checked="checked"' : ''; ?> reload="customer_register" /><?php echo $text_yes ?></label>&nbsp;
-                      <label><input type="radio" name="register" value="0" <?php echo $register == 0 ? 'checked="checked"' : ''; ?> reload="customer_not_register" /><?php echo $text_no ?></label>
-                    </td>
-                </tr>
-                <?php $user_choice = true; ?>
-            <?php $i++ ?>
-            <?php } ?>
             <?php if ($field['type'] == 'hidden') { ?>
                 <?php continue; ?>
             <?php } elseif ($field['type'] == 'header') { ?>

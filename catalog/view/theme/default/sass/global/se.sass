@@ -75,19 +75,31 @@ a.title-style
 .form-row
   margin-bottom: 10px
 
-.style-form-label
+.style-form-label, .simple-content label
   +font-family-2
-  color: #7f8c8c
-  font-size: 15px
+  color: #333333
+  font-size: 14px
+  &:hover
+    cursor: pointer
 
-.style-form-text, .style-form-textarea
+.style-form-text, .style-form-textarea, .simple-content input[type='text'], .simple-content textarea
+  width: 100%
   font-family: Arial, sans-serif
   color: #5E5E5E
   padding: 5px
   border: 2px solid #eaeaea
 
-.style-form-textarea
+.style-form-textarea, .simple-content textarea
   resize: none
+
+.style-form-select, .simple-content select
+  width: 100%
+  font-family: Arial, sans-serif
+  color: #5E5E5E
+  padding: 5px
+  border: 2px solid #eaeaea
+  &:hover
+    cursor: pointer
 
 .ocjoyajaxcheckout_errorfields, .style-error
   font-size: 11px

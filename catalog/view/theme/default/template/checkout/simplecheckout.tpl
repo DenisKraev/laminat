@@ -23,6 +23,7 @@ include $simple->tpl_static();
                 '{payment}'       => '<div class="simplecheckout-block'.($simple_payment_methods_hide ? ' simplecheckout-skip' : '').'" id="simplecheckout_payment"'.($simple_payment_methods_hide ? ' style="display:none;"' : '').'>' . $simplecheckout_payment . '</div>',
                 '{agreement}'     => $simple_common_view_agreement_text ? '<div class="simplecheckout-block" id="simplecheckout_agreement"></div>' : '',
                 '{help}'          => $simple_common_view_help_text ? '<div class="simplecheckout-block" id="simplecheckout_help"></div>' : '',
+                '{total}'          => '<div class="simplecheckout-block" id="simplecheckout_total">' . $simplecheckout_total . '</div>',
                 '{payment_form}'  => '',
 			);
             
@@ -72,6 +73,7 @@ include $simple->tpl_static();
 
             echo trim(str_replace($find, $replace, $simple_common_template));
         ?>
+
     <input type="hidden" name="simple_create_order" id="simple_create_order" value="">
     <input type="hidden" name="simple_step" id="simple_step" value="<?php echo $simple_step ?>">
     <input type="hidden" name="simple_step_next" id="simple_step_next" value="">
@@ -86,14 +88,16 @@ include $simple->tpl_static();
     <span style="display:none" id="please_confirm"><?php echo $text_please_confirm; ?></span>
     
     <div style="width:100%;height:1px;clear:both;"></div>
-    
-    <div class="simplecheckout-proceed-payment" id="simplecheckout_proceed_payment" style="display:none;"><?php echo $text_proceed_payment ?></div>
+
+
+
+        <div class="simplecheckout-proceed-payment" id="simplecheckout_proceed_payment" style="display:none;"><?php echo $text_proceed_payment ?></div>
     <!-- order button block -->
     <?php if ($error_warning_agree && $simple_show_errors) { ?>
         <div class="simplecheckout-warning-block agree-warning"><?php echo $error_warning_agree ?></div>
     <?php } elseif ($agree_warning) { ?>
         <div class="simplecheckout-warning-block agree-warning" style="display:none"><?php echo $agree_warning ?></div>
-    <?php } ?> 
+    <?php } ?>
     <?php if ($simple_steps) { ?>
     <div class="simplecheckout-button-block buttons" id="step_buttons">
         <div class="simplecheckout-button-right">
@@ -104,9 +108,9 @@ include $simple->tpl_static();
         </div>
     </div>
     <?php } ?>
-    <div class="simplecheckout-button-block buttons" id="buttons" <?php if ($block_order) { ?>style="display:none;"<?php } ?>>
+    <div class="simplecheckout-button-block buttons actions" id="buttons" <?php if ($block_order) { ?>style="display:none;"<?php } ?>>
         <div class="simplecheckout-button-right">
-            <?php if ($simple_common_view_agreement_checkbox) { ?><label><input type="checkbox" id="agree" name="agree" value="1" <?php if ($agree == 1) { ?>checked="checked"<?php } ?> /><?php echo $text_agree; ?></label>&nbsp;<?php } ?><a class="button btn" onclick="simplecheckout_submit();" id="simplecheckout_button_confirm"><span><?php echo $button_order; ?></span></a>
+            <?php if ($simple_common_view_agreement_checkbox) { ?><label><input type="checkbox" id="agree" name="agree" value="1" <?php if ($agree == 1) { ?>checked="checked"<?php } ?> /><?php echo $text_agree; ?></label>&nbsp;<?php } ?><a class="btn-style btn-order" onclick="simplecheckout_submit();" id="simplecheckout_button_confirm">Отправить</a>
         </div>
         <?php if ($simple_show_back) { ?>
         <div class="simplecheckout-button-left">

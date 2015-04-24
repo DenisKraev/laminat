@@ -1,0 +1,129 @@
+/* корзина
+.simple-content
+  margin: 0px
+  .hide
+    display: none
+  input[type="checkbox"], input[type="radio"]
+    vertical-align: middle
+    &:hover
+      cursor: pointer
+  input[disabled="disabled"], textarea[disabled="disabled"]
+    background: #fff
+    opacity: 1
+
+.simplecheckout-cart
+  border: 1px solid #cbcbcb
+  thead th
+    text-align: center !important
+    color: #8b8a8a
+    font-size: 12px
+    background: #f2f2f2
+    padding: 10px
+    border-bottom: 1px solid #e3e3e3
+    font-family: Arial, sans-serif
+  td
+    vertical-align: middle !important
+    padding: 15px
+    &.name a
+      +font-family-2
+      font-size: 14px
+      line-height: 16px
+      color: #333333
+      &:hover
+        text-decoration: none
+    &.remove
+      width: 45px
+    &.quantity
+      input[type='text']
+        width: 40px
+        vertical-align: middle
+        text-align: center
+        padding: 8px
+        margin: 0px 3px
+      .up, .down
+        width: 19px
+        height: 19px
+        +inline-block
+        &:hover
+          cursor: pointer
+      .down
+        background: image-url('app/btn-uo-down-sprite-orange-19x19.png') 0px 0px no-repeat
+      .up
+        background: image-url('app/btn-uo-down-sprite-orange-19x19.png') -19px 0px no-repeat
+    &.remove
+      .btn-remove
+        width: 19px
+        height: 19px
+        +inline-block
+        background: image-url('app/btn-cross-orange-19x19.png') 0px 0px no-repeat
+        &:hover
+          cursor: pointer
+
+.simplecheckout-customer-block
+  h3
+    margin: 0px
+    margin-bottom: 10px
+    +font-family-2(bold)
+    font-size: 20px
+    line-height: 22px
+    color: #333333
+
+.simplecheckout-customer-one-column
+  width: 100%
+
+.simplecheckout-left-column, .simplecheckout-right-column
+  width: 480px
+  min-width: 0px
+  max-width: 100%
+.simplecheckout-left-column
+  margin-right: 0px
+.simplecheckout-customer-left
+  width: 100px
+.simplecheckout-customer-right
+  width: 230px
+
+.simplecheckout-block-heading
+  +font-family-2(bold)
+  font-size: 14px
+  background: #f2f2f2
+  padding: 15px
+  margin-bottom: 0px
+  border: 1px solid #cbcbcb
+  border-bottom: 1px solid #e3e3e3
+
+.simplecheckout-block-content
+  border: 1px solid #cbcbcb
+  border-top: none
+
+.simplecheckout-methods-table
+  tr:first-child td b
+    margin: 0px
+    margin-bottom: 10px
+    +font-family-2(bold)
+    font-size: 20px
+    line-height: 22px
+    color: #333333
+  td.quote
+    width: 25%
+
+.simple-content
+  .box-sub-total, .box-total
+    margin: 30px 0px
+    .item
+      text-align: right
+    .name
+      +font-family-2
+      font-size: 14px
+      line-height: 14px
+      color: #333333
+    .value
+      font-family: Calibri, sans-serif
+      font-size: 26px
+      line-height: 26px
+      color: #eb8c2a
+  .actions
+    border: none !important
+    .btn-order
+      font-size: 18px
+      padding: 10px 20px
+

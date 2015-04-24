@@ -254,7 +254,7 @@ class ModelCatalogProduct extends Model {
 		
 		$num_query = $this->db->query("SELECT FOUND_ROWS() AS `found_rows`");
 		$this->FOUND_ROWS = intval($num_query->row['found_rows']);
-		
+
 		foreach ($query->rows as $result) {
 			$product_data[$result['product_id']] = $this->getProduct($result['product_id']);
 		}

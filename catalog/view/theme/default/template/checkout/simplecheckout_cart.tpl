@@ -8,7 +8,6 @@
         <colgroup>
             <col class="image">
             <col class="name">
-            <col class="model">
             <col class="quantity">
             <col class="price">
             <col class="total">
@@ -18,7 +17,6 @@
             <tr>
                 <th class="image"><?php echo $column_image; ?></th>
                 <th class="name"><?php echo $column_name; ?></th>
-                <th class="model"><?php echo $column_model; ?></th>
                 <th class="quantity"><?php echo $column_quantity; ?></th>
                 <th class="price"><?php echo $column_price; ?></th>
                 <th class="total"><?php echo $column_total; ?></th>
@@ -63,16 +61,17 @@
                 <small><?php echo $product['reward']; ?></small>
                 <?php } ?>
             </td>
-            <td class="model"><?php echo $product['model']; ?></td>
             <td class="quantity">
-                <img src='<?php echo $simple->tpl_joomla_path() ?>catalog/view/image/minus.png' border='0' <?php if ($quantity > 1) { ?>onclick="jQuery(this).next().val(~~jQuery(this).next().val()-1);simplecheckout_reload('cart_value_decreased');"<?php } ?>>
-                <input type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" onchange="simplecheckout_reload('cart_value_changed')" />
-                <img src='<?php echo $simple->tpl_joomla_path() ?>catalog/view/image/plus.png' border='0' onclick="jQuery(this).prev().val(~~jQuery(this).prev().val()+1);simplecheckout_reload('cart_value_increased');">
+
+                <?php if($product['unit_count'] == 2) { ?><div class="down" <?php if ($quantity > 1) { ?>onclick="jQuery(this).next().val(~~jQuery(this).next().val()-1);simplecheckout_reload('cart_value_decreased');"<?php } ?>></div><?php } ?>
+                <input class="<?php if($product['unit_count'] == 1) { echo ' hide '; }?>" type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" onchange="simplecheckout_reload('cart_value_changed')" <?php if($product['unit_count'] == 1) { echo 'disabled=disabled'; }?> />
+                <?php if($product['unit_count'] == 2) { ?><div class="up" onclick="jQuery(this).prev().val(~~jQuery(this).prev().val()+1);simplecheckout_reload('cart_value_increased');"></div><?php } ?>
+
             </td>
             <td class="price"><nobr><?php echo $product['price']; ?></nobr></td>
             <td class="total"><nobr><?php echo $product['total']; ?></nobr></td>
             <td class="remove">
-            <img style="cursor:pointer;" src="<?php echo $simple->tpl_joomla_path() ?>catalog/view/image/close.png" onclick="jQuery('#simplecheckout_remove').val('<?php echo $product['key']; ?>');simplecheckout_reload('product_removed');" />
+              <div class="btn-remove" onclick="jQuery('#simplecheckout_remove').val('<?php echo $product['key']; ?>');simplecheckout_reload('product_removed');" ></div>
             </td>        
             </tr>
             <?php } ?>
@@ -80,7 +79,6 @@
                 <tr>
                     <td class="image"></td>  
                     <td class="name"><?php echo $voucher_info['description']; ?></td>
-                    <td class="model"></td>
                     <td class="quantity">1</td>
                     <td class="price"><nobr><?php echo $voucher_info['amount']; ?></nobr></td>
                     <td class="total"><nobr><?php echo $voucher_info['amount']; ?></nobr></td>
@@ -91,44 +89,17 @@
             <?php } ?>
     </tbody>
 </table>
-    
-<?php foreach ($totals as $total) { ?>
-    <div class="simplecheckout-cart-total" id="total_<?php echo $total['code']; ?>">
-        <span><b><?php echo $total['title']; ?>:</b></span>
-        <span class="simplecheckout-cart-total-value"><nobr><?php echo $total['text']; ?></nobr></span>
-        <span class="simplecheckout-cart-total-remove">
-            <?php if ($total['code'] == 'coupon') { ?>
-            <img src="<?php echo $simple->tpl_joomla_path() ?>catalog/view/image/close.png" onclick="jQuery('input[name=coupon]').val('');simplecheckout_reload('coupon_removed');" />
-            <?php } ?>
-            <?php if ($total['code'] == 'voucher') { ?>
-            <img src="<?php echo $simple->tpl_joomla_path() ?>catalog/view/image/close.png" onclick="jQuery('input[name=voucher]').val('');simplecheckout_reload('voucher_removed');" />
-            <?php } ?>
-            <?php if ($total['code'] == 'reward') { ?>
-            <img src="<?php echo $simple->tpl_joomla_path() ?>catalog/view/image/close.png" onclick="jQuery('input[name=reward]').val('');simplecheckout_reload('reward_removed');" />
-            <?php } ?>
-        </span>
-    </div>
-<?php } ?>
-<?php if (isset($modules['coupon'])) { ?>
-    <div class="simplecheckout-cart-total">
-        <span class="inputs"><?php echo $entry_coupon; ?>&nbsp;<input type="text" name="coupon" value="<?php echo $coupon; ?>" onchange="simplecheckout_reload('coupon_changed')"  /></span>
-    </div>
-<?php } ?>
-<?php if (isset($modules['reward']) && $points > 0) { ?>
-    <div class="simplecheckout-cart-total">
-        <span class="inputs"><?php echo $entry_reward; ?>&nbsp;<input type="text" name="reward" value="<?php echo $reward; ?>" onchange="simplecheckout_reload('reward_changed')"  /></span>
-    </div>
-<?php } ?>
-<?php if (isset($modules['voucher'])) { ?>
-    <div class="simplecheckout-cart-total">
-        <span class="inputs"><?php echo $entry_voucher; ?>&nbsp;<input type="text" name="voucher" value="<?php echo $voucher; ?>" onchange="simplecheckout_reload('voucher_changed')"  /></span>
-    </div>
-<?php } ?>
-<?php if (isset($modules['coupon']) || isset($modules['reward']) || isset($modules['voucher'])) { ?>
-    <div class="simplecheckout-cart-total simplecheckout-cart-buttons">
-        <span class="inputs buttons"><a id="simplecheckout_button_cart" onclick="simplecheckout_reload('cart_changed');" class="button btn"><span><?php echo $button_update; ?></span></a></span>
-    </div>
-<?php } ?>
+
+<div class="box-sub-total">
+  <?php foreach ($totals as $total) { ?>
+    <?php if($total['code'] == 'sub_total'){ ?>
+      <div class="item" id="total_<?php echo $total['code']; ?>">
+          <span class="name"><?php echo $total['title']; ?>: </span>
+          <span class="value"><?php echo $total['text']; ?></span>
+      </div>
+    <?php } ?>
+  <?php } ?>
+</div>
     
 <input type="hidden" name="remove" value="" id="simplecheckout_remove">
 <div style="display:none;" id="simplecheckout_cart_total"><?php echo $cart_total ?></div>
@@ -166,7 +137,6 @@
         <colgroup>
             <col class="image">
             <col class="name">
-            <col class="model">
             <col class="quantity">
             <col class="price">
             <col class="total">
@@ -175,7 +145,6 @@
             <tr>
                 <th class="image"><?php echo $column_image; ?></th>
                 <th class="name"><?php echo $column_name; ?></th>
-                <th class="model"><?php echo $column_model; ?></th>
                 <th class="quantity"><?php echo $column_quantity; ?></th>
                 <th class="price"><?php echo $column_price; ?></th>
                 <th class="total"><?php echo $column_total; ?></th>
@@ -203,7 +172,6 @@
                 <small><?php echo $product['reward']; ?></small>
                 <?php } ?>
             </td>
-            <td class="model"><?php echo $product['model']; ?></td>
             <td class="quantity"><?php echo $product['quantity']; ?></td>
             <td class="price"><nobr><?php echo $product['price']; ?></nobr></td>
             <td class="total"><nobr><?php echo $product['total']; ?></nobr></td>
@@ -213,7 +181,6 @@
                 <tr>
                     <td class="image"></td>  
                     <td class="name"><?php echo $voucher_info['description']; ?></td>
-                    <td class="model"></td>
                     <td class="quantity">1</td>
                     <td class="price"><nobr><?php echo $voucher_info['amount']; ?></nobr></td>
                     <td class="total"><nobr><?php echo $voucher_info['amount']; ?></nobr></td>

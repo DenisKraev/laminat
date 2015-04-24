@@ -62,6 +62,48 @@ class ControllerCheckoutSimpleCheckout extends Controller {
             $this->data['simple_common_view_help_text']               = false;
             
             $this->data['agree_warning'] = '';
+
+          ////////////
+          $total_data = array();
+          $total = 0;
+          $taxes = $this->cart->getTaxes();
+
+          $this->data['modules'] = array();
+
+          if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+            $this->load->model('setting/extension');
+
+            $sort_order = array();
+
+            $results = $this->model_setting_extension->getExtensions('total');
+
+            foreach ($results as $key => $value) {
+              $sort_order[$key] = $this->config->get($value['code'] . '_sort_order');
+            }
+
+            array_multisort($sort_order, SORT_ASC, $results);
+
+            foreach ($results as $result) {
+              if ($this->config->get($result['code'] . '_status')) {
+                $this->load->model('total/' . $result['code']);
+
+                $this->{'model_total_' . $result['code']}->getTotal($total_data, $total, $taxes);
+
+                $this->data['modules'][$result['code']] = true;
+              }
+            }
+
+            $sort_order = array();
+
+            foreach ($total_data as $key => $value) {
+              $sort_order[$key] = $value['sort_order'];
+            }
+
+            array_multisort($sort_order, SORT_ASC, $total_data);
+          }
+
+          $this->data['totals'] = $total_data;
+          //////////////////////////
             
             if ($this->config->get('simple_common_view_agreement_id')) {
                 $this->load->model('catalog/information');
@@ -144,6 +186,7 @@ class ControllerCheckoutSimpleCheckout extends Controller {
             }
             
             $this->data['simplecheckout_cart']     = $this->getChild('checkout/simplecheckout_cart');
+            $this->data['simplecheckout_total']     = $this->getChild('checkout/simplecheckout_total');
             $this->data['simplecheckout_customer'] = $this->getChild('checkout/simplecheckout_customer');
 
             $this->data['modules'] = array();
@@ -197,6 +240,7 @@ class ControllerCheckoutSimpleCheckout extends Controller {
             }
             
             $this->data['simple_step'] = '';
+            $this->data['simple_steps'] = $this->simple->get_simple_steps();
             $this->data['simple_steps'] = $this->simple->get_simple_steps();
 
             if ($this->data['simple_steps']) {
@@ -436,7 +480,7 @@ class ControllerCheckoutSimpleCheckout extends Controller {
         $data['payment_country_id']     = $this->simple->payment_address['country_id'];
         $data['payment_address_format'] = $this->simple->payment_address['address_format'];
         $data['payment_company_id']     = $this->simple->payment_address['company_id'];    
-        $data['payment_tax_id']         = $this->simple->payment_address['tax_id'];    
+        $data['payment_tax_id']         = $this->simple->payment_address['tax_id'];
             
         $payment_method = $this->simple->payment_method;
         
@@ -717,7 +761,7 @@ class ControllerCheckoutSimpleCheckout extends Controller {
         }
         
         $data = array_merge($data, $custom_data_order_1, $custom_data_order_2, $custom_data_customer, $custom_data_payment_address, $custom_data_shipping_address);
-        
+
         $data['simple'] = array();
         $data['simple']['order'] = $this->simple->get_custom_data(Simple::SET_CHECKOUT_CUSTOMER, Simple::OBJECT_TYPE_ORDER);
         $data['simple']['customer'] = $this->simple->get_custom_data(Simple::SET_CHECKOUT_CUSTOMER, Simple::OBJECT_TYPE_CUSTOMER);

@@ -536,6 +536,8 @@ function simplecheckout_next() {
     }
 }
 
+
+
 function simplecheckout_reload(from) {
     if (simple_steps && (from == 'shipping_changed' || from == 'payment_changed')) {
         return;
@@ -555,8 +557,8 @@ function simplecheckout_reload(from) {
         dataType: 'text',
         beforeSend: function() {
             block_form();
-            overlay_simplecheckout();
-            overlay_button();
+            //overlay_simplecheckout();
+            //overlay_button();
             jQuery('#payment_form_reload').text(jQuery('#saving_changes').text());
         },      
         success: function(data) {
@@ -574,7 +576,7 @@ function simplecheckout_reload(from) {
         error: function(xhr, ajaxOptions, thrownError) {
             console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
             unblock_form();
-            overlay_remove();
+            //overlay_remove();
         }
     });
 }
@@ -744,6 +746,8 @@ jQuery(function(){
 
     simplecheckout_init('start');
 
+
+
     jQuery('input[reload]:not([autocomplete]):not([googleapi]),select[reload],textarea[reload]').live('change', function(){
         var from = jQuery(this).attr('reload');
         simplecheckout_reload.field = null;
@@ -813,6 +817,8 @@ jQuery(function(){
             simple_login_close();
         }
     });
+
+    simplecheckout_reload('header_cart_changed');
 
     /*window.onbeforeunload = function (evt) {
         if (can_submit_payment_form() && !jQuery('#simplecheckout_payment_form').data('is_confirmed')) {

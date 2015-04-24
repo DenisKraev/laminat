@@ -173,17 +173,17 @@ class ControllerCheckoutSimpleCheckoutCart extends Controller {
                     'value' => (utf8_strlen($value) > 20 ? utf8_substr($value, 0, 20) . '..' : $value)
                 );
             }
-            
+
             if ($product['image']) {
                 $image_cart_width = $this->config->get('config_image_cart_width');
                 $image_cart_width = $image_cart_width ? $image_cart_width : 40;
                 $image_cart_height = $this->config->get('config_image_cart_height');
                 $image_cart_height = $image_cart_height ? $image_cart_height : 40;
-                $image = $this->model_tool_image->resize($product['image'], $image_cart_width, $image_cart_height);
+                $image = $this->model_tool_image->crop($product['image'], 75, 75, "center", "_cart");
             } else {
                 $image = '';
             }
-            
+
             if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
                 $price = $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')));
             } else {
@@ -198,7 +198,7 @@ class ControllerCheckoutSimpleCheckoutCart extends Controller {
 
             if ($version >= 156) {
                 $profile_description = '';
-                    
+
                 if ($product['recurring']) {
                     $frequencies = array(
                         'day'        => $this->language->get('text_day'),
@@ -227,6 +227,7 @@ class ControllerCheckoutSimpleCheckoutCart extends Controller {
                     'thumb'               => $image,
                     'name'                => $product['name'],
                     'model'               => $product['model'],
+                    'unit_count'               => $product['unit_count'],
                     'option'              => $option_data,
                     'quantity'            => $product['quantity'],
                     'stock'               => $product['stock'],
@@ -244,6 +245,7 @@ class ControllerCheckoutSimpleCheckoutCart extends Controller {
                     'thumb'    => $image,
                     'name'     => $product['name'],
                     'model'    => $product['model'],
+                    'unit_count'               => $product['unit_count'],
                     'option'   => $option_data,
                     'quantity' => $product['quantity'],
                     'stock'    => $product['stock'],
@@ -257,7 +259,7 @@ class ControllerCheckoutSimpleCheckoutCart extends Controller {
             if ($product['points']) {
                 $points_total += $product['points'];
             }
-        } 
+        }
         
         // Gift Voucher
         $this->data['vouchers'] = array();
@@ -275,41 +277,41 @@ class ControllerCheckoutSimpleCheckoutCart extends Controller {
         $total_data = array();
         $total = 0;
         $taxes = $this->cart->getTaxes();
-        
+
         $this->data['modules'] = array();
-        
-        if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {                         
+
+        if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
             $this->load->model('setting/extension');
-            
-            $sort_order = array(); 
-            
+
+            $sort_order = array();
+
             $results = $this->model_setting_extension->getExtensions('total');
-            
+
             foreach ($results as $key => $value) {
                 $sort_order[$key] = $this->config->get($value['code'] . '_sort_order');
             }
-            
+
             array_multisort($sort_order, SORT_ASC, $results);
-            
+
             foreach ($results as $result) {
                 if ($this->config->get($result['code'] . '_status')) {
                     $this->load->model('total/' . $result['code']);
-    
+
                     $this->{'model_total_' . $result['code']}->getTotal($total_data, $total, $taxes);
-                    
+
                     $this->data['modules'][$result['code']] = true;
                 }
             }
-            
-            $sort_order = array(); 
-          
+
+            $sort_order = array();
+
             foreach ($total_data as $key => $value) {
                 $sort_order[$key] = $value['sort_order'];
             }
 
             array_multisort($sort_order, SORT_ASC, $total_data);
         }
-        
+
         $this->data['totals'] = $total_data;
         
         $this->data['entry_coupon'] = $this->language->get('entry_coupon');
