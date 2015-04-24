@@ -8844,3 +8844,7 @@
 2015-04-22 16:39:26 - PHP Notice:  Undefined variable: unit_count in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 113
 2015-04-22 16:39:32 - PHP Notice:  Undefined variable: unit_count in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 113
 2015-04-22 16:39:39 - PHP Notice:  Undefined variable: unit_count in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 113
+2015-04-24 8:30:49 - PHP Notice:  Undefined variable: product_detected in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 106
+2015-04-24 8:31:45 - PHP Notice:  Undefined variable: product_detected in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 106
+2015-04-24 8:34:54 - PHP Notice:  Undefined variable: product_detected in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 106
+2015-04-24 8:34:57 - PHP Notice:  Undefined variable: product_detected in D:\OpenServer\domains\laminat\catalog\controller\checkout\ocjoyajaxcheckout.php on line 106

@@ -17,6 +17,22 @@
   padding-left: 25px;
   padding-right: 25px;
 }
+#ajaxorder .count input[type="text"] {
+  background: #fff;
+  border: none;
+  width: 80px;
+  color: #444444;
+  font-weight: bold;
+}
+#ajaxorder .count input[type="text"].quantity {
+  width: 45px;
+  border: 1px solid #e4e4e4;
+  text-align: center;
+}
+#ajaxorder .count input[type="text"].product-detected {
+  border: none;
+  text-align: left;
+}
 
 .box-product-info {
   background: #fff;
