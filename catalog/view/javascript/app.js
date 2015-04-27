@@ -114,19 +114,7 @@ $(document).ready(function(){
         $('.product-info #option-227 .need-meters').bind("keyup", function(){calc_meter($(this));});
     }
 
-//    $('.prod-slider').lightSlider({
-//        gallery: true,
-//        loop: true,
-//        item: 1,
-//        thumbItem: 3,
-//        thumbMargin: 5,
-//        mode: 'fade',
-//        speed: 300,
-//        currentPagerPosition: 'middle',
-//        onSliderLoad: function() {
-//            $('.prod-slider').removeClass('slider-hidden');
-//        }
-//    });
+    $('.style-form-checkbox').styler();
 
 //    var myMap;
 //

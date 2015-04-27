@@ -8996,3 +8996,68 @@
 2015-04-27 8:32:43 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\simplecheckout_cart.tpl on line 94
 2015-04-27 8:32:46 - PHP Notice:  Undefined variable: totals in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\simplecheckout_cart.tpl on line 94
 2015-04-27 8:32:46 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\simplecheckout_cart.tpl on line 94
+2015-04-27 10:55:54 - PHP Notice:  Undefined index: path in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 325
+2015-04-27 10:56:07 - PHP Notice:  Undefined index: path in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 325
+2015-04-27 13:38:41 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:41 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:41 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:41 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:41 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:41 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:41 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:41 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:42 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:42 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:42 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:42 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:42 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:42 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:42 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:42 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:42 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:38:42 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\search.tpl on line 28
+2015-04-27 13:38:42 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\search.tpl on line 29
+2015-04-27 13:38:42 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\search.tpl on line 29
+2015-04-27 13:38:42 - PHP Notice:  Undefined index: children in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\search.tpl on line 33
+2015-04-27 13:38:42 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\search.tpl on line 33
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 13:39:29 - PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 471
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 14:20:09 - PHP Notice:  Undefined index: category_id in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_product_search.php on line 468
+2015-04-27 16:23:28 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 300
+2015-04-27 16:23:28 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 300
+2015-04-27 16:23:28 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 58
+2015-04-27 16:23:28 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 300
+2015-04-27 16:23:28 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 300
+2015-04-27 16:23:28 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 58
+2015-04-27 16:23:28 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 63

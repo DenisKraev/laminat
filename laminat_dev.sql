@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 27 2015 г., 10:26
+-- Время создания: Апр 27 2015 г., 16:27
 -- Версия сервера: 5.5.41-log
 -- Версия PHP: 5.3.29
 
@@ -1935,7 +1935,7 @@ CREATE TABLE IF NOT EXISTS `order` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=46 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=47 ;
 
 --
 -- Дамп данных таблицы `order`
@@ -1986,7 +1986,8 @@ INSERT INTO `order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, `st
 (42, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'wteghwse', 'sthrt', 'hser@rg.er', '564363456', '', 'wteghwse', 'sthrt', '', '', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', 'Оплата при доставке', 'cod', 'wteghwse', 'sthrt', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', '0-10 км от МКАД (1 200,00 руб.)', 'multiflat.multiflat1', '', '1209.3824', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4', '2015-04-27 09:40:27', '2015-04-27 09:40:39'),
 (43, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'wteghwse', 'sthrt', 'hser@rg.er', '564363456', '', 'wteghwse', 'sthrt', '', '', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', 'Оплата при доставке', 'cod', 'wteghwse', 'sthrt', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', '0-10 км от МКАД (1 200,00 руб.)', 'multiflat.multiflat1', '', '1209.3824', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4', '2015-04-27 09:41:09', '2015-04-27 09:41:17'),
 (44, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'wteghwse', 'sthrt', 'hser@rg.er', '564363456', '', 'wteghwse', 'sthrt', '', '', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', 'Оплата при доставке', 'cod', 'wteghwse', 'sthrt', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', '0-10 км от МКАД (1 200,00 руб.)', 'multiflat.multiflat1', '', '1237.5296', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4', '2015-04-27 10:19:13', '2015-04-27 10:19:26'),
-(45, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'wteghwse', 'sthrt', 'hser@rg.er', '564363456', '', 'wteghwse', 'sthrt', '', '', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', 'Оплата при доставке', 'cod', 'wteghwse', 'sthrt', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', '0-10 км от МКАД (1 200,00 руб.)', 'multiflat.multiflat1', '', '1209.3824', 0, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4', '2015-04-27 10:19:48', '2015-04-27 10:19:48');
+(45, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'wteghwse', 'sthrt', 'hser@rg.er', '564363456', '', 'wteghwse', 'sthrt', '', '', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', 'Оплата при доставке', 'cod', 'wteghwse', 'sthrt', '', 'Московская 4', '', 'Киров', '610000', 'Российская Федерация', 176, 'Кировская область', 2804, '', '0-10 км от МКАД (1 200,00 руб.)', 'multiflat.multiflat1', '', '1209.3824', 0, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4', '2015-04-27 10:19:48', '2015-04-27 10:19:48'),
+(46, 0, 'INV-2013-00', 0, 'Мой Магазин', 'http://laminat/', 0, 1, 'dfgdf', '', 'nomail@nomail.com', '345345', '', 'dfgdf', '', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'dfgdf', '', '', '', '', '', '', '', 0, '0', 0, '', '', '', '', '100.0000', 1, 0, '0.0000', 1, 1, 'RUB', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', '', '2015-04-27 12:57:15', '2015-04-27 12:57:15');
 
 -- --------------------------------------------------------
 
@@ -2098,7 +2099,7 @@ CREATE TABLE IF NOT EXISTS `order_history` (
   `comment` text NOT NULL,
   `date_added` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`order_history_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=45 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=46 ;
 
 --
 -- Дамп данных таблицы `order_history`
@@ -2148,7 +2149,8 @@ INSERT INTO `order_history` (`order_history_id`, `order_id`, `order_status_id`, 
 (41, 41, 1, 1, '', '2015-04-27 09:37:51'),
 (42, 42, 1, 1, '', '2015-04-27 09:40:39'),
 (43, 43, 1, 1, '', '2015-04-27 09:41:17'),
-(44, 44, 1, 1, '', '2015-04-27 10:19:26');
+(44, 44, 1, 1, '', '2015-04-27 10:19:26'),
+(45, 46, 1, 1, '', '2015-04-27 12:57:15');
 
 -- --------------------------------------------------------
 
@@ -2213,7 +2215,7 @@ CREATE TABLE IF NOT EXISTS `order_product` (
   `tax` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `reward` int(8) NOT NULL,
   PRIMARY KEY (`order_product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1823 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1824 ;
 
 --
 -- Дамп данных таблицы `order_product`
@@ -2264,7 +2266,8 @@ INSERT INTO `order_product` (`order_product_id`, `order_id`, `product_id`, `name
 (1816, 42, 42, 'Ламинат Kronospan Komfort', 'Товар 15', 1, '9.3824', '9.3824', '0.0000', 0),
 (1819, 43, 42, 'Ламинат Kronospan Komfort', 'Товар 15', 1, '9.3824', '9.3824', '0.0000', 0),
 (1821, 44, 42, 'Ламинат Kronospan Komfort', 'Товар 15', 4, '9.3824', '37.5296', '0.0000', 0),
-(1822, 45, 42, 'Ламинат Kronospan Komfort', 'Товар 15', 1, '9.3824', '9.3824', '0.0000', 0);
+(1822, 45, 42, 'Ламинат Kronospan Komfort', 'Товар 15', 1, '9.3824', '9.3824', '0.0000', 0),
+(1823, 46, 41, 'iMac', 'Товар 14', 1, '100.0000', '100.0000', '0.0000', 0);
 
 -- --------------------------------------------------------
 
@@ -2312,7 +2315,7 @@ CREATE TABLE IF NOT EXISTS `order_total` (
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`order_total_id`),
   KEY `idx_orders_total_orders_id` (`order_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2980 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2982 ;
 
 --
 -- Дамп данных таблицы `order_total`
@@ -2429,7 +2432,9 @@ INSERT INTO `order_total` (`order_total_id`, `order_id`, `code`, `title`, `text`
 (2974, 44, 'sub_total', 'Сумма', '37.53 р.', '37.5296', 1),
 (2977, 45, 'sub_total', 'Сумма', '9.38 р.', '9.3824', 1),
 (2978, 45, 'shipping', '0-10 км от МКАД (1 200,00 руб.)', '1 200.00 р.', '1200.0000', 3),
-(2979, 45, 'total', 'Итого', '1 209.38 р.', '1209.3824', 9);
+(2979, 45, 'total', 'Итого', '1 209.38 р.', '1209.3824', 9),
+(2980, 46, 'sub_total', 'Сумма', '100.00 р.', '100.0000', 1),
+(2981, 46, 'total', 'Итого', '100.00 р.', '100.0000', 9);
 
 -- --------------------------------------------------------
 
@@ -2511,7 +2516,7 @@ INSERT INTO `product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`
 (34, 'Товар 7', '', '', '', '', '', '', '', 1000, 6, 'data/demo/ipod_shuffle_1.jpg', 8, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 18:07:54', '2015-04-14 17:18:52', 0),
 (36, 'Товар 9', '', '', '', '', '', '', '', 994, 6, 'data/demo/ipod_nano_1.jpg', 8, 0, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 18:09:19', '2015-04-20 09:41:49', 0),
 (40, 'Товар 11', '', '', '', '', '', '', '', 970, 5, 'data/demo/iphone_1.jpg', 8, 1, 1, NULL, '101.0000', '', 0, 0, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:12', '2015-04-14 17:16:31', 0),
-(41, 'Товар 14', '', '', '', '', '', '', '', 977, 5, 'data/demo/imac_1.jpg', 8, 1, 1, NULL, '100.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:26', '2015-04-14 17:16:08', 0),
+(41, 'Товар 14', '', '', '', '', '', '', '', 976, 5, 'data/demo/imac_1.jpg', 8, 1, 2, '', '100.0000', '', 0, 0, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:26', '2015-04-27 12:48:16', 0),
 (42, 'Товар 15', '0709', '', '', '', '', '', '', 954, 7, 'data/products/img4.jpg', 8, 1, 1, '2.3456', '100.0000', '(unit_count == 1) ? (ceil({13}/meters_package)*meters_package)*price : price', 0, 0, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:37', '2015-04-22 11:54:24', 544),
 (43, 'Товар 16', '', '', '', '', '', '', '', 929, 5, 'data/demo/macbook_1.jpg', 8, 0, 1, NULL, '500.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:07:49', '2015-04-20 09:42:06', 2),
 (44, 'Товар 17', '', '', '', '', '', '', '', 1000, 5, 'data/demo/macbook_air_1.jpg', 8, 1, 1, NULL, '1000.0000', '', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:00', '2015-04-20 09:42:12', 0),
@@ -2632,7 +2637,7 @@ CREATE TABLE IF NOT EXISTS `product_image` (
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_image_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2974 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2976 ;
 
 --
 -- Дамп данных таблицы `product_image`
@@ -2642,7 +2647,7 @@ INSERT INTO `product_image` (`product_image_id`, `product_id`, `image`, `sort_or
 (2973, 30, 'data/demo/canon_eos_5d_3.jpg', 0),
 (2668, 47, 'data/demo/hp_2.jpg', 0),
 (2670, 28, 'data/demo/htc_touch_hd_2.jpg', 0),
-(2588, 41, 'data/demo/imac_3.jpg', 0),
+(2975, 41, 'data/demo/imac_2.jpg', 0),
 (2593, 40, 'data/demo/iphone_4.jpg', 0),
 (2676, 36, 'data/demo/ipod_nano_3.jpg', 0),
 (2675, 36, 'data/demo/ipod_nano_2.jpg', 0),
@@ -2669,7 +2674,7 @@ INSERT INTO `product_image` (`product_image_id`, `product_id`, `image`, `sort_or
 (2972, 30, 'data/demo/canon_eos_5d_2.jpg', 0),
 (2667, 47, 'data/demo/hp_3.jpg', 0),
 (2669, 28, 'data/demo/htc_touch_hd_3.jpg', 0),
-(2587, 41, 'data/demo/imac_2.jpg', 0),
+(2974, 41, 'data/demo/imac_3.jpg', 0),
 (2590, 40, 'data/demo/iphone_2.jpg', 0),
 (2589, 40, 'data/demo/iphone_6.jpg', 0),
 (2601, 48, 'data/demo/ipod_classic_2.jpg', 0),
@@ -2786,7 +2791,7 @@ CREATE TABLE IF NOT EXISTS `product_reward` (
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_reward_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=713 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=714 ;
 
 --
 -- Дамп данных таблицы `product_reward`
@@ -2806,7 +2811,7 @@ INSERT INTO `product_reward` (`product_reward_id`, `product_id`, `customer_group
 (617, 31, 1, 0),
 (622, 33, 1, 0),
 (711, 46, 1, 0),
-(609, 41, 1, 0),
+(713, 41, 1, 0),
 (636, 36, 1, 0),
 (614, 34, 1, 0),
 (615, 32, 1, 0),
@@ -2924,8 +2929,8 @@ INSERT INTO `product_to_category` (`product_id`, `category_id`, `main_category`)
 (36, 20, 0),
 (48, 26, 1),
 (40, 20, 0),
-(41, 20, 0),
 (41, 66, 1),
+(41, 20, 0),
 (64, 65, 1),
 (28, 63, 1),
 (42, 20, 0),
@@ -3141,7 +3146,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2766 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2792 ;
 
 --
 -- Дамп данных таблицы `setting`
@@ -3169,7 +3174,7 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (1369, 0, 'product_status', 'product_status_options', 'a:2:{s:7:"product";a:5:{s:11:"image_width";s:2:"45";s:12:"image_height";s:2:"45";s:12:"name_display";s:3:"tip";s:14:"status_display";s:6:"inline";s:3:"css";s:0:"";}s:8:"category";a:5:{s:11:"image_width";s:2:"45";s:12:"image_height";s:2:"45";s:12:"name_display";s:3:"tip";s:14:"status_display";s:6:"inline";s:3:"css";s:0:"";}}', 1),
 (962, 0, 'featured', 'product', '', 0),
 (963, 0, 'featured', 'featured_product', '43,40,42,49,46,47,28', 0),
-(1578, 0, 'ocjoyajaxcheckout', 'config_ukey_ch', '', 0),
+(2790, 0, 'ocjoyajaxcheckout', 'config_required_telephone', '1', 0),
 (42, 0, 'credit', 'credit_sort_order', '7', 0),
 (43, 0, 'credit', 'credit_status', '1', 0),
 (2764, 0, 'config', 'config_sms_gate_username', '', 0),
@@ -3184,11 +3189,11 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (2757, 0, 'config', 'config_google_api_key', '', 0),
 (2756, 0, 'config', 'config_google_analytics', '', 0),
 (2755, 0, 'config', 'config_error_filename', 'my_mego_log.log', 0),
-(1577, 0, 'ocjoyajaxcheckout', 'config_required_telephone', '1', 0),
-(1576, 0, 'ocjoyajaxcheckout', 'config_type_hidetelephone', '1', 0),
-(1575, 0, 'ocjoyajaxcheckout', 'config_required_email', '', 0),
-(1574, 0, 'ocjoyajaxcheckout', 'config_type_hideemail', '', 0),
-(1573, 0, 'ocjoyajaxcheckout', 'config_required_fio', '1', 0),
+(2791, 0, 'ocjoyajaxcheckout', 'config_ukey_ch', '', 0),
+(2789, 0, 'ocjoyajaxcheckout', 'config_type_hidetelephone', '1', 0),
+(2788, 0, 'ocjoyajaxcheckout', 'config_required_email', '', 0),
+(2787, 0, 'ocjoyajaxcheckout', 'config_type_hideemail', '', 0),
+(2786, 0, 'ocjoyajaxcheckout', 'config_required_fio', '1', 0),
 (2753, 0, 'config', 'config_error_display', '1', 0),
 (2754, 0, 'config', 'config_error_log', '1', 0),
 (2752, 0, 'config', 'config_compression', '0', 0),
@@ -3317,16 +3322,16 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (1292, 0, 'deadcow_seo', 'deadcow_seo_products_template', '[product_name]', 0),
 (1290, 0, 'deadcow_seo', 'deadcow_seo_categories_template', '[category_name]', 0),
 (1291, 0, 'deadcow_seo', 'deadcow_seo_categories_suffix', '', 0),
-(1572, 0, 'ocjoyajaxcheckout', 'config_type_hidefio', '1', 0),
-(1571, 0, 'ocjoyajaxcheckout', 'config_type_hidedescription', '', 0),
-(1570, 0, 'ocjoyajaxcheckout', 'config_type_hideoptions', '1', 0),
-(1569, 0, 'ocjoyajaxcheckout', 'config_type_hidepayment', '', 0),
-(1568, 0, 'ocjoyajaxcheckout', 'config_type_hideshipping', '', 0),
-(1567, 0, 'ocjoyajaxcheckout', 'config_type_hideimg', '1', 0),
-(1566, 0, 'ocjoyajaxcheckout', 'config_show_on_module_bestseller', '', 0),
-(1563, 0, 'ocjoyajaxcheckout', 'config_show_on_module_latest', '', 0),
+(2785, 0, 'ocjoyajaxcheckout', 'config_type_hidefio', '1', 0),
+(2784, 0, 'ocjoyajaxcheckout', 'config_type_hidedescription', '', 0),
+(2783, 0, 'ocjoyajaxcheckout', 'config_type_hideoptions', '1', 0),
+(2782, 0, 'ocjoyajaxcheckout', 'config_type_hidepayment', '', 0),
+(2781, 0, 'ocjoyajaxcheckout', 'config_type_hideshipping', '', 0),
+(2780, 0, 'ocjoyajaxcheckout', 'config_type_hideimg', '1', 0),
+(2779, 0, 'ocjoyajaxcheckout', 'config_show_on_module_bestseller', '', 0),
+(2778, 0, 'ocjoyajaxcheckout', 'config_show_on_module_featured', '', 0),
 (1367, 0, 'filterpro', 'filterpro_module', 'a:1:{i:0;a:5:{s:4:"type";s:1:"0";s:9:"layout_id";s:1:"3";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
-(1565, 0, 'ocjoyajaxcheckout', 'config_show_on_module_featured', '', 0),
+(2776, 0, 'ocjoyajaxcheckout', 'config_show_on_module_latest', '', 0),
 (1365, 0, 'filterpro', 'attribute_group', 'a:1:{i:1;a:2:{s:23:"attribute_group_tooltip";s:0:"";s:18:"attribute_group_id";s:1:"7";}}', 1),
 (1366, 0, 'filterpro', 'attribute', 'a:2:{i:1;a:2:{s:17:"attribute_tooltip";s:0:"";s:12:"attribute_id";s:2:"13";}i:2;a:2:{s:17:"attribute_tooltip";s:38:"Подсказка для класса";s:12:"attribute_id";s:2:"12";}}', 1),
 (1364, 0, 'filterpro', 'filterpro_setting', 'a:27:{s:12:"price_slider";s:1:"1";s:7:"filters";s:1:"0";s:16:"expanded_filters";s:2:"on";s:20:"display_manufacturer";s:6:"select";s:21:"expanded_manufacturer";s:2:"on";s:18:"display_categories";s:4:"none";s:19:"expanded_categories";s:2:"on";s:12:"display_tags";s:6:"select";s:13:"expanded_tags";s:2:"on";s:20:"display_attribute_13";s:6:"select";s:20:"display_attribute_12";s:6:"select";s:21:"expanded_attribute_12";s:2:"on";s:11:"option_mode";s:2:"or";s:14:"attribute_mode";s:2:"or";s:14:"attr_delimeter";s:1:":";s:3:"tax";s:1:"0";s:20:"attribute_value_mode";s:2:"or";s:10:"attr_group";s:1:"0";s:13:"subcategories";s:2:"on";s:20:"option_main_checkbox";s:2:"on";s:12:"disable_mask";s:2:"on";s:15:"option_images_w";s:2:"20";s:15:"option_images_h";s:2:"20";s:19:"filterpro_container";s:15:".product-{view}";s:14:"filterpro_name";s:9:"FilterPro";s:19:"filterpro_afterload";s:0:"";s:9:"news_days";s:1:"0";}', 1),
@@ -3395,24 +3400,24 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (1659, 0, 'html_block', 'html_block_module', 'a:6:{i:0;a:5:{s:13:"html_block_id";s:1:"1";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}i:1;a:5:{s:13:"html_block_id";s:1:"2";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"4";}i:2;a:5:{s:13:"html_block_id";s:1:"3";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"5";}i:3;a:5:{s:13:"html_block_id";s:1:"4";s:9:"layout_id";s:1:"2";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"2";}i:4;a:5:{s:13:"html_block_id";s:1:"5";s:9:"layout_id";s:1:"3";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}i:5;a:5:{s:13:"html_block_id";s:1:"5";s:9:"layout_id";s:1:"2";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
 (1119, 0, 'timer', 'timer_module', 'a:1:{i:1;a:11:{s:11:"description";a:1:{i:1;s:31:"&lt;p&gt;\r\n	[Timer]&lt;/p&gt;\r\n";}s:4:"date";s:10:"2015-04-09";s:4:"time";s:5:"0:0:0";s:8:"interval";s:2:"24";s:5:"image";s:19:"data/timer/img2.png";s:5:"title";s:32:"Плинтус в подарок";s:15:"title_font_size";s:2:"34";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
 (1150, 0, 'special', 'special_module', 'a:1:{i:0;a:7:{s:5:"limit";s:3:"100";s:11:"image_width";s:3:"195";s:12:"image_height";s:3:"195";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
-(1564, 0, 'ocjoyajaxcheckout', 'config_show_on_module_special', '', 0),
+(2777, 0, 'ocjoyajaxcheckout', 'config_show_on_module_special', '', 0),
 (1500, 0, 'category', 'category_module', 'a:2:{i:0;a:4:{s:9:"layout_id";s:1:"3";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}i:1;a:4:{s:9:"layout_id";s:1:"2";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
 (984, 0, 'actions_setting', 'actions_setting', 'a:14:{s:13:"actions_limit";s:1:"5";s:11:"image_width";s:3:"120";s:12:"image_height";s:3:"120";s:10:"show_image";s:1:"1";s:9:"show_date";s:1:"1";s:22:"image_relproduct_width";s:2:"80";s:23:"image_relproduct_height";s:2:"80";s:17:"show_actions_date";s:1:"1";s:18:"image_module_width";s:3:"212";s:19:"image_module_height";s:3:"218";s:13:"module_maxlen";s:2:"80";s:17:"show_module_image";s:1:"1";s:16:"show_module_date";s:1:"1";s:3:"seo";a:1:{i:1;a:4:{s:2:"h1";s:0:"";s:5:"title";s:0:"";s:8:"keywords";s:0:"";s:11:"description";s:0:"";}}}', 1),
-(1562, 0, 'ocjoyajaxcheckout', 'config_show_on_specials', '', 0),
-(1561, 0, 'ocjoyajaxcheckout', 'config_show_on_search', '', 0),
-(1560, 0, 'ocjoyajaxcheckout', 'config_show_on_brands', '', 0),
-(1559, 0, 'ocjoyajaxcheckout', 'config_show_on_category', '1', 0),
-(1558, 0, 'ocjoyajaxcheckout', 'config_show_on_product', '1', 0),
+(2775, 0, 'ocjoyajaxcheckout', 'config_show_on_specials', '', 0),
+(2774, 0, 'ocjoyajaxcheckout', 'config_show_on_search', '1', 0),
+(2773, 0, 'ocjoyajaxcheckout', 'config_show_on_brands', '1', 0),
+(2772, 0, 'ocjoyajaxcheckout', 'config_show_on_category', '1', 0),
+(2771, 0, 'ocjoyajaxcheckout', 'config_show_on_product', '1', 0),
 (1143, 0, 'latest', 'latest_module', 'a:1:{i:0;a:8:{s:9:"id_status";s:1:"1";s:5:"limit";s:3:"100";s:11:"image_width";s:3:"195";s:12:"image_height";s:3:"195";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"2";}}', 1),
 (1664, 0, 'html_block', 'html_block_5', 'a:7:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:767:"&lt;div class=&quot;box-consultants&quot;&gt;\r\n&lt;div class=&quot;manager-1 cf&quot;&gt;&lt;img alt=&quot;Менеджер&quot; src=&quot;catalog/view/theme/default/image/app/consultant1.jpg&quot; /&gt;\r\n&lt;div class=&quot;info&quot;&gt;\r\n&lt;div class=&quot;name&quot;&gt;Наталья&lt;/div&gt;\r\n\r\n&lt;div class=&quot;phone&quot;&gt;тел. 44-74-55&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;manager-2 cf&quot;&gt;&lt;img alt=&quot;Менеджер&quot; src=&quot;catalog/view/theme/default/image/app/consultant2.jpg&quot; /&gt;\r\n&lt;div class=&quot;info&quot;&gt;\r\n&lt;div class=&quot;name&quot;&gt;Николай&lt;/div&gt;\r\n\r\n&lt;div class=&quot;phone&quot;&gt;тел. 44-74-55&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}s:6:"editor";a:1:{i:1;s:1:"1";}s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
 (1660, 0, 'html_block', 'html_block_1', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:2099:"&lt;div class=&quot;site-content box-offer-manager&quot;&gt;\r\n&lt;div class=&quot;box-offer&quot;&gt;\r\n&lt;h3 class=&quot;title-style&quot;&gt;Мы предлагаем&lt;/h3&gt;\r\n\r\n&lt;ul class=&quot;offer-list&quot;&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – выезд инженера-консультанта на дом, для оценки технического состояния пола, замера, расчет количества необходимого материала.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – доставка образцов на дом. Вы можете подобрать напольное покрытие в соответствии обстановки, цветовой гаммы вашего помещения.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – при покупке у нас ламината, укладка бесплатно.&lt;/li&gt;\r\n	&lt;li class=&quot;item&quot;&gt;&lt;span&gt;БЕСПЛАТНО&lt;/span&gt; – при покупке у нас ламината, подложка бесплатно.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;box-manager&quot;&gt;\r\n&lt;h3 class=&quot;title-style&quot;&gt;Менеджеры&lt;/h3&gt;\r\n\r\n&lt;div class=&quot;manager-1&quot;&gt;&lt;img alt=&quot;Менеджер&quot; src=&quot;/catalog/view/theme/default/image/manager-1.png&quot; /&gt;\r\n&lt;div class=&quot;info&quot;&gt;\r\n&lt;div class=&quot;name&quot;&gt;Наталья&lt;/div&gt;\r\n\r\n&lt;div class=&quot;phone&quot;&gt;тел. 44-74-55&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;manager-2&quot;&gt;&lt;img alt=&quot;Менеджер&quot; src=&quot;/catalog/view/theme/default/image/manager-2.png&quot; /&gt;\r\n&lt;div class=&quot;info&quot;&gt;\r\n&lt;div class=&quot;name&quot;&gt;Николай&lt;/div&gt;\r\n\r\n&lt;div class=&quot;phone&quot;&gt;тел. 44-74-55&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}s:6:"editor";a:1:{i:1;s:1:"1";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
 (1661, 0, 'html_block', 'html_block_2', 'a:7:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:2627:"&lt;div class=&quot;box-about&quot;&gt;\r\n&lt;div class=&quot;site-content&quot;&gt;\r\n&lt;h2 class=&quot;title-style&quot;&gt;Интернет-магазин Ламинат-бонус&lt;/h2&gt;\r\n\r\n&lt;p class=&quot;text-style&quot;&gt;Не можете определиться с выбором напольного покрытия? У Вас нет возможности посетить наш магазин? Этот ли цвет подойдет для вашей комнаты, дверям, мебели, обоям и т.д.? Ведь не привезешь &quot;весь магазин&quot; домой, что бы подобрать нужный оттенок. В этом вам поможет КОНСУЛЬТАНТ, которого вы можете ВЫЗВАТЬ К СЕБЕ ДОМОЙ. Наш сотрудник привезет с собой достаточное количество образцов ламината, проконсультирует по качеству, особенностями укладки и ухода, при необходимости произведет замер помещения, просчитает стоимость планируемой покупи.&lt;/p&gt;\r\n\r\n&lt;p class=&quot;text-style&quot;&gt;Услуга включает в себя информирование по материалам,сферам их применения,условиям эксплуатации , ухода и хранения, необходимым аксессуарам, инсталляции, ценам , скидкам, условиям и формам оплаты за товар,порядок предоставления дополнительных услуг.&lt;/p&gt;\r\n\r\n&lt;p class=&quot;text-style&quot;&gt;При единовременной покупке ламината в рамках акции покупатель имеет право получить бесплатно плинтус с кабель-каналом марки ИДЕАЛ ), выбор декора (расцветки)осуществляется покупателем из присутствующих в наличии в магазине. Количество плинтуса рассчитывается по следующей формуле: N=S/2.5, с округлением до целого числа в меньшую сторону. где: N – количество палок плинтуса (1 палка = 2,5 пог.м.) S – количество квадратных метров ламината.&amp;nbsp;&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}s:6:"editor";a:1:{i:1;s:1:"1";}s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
 (1662, 0, 'html_block', 'html_block_3', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:3885:"&lt;div class=&quot;box-memo&quot;&gt;\r\n&lt;div class=&quot;site-content&quot;&gt;\r\n&lt;div class=&quot;memo-list cf&quot;&gt;\r\n&lt;div class=&quot;left&quot;&gt;\r\n&lt;h3 class=&quot;title&quot;&gt;Памятка покупателю купившему пробковое покрытие, паркетную доску или ламинат у нас.&lt;/h3&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;01&lt;/div&gt;\r\nХранение упаковок с напольным покрытием (в горизонтальном положении!) всегда осуществляется в сухом помещении с температурой не ниже +16°С.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;02&lt;/div&gt;\r\nМатериал должен пройти акклиматизацию не менее 48 часов в помещении, предназначенном для укладки. Упаковки должны вскрываться непосредственно перед началом работ.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;03&lt;/div&gt;\r\nУкладка напольных покрытий начинается только после контроля готовности данного помещения, включающего в себя: § контроль влажности основания, которая должна быть не выше 2,5%. § контроля влажности воздуха, которая должна быть не выше 65%, но и не ниже 40%. § контроля ровности основания, у которого перепад по высоте не должен превышать 2мм на 2м длины в любой точке. § контроля температуры, которая должна быть в пределах 20°…22°С.&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;right&quot;&gt;\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;04&lt;/div&gt;\r\nРаботы по укладке материала производятся строго после окончания всех общестроительных работ (штукатурные, окрасочные, оклеечные), а так же работ, связанных с проветриванием помещений.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;05&lt;/div&gt;\r\nВсе доски напольных покрытий проверяются до укладки. В случае обнаружения несоответствующего качества досок следует приостановить укладку и связаться с Продавцом. Все претензии к материалу (за исключением скрытых дефектов, выявленных в процессе эксплуатации) принимаются только до момента укладки.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;06&lt;/div&gt;\r\nВ соответствии с федеральным Законом &quot;О защите прав потребителей&quot; возврату подлежит только материал, признанный несоответствующим качеству.&lt;/div&gt;\r\n\r\n&lt;div class=&quot;memo-item&quot;&gt;\r\n&lt;div class=&quot;numb&quot;&gt;07&lt;/div&gt;\r\nК обмену (не по причине качества) могут быть приняты только невскрытые и неповрежденные упаковки.&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}s:6:"editor";a:1:{i:1;s:1:"1";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
-(1557, 0, 'ocjoyajaxcheckout', 'config_info_payment_text', '', 0),
-(1556, 0, 'ocjoyajaxcheckout', 'config_info_payment', '', 0),
-(1555, 0, 'ocjoyajaxcheckout', 'config_info_shipping_text', '', 0),
-(1554, 0, 'ocjoyajaxcheckout', 'config_info_shipping', '', 0),
-(1553, 0, 'ocjoyajaxcheckout', 'config_mask_telephone', '', 0),
+(2770, 0, 'ocjoyajaxcheckout', 'config_info_payment_text', '', 0),
+(2769, 0, 'ocjoyajaxcheckout', 'config_info_payment', '', 0),
+(2768, 0, 'ocjoyajaxcheckout', 'config_info_shipping_text', '', 0),
+(2767, 0, 'ocjoyajaxcheckout', 'config_info_shipping', '', 0),
+(2766, 0, 'ocjoyajaxcheckout', 'config_mask_telephone', '', 0),
 (1580, 0, 'actions', 'actions_module', 'a:1:{i:0;a:5:{s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:5:"limit";s:1:"4";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
 (1663, 0, 'html_block', 'html_block_4', 'a:8:{s:12:"machine_name";s:0:"";s:8:"theme_id";s:1:"0";s:3:"css";s:0:"";s:5:"title";a:1:{i:1;s:0:"";}s:7:"content";a:1:{i:1;s:117:"&lt;?php include($_SERVER[''DOCUMENT_ROOT''].''/catalog/view/theme/default/template/partials/product-actions.tpl'') ?&gt;";}s:6:"editor";a:1:{i:1;s:1:"0";}s:7:"use_php";s:2:"on";s:5:"store";a:1:{i:0;s:1:"0";}}', 1),
 (2604, 0, 'simple', 'simple_fields_main', 'a:15:{s:10:"main_email";a:16:{s:2:"id";s:10:"main_email";s:5:"label";a:1:{s:2:"ru";s:6:"E-mail";}s:4:"type";s:4:"text";s:6:"values";a:1:{s:2:"ru";s:0:"";}s:4:"init";s:0:"";s:8:"date_min";s:0:"";s:10:"date_start";s:0:"";s:8:"date_max";s:0:"";s:8:"date_end";s:0:"";s:13:"date_only_for";s:0:"";s:15:"validation_type";s:1:"3";s:17:"validation_regexp";s:56:"/^[a-z0-9_\\.\\-]{1,20}@[a-z0-9\\.\\-]{1,20}\\.[a-z]{2,4}$/si";s:16:"validation_error";a:1:{s:2:"ru";s:62:"Ошибка в адресе электронной почты";}s:7:"save_to";s:5:"email";s:4:"mask";s:0:"";s:11:"placeholder";a:1:{s:2:"ru";s:0:"";}}s:14:"main_firstname";a:18:{s:2:"id";s:14:"main_firstname";s:5:"label";a:1:{s:2:"ru";s:6:"Имя";}s:4:"type";s:4:"text";s:6:"values";a:1:{s:2:"ru";s:0:"";}s:4:"init";s:0:"";s:8:"date_min";s:0:"";s:10:"date_start";s:0:"";s:8:"date_max";s:0:"";s:8:"date_end";s:0:"";s:13:"date_only_for";s:0:"";s:15:"validation_type";s:1:"2";s:14:"validation_min";s:1:"1";s:14:"validation_max";s:2:"30";s:17:"validation_regexp";s:0:"";s:16:"validation_error";a:1:{s:2:"ru";s:60:"Имя должно быть от 1 до 30 символов";}s:7:"save_to";s:9:"firstname";s:4:"mask";s:0:"";s:11:"placeholder";a:1:{s:2:"ru";s:0:"";}}s:13:"main_lastname";a:18:{s:2:"id";s:13:"main_lastname";s:5:"label";a:1:{s:2:"ru";s:14:"Фамилия";}s:4:"type";s:4:"text";s:6:"values";a:1:{s:2:"ru";s:0:"";}s:4:"init";s:0:"";s:8:"date_min";s:0:"";s:10:"date_start";s:0:"";s:8:"date_max";s:0:"";s:8:"date_end";s:0:"";s:13:"date_only_for";s:0:"";s:15:"validation_type";s:1:"2";s:14:"validation_min";s:1:"1";s:14:"validation_max";s:2:"30";s:17:"validation_regexp";s:0:"";s:16:"validation_error";a:1:{s:2:"ru";s:68:"Фамилия должно быть от 1 до 30 символов";}s:7:"save_to";s:8:"lastname";s:4:"mask";s:0:"";s:11:"placeholder";a:1:{s:2:"ru";s:0:"";}}s:14:"main_telephone";a:18:{s:2:"id";s:14:"main_telephone";s:5:"label";a:1:{s:2:"ru";s:14:"Телефон";}s:4:"type";s:4:"text";s:6:"values";a:1:{s:2:"ru";s:0:"";}s:4:"init";s:0:"";s:8:"date_min";s:0:"";s:10:"date_start";s:0:"";s:8:"date_max";s:0:"";s:8:"date_end";s:0:"";s:13:"date_only_for";s:0:"";s:15:"validation_type";s:1:"2";s:14:"validation_min";s:1:"3";s:14:"validation_max";s:2:"32";s:17:"validation_regexp";s:0:"";s:16:"validation_error";a:1:{s:2:"ru";s:69:"Телефон должен быть от 3 до 32 символов!";}s:7:"save_to";s:9:"telephone";s:4:"mask";s:0:"";s:11:"placeholder";a:1:{s:2:"ru";s:0:"";}}s:8:"main_fax";a:18:{s:2:"id";s:8:"main_fax";s:5:"label";a:1:{s:2:"ru";s:8:"Факс";}s:4:"type";s:4:"text";s:6:"values";a:1:{s:2:"ru";s:0:"";}s:4:"init";s:0:"";s:8:"date_min";s:0:"";s:10:"date_start";s:0:"";s:8:"date_max";s:0:"";s:8:"date_end";s:0:"";s:13:"date_only_for";s:0:"";s:15:"validation_type";s:1:"0";s:14:"validation_min";s:0:"";s:14:"validation_max";s:0:"";s:17:"validation_regexp";s:0:"";s:16:"validation_error";a:1:{s:2:"ru";s:0:"";}s:7:"save_to";s:3:"fax";s:4:"mask";s:0:"";s:11:"placeholder";a:1:{s:2:"ru";s:0:"";}}s:12:"main_company";a:18:{s:2:"id";s:12:"main_company";s:5:"label";a:1:{s:2:"ru";s:16:"Компания";}s:4:"type";s:4:"text";s:6:"values";a:1:{s:2:"ru";s:0:"";}s:4:"init";s:0:"";s:8:"date_min";s:0:"";s:10:"date_start";s:0:"";s:8:"date_max";s:0:"";s:8:"date_end";s:0:"";s:13:"date_only_for";s:0:"";s:15:"validation_type";s:1:"0";s:14:"validation_min";s:0:"";s:14:"validation_max";s:0:"";s:17:"validation_regexp";s:0:"";s:16:"validation_error";a:1:{s:2:"ru";s:0:"";}s:7:"save_to";s:7:"company";s:4:"mask";s:0:"";s:11:"placeholder";a:1:{s:2:"ru";s:0:"";}}s:15:"main_company_id";a:18:{s:2:"id";s:15:"main_company_id";s:5:"label";a:1:{s:2:"ru";s:10:"Company ID";}s:4:"type";s:4:"text";s:6:"values";a:1:{s:2:"ru";s:0:"";}s:4:"init";s:0:"";s:8:"date_min";s:0:"";s:10:"date_start";s:0:"";s:8:"date_max";s:0:"";s:8:"date_end";s:0:"";s:13:"date_only_for";s:0:"";s:15:"validation_type";s:1:"0";s:14:"validation_min";s:0:"";s:14:"validation_max";s:0:"";s:17:"validation_regexp";s:0:"";s:16:"validation_error";a:1:{s:2:"ru";s:0:"";}s:7:"save_to";s:10:"company_id";s:4:"mask";s:0:"";s:11:"placeholder";a:1:{s:2:"ru";s:0:"";}}s:11:"main_tax_id";a:18:{s:2:"id";s:11:"main_tax_id";s:5:"label";a:1:{s:2:"ru";s:6:"Tax ID";}s:4:"type";s:4:"text";s:6:"values";a:1:{s:2:"ru";s:0:"";}s:4:"init";s:0:"";s:8:"date_min";s:0:"";s:10:"date_start";s:0:"";s:8:"date_max";s:0:"";s:8:"date_end";s:0:"";s:13:"date_only_for";s:0:"";s:15:"validation_type";s:1:"0";s:14:"validation_min";s:0:"";s:14:"validation_max";s:0:"";s:17:"validation_regexp";s:0:"";s:16:"validation_error";a:1:{s:2:"ru";s:0:"";}s:7:"save_to";s:6:"tax_id";s:4:"mask";s:0:"";s:11:"placeholder";a:1:{s:2:"ru";s:0:"";}}s:14:"main_address_1";a:18:{s:2:"id";s:14:"main_address_1";s:5:"label";a:1:{s:2:"ru";s:10:"Адрес";}s:4:"type";s:4:"text";s:6:"values";a:1:{s:2:"ru";s:0:"";}s:4:"init";s:0:"";s:8:"date_min";s:0:"";s:10:"date_start";s:0:"";s:8:"date_max";s:0:"";s:8:"date_end";s:0:"";s:13:"date_only_for";s:0:"";s:15:"validation_type";s:1:"2";s:14:"validation_min";s:1:"3";s:14:"validation_max";s:3:"128";s:17:"validation_regexp";s:0:"";s:16:"validation_error";a:1:{s:2:"ru";s:65:"Адрес должен быть от 3 до 128 символов";}s:7:"save_to";s:9:"address_1";s:4:"mask";s:0:"";s:11:"placeholder";a:1:{s:2:"ru";s:0:"";}}s:14:"main_address_2";a:18:{s:2:"id";s:14:"main_address_2";s:5:"label";a:1:{s:2:"ru";s:35:"Адрес (продолжение)";}s:4:"type";s:4:"text";s:6:"values";a:1:{s:2:"ru";s:0:"";}s:4:"init";s:0:"";s:8:"date_min";s:0:"";s:10:"date_start";s:0:"";s:8:"date_max";s:0:"";s:8:"date_end";s:0:"";s:13:"date_only_for";s:0:"";s:15:"validation_type";s:1:"0";s:14:"validation_min";s:0:"";s:14:"validation_max";s:0:"";s:17:"validation_regexp";s:0:"";s:16:"validation_error";a:1:{s:2:"ru";s:0:"";}s:7:"save_to";s:9:"address_2";s:4:"mask";s:0:"";s:11:"placeholder";a:1:{s:2:"ru";s:0:"";}}s:13:"main_postcode";a:18:{s:2:"id";s:13:"main_postcode";s:5:"label";a:1:{s:2:"ru";s:12:"Индекс";}s:4:"type";s:4:"text";s:6:"values";a:1:{s:2:"ru";s:0:"";}s:4:"init";s:0:"";s:8:"date_min";s:0:"";s:10:"date_start";s:0:"";s:8:"date_max";s:0:"";s:8:"date_end";s:0:"";s:13:"date_only_for";s:0:"";s:15:"validation_type";s:1:"2";s:14:"validation_min";s:1:"2";s:14:"validation_max";s:2:"10";s:17:"validation_regexp";s:0:"";s:16:"validation_error";a:1:{s:2:"ru";s:83:"Почтовый индекс должен быть от 2 до 10 символов";}s:7:"save_to";s:8:"postcode";s:4:"mask";s:0:"";s:11:"placeholder";a:1:{s:2:"ru";s:0:"";}}s:15:"main_country_id";a:18:{s:2:"id";s:15:"main_country_id";s:5:"label";a:1:{s:2:"ru";s:12:"Страна";}s:4:"type";s:6:"select";s:6:"values";s:9:"countries";s:4:"init";s:1:"0";s:8:"date_min";s:0:"";s:10:"date_start";s:0:"";s:8:"date_max";s:0:"";s:8:"date_end";s:0:"";s:13:"date_only_for";s:0:"";s:14:"validation_min";s:0:"";s:14:"validation_max";s:0:"";s:17:"validation_regexp";s:0:"";s:15:"validation_type";s:1:"4";s:16:"validation_error";a:1:{s:2:"ru";s:50:"Пожалуйста выберите страну";}s:7:"save_to";s:10:"country_id";s:4:"mask";s:0:"";s:11:"placeholder";a:1:{s:2:"ru";s:0:"";}}s:12:"main_zone_id";a:18:{s:2:"id";s:12:"main_zone_id";s:5:"label";a:1:{s:2:"ru";s:12:"Регион";}s:4:"type";s:6:"select";s:6:"values";s:5:"zones";s:4:"init";s:1:"0";s:8:"date_min";s:0:"";s:10:"date_start";s:0:"";s:8:"date_max";s:0:"";s:8:"date_end";s:0:"";s:13:"date_only_for";s:0:"";s:14:"validation_min";s:0:"";s:14:"validation_max";s:0:"";s:17:"validation_regexp";s:0:"";s:15:"validation_type";s:1:"4";s:16:"validation_error";a:1:{s:2:"ru";s:50:"Пожалуйста выберите регион";}s:7:"save_to";s:7:"zone_id";s:4:"mask";s:0:"";s:11:"placeholder";a:1:{s:2:"ru";s:0:"";}}s:9:"main_city";a:18:{s:2:"id";s:9:"main_city";s:5:"label";a:1:{s:2:"ru";s:10:"Город";}s:4:"type";s:4:"text";s:6:"values";a:1:{s:2:"ru";s:0:"";}s:4:"init";s:0:"";s:8:"date_min";s:0:"";s:10:"date_start";s:0:"";s:8:"date_max";s:0:"";s:8:"date_end";s:0:"";s:13:"date_only_for";s:0:"";s:15:"validation_type";s:1:"2";s:14:"validation_min";s:1:"2";s:14:"validation_max";s:3:"128";s:17:"validation_regexp";s:0:"";s:16:"validation_error";a:1:{s:2:"ru";s:65:"Город должен быть от 2 до 128 символов";}s:7:"save_to";s:4:"city";s:4:"mask";s:0:"";s:11:"placeholder";a:1:{s:2:"ru";s:0:"";}}s:12:"main_comment";a:18:{s:2:"id";s:12:"main_comment";s:5:"label";a:1:{s:2:"ru";s:22:"Комментарий";}s:4:"type";s:8:"textarea";s:6:"values";a:1:{s:2:"ru";s:0:"";}s:4:"init";s:0:"";s:8:"date_min";s:0:"";s:10:"date_start";s:0:"";s:8:"date_max";s:0:"";s:8:"date_end";s:0:"";s:13:"date_only_for";s:0:"";s:15:"validation_type";s:1:"0";s:14:"validation_min";s:0:"";s:14:"validation_max";s:0:"";s:17:"validation_regexp";s:0:"";s:16:"validation_error";a:1:{s:2:"ru";s:0:"";}s:7:"save_to";s:7:"comment";s:4:"mask";s:0:"";s:11:"placeholder";a:1:{s:2:"ru";s:0:"";}}}', 1),
@@ -3676,7 +3681,7 @@ CREATE TABLE IF NOT EXISTS `url_alias` (
   `keyword` varchar(255) NOT NULL,
   PRIMARY KEY (`url_alias_id`),
   KEY `query` (`query`(64))
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1108 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1109 ;
 
 --
 -- Дамп данных таблицы `url_alias`
@@ -3731,7 +3736,7 @@ INSERT INTO `url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (1028, 'product_id=47', 'hp-lp3065'),
 (1029, 'product_id=28', 'htc-touch-hd'),
 (1030, 'product_id=64', 'htc-touch-hd-1'),
-(1001, 'product_id=41', 'imac'),
+(1108, 'product_id=41', 'imac'),
 (1002, 'product_id=40', 'iphone'),
 (1031, 'product_id=36', 'ipod-nano'),
 (1006, 'product_id=34', 'ipod-shuffle'),

@@ -257,6 +257,28 @@ a.title-style:hover {
   cursor: pointer;
 }
 
+.style-form-checkbox {
+  border: 1px solid #eaeaea;
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 0px;
+  margin-right: 3px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.style-form-checkbox.checked .jq-checkbox__div {
+  width: 12px;
+  height: 12px;
+  margin: 0px;
+  border-radius: 0px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: url('/catalog/view/theme/default/image/app/tick-grey-8x6.png?1430136767') 50% 50% no-repeat;
+}
+
 .ocjoyajaxcheckout_errorfields, .style-error {
   font-size: 11px;
   color: #f25727;
@@ -440,6 +462,37 @@ a.title-style:hover {
 .catalog-content .product-item .ajaxbutton {
   margin-top: 7px;
   padding: 7px 10px;
+}
+
+.product-list.list .product-item, .product-grid.list .product-item {
+  display: table;
+  padding: 10px 0px;
+  width: 100%;
+  height: 100px;
+  border: none;
+  border-bottom: 1px solid #e3e3e3;
+}
+.product-list.list .product-item:first-child, .product-grid.list .product-item:first-child {
+  border-top: 1px solid #e3e3e3;
+}
+.product-list.list .product-item .box-img, .product-list.list .product-item .box-name-params, .product-list.list .product-item .price, .product-list.list .product-item .actions, .product-grid.list .product-item .box-img, .product-grid.list .product-item .box-name-params, .product-grid.list .product-item .price, .product-grid.list .product-item .actions {
+  display: table-cell;
+  vertical-align: middle;
+}
+.product-list.list .product-item .box-img, .product-grid.list .product-item .box-img {
+  width: 100px;
+}
+.product-list.list .product-item .box-name-params, .product-grid.list .product-item .box-name-params {
+  width: 400px;
+}
+.product-list.list .product-item .actions, .product-grid.list .product-item .actions {
+  position: static;
+  width: 300px;
+  text-align: right;
+}
+.product-list.list .product-item .ajaxbutton, .product-grid.list .product-item .ajaxbutton {
+  padding: 9px 21px;
+  margin-left: 20px;
 }
 
 /* сопутствующие товары */
@@ -1932,6 +1985,42 @@ a.title-style:hover {
   font-family: "OpenSans-regular-wf";
 }
 
+/* страница поиска */
+.page-search .top-sort h1, .page-search .top-sort h2 {
+  max-width: 550px;
+}
+
+.search-panel {
+  background: url('/catalog/view/theme/default/image/app/bg-grid.png?1429100775') 0px 0px repeat, #f2f2f2;
+  border: 1px solid #e3e3e3;
+  padding: 10px;
+  -moz-box-shadow: 3px 3px 3px #ededed;
+  -webkit-box-shadow: 3px 3px 3px #ededed;
+  box-shadow: 3px 3px 3px #ededed;
+  margin-bottom: 35px;
+}
+.search-panel .search-field input {
+  width: 500px;
+  margin-right: 20px;
+}
+.search-panel .bottom {
+  margin-top: 8px;
+}
+.search-panel select {
+  width: 225px;
+}
+.search-panel .desc {
+  margin-left: 20px;
+}
+.search-panel input[type='text']:hover {
+  cursor: auto;
+}
+.search-panel #button-search {
+  margin-left: 47px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
 /* слайдер */
 .box-slider {
   position: relative;
@@ -2071,7 +2160,7 @@ a.title-style:hover {
   margin-bottom: 20px;
   border-bottom: 1px solid #e3e3e3;
 }
-.top-sort h1 {
+.top-sort h1, .top-sort h2 {
   font-family: "OpenSans-bold-wf";
   font-size: 20px;
   line-height: 32px;

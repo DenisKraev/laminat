@@ -273,3 +273,10 @@ admin\language\russian\setting\setting.php
 admin\model\localisation\currency.php
 admin\model\localisation\return_status.php
 admin\view\template\setting\setting.tpl
+catalog\language\russian\product\search.php
+admin\controller\design\layout.php
+admin\language\russian\design\layout.php
+admin\view\template\design\layout_list.tpl
+catalog\view\theme\default\template\product\search.tpl
+admin\controller\module\ocjoyajaxcheckout.php
+admin\view\template\module\ocjoyajaxcheckout.tpl

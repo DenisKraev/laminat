@@ -184,9 +184,9 @@ function display(view) {
 view = $.totalStorage('display');
 
 if (view) {
-	display(view);
+	//display(view);
 } else {
-	display('list');
+	//display('list');
 }
 
 //--></script>

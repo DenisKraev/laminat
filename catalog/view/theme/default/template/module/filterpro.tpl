@@ -4,7 +4,7 @@
 <form id="filterpro">
 
 <div class="option_box <?php if(!$instock_visible) echo 'hide'; ?>">
-	<input type="checkbox" class="filtered" name="instock" id="instock" <?php if($instock_checked) echo 'checked="checked"'; ?>><label for="instock"><?php echo $text_instock?></label>
+	<input type="checkbox" class="filtered style-form-checkbox" name="instock" id="instock" <?php if($instock_checked) echo 'checked="checked"'; ?>><label for="instock" class="style-form-label"><?php echo $text_instock?></label>
 </div>
 	<?php if($manufacturers) { ?>
 	<?php foreach($manufacturers as $manufacturer) { ?>
@@ -42,11 +42,11 @@
   <div class="price_slider collapsible">
   <table>
     <tr>
-      <?php if($symbol_left){ echo "<td><label>". $symbol_left  . "</label></td>";}?>
+      <?php if($symbol_left){ echo "<td><label class=style-form-label>". $symbol_left  . "</label></td>";}?>
       <td><input type="text" id="min_price" value="-1" name="min_price" class="price_limit"></td>
       <td><label> - </label></td>
       <td><input type="text" id="max_price" value="-1" name="max_price" class="price_limit"></td>
-      <?php if($symbol_right){ echo "<td><label>" . $symbol_right . "</label></td>";}?>
+      <?php if($symbol_right){ echo "<td><label class=style-form-label>" . $symbol_right . "</label></td>";}?>
     </tr>
   </table>
     <div id="slider-range"></div>
@@ -60,8 +60,8 @@
     <ul class="collapsible  <?php if(!$expanded_filters){echo 'hide';}?>">
       <?php foreach ($filter_group['filter'] as $filter) { ?>
       <li>
-      <input type="checkbox" class="filtered" name="filter[]" value="<?php echo $filter['filter_id']; ?>" id="filter<?php echo $filter['filter_id']; ?>" />
-      <label for="filter<?php echo $filter['filter_id']; ?>"><?php echo $filter['name']; ?></label>
+      <input type="checkbox" class="filtered style-form-checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" id="filter<?php echo $filter['filter_id']; ?>" />
+      <label class="style-form-label" for="filter<?php echo $filter['filter_id']; ?>"><?php echo $filter['name']; ?></label>
       </li>
       <?php } ?>
     </ul>
@@ -89,12 +89,12 @@
           <?php foreach($categories as $category) { ?>
           <tr>
             <td>
-              <input id="cat_<?php echo $category['category_id']; ?>" class="filtered"
+              <input id="cat_<?php echo $category['category_id']; ?>" class="filtered style-form-checkbox"
                    type="checkbox" name="categories[]"
                    value="<?php echo $category['category_id']; ?>">
             </td>
             <td>
-              <label for="cat_<?php echo $category['category_id']; ?>"><?php echo $category['name']; ?></label>
+              <label class="style-form-label" for="cat_<?php echo $category['category_id']; ?>"><?php echo $category['name']; ?></label>
             </td>
           </tr>
           <?php } ?>
@@ -112,12 +112,12 @@
         <?php foreach($tags as $tag) { ?>
         <tr>
           <td>
-            <input id="tag_<?php echo $tag['tag']; ?>" class="filtered"
+            <input id="tag_<?php echo $tag['tag']; ?>" class="filtered style-form-checkbox"
                  type="checkbox" name="tags[]"
                  value="<?php echo $tag['tag']; ?>">
           </td>
           <td>
-            <label for="tag_<?php echo $tag['tag']; ?>"><?php echo $tag['name']; ?></label>
+            <label class="style-form-label" for="tag_<?php echo $tag['tag']; ?>"><?php echo $tag['name']; ?></label>
           </td>
         </tr>
         <?php } ?>
@@ -146,12 +146,12 @@
         <?php foreach($manufacturers as $manufacturer) { ?>
         <tr>
           <td>
-            <input id="manufacturer_<?php echo $manufacturer['manufacturer_id']?>" class="manufacturer_value filtered"
+            <input id="manufacturer_<?php echo $manufacturer['manufacturer_id']?>" class="manufacturer_value filtered style-form-checkbox"
                  type="checkbox" name="manufacturer[]"
                  value="<?php echo $manufacturer['manufacturer_id']?>">
           </td>
           <td>
-            <label for="manufacturer_<?php echo $manufacturer['manufacturer_id']?>"><?php echo $manufacturer['name']?></label>
+            <label class="style-form-label" for="manufacturer_<?php echo $manufacturer['manufacturer_id']?>"><?php echo $manufacturer['name']?></label>
           </td>
         </tr>
         <?php } ?>
@@ -166,7 +166,7 @@
                  value="<?php echo $manufacturer['manufacturer_id']?>">
           </td>
           <td>
-            <label for="manufacturer_<?php echo $manufacturer['manufacturer_id']?>"><?php echo $manufacturer['name']?></label>
+            <label class="style-form-label" for="manufacturer_<?php echo $manufacturer['manufacturer_id']?>"><?php echo $manufacturer['name']?></label>
           </td>
         </tr>
         <?php } ?>
@@ -212,14 +212,14 @@
             <?php foreach($attribute_value['values'] as $i => $value) { ?>
             <tr>
               <td>
-                <input class="filtered a_name"
+                <input class="filtered a_name style-form-checkbox"
                      id="attribute_value_<?php echo $attribute_value_id . $i; ?>"
                      type="checkbox" name="attribute_value[<?php echo $attribute_value_id?>][]"
                      at_v_i="<?php echo $attribute_value_id . '_' . $value; ?>"
                      value="<?php echo $value ?>">
               </td>
               <td>
-                <label for="attribute_value_<?php echo $attribute_value_id . $i; ?>"
+                <label class="style-form-label" for="attribute_value_<?php echo $attribute_value_id . $i; ?>"
                      at_v_t="<?php echo $attribute_value_id . '_' . htmlspecialchars(preg_replace('/\s+|\n|\r|\s+$/m', '_', $value)); ?>"
                      data-value="<?php echo strip_tags(html_entity_decode($value, ENT_QUOTES)); ?>"
                      value="<?php echo $value ?>"><?php echo strip_tags(html_entity_decode($value, ENT_QUOTES))?></label>
@@ -239,7 +239,7 @@
                      value="<?php echo $value ?>">
               </td>
               <td>
-                <label for="attribute_value_<?php echo $attribute_value_id . $i; ?>"
+                <label class="style-form-label" for="attribute_value_<?php echo $attribute_value_id . $i; ?>"
                      at_v_t="<?php echo $attribute_value_id . '_' . htmlspecialchars(preg_replace('/\s+|\n|\r|\s+$/m', '_', $value)) ?>"
                      data-value="<?php echo $value ?>"
                      value="<?php echo $value ?>"><?php echo $value?></label>
@@ -301,7 +301,7 @@
 <?php if($options) { ?>
   <?php foreach($options as $option) { ?>
   <div class="option_box <?php if(!$option['expanded']){echo 'hide';}?>">
-    <div class="option_name <?php if(!$option['expanded']){echo "hided";}?>">
+    <div class="option_name style-form-checkbox <?php if(!$option['expanded']){echo "hided";}?>">
             <?php if($option_main_checkbox && $option['display'] == 'checkbox') { ?><input type="checkbox" style="margin-left: 6px;"/><?php } ?><?php echo $option['name']; ?>
             <?php if ($option['tooltip']) { ?>
             <img class="option-tooltip" style="cursor: pointer" src="catalog/view/theme/default/image/tooltip.png" title="<?php echo $option['tooltip']; ?>" alt="<?php echo $option['name']; ?>" />
@@ -323,12 +323,12 @@
       <?php foreach($option['option_values'] as $option_value) { ?>
       <tr>
         <td>
-          <input class="filtered option_value" id="option_value_<?php echo $option_value['option_value_id']?>"
+          <input class="filtered option_value style-form-checkbox " id="option_value_<?php echo $option_value['option_value_id']?>"
                type="checkbox" name="option_value[<?php echo $option['option_id']?>][]"
                value="<?php echo $option_value['option_value_id']?>">
         </td>
         <td>
-          <label for="option_value_<?php echo $option_value['option_value_id']?>"><?php echo $option_value['name']?></label>
+          <label class="style-form-label" for="option_value_<?php echo $option_value['option_value_id']?>"><?php echo $option_value['name']?></label>
         </td>
       </tr>
       <?php } ?>
@@ -344,7 +344,7 @@
                value="<?php echo $option_value['option_value_id']?>">
         </td>
         <td>
-          <label for="option_value_<?php echo $option_value['option_value_id']?>"><?php echo $option_value['name']?></label>
+          <label class="style-form-label" for="option_value_<?php echo $option_value['option_value_id']?>"><?php echo $option_value['name']?></label>
         </td>
       </tr>
       <?php } ?>
@@ -353,7 +353,7 @@
     <div class="collapsible <?php if(!$option['expanded']){echo 'hide';}?>">
       <?php foreach($option['option_values'] as $option_value) { ?>
 
-          <input style="display: none;" class="filtered option_value" id="option_value_<?php echo $option_value['option_value_id']?>"
+          <input style="display: none;" class="filtered option_value style-form-checkbox" id="option_value_<?php echo $option_value['option_value_id']?>"
                type="checkbox" name="option_value[<?php echo $option['option_id']?>][]"
                value="<?php echo $option_value['option_value_id']?>">
           <img src="<?php echo $option_value['thumb'];?>" title="<?php echo $option['name'];?>" alt="<?php echo $option['name'];?>"/>
@@ -369,7 +369,7 @@
 	<div class="option_box">
 		<div class="option_name"><?php echo $text_filer_special?></div>
 		<div class="collapsible">
-			<input type="checkbox" class="filtered" name="filer_special" id="filer_special"><label for="filer_special"><?php echo $text_show_filer_special?></label>
+			<input type="checkbox" class="filtered style-form-checkbox" name="filer_special" id="filer_special"><label for="filer_special"><?php echo $text_show_filer_special?></label>
 		</div>
 	</div>
 <?php }?>
@@ -378,7 +378,7 @@
 <div class="option_box">
 	<div class="option_name"><?php echo $text_filer_news?></div>
 	<div class="collapsible">
-		<input type="checkbox" class="filtered" name="filer_news" id="filer_news"><label for="filer_news"><?php echo $text_show_filer_news ?></label>
+		<input type="checkbox" class="filtered style-form-checkbox" name="filer_news" id="filer_news"><label class="style-form-label" for="filer_news"><?php echo $text_show_filer_news ?></label>
 	</div>
 </div>
 <?php } ?>
