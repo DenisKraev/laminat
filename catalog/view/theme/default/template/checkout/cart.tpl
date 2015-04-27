@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<div class="site-content inner-pages">
 <?php if ($attention) { ?>
 <div class="attention"><?php echo $attention; ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
 <?php } ?>
@@ -348,4 +349,5 @@ $('select[name=\'country_id\']').bind('change', function() {
 $('select[name=\'country_id\']').trigger('change');
 //--></script>
 <?php } ?>
+</div>
 <?php echo $footer; ?>

@@ -94,7 +94,7 @@
 </head>
 <body>
 <div id="notification"></div>
-<div id="container">
+<div id="wrapper">
 <div id="header" class="site-content">
 
   <a href="<?php echo $home; ?>" class="logo">

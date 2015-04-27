@@ -573,6 +573,29 @@ a.title-style:hover {
   background: url('/catalog/view/theme/default/image/app/ico-phone-grey-21x21.png?1429270019') 50% 50% no-repeat;
 }
 
+/* всплывающие уведомления */
+#notification {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 200px;
+  z-index: 200;
+}
+#notification .close {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  cursor: pointer;
+}
+#notification .success {
+  padding: 10px;
+  background: #E7FFDD;
+  border: 1px solid #a1c694;
+}
+#notification .success a {
+  color: #eb8c2a;
+}
+
 /* о компании на главной */
 .box-about {
   padding: 40px 0px;

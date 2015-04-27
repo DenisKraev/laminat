@@ -8968,3 +8968,31 @@
 2015-04-24 14:40:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\simplecheckout.tpl on line 90
 2015-04-24 14:50:29 - PHP Notice:  Undefined variable: data in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\simplecheckout.tpl on line 90
 2015-04-24 14:56:42 - PHP Notice:  Undefined variable: data in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\simplecheckout.tpl on line 90
+2015-04-24 17:13:06 - PHP Notice:  Undefined variable: simplecheckout_total in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\simplecheckout.tpl on line 26
+2015-04-24 17:13:11 - PHP Notice:  Undefined variable: simplecheckout_total in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\simplecheckout.tpl on line 26
+2015-04-24 17:13:12 - PHP Notice:  Undefined variable: simplecheckout_total in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\simplecheckout.tpl on line 26
+2015-04-24 17:13:42 - PHP Notice:  Undefined variable: simplecheckout_total in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\simplecheckout.tpl on line 26
+2015-04-24 17:13:47 - PHP Notice:  Undefined variable: simplecheckout_total in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\simplecheckout.tpl on line 26
+2015-04-24 17:16:11 - PHP Notice:  Undefined variable: simplecheckout_total in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\simplecheckout.tpl on line 26
+2015-04-24 17:34:41 - PHP Warning:  array_multisort() [<a href='function.array-multisort'>function.array-multisort</a>]: Argument #3 is expected to be an array or a sort flag in D:\OpenServer\domains\laminat\catalog\controller\checkout\simplecheckout_total.php on line 29
+2015-04-24 17:34:41 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\catalog\controller\checkout\simplecheckout_total.php on line 31
+2015-04-27 8:19:13 - PHP Warning:  Missing argument 3 for ModelTotalSubTotal::getTotal(), called in D:\OpenServer\domains\laminat\catalog\controller\checkout\simplecheckout_total.php on line 35 and defined in D:\OpenServer\domains\laminat\catalog\model\total\sub_total.php on line 3
+2015-04-27 8:19:13 - PHP Warning:  Missing argument 3 for ModelTotalReward::getTotal(), called in D:\OpenServer\domains\laminat\catalog\controller\checkout\simplecheckout_total.php on line 35 and defined in D:\OpenServer\domains\laminat\catalog\model\total\reward.php on line 3
+2015-04-27 8:19:13 - PHP Warning:  Missing argument 3 for ModelTotalShipping::getTotal(), called in D:\OpenServer\domains\laminat\catalog\controller\checkout\simplecheckout_total.php on line 35 and defined in D:\OpenServer\domains\laminat\catalog\model\total\shipping.php on line 3
+2015-04-27 8:19:13 - PHP Warning:  Missing argument 3 for ModelTotalCoupon::getTotal(), called in D:\OpenServer\domains\laminat\catalog\controller\checkout\simplecheckout_total.php on line 35 and defined in D:\OpenServer\domains\laminat\catalog\model\total\coupon.php on line 3
+2015-04-27 8:19:13 - PHP Warning:  Missing argument 3 for ModelTotalTax::getTotal(), called in D:\OpenServer\domains\laminat\catalog\controller\checkout\simplecheckout_total.php on line 35 and defined in D:\OpenServer\domains\laminat\catalog\model\total\tax.php on line 3
+2015-04-27 8:19:13 - PHP Notice:  Undefined variable: taxes in D:\OpenServer\domains\laminat\catalog\model\total\tax.php on line 4
+2015-04-27 8:19:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\catalog\model\total\tax.php on line 4
+2015-04-27 8:19:13 - PHP Warning:  Missing argument 3 for ModelTotalCredit::getTotal(), called in D:\OpenServer\domains\laminat\catalog\controller\checkout\simplecheckout_total.php on line 35 and defined in D:\OpenServer\domains\laminat\catalog\model\total\credit.php on line 3
+2015-04-27 8:19:13 - PHP Warning:  Missing argument 3 for ModelTotalVoucher::getTotal(), called in D:\OpenServer\domains\laminat\catalog\controller\checkout\simplecheckout_total.php on line 35 and defined in D:\OpenServer\domains\laminat\catalog\model\total\voucher.php on line 3
+2015-04-27 8:19:13 - PHP Warning:  Missing argument 3 for ModelTotalTotal::getTotal(), called in D:\OpenServer\domains\laminat\catalog\controller\checkout\simplecheckout_total.php on line 35 and defined in D:\OpenServer\domains\laminat\catalog\model\total\total.php on line 3
+2015-04-27 8:27:11 - PHP Notice:  Undefined variable: total_data in D:\OpenServer\domains\laminat\catalog\controller\checkout\simplecheckout.php on line 618
+2015-04-27 8:27:11 - PHP Notice:  Undefined variable: total in D:\OpenServer\domains\laminat\catalog\controller\checkout\simplecheckout.php on line 620
+2015-04-27 8:27:11 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\catalog\model\checkout\order.php on line 26
+2015-04-27 8:27:14 - PHP Notice:  Undefined variable: total_data in D:\OpenServer\domains\laminat\catalog\controller\checkout\simplecheckout.php on line 618
+2015-04-27 8:27:14 - PHP Notice:  Undefined variable: total in D:\OpenServer\domains\laminat\catalog\controller\checkout\simplecheckout.php on line 620
+2015-04-27 8:27:14 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\catalog\model\checkout\order.php on line 26
+2015-04-27 8:32:43 - PHP Notice:  Undefined variable: totals in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\simplecheckout_cart.tpl on line 94
+2015-04-27 8:32:43 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\simplecheckout_cart.tpl on line 94
+2015-04-27 8:32:46 - PHP Notice:  Undefined variable: totals in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\simplecheckout_cart.tpl on line 94
+2015-04-27 8:32:46 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\simplecheckout_cart.tpl on line 94

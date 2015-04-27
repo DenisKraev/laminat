@@ -262,3 +262,14 @@ admin\view\template\shipping\multiflat.tpl
 catalog\model\shipping\multiflat.php
 admin\controller\shipping\flat.php
 admin\view\template\shipping\flat.tpl
+catalog\controller\information\contact.php
+catalog\language\russian\information\contact.php
+catalog\view\theme\default\template\information\contact.tpl
+admin\controller\setting\store.php
+admin\language\russian\setting\store.php
+admin\view\template\setting\store_list.tpl
+admin\controller\setting\setting.php
+admin\language\russian\setting\setting.php
+admin\model\localisation\currency.php
+admin\model\localisation\return_status.php
+admin\view\template\setting\setting.tpl

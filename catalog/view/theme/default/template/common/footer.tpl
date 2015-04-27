@@ -1,3 +1,6 @@
+<div class="cf"></div>
+<div id="push"></div>
+</div>
 <div id="footer">
     <div class="site-content">
         <div class="left">
@@ -32,6 +35,6 @@
     </div>
 </div>
 
-</div>
+
 </body>
 </html>

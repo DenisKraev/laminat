@@ -6,7 +6,7 @@
 */  
 
 class ControllerCheckoutSimpleCheckoutTotal extends Controller {
-    static $error = array();
+    //static $error = array();
     
     public function index() {
         $total_data = array();

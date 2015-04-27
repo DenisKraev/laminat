@@ -536,8 +536,6 @@ function simplecheckout_next() {
     }
 }
 
-
-
 function simplecheckout_reload(from) {
     if (simple_steps && (from == 'shipping_changed' || from == 'payment_changed')) {
         return;
@@ -684,7 +682,7 @@ function simplecheckout_load_block(block) {
         type: 'GET',
         dataType: 'text',
         success: function(data) {
-            var allowed = ['simplecheckout_shipping','simplecheckout_payment','simplecheckout_cart','simplecheckout_customer'];
+            var allowed = ['simplecheckout_shipping','simplecheckout_payment','simplecheckout_cart', 'simplecheckout_customer'];
             if (allowed.join(',').indexOf(block) >= 0) {
                 jQuery('div#'+block).html(data);
             } else {
@@ -745,8 +743,6 @@ function simple_login_close() {
 jQuery(function(){
 
     simplecheckout_init('start');
-
-
 
     jQuery('input[reload]:not([autocomplete]):not([googleapi]),select[reload],textarea[reload]').live('change', function(){
         var from = jQuery(this).attr('reload');
@@ -817,8 +813,6 @@ jQuery(function(){
             simple_login_close();
         }
     });
-
-    simplecheckout_reload('header_cart_changed');
 
     /*window.onbeforeunload = function (evt) {
         if (can_submit_payment_form() && !jQuery('#simplecheckout_payment_form').data('is_confirmed')) {
