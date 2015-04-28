@@ -9061,3 +9061,271 @@
 2015-04-27 16:23:28 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 300
 2015-04-27 16:23:28 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 58
 2015-04-27 16:23:28 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 63
+2015-04-27 16:45:29 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 306
+2015-04-27 16:45:29 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 306
+2015-04-27 16:45:29 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 58
+2015-04-27 16:45:29 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 306
+2015-04-27 16:45:29 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 306
+2015-04-27 16:45:29 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 58
+2015-04-27 16:45:29 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 63
+2015-04-27 16:45:31 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 306
+2015-04-27 16:45:31 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 306
+2015-04-27 16:45:31 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 58
+2015-04-27 16:45:31 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 306
+2015-04-27 16:45:31 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 306
+2015-04-27 16:45:31 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 58
+2015-04-27 16:45:31 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 63
+2015-04-27 16:45:54 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 306
+2015-04-27 16:45:54 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 306
+2015-04-27 16:45:54 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 58
+2015-04-27 16:45:54 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 306
+2015-04-27 16:45:54 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 306
+2015-04-27 16:45:54 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 58
+2015-04-27 16:45:54 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 63
+2015-04-27 16:45:56 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 306
+2015-04-27 16:45:56 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 306
+2015-04-27 16:45:56 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 58
+2015-04-27 16:45:56 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 306
+2015-04-27 16:45:56 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 306
+2015-04-27 16:45:56 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 58
+2015-04-27 16:45:56 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 63
+2015-04-27 16:46:11 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 63
+2015-04-27 16:48:04 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 65
+2015-04-27 16:53:14 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 187
+2015-04-27 16:53:14 - PHP Warning:  date() expects parameter 2 to be long, string given in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 187
+2015-04-27 16:53:14 - PHP Notice:  Undefined offset: -1 in D:\OpenServer\domains\laminat\catalog\model\catalog\actions.php on line 58
+2015-04-28 8:34:14 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 65
+2015-04-28 8:39:17 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 8:40:04 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 8:45:37 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 8:45:38 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 8:46:44 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 8:49:09 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 8:53:16 - PHP Notice:  Undefined variable: css in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 58
+2015-04-28 8:53:16 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 8:53:29 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 8:53:52 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 8:58:40 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 8:59:48 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 9:00:39 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 9:00:41 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 9:00:42 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 9:00:44 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 9:01:39 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 9:01:40 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 9:04:55 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 9:04:59 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 9:05:02 - PHP Notice:  Undefined variable: text_limit in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\actions.tpl on line 69
+2015-04-28 9:35:33 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 9:36:35 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 9:38:18 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 9:38:38 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 9:42:42 - PHP Notice:  Undefined variable: date in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 387
+2015-04-28 9:42:42 - PHP Notice:  Undefined variable: date in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 387
+2015-04-28 9:46:20 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 9:46:37 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 9:47:14 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 9:50:13 - PHP Notice:  Undefined variable: result in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 185
+2015-04-28 9:50:13 - PHP Notice:  Undefined variable: result in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 224
+2015-04-28 9:50:13 - PHP Notice:  Undefined variable: result in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 229
+2015-04-28 9:56:04 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 9:57:09 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 9:57:53 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 9:59:00 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:00:58 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:01:25 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:04:00 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:06:11 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:06:40 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:07:54 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:17:55 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:22:31 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:23:59 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:24:25 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:42:24 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:43:04 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:43:42 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:47:26 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:47:54 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:48:08 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:48:23 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 10:49:19 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:03:01 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:04:06 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:04:16 - PHP Warning:  Division by zero in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 201
+2015-04-28 11:04:16 - PHP Warning:  Division by zero in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 203
+2015-04-28 11:04:42 - PHP Warning:  Division by zero in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 203
+2015-04-28 11:15:27 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:15:54 - PHP Warning:  Division by zero in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 204
+2015-04-28 11:18:43 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:21:56 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:23:48 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:24:19 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:24:57 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:26:35 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:27:17 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:27:25 - PHP Warning:  Division by zero in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 201
+2015-04-28 11:28:40 - PHP Warning:  Division by zero in D:\OpenServer\domains\laminat\catalog\controller\information\actions.php on line 201
+2015-04-28 11:28:44 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:29:15 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:30:14 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:30:35 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:30:50 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:31:20 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:31:54 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:33:38 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:34:17 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50
+2015-04-28 11:57:18 - PHP Notice:  Undefined variable: actions in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 47
+2015-04-28 11:57:18 - PHP Notice:  Undefined variable: actions in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 49
+2015-04-28 11:57:18 - PHP Warning:  Division by zero in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 56
+2015-04-28 11:57:18 - PHP Notice:  Undefined variable: actions in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 47
+2015-04-28 11:57:18 - PHP Notice:  Undefined variable: actions in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 49
+2015-04-28 11:57:18 - PHP Warning:  Division by zero in D:\OpenServer\domains\laminat\catalog\controller\module\actions.php on line 56
+2015-04-28 11:59:50 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4<br />Error No: 1064<br />SELECT p.product_id, pd.name
+				FROM product p LEFT JOIN product_description pd ON (p.product_id = pd.product_id)
+				WHERE pd.language_id = '1'
+				AND p.product_id IN () in D:\OpenServer\domains\laminat\system\database\mysql.php on line 50

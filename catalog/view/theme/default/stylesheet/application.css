@@ -124,6 +124,19 @@ input:focus, textarea:focus, button:focus, select:focus, a:focus {
   width: 730px;
 }
 
+.media {
+  overflow: auto;
+}
+.media .pull-left {
+  overflow: hidden;
+  margin-right: 10px;
+  float: left;
+}
+.media .media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+
 /* стандартные элементы */
 /* Ссылки */
 .link-style {
@@ -665,11 +678,10 @@ a.title-style:hover {
 .box-actions .title-style {
   margin-bottom: 20px;
 }
-
-.wrap-actions {
+.box-actions .wrap-actions {
   position: relative;
 }
-.wrap-actions .prev, .wrap-actions .next {
+.box-actions .wrap-actions .prev, .box-actions .wrap-actions .next {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -677,48 +689,46 @@ a.title-style:hover {
   z-index: 101;
   cursor: pointer;
 }
-.wrap-actions .prev:hover, .wrap-actions .next:hover {
+.box-actions .wrap-actions .prev:hover, .box-actions .wrap-actions .next:hover {
   opacity: 0.9;
 }
-.wrap-actions .prev {
+.box-actions .wrap-actions .prev {
   left: -55px;
   background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') 0px 0px no-repeat;
 }
-.wrap-actions .prev.disabled {
+.box-actions .wrap-actions .prev.disabled {
   background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') -60px 0px no-repeat;
 }
-.wrap-actions .prev.disabled:hover {
+.box-actions .wrap-actions .prev.disabled:hover {
   cursor: auto;
   opacity: 1;
 }
-.wrap-actions .next {
+.box-actions .wrap-actions .next {
   right: -55px;
   background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') -30px 0px no-repeat;
 }
-.wrap-actions .next.disabled {
+.box-actions .wrap-actions .next.disabled {
   background: url('/catalog/view/theme/default/image/app/arrow-white-grey-sprite-30x30.png?1428474217') -90px 0px no-repeat;
 }
-.wrap-actions .next.disabled:hover {
+.box-actions .wrap-actions .next.disabled:hover {
   cursor: auto;
   opacity: 1;
 }
-
-.actions-list {
+.box-actions .actions-list {
   margin: 0px -12px;
   height: 290px;
 }
-
-.actions-item {
+.box-actions .actions-item {
   position: relative !important;
   width: 475px;
   padding: 15px;
   background: #fff;
   margin: 0px 12px;
 }
-.actions-item * {
+.box-actions .actions-item * {
   white-space: normal;
 }
-.actions-item:before {
+.box-actions .actions-item:before {
   position: absolute;
   content: "";
   top: 100%;
@@ -727,10 +737,10 @@ a.title-style:hover {
   height: 45px;
   background: url('/catalog/view/theme/default/image/app/shadow-action-item.png?1428414146') 50% 0px no-repeat;
 }
-.actions-item .box-img {
+.box-actions .actions-item .box-img {
   display: table-cell;
 }
-.actions-item .info {
+.box-actions .actions-item .info {
   font-family: Calibri, sans-serif;
   width: 220px;
   height: 218px;
@@ -738,7 +748,7 @@ a.title-style:hover {
   vertical-align: middle;
   padding-left: 12px;
 }
-.actions-item .mark {
+.box-actions .actions-item .mark {
   font-weight: bold;
   font-size: 18px;
   color: #fff;
@@ -752,33 +762,33 @@ a.title-style:hover {
   *zoom: 1;
   *display: inline;
 }
-.actions-item .title, .actions-item .date {
+.box-actions .actions-item .title, .box-actions .actions-item .date {
   font-weight: bold;
   font-size: 21px;
   color: #010101;
 }
-.actions-item .title a, .actions-item .date a {
+.box-actions .actions-item .title a, .box-actions .actions-item .date a {
   color: #010101;
   text-decoration: none;
 }
-.actions-item .title a:hover, .actions-item .date a:hover {
+.box-actions .actions-item .title a:hover, .box-actions .actions-item .date a:hover {
   text-decoration: underline;
 }
-.actions-item .date {
+.box-actions .actions-item .date {
   margin-bottom: 8px;
 }
-.actions-item .description {
+.box-actions .actions-item .description {
   font-family: Arial, sans-serif;
   font-size: 12px;
   line-height: 16px;
   color: #444444;
   margin-bottom: 5px;
 }
-.actions-item .more {
+.box-actions .actions-item .more {
   color: #444444;
   font-size: 14px;
 }
-.actions-item .more:hover {
+.box-actions .actions-item .more:hover {
   text-decoration: none;
 }
 
@@ -1761,6 +1771,125 @@ a.title-style:hover {
   text-transform: none;
   margin-bottom: 5px;
   font-weight: bold;
+}
+
+/* страница акций */
+.page-actions h1.title-style {
+  margin-bottom: 0px;
+}
+.page-actions .actions-list {
+  margin-bottom: 30px;
+}
+.page-actions .actions-list .item {
+  display: table;
+  width: 100%;
+  padding: 15px 0px;
+  border-bottom: 1px solid #e3e3e3;
+}
+.page-actions .actions-list .cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.page-actions .actions-list .cell.box-image {
+  vertical-align: top;
+  width: 230px;
+}
+.page-actions .actions-list .cell.info {
+  padding-left: 20px;
+}
+.page-actions .actions-list .name {
+  margin: 0px;
+  padding: 0px;
+  line-height: 14px;
+  margin-bottom: 5px;
+}
+.page-actions .actions-list .name a {
+  font-family: "OpenSans-bold-wf";
+  font-size: 16px;
+  line-height: 20px;
+  color: #010101;
+  text-decoration: none;
+}
+.page-actions .actions-list .name a:hover {
+  text-decoration: underline;
+}
+.page-actions .actions-list .date {
+  font-family: "OpenSans-regular-wf";
+  color: #444444;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: lowercase;
+}
+.page-actions .actions-list .description {
+  font-family: Verdana;
+  color: #444444;
+  margin: 30px 0px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.page-actions .actions-list .more a {
+  padding: 7px 30px;
+}
+
+/* Actions Info */
+#actionsInfo {
+  margin-bottom: 0px;
+  overflow: auto;
+  vertical-align: top;
+}
+
+.actionsModule .actionsDate {
+  font-weight: bold;
+}
+
+#actionsInfo .actionsDate {
+  font-weight: bold;
+}
+#actionsInfo .actionsDescription, #actionsInfo .actionsDate {
+  margin-top: 10px;
+}
+
+.actionsModule {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #EEEEEE;
+}
+.actionsModule + .actionsModule {
+  margin-top: 10px;
+}
+.actionsModule div + div {
+  margin-top: 6px;
+}
+
+.actionsReadAll {
+  margin-top: 10px;
+}
+
+.actionsRelHeader {
+  border-bottom: 1px solid #DBDEE1;
+  padding-bottom: 10px;
+  overflow: auto;
+}
+.actionsRelHeader .left {
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 14px;
+  color: #333;
+}
+.actionsRelHeader .right {
+  float: right;
+}
+
+.actionsRelProducts {
+  padding: 10px 0px;
+  margin-bottom: 20px;
+}
+.actionsRelProducts > div {
+  text-align: center;
+  background: transparent;
+  margin: 0px 15px 15px 0px;
+  padding: 0px;
 }
 
 /* страница продукта */

@@ -1,28 +1,39 @@
 /*
-Error: Undefined mixin 'inline-block'.
-        on line 72 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass, in `inline-block'
-        from line 72 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass
+Error: Undefined mixin 'font-family-2'.
+        on line 26 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-actions.sass, in `font-family-2'
+        from line 26 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-actions.sass
 
-67:       color: #fff
-68:       text-transform: uppercase
-69:       background: #eb8c2a
-70:       padding: 5px 8px
-71:       margin-bottom: 8px
-72:       +inline-block(top)
-73:     .title, .date
-74:       font-weight: bold
-75:       font-size: 21px
-76:       color: #010101
-77:       a
+21:       margin: 0px
+22:       padding: 0px
+23:       line-height: 14px
+24:       margin-bottom: 5px
+25:       a
+26:         +font-family-2(bold)
+27:         font-size: 16px
+28:         line-height: 20px
+29:         color: #010101
+30:         text-decoration: none
+31:         &:hover
 
 Backtrace:
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass:72:in `inline-block'
-D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass:72
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-actions.sass:26:in `font-family-2'
+D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-actions.sass:26
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `with_mixin'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
@@ -95,4 +106,4 @@ C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/ada
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'inline-block'.\A         on line 72 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass, in `inline-block'\A         from line 72 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/box-actions.sass\A \A 67:       color: #fff\A 68:       text-transform: uppercase\A 69:       background: #eb8c2a\A 70:       padding: 5px 8px\A 71:       margin-bottom: 8px\A 72:       +inline-block(top)\A 73:     .title, .date\A 74:       font-weight: bold\A 75:       font-size: 21px\A 76:       color: #010101\A 77:       a"; }
+  content: "Error: Undefined mixin 'font-family-2'.\A         on line 26 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-actions.sass, in `font-family-2'\A         from line 26 of D:/OpenServer/domains/laminat/catalog/view/theme/default/sass/app/page-actions.sass\A \A 21:       margin: 0px\A 22:       padding: 0px\A 23:       line-height: 14px\A 24:       margin-bottom: 5px\A 25:       a\A 26:         +font-family-2(bold)\A 27:         font-size: 16px\A 28:         line-height: 20px\A 29:         color: #010101\A 30:         text-decoration: none\A 31:         &:hover"; }

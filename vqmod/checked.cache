@@ -280,3 +280,5 @@ admin\view\template\design\layout_list.tpl
 catalog\view\theme\default\template\product\search.tpl
 admin\controller\module\ocjoyajaxcheckout.php
 admin\view\template\module\ocjoyajaxcheckout.tpl
+catalog\language\russian\product\special.php
+admin\view\template\module\timer.tpl

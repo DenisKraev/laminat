@@ -49,13 +49,13 @@ class ControllerInformationActions extends Controller {
 				}
 			
 		} else {
-				if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/stylesheet/actions-styles.css')) {
-						$css = 'catalog/view/theme/'.$this->config->get('config_template') . '/stylesheet/actions-styles.css'; 
-				} else {
-						$css = 'catalog/view/theme/default/stylesheet/stylesheet-actions.css';
-				}
+//				if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/stylesheet/actions-styles.css')) {
+//						$css = 'catalog/view/theme/'.$this->config->get('config_template') . '/stylesheet/actions-styles.css';
+//				} else {
+//						$css = 'catalog/view/theme/default/stylesheet/stylesheet-actions.css';
+//				}
 		
-				$this->document->addStyle($css);
+				//$this->document->addStyle($css);
 		
 				if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/information/actions.tpl')) {
 						$this->template = $this->config->get('config_template') . '/template/information/actions.tpl';
@@ -106,7 +106,7 @@ class ControllerInformationActions extends Controller {
 					
 					if ($product_info) {
 						if ($product_info['image']) {
-							$image = $this->model_tool_image->resize($product_info['image'], $actions_setting['image_relproduct_width'], $actions_setting['image_relproduct_height']);
+							$image = $this->model_tool_image->crop($product_info['image'], 230, 230, 'center', '_actions_list');
 						} else {
 							$image = false;
 						}
@@ -181,15 +181,80 @@ class ControllerInformationActions extends Controller {
 			}
 			$this->data['caption']		= $actions['caption'];
 			$this->data['actions_id']	= $actions['actions_id'];
-			
-			if ($actions_setting['show_actions_date'] == 1) {
-				$date_start = date( 'j', $actions['date_start'] ) . ' ' . $this->model_catalog_actions->getMonthName(date( 'n', $actions['date_start'] ));
-				$date_end = date( 'j', $actions['date_end'] ) . ' ' . $this->model_catalog_actions->getMonthName(date( 'n', $actions['date_end'] ));
-					
-				$this->data['date']		= sprintf($this->language->get('date_actions_format'), $date_start, $date_end);
-			} else {
-				$this->data['date'] = NULL;
-			} 
+
+    if($actions['interval'] != '' && $actions['interval'] != 0){
+      $cur = getdate();
+      $cur = $cur[0];
+
+      $interval =  $actions['interval'] * 60 * 60; // интервал часы в секунды
+
+      $start = $actions['date_start'];
+
+      $past_interval =  $cur - $start;
+      // 3600 корректировка на час (пока не выяснил почему так работает)
+      $stop = ($start + ($interval - $past_interval)) - 3600;
+      $stop_text = ($start + $interval) - 3600;
+
+      if($interval - 86400 <= 0){$count = floor(abs($start - $cur)/($interval));} else {$count = floor(abs($start - $cur)/($interval - 86400));}
+
+      if($count >= 1){
+
+        if($interval - 86400 <= 0){$start = $start + (($interval) * $count);} else {$start = $start + (($interval - 86400) * $count);}
+
+        $stop = ($start + ($interval)) - 3600;
+
+        $stop_text = $stop;
+      }
+
+      $date_start = $start;
+      $date_end = date( 'j', $stop_text ) . ' ' . $this->model_catalog_actions->getMonthName(date( 'n', $stop_text ));
+
+      $date = sprintf('до %s', $date_end);
+
+    } else {
+      if ($actions['date_start'] != ''){
+        $date_start = date( 'j', $actions['date_start'] ) . ' ' .$this->model_catalog_actions->getMonthName(date( 'n', $actions['date_start'] ));
+      }	else {
+        $date_start = null;
+      }
+      if($actions['date_end'] != ''){
+        $date_end = date( 'j', $actions['date_end'] ) . ' ' . $this->model_catalog_actions->getMonthName(date( 'n', $actions['date_end'] ));
+      } else {
+        $date_end = null;
+      }
+
+      if($actions_setting['show_module_date']) {
+        if($date_start == null){
+          $date = sprintf('до %s', $date_end);
+        } else {
+          $date = sprintf('C %s до %s', $date_start, $date_end);
+        }
+      } else {
+        $date = FALSE;
+      }
+    }
+
+    $this->data['date'] = $date;
+
+//			if ($actions_setting['show_actions_date'] == 1) {
+//
+//        if($actions['date_start'] != null){
+//          $date_start = date( 'j', $actions['date_start'] ) . ' ' . $this->model_catalog_actions->getMonthName(date( 'n', $actions['date_start'] ));
+//        } else {
+//          $date_start = null;
+//        }
+//
+//        if($actions['date_end'] != null){
+//          $date_end = date( 'j', $actions['date_end'] ) . ' ' . $this->model_catalog_actions->getMonthName(date( 'n', $actions['date_end'] ));
+//        } else {
+//          $date_end = null;
+//        }
+//
+//
+//				$this->data['date']		= sprintf($this->language->get('date_actions_format'), $date_start, $date_end);
+//			} else {
+//				$this->data['date'] = NULL;
+//			}
 
 			$this->data['fancybox']		= $actions['fancybox'];
 			
@@ -295,21 +360,79 @@ class ControllerInformationActions extends Controller {
 			$this->data['actions_all'] = array();
 			
 			foreach ($results as $result) {
-					
-				$date_start = date( 'j', $result['date_start'] ) . ' ' . $this->model_catalog_actions->getMonthName(date( 'n', $result['date_start'] ));
-				$date_end = date( 'j', $result['date_end'] ) . ' ' . $this->model_catalog_actions->getMonthName(date( 'n', $result['date_end'] ));
-				
+
+        if($result['interval'] != '' && $result['interval'] != 0){
+          $cur = getdate();
+          $cur = $cur[0];
+
+          $interval =  $result['interval'] * 60 * 60; // интервал часы в секунды
+
+          $start = $result['date_start'];
+
+          $past_interval =  $cur - $start;
+          // 3600 корректировка на час (пока не выяснил почему так работает)
+          $stop = ($start + ($interval - $past_interval)) - 3600;
+          $stop_text = ($start + $interval) - 3600;
+          //$stop = $start + ($interval - $past_interval);
+
+          $count = floor($past_interval/$interval);
+
+          if($count >= 1){
+            $start = $start + ($interval * $count);
+            $past_interval =  abs($cur - $start);
+
+            $cur_t = new DateTime(date('Y-m-d'));
+            $start_t = new DateTime(date('Y-m-d', $result['date_start']));
+            $start_t = new DateTime($start_t->format('Y-m-d'));
+
+            if($cur_t > $start_t) {
+              $stop = ($start + ($interval - $past_interval)) - 3600;
+            } else {
+              $stop = ($start + ($interval - $past_interval));
+            }
+
+            $stop_text = $stop;
+          }
+
+          $date_start = $start;
+          $date_end = date( 'j', $stop_text ) . ' ' . $this->model_catalog_actions->getMonthName(date( 'n', $stop_text ));
+
+          $date = sprintf('до %s', $date_end);
+
+        } else {
+          if ($result['date_start'] != ''){
+            $date_start = date( 'j', $result['date_start'] ) . ' ' .$this->model_catalog_actions->getMonthName(date( 'n', $result['date_start'] ));
+          }	else {
+            $date_start = null;
+          }
+          if($result['date_end'] != ''){
+            $date_end = date( 'j', $result['date_end'] ) . ' ' . $this->model_catalog_actions->getMonthName(date( 'n', $result['date_end'] ));
+          } else {
+            $date_end = null;
+          }
+
+          if($actions_setting['show_module_date']) {
+            if($date_start == null){
+              $date = sprintf('до %s', $date_end);
+            } else {
+              $date = sprintf('C %s до %s', $date_start, $date_end);
+            }
+          } else {
+            $date = FALSE;
+          }
+        }
+
 					if ($result['image'] AND $actions_setting['show_image']) {
-						$image = $this->model_tool_image->resize($result['image'], $actions_setting['image_width'], $actions_setting['image_height']);
-					} else {
+            $image = $this->model_tool_image->crop($result['image'], 230, 230, 'center', '_actions_list');
+          } else {
 						$image = FALSE;
 					}
 					
-					if ($actions_setting['show_date']) {
-						$date = sprintf($this->language->get('date_actions_format'), $date_start, $date_end);
-					} else {
-						$date = FALSE;
-					}
+//					if ($actions_setting['show_date']) {
+//						$date = sprintf($this->language->get('date_actions_format'), $date_start, $date_end);
+//					} else {
+//						$date = FALSE;
+//					}
 					
 					$this->data['actions_all'][] = array(
 							'caption'		=> $result['caption'],

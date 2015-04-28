@@ -33,22 +33,20 @@ class ControllerModuleTimer extends Controller {
     $stop = ($start + ($interval - $past_interval)) - 3600;
     $stop_text = ($start + $interval) - 3600;
 
-    $count = floor($past_interval/$interval);
+    //$count = floor($past_interval/$interval);
+    if($interval - 86400 <= 0){$count = floor(abs($start - $cur)/($interval));} else {$count = floor(abs($start - $cur)/($interval - 86400));}
+
 
     if($count >= 1){
-      $start = $start + ($interval * $count);
+
+
+      if($interval - 86400 <= 0){$start = $start + (($interval) * $count);} else {$start = $start + (($interval - 86400) * $count);}
       $past_interval =  abs($cur - $start);
 
-      $cur_t = new DateTime(date('Y-m-d'));
-      $start_t = new DateTime($setting['date']);
-      $start_t = new DateTime($start_t->format('Y-m-d'));
-      if($cur_t > $start_t) {
-        $stop = ($start + ($interval - $past_interval)) - 3600;
-      } else {
-        $stop = ($start + ($interval - $past_interval));
-      }
+      $stop = ($start + ($interval - $past_interval)) - 3600;
 
-      $stop_text = $stop;
+
+      $stop_text = ($start + $interval) - 3600;
     }
 
     $template->data['start'] = $start;

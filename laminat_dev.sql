@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 27 2015 г., 16:27
+-- Время создания: Апр 28 2015 г., 13:35
 -- Версия сервера: 5.5.41-log
 -- Версия PHP: 5.3.29
 
@@ -47,7 +47,7 @@ INSERT INTO `actions` (`actions_id`, `image`, `image_size`, `date_start`, `date_
 (1, 'data/actions/img3.jpg', 0, '1428406080', '1429788480', 0, 1, 0, '42'),
 (2, 'data/actions/img3.jpg', 0, '1428408180', '1428408180', NULL, 1, 0, ''),
 (3, 'data/actions/img3.jpg', 0, '1428440400', '', 24, 1, 0, ''),
-(4, '', 0, '1428526800', '', 240, 1, 0, '');
+(4, '', 0, '1428526800', '', 12, 1, 0, '');
 
 -- --------------------------------------------------------
 
@@ -77,7 +77,7 @@ INSERT INTO `actions_description` (`actions_id`, `language_id`, `title`, `meta_k
 (1, 1, '', '', '', '', 'Плинтус в подарок', '', '&lt;div&gt;Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n\r\n&lt;div&gt;в бесплатную укладку не входит.Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n\r\n&lt;div&gt;в бесплатную укладку не входит.Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n\r\n&lt;div&gt;в бесплатную укладку не входит.&lt;/div&gt;\r\n', '&lt;div&gt;Демонтаж и Монтаж плинтусов&lt;/div&gt;\r\n\r\n&lt;div&gt;в бесплатную укладку не входит.&lt;/div&gt;\r\n'),
 (2, 1, '', '', '', '', 'Еще акция', '', '&lt;p&gt;\r\n	фкпыфукп фкпыукп&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	укпыукп ыукпыур&lt;/p&gt;\r\n'),
 (3, 1, '', '', '', '', 'Акция', '', '&lt;p&gt;\r\n	фыпфкуп&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	фукпыукп&lt;/p&gt;\r\n'),
-(4, 1, '', '', '', '', 'ewgaweg', '', '&lt;p&gt;\r\n	wegaw&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	waegaweg&lt;/p&gt;\r\n');
+(4, 1, '', '', '', '', 'ewgaweg', '', '&lt;p&gt;wegaw&lt;/p&gt;\r\n', '&lt;p&gt;waegaweg&lt;/p&gt;\r\n');
 
 -- --------------------------------------------------------
 
@@ -3146,7 +3146,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2792 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2793 ;
 
 --
 -- Дамп данных таблицы `setting`
@@ -3398,7 +3398,7 @@ INSERT INTO `setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `seria
 (2652, 0, 'config', 'config_owner', 'Мое Имя', 0),
 (2651, 0, 'config', 'config_name', 'Мой Магазин', 0),
 (1659, 0, 'html_block', 'html_block_module', 'a:6:{i:0;a:5:{s:13:"html_block_id";s:1:"1";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}i:1;a:5:{s:13:"html_block_id";s:1:"2";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"4";}i:2;a:5:{s:13:"html_block_id";s:1:"3";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"5";}i:3;a:5:{s:13:"html_block_id";s:1:"4";s:9:"layout_id";s:1:"2";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"2";}i:4;a:5:{s:13:"html_block_id";s:1:"5";s:9:"layout_id";s:1:"3";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}i:5;a:5:{s:13:"html_block_id";s:1:"5";s:9:"layout_id";s:1:"2";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
-(1119, 0, 'timer', 'timer_module', 'a:1:{i:1;a:11:{s:11:"description";a:1:{i:1;s:31:"&lt;p&gt;\r\n	[Timer]&lt;/p&gt;\r\n";}s:4:"date";s:10:"2015-04-09";s:4:"time";s:5:"0:0:0";s:8:"interval";s:2:"24";s:5:"image";s:19:"data/timer/img2.png";s:5:"title";s:32:"Плинтус в подарок";s:15:"title_font_size";s:2:"34";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
+(2792, 0, 'timer', 'timer_module', 'a:1:{i:1;a:11:{s:11:"description";a:1:{i:1;s:28:"&lt;p&gt;[Timer]&lt;/p&gt;\r\n";}s:4:"date";s:10:"2015-04-09";s:4:"time";s:5:"0:0:0";s:8:"interval";s:3:"240";s:5:"image";s:19:"data/timer/img2.png";s:5:"title";s:32:"Плинтус в подарок";s:15:"title_font_size";s:2:"34";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
 (1150, 0, 'special', 'special_module', 'a:1:{i:0;a:7:{s:5:"limit";s:3:"100";s:11:"image_width";s:3:"195";s:12:"image_height";s:3:"195";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
 (2777, 0, 'ocjoyajaxcheckout', 'config_show_on_module_special', '', 0),
 (1500, 0, 'category', 'category_module', 'a:2:{i:0;a:4:{s:9:"layout_id";s:1:"3";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}i:1;a:4:{s:9:"layout_id";s:1:"2";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
