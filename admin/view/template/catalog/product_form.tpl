@@ -14,7 +14,18 @@
       <div class="buttons"><a onclick="$('#form').submit();" class="button"><?php echo $button_save; ?></a><a href="<?php echo $cancel; ?>" class="button"><?php echo $button_cancel; ?></a></div>
     </div>
     <div class="content">
-      <div id="tabs" class="htabs"><a href="#tab-general"><?php echo $tab_general; ?></a><a href="#tab-data"><?php echo $tab_data; ?></a><a href="#tab-links"><?php echo $tab_links; ?></a><a href="#tab-attribute"><?php echo $tab_attribute; ?></a><a href="#tab-option"><?php echo $tab_option; ?></a><a href="#tab-discount"><?php echo $tab_discount; ?></a><a href="#tab-special"><?php echo $tab_special; ?></a><a href="#tab-image"><?php echo $tab_image; ?></a><a href="#tab-reward"><?php echo $tab_reward; ?></a><a href="#tab-design"><?php echo $tab_design; ?></a></div>
+      <div id="tabs" class="htabs">
+          <a href="#tab-general"><?php echo $tab_general; ?></a>
+          <a href="#tab-data"><?php echo $tab_data; ?></a>
+          <a href="#tab-links"><?php echo $tab_links; ?></a>
+          <a href="#tab-attribute"><?php echo $tab_attribute; ?></a>
+          <a href="#tab-option"><?php echo $tab_option; ?></a>
+<!--          <a href="#tab-discount">--><?php //echo $tab_discount; ?><!--</a>-->
+          <a href="#tab-special">Скидки</a>
+          <a href="#tab-image"><?php echo $tab_image; ?></a>
+          <a href="#tab-reward"><?php echo $tab_reward; ?>
+          </a><a href="#tab-design"><?php echo $tab_design; ?></a>
+      </div>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
         <div id="tab-general">
           <div id="languages" class="htabs">
@@ -580,50 +591,50 @@
           <?php $option_row++; ?>
           <?php } ?>
         </div>
-        <div id="tab-discount">
-          <table id="discount" class="list">
-            <thead>
-              <tr>
-                <td class="left"><?php echo $entry_customer_group; ?></td>
-                <td class="right"><?php echo $entry_quantity; ?></td>
-                <td class="right"><?php echo $entry_priority; ?></td>
-                <td class="right"><?php echo $entry_price; ?></td>
-                <td class="left"><?php echo $entry_date_start; ?></td>
-                <td class="left"><?php echo $entry_date_end; ?></td>
-                <td></td>
-              </tr>
-            </thead>
-            <?php $discount_row = 0; ?>
-            <?php foreach ($product_discounts as $product_discount) { ?>
-            <tbody id="discount-row<?php echo $discount_row; ?>">
-              <tr>
-                <td class="left"><select name="product_discount[<?php echo $discount_row; ?>][customer_group_id]">
-                    <?php foreach ($customer_groups as $customer_group) { ?>
-                    <?php if ($customer_group['customer_group_id'] == $product_discount['customer_group_id']) { ?>
-                    <option value="<?php echo $customer_group['customer_group_id']; ?>" selected="selected"><?php echo $customer_group['name']; ?></option>
-                    <?php } else { ?>
-                    <option value="<?php echo $customer_group['customer_group_id']; ?>"><?php echo $customer_group['name']; ?></option>
-                    <?php } ?>
-                    <?php } ?>
-                  </select></td>
-                <td class="right"><input type="text" name="product_discount[<?php echo $discount_row; ?>][quantity]" value="<?php echo $product_discount['quantity']; ?>" size="2" /></td>
-                <td class="right"><input type="text" name="product_discount[<?php echo $discount_row; ?>][priority]" value="<?php echo $product_discount['priority']; ?>" size="2" /></td>
-                <td class="right"><input type="text" name="product_discount[<?php echo $discount_row; ?>][price]" value="<?php echo $product_discount['price']; ?>" /></td>
-                <td class="left"><input type="text" name="product_discount[<?php echo $discount_row; ?>][date_start]" value="<?php echo $product_discount['date_start']; ?>" class="date" /></td>
-                <td class="left"><input type="text" name="product_discount[<?php echo $discount_row; ?>][date_end]" value="<?php echo $product_discount['date_end']; ?>" class="date" /></td>
-                <td class="left"><a onclick="$('#discount-row<?php echo $discount_row; ?>').remove();" class="button"><?php echo $button_remove; ?></a></td>
-              </tr>
-            </tbody>
-            <?php $discount_row++; ?>
-            <?php } ?>
-            <tfoot>
-              <tr>
-                <td colspan="6"></td>
-                <td class="left"><a onclick="addDiscount();" class="button"><?php echo $button_add_discount; ?></a></td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
+<!--        <div id="tab-discount">-->
+<!--          <table id="discount" class="list">-->
+<!--            <thead>-->
+<!--              <tr>-->
+<!--                <td class="left">--><?php //echo $entry_customer_group; ?><!--</td>-->
+<!--                <td class="right">--><?php //echo $entry_quantity; ?><!--</td>-->
+<!--                <td class="right">--><?php //echo $entry_priority; ?><!--</td>-->
+<!--                <td class="right">--><?php //echo $entry_price; ?><!--</td>-->
+<!--                <td class="left">--><?php //echo $entry_date_start; ?><!--</td>-->
+<!--                <td class="left">--><?php //echo $entry_date_end; ?><!--</td>-->
+<!--                <td></td>-->
+<!--              </tr>-->
+<!--            </thead>-->
+<!--            --><?php //$discount_row = 0; ?>
+<!--            --><?php //foreach ($product_discounts as $product_discount) { ?>
+<!--            <tbody id="discount-row--><?php //echo $discount_row; ?><!--">-->
+<!--              <tr>-->
+<!--                <td class="left"><select name="product_discount[--><?php //echo $discount_row; ?><!--][customer_group_id]">-->
+<!--                    --><?php //foreach ($customer_groups as $customer_group) { ?>
+<!--                    --><?php //if ($customer_group['customer_group_id'] == $product_discount['customer_group_id']) { ?>
+<!--                    <option value="--><?php //echo $customer_group['customer_group_id']; ?><!--" selected="selected">--><?php //echo $customer_group['name']; ?><!--</option>-->
+<!--                    --><?php //} else { ?>
+<!--                    <option value="--><?php //echo $customer_group['customer_group_id']; ?><!--">--><?php //echo $customer_group['name']; ?><!--</option>-->
+<!--                    --><?php //} ?>
+<!--                    --><?php //} ?>
+<!--                  </select></td>-->
+<!--                <td class="right"><input type="text" name="product_discount[--><?php //echo $discount_row; ?><!--][quantity]" value="--><?php //echo $product_discount['quantity']; ?><!--" size="2" /></td>-->
+<!--                <td class="right"><input type="text" name="product_discount[--><?php //echo $discount_row; ?><!--][priority]" value="--><?php //echo $product_discount['priority']; ?><!--" size="2" /></td>-->
+<!--                <td class="right"><input type="text" name="product_discount[--><?php //echo $discount_row; ?><!--][price]" value="--><?php //echo $product_discount['price']; ?><!--" /></td>-->
+<!--                <td class="left"><input type="text" name="product_discount[--><?php //echo $discount_row; ?><!--][date_start]" value="--><?php //echo $product_discount['date_start']; ?><!--" class="date" /></td>-->
+<!--                <td class="left"><input type="text" name="product_discount[--><?php //echo $discount_row; ?><!--][date_end]" value="--><?php //echo $product_discount['date_end']; ?><!--" class="date" /></td>-->
+<!--                <td class="left"><a onclick="$('#discount-row--><?php //echo $discount_row; ?><!--').remove();" class="button">--><?php //echo $button_remove; ?><!--</a></td>-->
+<!--              </tr>-->
+<!--            </tbody>-->
+<!--            --><?php //$discount_row++; ?>
+<!--            --><?php //} ?>
+<!--            <tfoot>-->
+<!--              <tr>-->
+<!--                <td colspan="6"></td>-->
+<!--                <td class="left"><a onclick="addDiscount();" class="button">--><?php //echo $button_add_discount; ?><!--</a></td>-->
+<!--              </tr>-->
+<!--            </tfoot>-->
+<!--          </table>-->
+<!--        </div>-->
         <div id="tab-special">
           <table id="special" class="list">
             <thead>

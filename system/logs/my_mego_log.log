@@ -9379,3 +9379,7 @@
 2015-04-29 9:39:23 - PHP Notice:  Undefined variable: description in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\information\contact.tpl on line 16
 2015-04-29 9:54:06 - PHP Notice:  Undefined index: actions_id in D:\OpenServer\domains\laminat\catalog\controller\common\header.php on line 143
 2015-04-29 9:55:30 - PHP Notice:  Undefined variable: actions_id in D:\OpenServer\domains\laminat\catalog\controller\common\header.php on line 146
+2015-04-29 10:55:28 - PHP Notice:  Undefined variable: discount_row in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 1341
+2015-04-29 10:55:41 - PHP Notice:  Undefined variable: discount_row in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 1341
+2015-04-29 10:56:21 - PHP Notice:  Undefined variable: discount_row in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 1341
+2015-04-29 10:56:38 - PHP Notice:  Undefined variable: discount_row in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 1341

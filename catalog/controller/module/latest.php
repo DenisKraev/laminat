@@ -74,6 +74,7 @@ class ControllerModuleLatest extends Controller {
 				'price'   	 => $price,
 				'special' 	 => $special,
 				'rating'     => $rating,
+        'statuses'    => $result['statuses']['product'],
 				'attribute_data'     => $attribute_data,
 				'art'        => $result['sku'],
         'reviews'    => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),

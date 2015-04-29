@@ -11,7 +11,10 @@
       <div class="product-item">
 
         <?php if ($product['thumb']) { ?>
-          <a class="box-img" href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a>
+          <div  class="box-img">
+            <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a>
+            <div class="statuses"><?php echo $product['statuses']; ?></div>
+          </div>
         <?php } ?>
 
         <div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
