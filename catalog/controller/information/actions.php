@@ -84,6 +84,8 @@ class ControllerInformationActions extends Controller {
 			
 			$this->load->model('catalog/product');
 			$this->load->model('tool/image');
+      $this->load->model('catalog/product_status');
+      $this->load->helper('truncate');
 			
 			$date_format = $this->language->get('date_long_format');
 
@@ -106,20 +108,22 @@ class ControllerInformationActions extends Controller {
 					
 					if ($product_info) {
 						if ($product_info['image']) {
-							$image = $this->model_tool_image->crop($product_info['image'], 230, 230, 'center', '_actions_list');
+							$image = $this->model_tool_image->crop($product_info['image'], 195, 195, 'center', '_action_prod');
 						} else {
 							$image = false;
 						}
 		
 						if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 							$price = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
-						} else {
+              if($product_info['unit_count'] == 1){$price = $price.'/м&#178;';}
+            } else {
 							$price = false;
 						}
 								
 						if ((float)$product_info['special']) {
 							$special = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')));
-						} else {
+              if($product_info['unit_count'] == 1){$special = $special.'/м&#178;';}
+            } else {
 							$special = false;
 						}
 						
@@ -128,14 +132,31 @@ class ControllerInformationActions extends Controller {
 						} else {
 							$rating = false;
 						}
-							
+
+            $attribute_groups = $this->model_catalog_product->getProductAttributes($product_info['product_id']);
+
+            $attribute_data = array();
+            $attribute_data['name'] = null;
+            $attribute_data['text'] = null;
+            if(!empty($attribute_groups)) {
+              foreach($attribute_groups[0]['attribute'] as $item) {
+                if($item['name'] == 'Класс') {
+                  $attribute_data['name'] = $item['name'];
+                  $attribute_data['text'] = $item['text'];
+                }
+              }
+            }
+
 						$this->data['product_related'][] = array(
 							'product_id' => $product_info['product_id'],
 							'thumb'   	 => $image,
-							'name'    	 => $product_info['name'],
+							'name'    	 => truncate($product_info['name'], 40),
 							'price'   	 => $price,
 							'special' 	 => $special,
-							'rating'     => $rating,
+              'statuses'    => $product_info['statuses']['product'],
+              'attribute_data'     => $attribute_data,
+              'art'        => $product_info['sku'],
+              'rating'     => $rating,
 							'reviews'    => sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']),
 							'href'    	 => $this->url->link('product/product', 'product_id=' . $product_info['product_id']),
 						);
@@ -235,26 +256,6 @@ class ControllerInformationActions extends Controller {
     }
 
     $this->data['date'] = $date;
-
-//			if ($actions_setting['show_actions_date'] == 1) {
-//
-//        if($actions['date_start'] != null){
-//          $date_start = date( 'j', $actions['date_start'] ) . ' ' . $this->model_catalog_actions->getMonthName(date( 'n', $actions['date_start'] ));
-//        } else {
-//          $date_start = null;
-//        }
-//
-//        if($actions['date_end'] != null){
-//          $date_end = date( 'j', $actions['date_end'] ) . ' ' . $this->model_catalog_actions->getMonthName(date( 'n', $actions['date_end'] ));
-//        } else {
-//          $date_end = null;
-//        }
-//
-//
-//				$this->data['date']		= sprintf($this->language->get('date_actions_format'), $date_start, $date_end);
-//			} else {
-//				$this->data['date'] = NULL;
-//			}
 
 			$this->data['fancybox']		= $actions['fancybox'];
 			

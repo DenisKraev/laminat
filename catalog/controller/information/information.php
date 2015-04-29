@@ -48,12 +48,20 @@ class ControllerInformationInformation extends Controller {
       		
 			$this->data['continue'] = $this->url->link('common/home');
 
-			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/information/information.tpl')) {
-				$this->template = $this->config->get('config_template') . '/template/information/information.tpl';
-			} else {
-				$this->template = 'default/template/information/information.tpl';
-			}
-			
+      if($this->request->get['information_id'] == 8 ){
+        if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/information/contact.tpl')) {
+          $this->template = $this->config->get('config_template') . '/template/information/contact.tpl';
+        } else {
+          $this->template = 'default/template/information/contact.tpl';
+        }
+      } else {
+        if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/information/information.tpl')) {
+          $this->template = $this->config->get('config_template') . '/template/information/information.tpl';
+        } else {
+          $this->template = 'default/template/information/information.tpl';
+        }
+      }
+
 			$this->children = array(
 				'common/column_left',
 				'common/column_right',

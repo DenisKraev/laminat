@@ -101,7 +101,8 @@ class Currency {
   	public function convert($value, $from, $to) {
 		if (isset($this->currencies[$from])) {
 			$from = $this->currencies[$from]['value'];
-		} else {		  return 0;
+		} else {
+		  return 0;
 		}
 		
 		if (isset($this->currencies[$to])) {

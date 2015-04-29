@@ -137,7 +137,14 @@ class ControllerCommonHeader extends Controller {
 
       }
     }
-		
+
+    $actions_active = false;
+    if(in_array('information/actions', $this->request->get)){
+      $actions_active = true;
+    }
+    $this->data['actions_href'] = $this->url->link('information/actions');
+    $this->data['actions_active'] = $actions_active;
+
 		$this->children = array(
 			'module/language',
 			'module/currency',

@@ -13,23 +13,45 @@
   </div>
   
   <?php if(isset($actions_id)) { ?>
-  	<div id="actionsInfo" itemscope="" itemtype="http://schema.org/Article">
-      <div class="actionsHeader"><h1 itemprop="headline"><?php echo $h1 ?></h1></div>
-      <div class="actionsContent" itemprop="articleBody">
-        <?php if(!empty($date)) { ?><div class="actionsDate"><?php echo $date; ?></div> <?php } ?>
-        <div class="actionsDescription" itemprop="description"><?php echo $content; ?></div>
-      </div>
+  	<div class="action-single">
+      <h1 class="title-style border-bottom"><?php echo $h1 ?></h1>
+      <?php if(!empty($date)) { ?><div class="date"><?php echo $date; ?></div> <?php } ?>
+      <div class="description"><?php echo $content; ?></div>
     </div>
 
     <?php if( count($product_related) > 0) { ?>
-      <div class="actionsRelHeader"><div class="left"><?php echo $text_relproduct_header; ?></div> <div class="right"><a href="<?php echo $special; ?>" title="<?php echo $text_special; ?>"><?php echo $text_special; ?></a></div></div>
-      <div class="box-product actionsRelProducts">
+
+    <div class="action-product-related">
+
+      <div class="top cf">
+          <div class="title-style left"><?php echo $text_relproduct_header; ?></div>
+          <div class="right"><a href="<?php echo $special; ?>" title="<?php echo $text_special; ?>"><?php echo $text_special; ?></a></div>
+      </div>
+
+      <div class="product-list">
         <?php foreach ($product_related as $product) { ?>
-          <div>
+          <div class="product-item">
+
             <?php if ($product['thumb']) { ?>
-            <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
+            <div class="image box-img">
+              <a href="<?php echo $product['href']; ?>">
+                  <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" />
+              </a>
+              <div class="statuses"><?php echo $product['statuses']; ?></div>
+            </div>
             <?php } ?>
+
             <div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
+
+            <div class="params">
+              <?php if (!empty($product['attribute_data']['text'])) {  ?>
+                <span><?php echo $product['attribute_data']['text'] ?> <?php echo $product['attribute_data']['name'] ?>, </span>
+              <?php } ?>
+              <?php if($product['art']){ ?>
+                <span>арт. <?php echo $product['art']; ?></span>
+              <?php } ?>
+            </div>
+
             <?php if ($product['price']) { ?>
             <div class="price">
               <?php if (!$product['special']) { ?>
@@ -39,26 +61,12 @@
               <?php } ?>
             </div>
             <?php } ?>
-            <?php if ($product['rating']) { ?>
-            <div class="rating"><img src="catalog/view/theme/default/image/stars-<?php echo $product['rating']; ?>.png" alt="<?php echo $product['reviews']; ?>" /></div>
-            <?php } ?>
-            <div class="cart"><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" /></div>
+
+            <div class="cart actions"><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button btn-cart-style" /></div>
           </div>
         <?php } ?>
       </div>
-    <?php } ?>
-
-    <?php if ($fancybox > 0) { ?>
-    <script type="text/javascript"><!--
-    $(document).ready(function() {
-        if($('.colorbox').length) {
-            $('.colorbox').colorbox({
-                    overlayClose: true,
-                    opacity: 0.5
-            });
-        }
-    });
-    //--></script>
+    </div>
     <?php } ?>
 
   <?php } else { ?>

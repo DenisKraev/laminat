@@ -101,17 +101,18 @@
   <?php } ?>
 
   <?php echo $content_bottom; ?></div>
-<script type="text/javascript"><!--
+<script type="text/javascript">
+<!--
 function display(view) {
 	if (view == 'list') {
 		$('.product-grid').attr('class', 'product-list');
-		
+
 		$('.product-list > div.product-item').each(function(index, element) {
-			
+
 			html += '<div class="left">';
-			
+
 			var image = $(element).find('.box-img').html();
-			
+
 			if (image != null) {
           html += '<div class="box-img">' + image + '<div class="statuses">' + $(element).find('.statuses').html() + '</div></div>';
 			}
@@ -119,7 +120,7 @@ function display(view) {
       html += '  <div class="name">' + $(element).find('.name').html() + '</div>';
 
 			var price = $(element).find('.price').html();
-			
+
 			if (price != null) {
 				html += '<div class="price">' + price  + '</div>';
 			}
@@ -131,24 +132,24 @@ function display(view) {
       }
 
 			html += '</div>';
-						
+
 			$(element).html(html);
-		});		
+		});
 
 		$.totalStorage('display', 'list');
-
-    $('.product-status img').tooltipster({
-        position: 'left'
+      $('.product-item .statuses img').tooltipster({
+        position: 'left',
+        multiple: true
     });
 
 	} else {
 		$('.product-list').attr('class', 'product-grid');
-		
+
 		$('.product-grid > div.product-item').each(function(index, element) {
 			html = '';
-			
+
 			var image = $(element).find('.box-img').html();
-			
+
 			if (image != null) {
           html += '<div class="box-img">' + image + '<div class="statuses">' + $(element).find('.statuses').html() + '</div></div>';
 			}
@@ -163,30 +164,31 @@ function display(view) {
       }
 
 			var price = $(element).find('.price').html();
-			
+
 			if (price != null) {
 				html += '<div class="price">' + price  + '</div>';
 			}
-						
+
 			html += '<div class="actions">' + $(element).find('.actions').html() + '</div>';
-			
+
 			$(element).html(html);
-		});	
+		});
 
 		$.totalStorage('display', 'grid');
 
-    $('.product-status img').tooltipster({
-        position: 'left'
-    });
+      $('.product-item .statuses img').tooltipster({
+          position: 'left',
+          multiple: true
+      });
 	}
 }
 
 view = $.totalStorage('display');
 
 if (view) {
-	//display(view);
+	display(view);
 } else {
-	//display('list');
+	display('list');
 }
 
 //--></script>

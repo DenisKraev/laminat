@@ -92,6 +92,19 @@ $(document).ready(function(){
         position: 'right'
     });
 
+//    $('.product-item .statuses img').on('hover', function(){
+//        console.info(1);
+//        $(this).tooltipster({
+//            position: 'left'
+//            //multiple: true
+//        });
+//    });
+    $('.product-item .statuses img').tooltipster({
+        position: 'left',
+        multiple: true
+    });
+
+
     // считаем на КЛИЕНТЕ для визуализации метры и коробки
     if($('.product-info #option-227 input[name="option[227]"]').size() > 0){
         $('.product-info #option-227 input[name="option[227]"]').attr('disabled', 'disabled').val($('.product-info .meters-package').data('metersPackage')).addClass('count-meters');
@@ -116,30 +129,28 @@ $(document).ready(function(){
 
     $('.style-form-checkbox').styler();
 
-//    var myMap;
-//
-//    ymaps.ready(init);
-//
-//    function init () {
-//
-//        myMap = new ymaps.Map('map-contact', {
-//            center: [58.602901, 49.668077],
-//            zoom: 12
-//        }),
-//        myPlacemark = new ymaps.Placemark(
-//            myMap.getCenter(),
-//            {
-//                hintContent: "Терраса",
-//                iconContent: "Терраса"
-//            },
-//            {preset: 'islands#brownStretchyIcon'}
-//        );
-//        myMap.geoObjects.add(myPlacemark);
-//
-//    }
-//
+    var myMap;
 
-//
+    ymaps.ready(init);
+
+    function init () {
+
+        myMap = new ymaps.Map('map-contact', {
+            center: [58.602901, 49.668077],
+            zoom: 12
+        }),
+        myPlacemark = new ymaps.Placemark(
+            myMap.getCenter(),
+            {
+                hintContent: "Ламинат - Бонус",
+                iconContent: "Ламинат - Бонус"
+            },
+            {preset: 'islands#orangeStretchyIcon'}
+        );
+        myMap.geoObjects.add(myPlacemark);
+
+    }
+
 //    var boxen = [];
 //    $("a[class^=js-popup-img]").each(function() {
 //        if ($.inArray($(this).attr('class'),boxen)) boxen.push($(this).attr('class'));

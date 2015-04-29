@@ -33,13 +33,15 @@ class ControllerModuleSpecial extends Controller {
 
 			if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 				$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
-			} else {
+        if($result['unit_count'] == 1){$price = $price.'/м&#178;';}
+      } else {
 				$price = false;
 			}
 					
 			if ((float)$result['special']) { 
 				$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
-			} else {
+        if($result['unit_count'] == 1){$special = $special.'/м&#178;';}
+      } else {
 				$special = false;
 			}
 			

@@ -30,15 +30,15 @@
 function display(view) {
 	if (view == 'list') {
 		$('.product-grid').attr('class', 'product-list');
-		
+
 		$('.product-list > div.product-item').each(function(index, element) {
 
-			
+
 			html += '<div class="left">';
-			
+
 			var image = $(element).find('.box-img').html();
-			
-			if (image != null) { 
+
+			if (image != null) {
 				html += '<div class="box-img">' + image + '<div class="statuses">' + $(element).find('.statuses').html() + '</div></div>';
 			}
 
@@ -51,35 +51,32 @@ function display(view) {
       }
 
 			var price = $(element).find('.price').html();
-			
+
 			if (price != null) {
 				html += '<div class="price">' + price  + '</div>';
 			}
 
 			html += '</div>';
-						
+
 			$(element).html(html);
-		});		
-		
+		});
+
 		$('.display').html('<b><?php echo $text_display; ?></b> <?php echo $text_list; ?> <b>/</b> <a onclick="display(\'grid\');"><?php echo $text_grid; ?></a>');
-		
+
 		$.totalStorage('display', 'list');
 
-    $('.product-status img').tooltipster({
-        position: 'left'
-    });
   } else {
 		$('.product-list').attr('class', 'product-grid');
-		
+
 		$('.product-grid > div.product-item').each(function(index, element) {
 			html = '';
-			
+
 			var image = $(element).find('.box-img').html();
-			
+
 			if (image != null) {
 				html += '<div class="box-img">' + image + '<div class="statuses">' + $(element).find('.statuses').html() + '</div></div>';
 			}
-			
+
 			html += '<div class="name">' + $(element).find('.name').html() + '</div>';
 
       var params = $(element).find('.params').html();
@@ -89,7 +86,7 @@ function display(view) {
       }
 
 			var price = $(element).find('.price').html();
-			
+
 			if (price != null) {
 				html += '<div class="price">' + price  + '</div>';
 			}
@@ -97,15 +94,12 @@ function display(view) {
 			html += '<div class="actions">' + $(element).find('.actions').html() + '</div>';
 
 			$(element).html(html);
-		});	
-					
+		});
+
 		$('.display').html('<b><?php echo $text_display; ?></b> <a onclick="display(\'list\');"><?php echo $text_list; ?></a> <b>/</b> <?php echo $text_grid; ?>');
-		
+
 		$.totalStorage('display', 'grid');
 
-    $('.product-status img').tooltipster({
-        position: 'left'
-    });
   }
 }
 

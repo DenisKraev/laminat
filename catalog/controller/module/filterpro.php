@@ -317,12 +317,16 @@ class ControllerModuleFilterPro extends Controller {
 			}
 
 			$this->data['filter_groups'] = array();
-			$this->load->model('catalog/category');
+
+      $this->load->model('catalog/category');
 
 			$this->data['option_main_checkbox'] = isset($filterpro_setting['option_main_checkbox']) ? 1 : 0;
 			if(version_compare(VERSION, "1.5.5") >= 0 && $filterpro_setting['filters']==1) {
 				$this->data['expanded_filters'] = isset($filterpro_setting['expanded_filters']) ? 1 : 0;
-				$filter_groups = $this->model_catalog_category->getCategoryFilters($category_id);
+
+        $this->load->model('catalog/product');
+
+        $filter_groups = $this->model_catalog_category->getCategoryFilters($category_id);
 				
 				if ($filter_groups) {
 					foreach ($filter_groups as $filter_group) {
@@ -608,13 +612,15 @@ class ControllerModuleFilterPro extends Controller {
 
 			if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 				$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
-			} else {
+        if($result['unit_count'] == 1){$price = $price.'/м&#178;';}
+      } else {
 				$price = false;
 			}
 
 			if ((float)$result['special']) {
 				$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
-			} else {
+        if($result['unit_count'] == 1){$special = $special.'/м&#178;';}
+      } else {
 				$special = false;
 			}
 

@@ -1397,6 +1397,7 @@ a.title-style:hover {
   background: url('/catalog/view/theme/default/image/app/bg-grid.png?1429100775') 0px 0px repeat, #f2f2f2;
   border: 1px solid #e3e3e3;
   padding: 10px;
+  min-height: 95px;
   padding-right: 135px;
   -moz-box-shadow: 3px 3px 3px #ededed;
   -webkit-box-shadow: 3px 3px 3px #ededed;
@@ -1474,6 +1475,9 @@ a.title-style:hover {
 }
 #filterpro .box-add {
   display: none;
+}
+#filterpro .box-add .option_box {
+  margin-right: 10px;
 }
 
 /* подвал */
@@ -1831,65 +1835,46 @@ a.title-style:hover {
   padding: 7px 30px;
 }
 
-/* Actions Info */
-#actionsInfo {
-  margin-bottom: 0px;
-  overflow: auto;
-  vertical-align: top;
+.action-single {
+  margin-bottom: 30px;
 }
-
-.actionsModule .actionsDate {
-  font-weight: bold;
+.action-single .date {
+  font-family: "OpenSans-regular-wf";
+  font-size: 12px;
+  color: #444444;
+  margin-bottom: 25px;
 }
-
-#actionsInfo .actionsDate {
-  font-weight: bold;
-}
-#actionsInfo .actionsDescription, #actionsInfo .actionsDate {
-  margin-top: 10px;
-}
-
-.actionsModule {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #EEEEEE;
-}
-.actionsModule + .actionsModule {
-  margin-top: 10px;
-}
-.actionsModule div + div {
-  margin-top: 6px;
-}
-
-.actionsReadAll {
-  margin-top: 10px;
-}
-
-.actionsRelHeader {
-  border-bottom: 1px solid #DBDEE1;
-  padding-bottom: 10px;
-  overflow: auto;
-}
-.actionsRelHeader .left {
-  float: left;
-  font-family: Arial, Helvetica, sans-serif;
+.action-single .description {
+  font-family: Verdana, sans-serif;
   font-size: 14px;
-  font-weight: bold;
-  line-height: 14px;
-  color: #333;
+  line-height: 18px;
+  color: #444444;
 }
-.actionsRelHeader .right {
+
+.action-product-related .top {
+  padding-bottom: 7px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #e3e3e3;
+}
+.action-product-related .top .right {
   float: right;
 }
-
-.actionsRelProducts {
-  padding: 10px 0px;
-  margin-bottom: 20px;
+.action-product-related .top .left {
+  float: left;
 }
-.actionsRelProducts > div {
-  text-align: center;
-  background: transparent;
-  margin: 0px 15px 15px 0px;
-  padding: 0px;
+.action-product-related .top .title-style {
+  margin-bottom: 0px;
+}
+
+/* страница контактов */
+.box-contacts .box-map {
+  float: left;
+  width: 480px;
+  height: 210px;
+}
+.box-contacts .text {
+  float: right;
+  width: 480px;
 }
 
 /* страница продукта */

@@ -53,22 +53,16 @@
   </div>
 </div>
 
-<?php if($filter_groups) { ?>
-  <ul class="box-filter option_box <?php if(!$expanded_filters){echo 'hide';}?>">
-    <?php foreach ($filter_groups as $filter_group) { ?>
-    <li><span id="filter-group<?php echo $filter_group['filter_group_id']; ?>" class="option_name <?php if(!$expanded_filters){echo "hided";}?>"><?php echo $filter_group['name']; ?></span>
-    <ul class="collapsible  <?php if(!$expanded_filters){echo 'hide';}?>">
-      <?php foreach ($filter_group['filter'] as $filter) { ?>
-      <li>
-      <input type="checkbox" class="filtered style-form-checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" id="filter<?php echo $filter['filter_id']; ?>" />
-      <label class="style-form-label" for="filter<?php echo $filter['filter_id']; ?>"><?php echo $filter['name']; ?></label>
-      </li>
+  <?php if($filter_groups) { ?>
+  <?php foreach ($filter_groups as $filter_group) { ?>
+    <?php foreach ($filter_group['filter'] as $filter) { ?>
+      <div class="option_box <?php if(!$expanded_filters){echo 'hide';}?>">
+        <input type="checkbox" class="filtered style-form-checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" id="filter<?php echo $filter['filter_id']; ?>" />
+        <label class="style-form-label" for="filter<?php echo $filter['filter_id']; ?>"><?php echo $filter['name']; ?></label>
+      </div>
       <?php } ?>
-    </ul>
-    </li>
     <?php } ?>
-  </ul>
-<?php } ?>
+  <?php } ?>
 
 <?php if($categories) { ?>
   <div class="option_box <?php if(!$expanded_categories){echo 'hide';}?>">
@@ -394,14 +388,7 @@ $(document).ready(function () {
     initfilter(jQuery.parseJSON('<?php echo $filterOptions;?>'));
 });
 
-$('.attribute-tooltip, .attribute-group-tooltip, .option-tooltip').qtip
-({
-	content:  {text: $(this).attr('title'), title: {text: '', button: false}},
-	position: {my: 'bottom center', at: 'top center', adjust: {x: 0, y: 0}, viewport: $(window), effect: false},
-	show:     {event: 'mouseover', solo: true, fixed: true, delay: 250},
-	style:    {classes: 'qtip-shadow qtip-rounded qtip-light'},
-	hide:     'unfocus'
-});
+
 </script>
 
 <?php } ?>

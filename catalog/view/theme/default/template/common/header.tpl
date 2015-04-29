@@ -89,7 +89,7 @@
     //-->
   </script>
 <?php } ?>
-
+    <script src="http://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU" type="text/javascript"></script>
 <?php echo $google_analytics; ?>
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/application.css" />
 
@@ -125,6 +125,7 @@
       <?php foreach ($categories as $category) { ?>
         <li><a href="<?php echo $category['href']; ?>" class="<?php echo $category['active'] ? 'active' : ''; ?>"><?php echo $category['name']; ?></a></li>
       <?php } ?>
+      <li><a class="<?php echo $actions_active ? 'active' : ''; ?>" href="<?php echo $actions_href; ?>">Акции</a></li>
       <?php foreach ($informations as $information) { ?>
         <li><a href="<?php echo $information['href']; ?>" class="<?php echo $information['active'] ? 'active' : ''; ?>"><?php echo $information['title']; ?></a></li>
       <?php } ?>

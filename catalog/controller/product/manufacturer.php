@@ -218,13 +218,15 @@ class ControllerProductManufacturer extends Controller {
 				
 				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
-				} else {
+          if($result['unit_count'] == 1){$price = $price.'/м&#178;';}
+        } else {
 					$price = false;
 				}
 				
 				if ((float)$result['special']) {
 					$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
-				} else {
+          if($result['unit_count'] == 1){$special = $special.'/м&#178;';}
+        } else {
 					$special = false;
 				}	
 				
@@ -282,7 +284,7 @@ class ControllerProductManufacturer extends Controller {
       $this->data['sorts'][] = array(
         'text'  => $this->language->get('text_default'),
         'value' => 'p.sort_order-ASC',
-        'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=p.sort_order&order=ASC' . $url)
+        'href'  => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . '&sort=p.sort_order&order=ASC' . $url)
       );
 	
 			$this->data['sorts'][] = array(

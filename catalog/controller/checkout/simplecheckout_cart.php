@@ -177,6 +177,7 @@ class ControllerCheckoutSimpleCheckoutCart extends Controller {
       }
       if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
         $price = $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')));
+        if($product['unit_count'] == 1){$price = $price.'/м&#178;';}
       } else {
         $price = false;
       }
