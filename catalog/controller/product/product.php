@@ -224,7 +224,7 @@ class ControllerProductProduct extends Controller {
 			if ($product_info['seo_title']) {
 				$this->document->setTitle($product_info['seo_title']);
 			} else {
-			    $this->document->setTitle($product_info['name']);
+			    $this->document->setTitle($product_info['name'].' | '.$this->config->get('config_name'));
 			}
 
 			$this->document->setDescription($product_info['meta_description']);

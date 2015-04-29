@@ -1,7 +1,7 @@
 <div class="box-sale site-content">
 
   <div class="top cf">
-      <h3 class="title-style">Распродажа</h3>
+      <h3 class="title-style"><a href="<?php echo $this->url->link('product/special')?>">Распродажа</a></h3>
       <div class="nav-slider"><div class="prev"></div><div class="next"></div></div>
   </div>
 

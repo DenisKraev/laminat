@@ -25,7 +25,6 @@
 
       <div class="top cf">
           <div class="title-style left"><?php echo $text_relproduct_header; ?></div>
-          <div class="right"><a href="<?php echo $special; ?>" title="<?php echo $text_special; ?>"><?php echo $text_special; ?></a></div>
       </div>
 
       <div class="product-list">

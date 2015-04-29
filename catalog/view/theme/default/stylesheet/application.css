@@ -157,6 +157,7 @@ input:focus, textarea:focus, button:focus, select:focus, a:focus {
   color: #333333;
 }
 .title-style a {
+  color: #333333;
   text-decoration: none;
 }
 .title-style a:hover {
@@ -295,6 +296,11 @@ a.title-style:hover {
 .ocjoyajaxcheckout_errorfields, .style-error {
   font-size: 11px;
   color: #f25727;
+}
+
+.style-success {
+  font-size: 13px;
+  color: #009937;
 }
 
 /* Кнопки */

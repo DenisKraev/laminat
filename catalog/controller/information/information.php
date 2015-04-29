@@ -25,7 +25,7 @@ class ControllerInformationInformation extends Controller {
 			if ($information_info['seo_title']) {
 				$this->document->setTitle($information_info['seo_title']);
 			} else {
-				$this->document->setTitle($information_info['title']);
+				$this->document->setTitle($information_info['title'].' | '.$this->config->get('config_name'));
 			}
 			$this->document->setDescription($information_info['meta_description']);
 			$this->document->setKeywords($information_info['meta_keyword']);

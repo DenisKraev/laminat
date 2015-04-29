@@ -104,7 +104,7 @@ class ControllerProductCategory extends Controller {
 			if ($category_info['seo_title']) {
 		  		$this->document->setTitle($category_info['seo_title']);
 			} else {
-		  		$this->document->setTitle($category_info['name']);
+		  		$this->document->setTitle($category_info['name'].' | '.$this->config->get('config_name'));
 			}
 
 			$this->document->setDescription($category_info['meta_description']);

@@ -88,13 +88,13 @@ class ControllerModuleCallbackphone extends Controller {
 
 				if (!empty($callbackphonename) && !empty($callbackphonetel) && preg_match('/^\p{L}+$/u', $callbackphonename)) {
 
-          echo $success = "Заказ обратного звонка отправлен успешно!<br />Наш менеджер Вам перезвонит.";
+          echo $success = "<div class='style-success'>Заказ обратного звонка отправлен успешно!<br />Наш менеджер Вам перезвонит.</div>";
 
           $mail->send();
 				
 				} else {
 
-				echo $error = "Вы не заполнили обязательные поля!";
+				echo $error = "<div class='style-error'>Вы не заполнили обязательные поля!</div>";
 				
 				}
 

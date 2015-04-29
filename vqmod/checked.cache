@@ -306,3 +306,10 @@ admin\controller\catalog\information.php
 admin\language\russian\catalog\information.php
 admin\view\template\catalog\information_list.tpl
 admin\view\template\catalog\information_form.tpl
+catalog\view\theme\default\template\product\special.tpl
+admin\controller\common\filemanager.php
+admin\language\russian\common\filemanager.php
+admin\view\template\common\filemanager.tpl
+admin\controller\common\filemanager.php
+admin\language\russian\common\filemanager.php
+admin\view\template\common\filemanager.tpl

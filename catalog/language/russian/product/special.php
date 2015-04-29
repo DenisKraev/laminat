@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']     = 'Акции';
+$_['heading_title']     = 'Товары со скидкой';
 
 // Text
 $_['text_empty']        = 'Нет специальных предложений.';
@@ -19,8 +19,8 @@ $_['text_sort']         = 'Сортировка:';
 $_['text_default']      = 'По умолчанию';
 $_['text_name_asc']     = 'Наименование (А -&gt; Я)';
 $_['text_name_desc']    = 'Наименование (Я -&gt; А)';
-$_['text_price_asc']    = 'Цена (по возрастанию)';
-$_['text_price_desc']   = 'Цена (по убыванию)';
+$_['text_price_asc']    = 'Цена &#8593;';
+$_['text_price_desc']   = 'Цена &#8595;';
 $_['text_rating_asc']   = 'Рейтинг (по возрастанию)';
 $_['text_rating_desc']  = 'Рейтинг (по убыванию)';
 $_['text_model_asc']    = 'Модель (А -&gt; Я)';

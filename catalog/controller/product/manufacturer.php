@@ -132,7 +132,7 @@ class ControllerProductManufacturer extends Controller {
 			if ($manufacturer_info['seo_title']) {
 				$this->document->setTitle($manufacturer_info['seo_title']);
 			} else {
-				$this->document->setTitle($manufacturer_info['name']);
+				$this->document->setTitle($manufacturer_info['name'].' | '.$this->config->get('config_name'));
 				
 			}
 			$this->document->addScript('catalog/view/javascript/jquery/jquery.total-storage.min.js');
@@ -211,9 +211,9 @@ class ControllerProductManufacturer extends Controller {
 					
 			foreach ($results as $result) {
         if ($result['image']) {
-          $image = $this->model_tool_image->crop($result['image'], 195, 195, 'center', '_manufacture');
+          $image = $this->model_tool_image->crop($result['image'], 195, 195, 'center', '_cat');
         } else {
-          $image = $this->model_tool_image->crop('no_image.jpg', 195, 195, 'center', '_manufacture');
+          $image = $this->model_tool_image->crop('no_image.jpg', 195, 195, 'center', '_cat');
         }
 				
 				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {

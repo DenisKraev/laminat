@@ -9383,3 +9383,6 @@
 2015-04-29 10:55:41 - PHP Notice:  Undefined variable: discount_row in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 1341
 2015-04-29 10:56:21 - PHP Notice:  Undefined variable: discount_row in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 1341
 2015-04-29 10:56:38 - PHP Notice:  Undefined variable: discount_row in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 1341
+2015-04-29 11:36:55 - PHP Warning:  imagesx() expects parameter 1 to be resource, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_library_image.php on line 188
+2015-04-29 11:36:55 - PHP Warning:  imagesy() expects parameter 1 to be resource, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_library_image.php on line 188
+2015-04-29 11:36:55 - PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_library_image.php on line 188

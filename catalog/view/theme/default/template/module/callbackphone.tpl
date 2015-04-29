@@ -5,7 +5,7 @@
     <div id="callbackphone-left">
 
         <div id="callbackphone-left-required"><?php echo $callbackphone_required; ?></div>
-        <div id="callbackphone-result" class="style-error"></div>
+        <div id="callbackphone-result" ></div>
 
         <form action="" id="callbackphone-form" >
             <div class="form-row">
@@ -59,6 +59,7 @@ function send() {
       $('.callback-form input').val('');
       $("#result").empty();
       $("#callbackphone-left-forma").hide();
+      $("#callbackphone-result").text('');
       $("#callbackphone-result").append(html);
     }
   });

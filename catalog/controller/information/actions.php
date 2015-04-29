@@ -177,9 +177,9 @@ class ControllerInformationActions extends Controller {
 			
 			/* Add Document:Title  */
 			if($actions['title']) {
-				$this->document->setTitle($actions['title']);
+				$this->document->setTitle($actions['title'].' | '.$this->config->get('config_name'));
 			} else {
-				$this->document->setTitle($actions['caption']);
+				$this->document->setTitle($actions['caption'].' | '.$this->config->get('config_name'));
 			}
 			/* Add Document:Link-Canonical */
 			$this->document->addLink($this->url->link('information/actions','actions_id=' . $actions_id), 'canonical');
@@ -318,7 +318,7 @@ class ControllerInformationActions extends Controller {
 			if( !empty($actions_setting['seo'][$language_id]['title']) ) {
 				$this->document->setTitle($actions_setting['seo'][$language_id]['title']);
 			} else {
-				$this->document->setTitle($this->language->get('text_actions_title'));
+				$this->document->setTitle($this->language->get('text_actions_title').' | '.$this->config->get('config_name'));
 			}
 			/* Add Document:Link-Canonical */
 			$this->document->addLink($this->url->link('information/actions'), 'canonical');
