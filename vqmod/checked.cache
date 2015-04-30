@@ -313,3 +313,7 @@ admin\view\template\common\filemanager.tpl
 admin\controller\common\filemanager.php
 admin\language\russian\common\filemanager.php
 admin\view\template\common\filemanager.tpl
+admin\controller\catalog\category_mgr.php
+admin\view\template\catalog\category_mgr.tpl
+admin\model\catalog\category_mgr.php
+admin\model\catalog\category_mgr.php

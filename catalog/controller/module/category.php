@@ -17,7 +17,7 @@ class ControllerModuleCategory extends Controller {
 
 		$this->data['categories'] = array();
 
-		$categories = $this->model_catalog_category->getCategories(0);
+		$categories = $this->model_catalog_category->getCategories(75);
 
     $this->data['categories'] = array('items' => $this->buildTree($categories, $parts));
 
