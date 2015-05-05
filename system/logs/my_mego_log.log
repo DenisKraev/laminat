@@ -9386,3 +9386,56 @@
 2015-04-29 11:36:55 - PHP Warning:  imagesx() expects parameter 1 to be resource, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_library_image.php on line 188
 2015-04-29 11:36:55 - PHP Warning:  imagesy() expects parameter 1 to be resource, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_library_image.php on line 188
 2015-04-29 11:36:55 - PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, null given in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_library_image.php on line 188
+2015-05-05 8:18:48 - PHP Notice:  Undefined variable: discount_row in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 1341
+2015-05-05 9:00:24 - PHP Notice:  Undefined variable: product_total in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-catalog_controller_module_filterpro.php on line 566
+2015-05-05 11:11:19 - PHP Warning:  require(D:\OpenServer\domains\laminat\catalog\view\theme) [<a href='function.require'>function.require</a>]: failed to open stream: Permission denied in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 62
+2015-05-05 11:11:19 - PHP Warning:  require(D:\OpenServer\domains\laminat\catalog\view\theme) [<a href='function.require'>function.require</a>]: failed to open stream: Permission denied in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 62
+2015-05-05 11:11:25 - PHP Warning:  require(D:\OpenServer\domains\laminat\catalog\view\theme) [<a href='function.require'>function.require</a>]: failed to open stream: Permission denied in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 62
+2015-05-05 11:11:25 - PHP Warning:  require(D:\OpenServer\domains\laminat\catalog\view\theme) [<a href='function.require'>function.require</a>]: failed to open stream: Permission denied in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 62
+2015-05-05 11:13:11 - PHP Warning:  require(D:\OpenServer\domains\laminat\catalog\view\theme) [<a href='function.require'>function.require</a>]: failed to open stream: Permission denied in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 62
+2015-05-05 11:13:11 - PHP Warning:  require(D:\OpenServer\domains\laminat\catalog\view\theme) [<a href='function.require'>function.require</a>]: failed to open stream: Permission denied in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-system_engine_controller.php on line 62
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 63
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 63
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 63
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 63
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 63
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 63
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 63
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 63
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 63
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 63
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 63
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 63
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 63
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 63
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
+2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 63

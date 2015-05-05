@@ -1,20 +1,5 @@
----------- Date: 2015-04-28 14:14:30 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /admin/index.php?route=module/product_status&amp;token=4183f32c648069f648d64f1aeafb0d7b
-MOD DETAILS:
-   modFile   : D:\OpenServer\domains\laminat\vqmod/xml/allpagelayout.xml
-   id        : All Page Layout
-   version   : 1.0.0
-   vqmver    : 2.4.1
-   author    : LongNH
-
-File Name    : admin/controller/module/*.php(0)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->data['layouts'] = $this->model_design_layout->getLayouts();
-
-----------------------------------------------------------------------
-
-
----------- Date: 2015-04-28 14:29:59 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /laminat/
+---------- Date: 2015-05-05 10:52:13 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=product/category&amp;path=75
 MOD DETAILS:
    modFile   : D:\OpenServer\domains\laminat\vqmod/xml/filterpro_seo.xml
    id        : Filterpro seo
@@ -27,8 +12,8 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $product_total = $this-
 ----------------------------------------------------------------------
 
 
----------- Date: 2015-04-28 14:30:46 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /laminat/
+---------- Date: 2015-05-05 10:53:45 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=product/category&amp;path=75
 MOD DETAILS:
    modFile   : D:\OpenServer\domains\laminat\vqmod/xml/filterpro_seo.xml
    id        : Filterpro seo
@@ -41,8 +26,8 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $product_total = $this-
 ----------------------------------------------------------------------
 
 
----------- Date: 2015-04-28 14:51:00 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /laminat/
+---------- Date: 2015-05-05 10:54:22 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=product/category&amp;path=75
 MOD DETAILS:
    modFile   : D:\OpenServer\domains\laminat\vqmod/xml/filterpro_seo.xml
    id        : Filterpro seo
@@ -55,8 +40,8 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $product_total = $this-
 ----------------------------------------------------------------------
 
 
----------- Date: 2015-04-28 14:51:26 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /laminat/
+---------- Date: 2015-05-05 10:57:02 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=product/category&amp;path=75
 MOD DETAILS:
    modFile   : D:\OpenServer\domains\laminat\vqmod/xml/filterpro_seo.xml
    id        : Filterpro seo
@@ -69,8 +54,8 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $product_total = $this-
 ----------------------------------------------------------------------
 
 
----------- Date: 2015-04-28 15:03:04 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /index.php?route=product/manufacturer/info&amp;manufacturer_id=8
+---------- Date: 2015-05-05 11:16:19 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=product/category&amp;path=75
 MOD DETAILS:
    modFile   : D:\OpenServer\domains\laminat\vqmod/xml/filterpro_seo.xml
    id        : Filterpro seo
@@ -78,13 +63,13 @@ MOD DETAILS:
    vqmver    : 2.1.6(7)
    author    : s-m-o-k@list.ru
 
-File Name    : catalog/controller/product/manufacturer.php(2)
+File Name    : catalog/controller/product/category.php(2)
 VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $product_total = $this->model_catalog_product->getTotalProducts($data);
 ----------------------------------------------------------------------
 
 
----------- Date: 2015-04-28 15:05:57 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /index.php?route=product/manufacturer/info&amp;manufacturer_id=8
+---------- Date: 2015-05-05 11:16:34 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=product/category&amp;path=75
 MOD DETAILS:
    modFile   : D:\OpenServer\domains\laminat\vqmod/xml/filterpro_seo.xml
    id        : Filterpro seo
@@ -92,13 +77,13 @@ MOD DETAILS:
    vqmver    : 2.1.6(7)
    author    : s-m-o-k@list.ru
 
-File Name    : catalog/controller/product/manufacturer.php(2)
+File Name    : catalog/controller/product/category.php(2)
 VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $product_total = $this->model_catalog_product->getTotalProducts($data);
 ----------------------------------------------------------------------
 
 
----------- Date: 2015-04-28 15:08:20 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /index.php?route=product/manufacturer/info&amp;manufacturer_id=8
+---------- Date: 2015-05-05 11:16:43 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=product/category&amp;path=75
 MOD DETAILS:
    modFile   : D:\OpenServer\domains\laminat\vqmod/xml/filterpro_seo.xml
    id        : Filterpro seo
@@ -106,13 +91,13 @@ MOD DETAILS:
    vqmver    : 2.1.6(7)
    author    : s-m-o-k@list.ru
 
-File Name    : catalog/controller/product/manufacturer.php(2)
+File Name    : catalog/controller/product/category.php(2)
 VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $product_total = $this->model_catalog_product->getTotalProducts($data);
 ----------------------------------------------------------------------
 
 
----------- Date: 2015-04-28 15:12:47 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /index.php?route=product/manufacturer/info&amp;manufacturer_id=8&amp;sort=p.price&amp;order=ASC
+---------- Date: 2015-05-05 11:19:06 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=product/category&amp;path=75
 MOD DETAILS:
    modFile   : D:\OpenServer\domains\laminat\vqmod/xml/filterpro_seo.xml
    id        : Filterpro seo
@@ -120,13 +105,13 @@ MOD DETAILS:
    vqmver    : 2.1.6(7)
    author    : s-m-o-k@list.ru
 
-File Name    : catalog/controller/product/manufacturer.php(2)
+File Name    : catalog/controller/product/category.php(2)
 VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $product_total = $this->model_catalog_product->getTotalProducts($data);
 ----------------------------------------------------------------------
 
 
----------- Date: 2015-04-28 15:13:06 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /index.php?route=product/manufacturer/info&amp;manufacturer_id=8&amp;sort=p.price&amp;order=ASC
+---------- Date: 2015-05-05 11:20:21 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=product/category&amp;path=75
 MOD DETAILS:
    modFile   : D:\OpenServer\domains\laminat\vqmod/xml/filterpro_seo.xml
    id        : Filterpro seo
@@ -134,13 +119,13 @@ MOD DETAILS:
    vqmver    : 2.1.6(7)
    author    : s-m-o-k@list.ru
 
-File Name    : catalog/controller/product/manufacturer.php(2)
+File Name    : catalog/controller/product/category.php(2)
 VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $product_total = $this->model_catalog_product->getTotalProducts($data);
 ----------------------------------------------------------------------
 
 
----------- Date: 2015-04-28 15:15:25 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /index.php?route=product/manufacturer/info&amp;manufacturer_id=8&amp;sort=p.price&amp;order=ASC
+---------- Date: 2015-05-05 11:23:00 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=product/category&amp;path=75
 MOD DETAILS:
    modFile   : D:\OpenServer\domains\laminat\vqmod/xml/filterpro_seo.xml
    id        : Filterpro seo
@@ -148,7 +133,7 @@ MOD DETAILS:
    vqmver    : 2.1.6(7)
    author    : s-m-o-k@list.ru
 
-File Name    : catalog/controller/product/manufacturer.php(2)
+File Name    : catalog/controller/product/category.php(2)
 VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $product_total = $this->model_catalog_product->getTotalProducts($data);
 ----------------------------------------------------------------------
 

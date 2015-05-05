@@ -317,3 +317,15 @@ admin\controller\catalog\category_mgr.php
 admin\view\template\catalog\category_mgr.tpl
 admin\model\catalog\category_mgr.php
 admin\model\catalog\category_mgr.php
+admin\controller\common\login.php
+admin\language\russian\common\login.php
+admin\view\template\common\login.tpl
+admin\language\russian\common\home.php
+admin\model\catalog\review.php
+admin\view\template\common\home.tpl
+catalog\language\russian\product\filter.php
+catalog\view\theme\default\template\module\filterpro_container.tpl
+catalog\controller\product\filter.php
+catalog\view\theme\default\template\product\filter.tpl
+catalog\controller\error\not_found.php
+catalog\language\russian\error\not_found.php
