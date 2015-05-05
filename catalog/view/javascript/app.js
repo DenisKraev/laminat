@@ -106,25 +106,25 @@ $(document).ready(function(){
 
 
     // считаем на КЛИЕНТЕ для визуализации метры и коробки
-    if($('.product-info #option-227 input[name="option[227]"]').size() > 0){
-        $('.product-info #option-227 input[name="option[227]"]').attr('disabled', 'disabled').val($('.product-info .meters-package').data('metersPackage')).addClass('count-meters');
+    if($('.product-info .option-13 .field-option-13').size() > 0){
+        $('.product-info .option-13 .field-option-13').attr('disabled', 'disabled').val($('.product-info .meters-package').data('metersPackage')).addClass('count-meters');
 
         count_meter_p = $('.product-info .meters-package').data('metersPackage');
 
         box_calc = "<div class='wrap-need-meters table'><label class='cell'>Требуемая площадь: </label><div class='cell'><input type='text' class='need-meters style-form-text'> (м&#178)</div></div>";
         box_calc_boxes = "<div class='count-box table'><div class=' cell'>Коробки: </div> <span class='cell'></span></div>";
 
-        $('.product-info #option-227').prepend(box_calc).append(box_calc_boxes);
+        $('.product-info .option-13').prepend(box_calc).append(box_calc_boxes);
 
         var calc_meter = function(obj){
             count_need_m = obj.val();
             whole_box = Math.ceil(count_need_m/count_meter_p);
-            $('.product-info #option-227 .count-box span').text(whole_box);
-            $('.product-info #option-227 .count-meters').val(parseFloat(whole_box*count_meter_p).toFixed(4));
+            $('.product-info .option-13 .count-box span').text(whole_box);
+            $('.product-info .option-13 .count-meters').val(parseFloat(whole_box*count_meter_p).toFixed(4));
         }
 
-        calc_meter($('.product-info #option-227 .count-meters'));
-        $('.product-info #option-227 .need-meters').bind("keyup", function(){calc_meter($(this));});
+        calc_meter($('.product-info .option-13 .count-meters'));
+        $('.product-info .option-13 .need-meters').bind("keyup", function(){calc_meter($(this));});
     }
 
     $('.style-form-checkbox').styler();

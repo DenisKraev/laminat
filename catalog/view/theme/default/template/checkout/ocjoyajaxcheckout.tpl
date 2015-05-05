@@ -107,11 +107,12 @@ function minuscon(pid) {
               </div>
           </div>
 
+
             <div class="count">Покупаемое количество:
               <span>
                 <?php if($unit_count == 1){ // отображаем если тип м2?>
                   <?php foreach ($options as $option) { ?>
-                    <?php if ($option['type'] == 'text' &&  $option['product_option_id'] == 227) { // если это опция текстовая и id равен 227 (покупаемое количество метров)?>
+                    <?php if ($option['type'] == 'text' &&  $option['option_id'] == 13) { // если это опция текстовая и id равен 227 (покупаемое количество метров)?>
                           <input type="text" name="option[<?php echo $option['product_option_id']; ?>]" id="option-<?php echo $option['product_option_id']; ?>" class="count-meters" value="<?php echo $meters_package; ?>" disabled="disabled"/>
                       <?php } ?>
                   <?php } ?>

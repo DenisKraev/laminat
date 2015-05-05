@@ -9439,3 +9439,9 @@
 2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
 2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 57
 2015-05-05 11:16:43 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\product\category.tpl on line 63
+2015-05-05 13:41:03 - PHP Notice:  Undefined variable: discount_row in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 1341
+2015-05-05 13:42:02 - PHP Notice:  Undefined variable: discount_row in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 1341
+2015-05-05 13:42:13 - PHP Notice:  Undefined variable: discount_row in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 1341
+2015-05-05 13:42:21 - PHP Notice:  Undefined variable: discount_row in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 1341
+2015-05-05 13:42:47 - PHP Notice:  Undefined variable: discount_row in D:\OpenServer\domains\laminat\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 1341
+2015-05-05 13:47:01 - PHP Notice:  Undefined variable: option in D:\OpenServer\domains\laminat\catalog\view\theme\default\template\checkout\ocjoyajaxcheckout.tpl on line 110

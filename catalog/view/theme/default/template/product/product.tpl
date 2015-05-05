@@ -142,13 +142,13 @@
         <?php } ?>
 
         <?php if ($option['type'] == 'text') { ?>
-        <div id="option-<?php echo $option['product_option_id']; ?>" class="option">
+        <div id="option-<?php echo $option['product_option_id']; ?>" class="option option-<?php echo $option['option_id']; ?>">
           <?php if ($option['required']) { ?>
             <span class="required">*</span>
           <?php } ?>
           <div class="table">
             <span class="cell"><?php echo $option['name']; ?>: </span>
-            <div class="cell"><input type="text" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option['option_value']; ?>" /></div>
+            <div class="cell"><input type="text" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option['option_value']; ?>" class="field-option-<?php echo $option['option_id']; ?>" /></div>
           </div>
         </div>
         <?php } ?>

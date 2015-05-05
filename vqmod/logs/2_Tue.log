@@ -138,3 +138,17 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $product_total = $this-
 ----------------------------------------------------------------------
 
 
+---------- Date: 2015-05-05 13:58:21 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=product/category&amp;path=75_20
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\laminat\vqmod/xml/filterpro_seo.xml
+   id        : Filterpro seo
+   version   : 1.5.[1-4]
+   vqmver    : 2.1.6(7)
+   author    : s-m-o-k@list.ru
+
+File Name    : catalog/controller/product/category.php(2)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $product_total = $this->model_catalog_product->getTotalProducts($data);
+----------------------------------------------------------------------
+
+

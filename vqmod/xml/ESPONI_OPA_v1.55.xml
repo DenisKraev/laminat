@@ -161,8 +161,8 @@
 				$('#product_add_to_cart_form input[type=\'hidden\']').bind("change", function(){ esponi_OTF($(this)); });
 
                 // считаем при загрузке
-				if($('.product-info #option-227 input').size() > 0){
-					esponi_OTF($('.product-info #option-227 input'));
+				if($('.product-info .option-13 input').size() > 0){
+					esponi_OTF($('.product-info .option-13 input'));
 				} else {
 					esponi_OTF($('.cart input[type="text"]'));
 				}

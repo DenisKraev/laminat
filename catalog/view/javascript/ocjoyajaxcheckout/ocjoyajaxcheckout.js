@@ -48,7 +48,7 @@ function AjaxCheckoutOcjoy(id, product) {
                // если из карточки товара
                if($('#esponi_OTF_Total').size() > 0) {
                    $('#ajaxorder .price span').text($('#esponi_OTF_Total').text());
-                   $('#ajaxorder .count .count-meters').val($('.product-info #option-227 .count-meters').val());
+                   $('#ajaxorder .count .count-meters').val($('.product-info .option-13 .count-meters').val());
                } else { // иначе из каталога
                    count_meter_p = $('#ajaxorder .meters-package').data('metersPackage');
 
