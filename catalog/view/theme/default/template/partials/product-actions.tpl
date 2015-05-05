@@ -21,23 +21,14 @@ foreach($results as $result) {
       // 3600 корректировка на час (пока не выяснил почему так работает)
       $stop = ($start + ($interval - $past_interval)) - 3600;
       $stop_text = ($start + $interval) - 3600;
-      //$stop = $start + ($interval - $past_interval);
 
-      $count = floor($past_interval/$interval);
+      if($interval - 86400 <= 0){$count = floor(abs($start - $cur)/($interval));} else {$count = floor(abs($start - $cur)/($interval - 86400));}
 
       if($count >= 1){
-        $start = $start + ($interval * $count);
-        $past_interval =  abs($cur - $start);
 
-        $cur_t = new DateTime(date('Y-m-d'));
-        $start_t = new DateTime(date('Y-m-d', $result['date_start']));
-        $start_t = new DateTime($start_t->format('Y-m-d'));
+        if($interval - 86400 <= 0){$start = $start + (($interval) * $count);} else {$start = $start + (($interval - 86400) * $count);}
 
-        if($cur_t > $start_t) {
-          $stop = ($start + ($interval - $past_interval)) - 3600;
-        } else {
-          $stop = ($start + ($interval - $past_interval));
-        }
+        $stop = ($start + ($interval)) - 3600;
 
         $stop_text = $stop;
       }

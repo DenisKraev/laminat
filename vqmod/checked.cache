@@ -87,3 +87,7 @@ catalog\model\module\filterpro.php
 catalog\view\theme\default\template\module\filterpro.tpl
 catalog\view\theme\default\template\product\category.tpl
 catalog\view\theme\default\template\module\filterpro_products.tpl
+catalog\controller\information\actions.php
+catalog\language\russian\information\actions.php
+catalog\model\setting\setting.php
+catalog\view\theme\default\template\information\actions.tpl
